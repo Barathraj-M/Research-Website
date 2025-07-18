@@ -42,23 +42,23 @@ const About = () => {
                 <img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684129d5df974c68c80cbd41_7f31505442587e86e496054776f573fd_about-hero-image.jpg" loading="eager" alt="About Image" className='absolute w-full h-full'></img>
                 <div class="absolute inset-0 gradient"></div>
                 <div className='w-full h-full flex flex-col justify-between'>
-                    <div className='relative flex flex-col justify-evenly sm:gap-4 gap-1 lg:w-[370px] lg:h-[400px] lg:ms-22 lg:mt-30 md:w-[760px] md:h-[230px] md:ms-12 md:mt-30 mt-25 ms-5 me-5'>
-                        <h1 className='lg:text-7xl md:text-6xl text-4xl font-sans font-semibold text-white leading-20 overflow-hidden leading-tight'>About Mivora<span className='md:text-3xl text-lg absolute me-10 overflow-hidden'>TM</span></h1>
-                        <p className='sm:text-lg text-md mb-2 text-white'>We are pioneers in sustainable logistics, delivering smart and efficient supply chain solutions that minimize environmental impact and maximize value for businesses worldwide.</p>
-                        <button className='text-black bg-[#7EEA57] md:h-15 h-12 w-43 rounded-full hover:text-white p-3 text-center hover:bg-transparent hover:border border-white'>Get a green quote</button>
+                    <div className='relative flex flex-col justify-evenly sm:gap-4 gap-1 lg:w-[350px] lg:h-[385px] lg:ms-22 lg:mt-30 md:w-[760px] md:h-[230px] md:ms-12 md:mt-30 mt-25 ms-5 me-5'>
+                        <h1 className='text-white! overflow-hidden'>About Mivora<span className='md:text-3xl text-lg absolute me-10 overflow-hidden'>TM</span></h1>
+                        <p className='mb-2 text-white overflow-hidden'>We are pioneers in sustainable logistics, delivering smart and efficient supply chain solutions that minimize environmental impact and maximize value for businesses worldwide.</p>
+                        <button className='text-black bg-[#7EEA57] md:h-12 h-12 w-45 rounded-full hover:text-white p-3 text-center hover:bg-transparent hover:border border-white overflow-hidden'>Get a green quote</button>
                     </div>
                     <div className='relative flex self-end lg:me-17 ps-6 pe-6 lg:ms-17 md:me-10 md:ms-10 ms-2 me-2 text-gray-500'>
                         <div className='absolute left-0 w-10 h-10 bg-white z-40 self-end'></div>
-                        <div className='md:w-[590px] w-[auto] sm:h-auto h-[180px] bg-white flex lg:justify-between justify-evenly rounded-[10px] flex-wrap'>
-                            <div className='flex flex-col  items-center justify-center p-2 sm:gap-7 sm:p-5 gap-5'>
+                        <div className='md:w-[590px] w-[auto] sm:h-auto h-[180px] bg-white flex lg:justify-between justify-evenly rounded-[10px] flex-wrap overflow-hidden'>
+                            <div className='flex flex-col  items-center justify-center p-2 md:gap-7 md:p-4 gap-3'>
                                 <p>Lower CO2 Emission</p>
                                 <div className='flex gap-5 justify-center items-center'>
                                     <img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683976f56676896290088678_counter-icon-01.svg" loading="lazy" alt="Icon" className='md:h-8 h-5'></img>
                                     <div className='md:text-2xl text-lg text-gray-900'>30%</div>
                                 </div>
                             </div>
-                            <div class="h-auto w-px  md:mt-2 md:mb-5 bg-gray-300"></div>
-                            <div className='flex flex-col items-center p-2 justify-center md:gap-7 md:p-5 gap-5'>
+                            <div class="h-auto w-px  mt-2 mb-5 bg-gray-300"></div>
+                            <div className='flex flex-col items-center p-2 justify-center md:gap-7 md:p-4 gap-3'>
                                 <p>Fuel Cost Saving</p>
                                 <div className='flex gap-5 justify-center items-center'>
                                     <img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683976f506218de3dbfbee9e_counter-icon-02.svg" loading="lazy" alt="Icon" className='md:h-8 h-5'></img>
@@ -66,7 +66,7 @@ const About = () => {
                                 </div>
                             </div>
                             <div class="h-auto w-px  mt-2 mb-5 bg-gray-300"></div>
-                            <div className='flex flex-col items-center justify-center md:gap-7 p-2 md:p-5 gap-5'>
+                            <div className='flex flex-col items-center justify-center md:gap-7 p-2 md:p-4 gap-3'>
                                 <p>Tons of CO2 saved anually</p>
                                 <div className='flex gap-5 justify-center items-center'>
                                     <img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683976f5384d68e5ba0c57c7_counter-icon-03.svg" loading="lazy" alt="Icon" className='md:h-8 h-5'></img>
@@ -80,8 +80,8 @@ const About = () => {
             </div>
 
             <div className='flex flex-col items-center justify-center lg:mt-28 md:mt-20 mt-10'>
-                <div className='xl:w-[800px] text-center flex flex-col md:space-y-5 space-y-3'>
-                    <h1 className='md:text-5xl text-3xl overflow-hidden md:pe-5 md:ps-5 p-2'>Smart <span className='text-gray-500'>Eco-transportation</span> solutions for modern <span className='text-gray-500'>supply chains</span></h1>
+                <div className='lg:w-[800px] md:w-[700px] text-center flex flex-col md:space-y-5 space-y-3'>
+                    <h2 className='overflow-hidden md:pe-5 md:ps-5 p-2'>Smart <span className='text-gray-500'>Eco-transportation</span> solutions for modern <span className='text-gray-500'>supply chains</span></h2>
                     <p className='text-[17px] text-gray-500 lg:pe-25 lg:ps-25 pe-5 ps-5'>At Mivora, we believe logistics should be as kind to the planet as it is efficient for business. Born from a vision to create cleaner, smarter transportation solutions, we set out to challenge the conventional supply chain model.</p>
                 </div>
                 <div className='grid lg:grid-cols-[3fr_2fr_3fr] sm:grid-cols-[3fr_3fr_3fr] grid-cols-2 lg:gap-9 sm:gap-3 gap-4 max-w-[1100px] lg:h-[290px] md:h-[320px] sm:h-[290px] h-[500px] mx-5 md:mt-20 mt-10'>
@@ -114,9 +114,9 @@ const About = () => {
                 </div>
 
                 <div className='flex md:flex-row flex-col justify-evenly items-center lg:gap-25 md:gap-10 gap-5 p-5 text-gray-500 mt-8'>
-                    <div className='xl:w-[440px] text-center h-auto '>Over the years, we've built a global network dedicated to eco-supply transportation — blending technology, innovation, and sustainability.</div>
+                    <p className='xl:w-[440px] xl:px-0 lg:px-4 text-center h-auto'>Over the years, we've built a global network dedicated to eco-supply transportation — blending technology, innovation, and sustainability.</p>
                     <img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/68380c88b7e106bfe4fe4980_about-icon-02.svg" loading="eager" alt="Icon" className='xl:h-12 md:h-35 h-10'></img>
-                    <div className='xl:w-[440px] h-auto text-center'>From electric fleets to carbon-neutral strategies, every solution we offer is designed to minimize environmental impact while maximizing operational value.</div>
+                    <p className='xl:w-[440px] h-auto text-center'>From electric fleets to carbon-neutral strategies, every solution we offer is designed to minimize environmental impact while maximizing operational value.</p>
                 </div>
                 <p className='text-gray-500 xl:mt-8 lg:mt-5 mt-2 text-center'>Together, we can redefine logistics for a better tomorrow.</p>
                 <button className='md:h-13 h-10 w-43 rounded-full bg-[#7EEA57] hover:bg-black hover:border hover:text-[#7EEA57] text-center lg:mt-9 md:mt-7 mt-5'>Explore eco solution</button>
@@ -125,15 +125,15 @@ const About = () => {
             <div className='lg:m-22 md:m-15 m-5 mt-10'>
                 <div className='overflow-hidden'>
                     <span className='p-1 border-1 border-gray-300 text-gray-500 rounded-full'>OUR MISSION & VISION</span>
-                    <h1 className='text-[40px] font-semibold overflow-hidden leading-12'>Committed to an eco-friendly world: <span className='text-gray-400'>Our vision & mission</span> explained</h1>
+                    <h2 className='font-semibold overflow-hidden '>Committed to an eco-friendly world: <span className='text-gray-400'>Our vision & mission</span> explained</h2>
                 </div>
                 <div className='flex lg:flex-row flex-col xl:mt-18 lg:mt-15 md:mt-10 m-2'>
                     <div className='border-1 lg:p-8 md:p-6 p-3  border-gray-300 flex-1/2 flex flex-col lg:gap-6 gap-3'>
-                        <h1 className='text-3xl overflow-hidden'>Mission</h1>
+                        <h3 className='overflow-hidden'>Mission</h3>
                         <p className='text-gray-600'>At Mivora, our mission is clear — to reshape the future of transportation through sustainable and intelligent logistics solutions. We are dedicated to reducing environmental impact by offering eco-friendly supply chain services that combine innovation, efficiency, and environmental responsibility.</p>
                     </div>
                     <div className='border-1 lg:p-8 md:p-6 p-3  flex-1/2 border-gray-300 flex flex-col lg:gap-6 gap-3'>
-                        <h1 className='text-3xl overflow-hidden'>Vision</h1>
+                        <h3 className='overflow-hidden'>Vision</h3>
                         <p className='text-gray-600'>Our vision is to lead the transformation of global logistics into a cleaner, greener, and smarter ecosystem. We aim to set a new standard where eco-supply transportation becomes the backbone of sustainable business practices.</p>
                         <div className='flex flex-wrap gap-2'>
                             <div className='p-2 bg-gray-100 rounded-2xl text-gray-500'>Eco deliveries</div>
@@ -151,7 +151,7 @@ const About = () => {
 
             <div className='xl:h-[700px] lg:h-[1200px] w-full bg-[#212121] flex flex-col items-center'>
                 <p className='border-gray-500 border-1 text-gray-500 mt-23  inline-block pt-1 xl:pb-5 pb-2 pe-4 ps-4 rounded-full overflow-hidden'>OUR TEAM</p>
-                <h1 className='text-[40px] leading-13 pt-3 xl:pb-20 sm:pb-13 pb-7 overflow-hidden lg:w-[600px] text-center font-semibold text-white'>The <span className='text-green-400'>team</span> powering green transport</h1>
+                <h2 className='text-white!  pt-3 xl:pb-20 sm:pb-13 pb-7 overflow-hidden lg:w-[600px] text-center font-semibold'>The <span className='text-green-400'>team</span> powering green transport</h2>
                 <div className='flex grid xl:grid-cols-[3fr_3fr_3fr_3fr] lg:grid-cols-3 sm:grid-cols-2  flex-wrap xl:h-[1100px] lg:h-[900px] md:h-[800px] sm:w-full md:w-[90%] lg:w-full w-full md:px-18 px-10 xl:py-8 md:gap-9 gap-4'>
                     <div className='rounded-2xl flex justify-center items-center flex-col bg-[#282828]'>
                         <div className='h-[85%] w-[80%] flex flex-col items-start py-2'>
@@ -202,7 +202,7 @@ const About = () => {
             <div className='bg-[#212121] h-[100px] w-full'>
             </div>
             <div className='flex flex-col items-center md:gap-5 gap-3 xl:m-35 lg:m-25 md:m-15 sm:mt-10 m-5 sm:pt-0 pt-10'>
-                <h1 className='lg:text-6xl md:text-5xl sm:text-4xl text-4xl font-sans text-center overflow-hidden p-2 xl:w-[800px]'>Join the mission for smarter, cleaner transportation</h1>
+                <h2 className=' text-center overflow-hidden p-2 xl:w-[800px]'>Join the mission for smarter, cleaner transportation</h2>
                 <p className='text-lg text-center text-gray-500 md:w-[500px] sm:w-[400px] w-auto'>Let’s work together to reduce emissions, optimize our operations, and make a positive impact on the planet.</p>
                 <button className='text-center bg-[#7EEA57] p-3 hover:text-[#7EEA57] hover:bg-black text-black rounded-full mt-6'>Talk to our experts</button>
             </div>
