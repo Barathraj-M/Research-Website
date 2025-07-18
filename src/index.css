@@ -1,3 +1,48 @@
 @import "tailwindcss";
 
 /* Tailwind CSS base styles */
+
+@theme {
+    --font-family-body: Inter, sans-serif;
+    --font-family-heading: "Instrument Sans", sans-serif;
+
+    --breakpoint-xs: 200px;
+    --breakpoint-sm: 500px;
+    --breakpoint-md: 980px;
+    --breakpoint-lg: 1024px;
+
+    --color-black: #212121;
+    --color-white: white;
+    --color-gray-5: lightgrey;
+    --color-gray-3: #7b7b7b;
+    --color-primary-1: #7eea57;
+    --color-gray-6: #ebebeb;
+    --color-gray-4: #bebebe;
+    --color-gray-7: whitesmoke;
+    --color-gray-8: #f9f9f9;
+    --color-transparent: #0000;
+    --color-gray-1: #282828;
+    --color-gray-2: #636363;
+
+    --border-radius-sm: .625rem;
+    --border-radius-form-input: .625rem;
+    --border-radius-lg: 3.125rem;
+    --border-radius-md: 1.25rem;
+    --border-radius-button: 6.25rem;
+    --border-radius-xs: .3475rem;
+    --font-size-11: 3.5rem 63px;
+    --font-size-10: 3rem;
+    --font-size--size-8: 2.25rem;
+    --base-font-size: 1rem;
+    --base-font-size-small: .938rem;
+    --font-size-1: .938rem;
+    --font-size-2: 1rem;
+    --font-size-3: 1.125rem;
+    --font-size-4: 1.25rem;
+    --font-size-5: 1.375rem;
+    --font-size-6: 1.75rem;
+    --font-size-7: 2rem;
+    --font-size-9: 2.5rem;
+    --font-size-12: 5rem;
+    --border-radius-sm-01: .4375rem;
+}
