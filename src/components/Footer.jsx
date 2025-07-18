@@ -29,7 +29,7 @@ const Footer = () => {
               <h2>We believe real change starts deep within the supply chain.</h2>
               <div className='flex flex-col justify-start items-center gap-y-3 w-full'>
                 <p>Join our eco-supply community.</p>
-                <form className='flex flex-row justify-around items-center gap-x-2 w-full rounded-full p-1 border-1 border-gray-3 focus:outline-none focus:ring-2 focus:ring-blue-500'>
+                <form className='flex flex-row justify-around items-center gap-x-2 w-full rounded-full p-1 border-1 border-gray-3 focus-within:ring-1 focus-within:ring-gray-2'>
                   <input 
                     type='text'
                     id='email'
