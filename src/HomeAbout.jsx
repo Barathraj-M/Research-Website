@@ -1,82 +1,83 @@
-import { use, useRef } from "react";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import bulb from "./assets/bulb.svg";
 import star from "./assets/star.svg";
 import cross from "./assets/cross.svg";
 import crosses from "./assets/crosses.svg";
-import "./HomeAbout.css";
-import { motion, useInView } from "framer-motion";
+import "./HomeAbout.css"; // For custom `.custom-box`, `.box`, etc.
+
 const HomeAbout = () => {
   const head = useRef(null);
   const headInView = useInView(head, { once: false });
+
   const imgage = useRef(null);
   const imgageInView = useInView(imgage, { once: false });
+
   const bottomRef = useRef(null);
   const bottomInView = useInView(bottomRef, { once: false });
+
   return (
-    <div className="home-about d-flex flex-column align-items-center text-center p-2 berkshire-swash-regular">
+    <div className="home-about flex flex-col items-center text-center p-2 berkshire-swash-regular">
+      {/* Header */}
       <motion.div
         ref={head}
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: headInView ? 1 : 0, y: headInView ? 0 : 100 }}
         transition={{ duration: 1, ease: "easeInOut" }}
-        className="d-flex flex-column align-items-center text-center"
+        className="flex flex-col items-center text-center"
       >
-        <img src={bulb} alt="" className="mt-2" />
-        <div className="border border-1 rounded-pill p-1 mt-1 ps-3 pe-3">
+        <img src={bulb} alt="bulb" className="mt-2" />
+        <div className="border border-gray-400 rounded-full px-4 py-1 mt-1">
           Driving change
         </div>
-        <div
-          className="col-md-12 col-lg-6"
-          style={{ fontSize: "2.3rem", fontWeight: "600", margin: "0 auto" }}
-        >
+        <div className="w-full lg:w-1/2 text-[2.3rem] font-semibold mx-auto mt-2">
           At Eco-Supply Transportation, we are{" "}
-          <span style={{ color: "gray" }}>redefining </span>
-          logistics by integrating sustainability{" "}
-          <span style={{ color: "gray" }}>into every mile.</span>
+          <span className="text-gray-500">redefining</span> logistics by
+          integrating sustainability{" "}
+          <span className="text-gray-500">into every mile.</span>
         </div>
       </motion.div>
+
       {/* 3 Boxes */}
       <motion.div
         ref={imgage}
-        initial={{ opacity: 0, scale: 1.1, }}
+        initial={{ opacity: 0, scale: 1.1 }}
         animate={{
           opacity: imgageInView ? 1 : 0,
           scale: imgageInView ? 1 : 1.1,
-        
         }}
         transition={{ duration: 2, ease: "backOut" }}
-        className="d-flex flex-wrap justify-content-center gap-4 mt-4 boxs"
-        style={{ width: "100%" }}
+        className="flex flex-wrap justify-center gap-4 mt-4 w-full boxs"
       >
-        <div className="custom-box box col-3"></div>
-        <div className="custom-box box col-3"></div>
-        <div className="custom-box box col-3"></div>
+        <div className="custom-box box w-[30%] min-w-[150px]"></div>
+        <div className="custom-box box w-[30%] min-w-[150px]"></div>
+        <div className="custom-box box w-[30%] min-w-[150px]"></div>
       </motion.div>
+
+      {/* CTA and Features */}
       <motion.div
-      ref={bottomRef}
+        ref={bottomRef}
         initial={{ opacity: 0, y: -150 }}
         animate={{ opacity: bottomInView ? 1 : 0, y: bottomInView ? 0 : -150 }}
         transition={{ duration: 1, ease: "easeInOut" }}
+        className="mt-5 flex flex-col items-center"
       >
-        <div
-          className="btn rounded-pill mt-5"
-          style={{ backgroundColor: "#4CAF50", color: "white" }}
-        >
+        <div className="rounded-full mt-5  py-2 bg-[#4CAF50] text-white cursor-pointer " style={{paddingLeft: "2rem", paddingRight: "2rem"}}>
           More about us
         </div>
 
-        <div className="col-12 d-flex gap-1 justify-content-center mt-3">
-          <div className="col-4 d-flex justify-content-center flex-column align-items-center">
-            <img src={star} alt="" />
-            <div style={{ color: "gray" }}>Optimized routes</div>
+        <div className="w-full flex flex-wrap justify-center gap-2 mt-3">
+          <div className="w-1/3 flex flex-col items-center">
+            <img src={star} alt="star" />
+            <div className="text-gray-500 mt-1">Optimized routes</div>
           </div>
-          <div className="col-4  d-flex justify-content-center flex-column align-items-center">
-            <img src={cross} alt="" />
-            <div style={{ color: "gray" }}>Lower emissions</div>
+          <div className="w-1/3 flex flex-col items-center">
+            <img src={cross} alt="cross" />
+            <div className="text-gray-500 mt-1">Lower emissions</div>
           </div>
-          <div className="col-4 d-flex justify-content-center flex-column align-items-center">
-            <img src={crosses} alt="" />
-            <div style={{ color: "gray" }}>Sustainable logistics</div>
+          <div className="w-3/3 flex flex-col items-center">
+            <img src={crosses} alt="crosses" />
+            <div className="text-gray-500 mt-1">Sustainable logistics</div>
           </div>
         </div>
       </motion.div>
