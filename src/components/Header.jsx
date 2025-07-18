@@ -43,7 +43,7 @@ const Header = () => {
               />
               <Link
                 to='/'
-                className='font-semibold hover:text-gray-2 transition-colors duration-300'
+                className='font-semibold hover:text-gray-1 transition-colors duration-300'
               >
                 Home
               </Link>
@@ -59,7 +59,7 @@ const Header = () => {
               />
               <Link
                 to='/about'
-                className='font-semibold hover:text-gray-2 transition-colors duration-300'
+                className='font-semibold hover:text-gray-1 transition-colors duration-300'
               >
                 About
               </Link>
@@ -75,7 +75,7 @@ const Header = () => {
               />
               <Link
                 to='/environment'
-                className='font-semibold hover:text-gray-2 transition-colors duration-300'
+                className='font-semibold hover:text-gray-1 transition-colors duration-300'
               >
                 Environment
               </Link>
@@ -91,7 +91,7 @@ const Header = () => {
               />
               <Link
                 to='/social'
-                className='font-semibold hover:text-gray-2 transition-colors duration-300'
+                className='font-semibold hover:text-gray-1 transition-colors duration-300'
               >
                 Social
               </Link>
@@ -107,7 +107,7 @@ const Header = () => {
               />
               <Link
                 to='/contact'
-                className='font-semibold hover:text-gray-2 transition-colors duration-300'
+                className='font-semibold hover:text-gray-1 transition-colors duration-300'
               >
                 Contact
               </Link>
@@ -155,7 +155,7 @@ const Header = () => {
                 />
                 <Link
                   to='/'
-                  className='font-semibold hover:text-gray-2 transition-colors duration-300'
+                  className='font-semibold hover:text-gray-1 transition-colors duration-300'
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Home
@@ -172,7 +172,7 @@ const Header = () => {
                 />
                 <Link
                   to='/about'
-                  className='font-semibold hover:text-gray-2 transition-colors duration-300'
+                  className='font-semibold hover:text-gray-1 transition-colors duration-300'
                   onClick={() => setIsMenuOpen(false)}
                 >
                   About
@@ -189,7 +189,7 @@ const Header = () => {
                 />
                 <Link
                   to='/environment'
-                  className='font-semibold hover:text-gray-2 transition-colors duration-300'
+                  className='font-semibold hover:text-gray-1 transition-colors duration-300'
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Environment
@@ -206,7 +206,7 @@ const Header = () => {
                 />
                 <Link
                   to='/social'
-                  className='font-semibold hover:text-gray-2 transition-colors duration-300'
+                  className='font-semibold hover:text-gray-1 transition-colors duration-300'
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Social
@@ -223,7 +223,7 @@ const Header = () => {
                 />
                 <Link
                   to='/contact'
-                  className='font-semibold hover:text-gray-2 transition-colors duration-300'
+                  className='font-semibold hover:text-gray-1 transition-colors duration-300'
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact
