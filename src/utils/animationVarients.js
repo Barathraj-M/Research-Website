@@ -36,3 +36,19 @@ export const navMenuVariants = {
         }
     }
 }
+
+export const footerContainerVariants = {
+    initial: {
+        opacity: 0,
+        y: -200
+    },
+    whileInView: {
+        opacity: [0.5, 0.8, 1],
+        y: 0,
+        transition: {
+            duration: 1,
+            ease: "easeInOut",
+            when: "beforeChildren"
+        }
+    }
+}

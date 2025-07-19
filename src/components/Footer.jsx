@@ -1,14 +1,20 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 
 import DummyLogo from '../assets/Images/dummy-icon.svg';
 import FooterDivider from '../assets/Images/nav-divider.svg';
+import BrixLogo from '../assets/Images/brix-logo.jpg';
+import QdotzLogo from '../assets/Images/qdotz-logo.png';
+import CoreverseLogo from '../assets/Images/coreverse-logo.png';
+import SavantLogo from '../assets/Images/sna-logo.jpg';
 import { LinkedIn, InstagramIcon, YoutubeIcon } from '../assets/Icons/Icons.jsx';
-
 
 import footerMp4 from '../assets/Videos/footer-video.mp4';
 import footerWebm from '../assets/Videos/footer-video.webm';
 
 import '../index.css'
+
+import { footerContainerVariants } from '../utils/animationVarients.js';
 
 const Footer = () => {
   return (
@@ -21,7 +27,13 @@ const Footer = () => {
         Your browser does not support the video tag.
       </video>
 
-      <div className='before:w-full before:h-full before:mx-auto after:absolue after:inset-0 after:bg-white after:backdrop-blur-sm relative z-20 px-3 md:px-10 py-5 my-auto'>
+      <motion.div 
+        className='before:w-full before:h-full before:mx-auto after:absolue after:inset-0 after:bg-white after:backdrop-blur-sm relative z-20 px-3 md:px-10 py-5 my-auto'
+        variants={footerContainerVariants}
+        initial='initial'
+        whileInView='whileInView'
+        viewport={{ once: true, amount: "some" }}
+      >
         <div className='flex xs:flex-col lg:flex-row w-full gap-0'>
           <div className='lg:w-10/20 flex flex-col justify-between items-center gap-3 bg-white rounded-2xl p-5 border-white'>
             <img src={DummyLogo} alt='brand-logo' className='w-30 h-10 self-start'/>
@@ -50,11 +62,11 @@ const Footer = () => {
           <img
             src={FooterDivider}
             alt='footer-divider'
-            className='xs:w-10 xs:h-10 lg:h-10 lg:w-auto xs:rotate-90 lg:rotate-0 self-center'
+            className='xs:w-10 xs:h-auto lg:h-10 lg:w-auto xs:rotate-90 lg:rotate-0 self-center m-0 p-0 object-fill'
           />
 
-          <div className='grid grid-cols-2 bg-white rounded-2xl p-4 border-white'>
-            <div className='border-b-1 border-e-1 border-gray-5 border-dashed flex flex-col justify-between items-start gap-y-3 p-2'>
+          <div className='grid grid-cols-2 bg-white rounded-2xl p-10 border-white'>
+            <div className='border-b-1 border-e-1 border-gray-5 border-dashed flex flex-col justify-between items-start gap-y-3 py-4'>
               <h2>Pages</h2>
               <div className='grid grid-cols-2 gap-x-2'>
                 <div className='flex flex-col justify-center items-start gap-y-2'>
@@ -71,17 +83,49 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className='border-b-1 border-gray-5 border-dashed p-2'>
-              <h2>Address</h2>
-              <p>123 Remote Work Avenue, San Francisco, CA 94105</p>
-              <p>144 Creative Street, Suite 456, New York, NY 10001, USA</p>
+            <div className='border-b-1 border-gray-5 border-dashed py-4 ps-4'>
+              <h2>Other Services</h2>
+              <div className='grid grid-cols-2 gap-x-2 gap-y-5 text-center mt-5'>
+                <a href='' target='_blank' rel='noopener noreferrer'>
+                  <img 
+                    src={BrixLogo} 
+                    alt='brix-logo' 
+                    className='w-15 h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
+                    loading='eager' 
+                  />
+                </a>
+                <a href='' target='_blank' rel='noopener noreferrer'>
+                  <img 
+                    src={QdotzLogo} 
+                    alt='qdotz-logo' 
+                    className='w-15 h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
+                    loading='eager' 
+                  />
+                </a>
+                <a href='' target='_blank' rel='noopener noreferrer'>
+                  <img 
+                    src={CoreverseLogo} 
+                    alt='coreverse-logo' 
+                    className='w-20 h-20 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto grayscale'
+                    loading='eager' 
+                  />
+                </a>
+                <a href='' target='_blank' rel='noopener noreferrer'>
+                  <img 
+                    src={SavantLogo} 
+                    alt='savant-logo' 
+                    className='w-15 h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
+                    loading='eager' 
+                  />
+                </a>
+              </div>
             </div>
-            <div className='border-e-1 border-gray-5 border-dashed flex flex-col justify-between items-start gap-y-3 p-2'>
+            <div className='border-e-1 border-gray-5 border-dashed flex flex-col justify-between items-start gap-y-3 py-4'>
               <h2>Contact</h2>
               <a href='mailto:hello@slrp-research-park.com' className='text-decoration-none hover:text-black active:text-black transition-all duration-300 ease-in-out'>hello@slrp-research-park.com</a>
               <a href='tel:+91 6383499920' className='text-decoration-none hover:text-black active:text-black transition-all duration-300 ease-in-out'>+91 6383499920</a>
             </div>
-            <div className='border-gray-5 border-dashed p-2'>
+            <div className='border-gray-5 border-dashed py-4 ps-4'>
               <h2>Social Media</h2>
               <div className='flex flex-row justify-start items-center gap-x-4 mt-5'>
                 <a href='https://www.linkedin.com/company/slrp-research-park/' target='_blank' rel='noopener noreferrer' className='hover:text-blue-700'>
@@ -97,7 +141,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </footer>
   )
 }
