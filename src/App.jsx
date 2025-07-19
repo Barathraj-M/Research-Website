@@ -11,7 +11,7 @@ import {
 import Header from './components/Header'
 import Footer from './components/Footer'
 
-const Home = lazy(() => import('./temp pages/Home'))
+const Home = lazy(() => import('./Home.jsx'))
 const Contact = lazy(() => import('./temp pages/Contact'))
 import About from './About.jsx'
 const Environment = lazy(() => import('./temp pages/Environment'))
