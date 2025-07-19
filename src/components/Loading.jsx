@@ -8,7 +8,8 @@ const Loading = () => {
         <img
           src={LoadingHolder}
           alt='loading'
-          className='w-50 h-50 animate-spin-slow'
+          className='w-20 h-20 animate-ping'
+          loading='eager'
         />
     </div>
   )
