@@ -1,13 +1,55 @@
+
 import { useState } from 'react'
-import Aboutus from './Aboutus.jsx'
+import React, { Suspense, lazy } from 'react'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useLocation
+} from 'react-router-dom'
+
+import Header from './components/Header'
+import Footer from './components/Footer'
+
+const Home = lazy(() => import('./temp pages/Home'))
+const Contact = lazy(() => import('./temp pages/Contact'))
 import About from './About.jsx'
+const Environment = lazy(() => import('./temp pages/Environment'))
+const Social = lazy(() => import('./temp pages/Social'))
+const Loading = lazy(() => import('./components/Loading'))
+const NotFound = lazy(() => import('./pages/NotFound'))
 
-function App() {
-
+function AppContent() {
+  const location = useLocation()
+  
+  const validRoutes = ['/', '/about', '/contact', '/environment', '/social']
+  const isValidRoute = validRoutes.includes(location.pathname)
+  
   return (
     <>
-      <About />
+      {isValidRoute && <Header />}
+      <div className={isValidRoute ? 'mt-30' : ''}>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/environment' element={<Environment />} />
+          <Route path='/social' element={<Social />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </div>
+      {isValidRoute && <Footer />}
     </>
+  )
+}
+
+function App() {
+  return (
+    <Suspense fallback={<Loading />}>
+      <BrowserRouter>
+        <AppContent />
+      </BrowserRouter>
+    </Suspense>
   )
 }
 
