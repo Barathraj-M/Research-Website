@@ -56,7 +56,7 @@ const Contact = () => {
                                     Eco-supply solutions start with a conversation. Whether you're exploring green logistics or need tailored support, we're ready to assist.
                                 </motion.p>
                             </div>
-                            <div className='xs:w-full md:w-9/10 lg:w-8/10 flex flex-row justify-between items-center gap-0'>
+                            <div className='xs:w-full sm:w-8/10 md:w-9/10 lg:w-8/10 flex flex-row justify-between items-center gap-0'>
                                 <img
                                     src={RoundedBottomLeft}
                                     alt='Rounded bottom left decoration'
