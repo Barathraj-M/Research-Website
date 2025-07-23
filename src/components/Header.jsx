@@ -137,7 +137,7 @@ const Header = () => {
       <AnimatePresence mode='wait'>
         {isMenuOpen && (
           <motion.nav 
-            className='absolute top-full left-0 right-0 mt-3 mx-3 bg-white/10 border-1 border-gray-4 rounded-lg backdrop-blur-sm p-3 md:hidden z-40'
+            className='absolute top-full left-0 right-0 mt-3 mx-3 bg-white/80 border-1 border-gray-4 rounded-lg backdrop-blur-sm p-3 md:hidden z-40'
             variants={navMenuVariants}
             initial='initial'
             animate='animate'
