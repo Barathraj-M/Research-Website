@@ -134,7 +134,7 @@ const Contact = () => {
                             Let's start a <span className='text-primary-1!'>conversation</span>
                         </motion.h2>
                         <motion.form
-                            className='w-9/10 md:w-7/10 h-full flex flex-col justify-start items-start sm:gap-y-5 md:gap-y-10 rounded-3xl xs:p-5 md:p-10 bg-white border-0 focus-within:shadow-2xl'
+                            className='w-9/10 md:w-7/10 h-full flex flex-col justify-start items-start xs:gap-y-5 md:gap-y-10 rounded-3xl xs:p-5 md:p-10 bg-white border-0 focus-within:shadow-2xl'
                             variants={contentBasicVariants}
                             initial='initial'
                             whileInView='whileInView'
@@ -154,7 +154,7 @@ const Contact = () => {
                                     className='w-full p-4 border border-dashed border-gray-4 focus:outline-dashed focus:ring-gray-2 focus:border-transparent rounded-md transition-all duration-200'
                                 />
                             </div>
-                            <div className='w-full flex xs:flex-col md:flex-row justify-between items-center gap-x-8 sm:gap-y-5 md:gap-y-10'>
+                            <div className='w-full flex xs:flex-col md:flex-row justify-between items-center gap-x-8 xs:gap-y-5 md:gap-y-10'>
                                 <div className='w-full'>
                                     <label htmlFor='email' className='block mb-2 text-black'>
                                         Email Address
