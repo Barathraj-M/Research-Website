@@ -18,7 +18,7 @@ import { footerContainerVariants } from '../utils/animationVarients.js';
 
 const Footer = () => {
   return (
-    <footer className='w-full relative flex flex-col items-center justify-center overflow-hidden min-h-screen'>
+    <footer className='w-full pt-20 relative flex flex-col items-center justify-center overflow-hidden'>
       <div className='h-15 w-full absolute inset-0 bg-linear-to-t from-transparent via-gray-8/60 to-gray-8'></div>
 
       <video className='absolute left-0 top-0 w-[100vw] h-full object-cover -z-50 overflow-clip m-auto' autoPlay loop muted playsInline preload='auto'>

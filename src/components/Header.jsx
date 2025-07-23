@@ -122,7 +122,7 @@ const Header = () => {
         </nav>
         <div className='flex flex-row gap-x-2 items-center h-full bg-transparent'>
           <div className='xs:hidden p-2 bg-white rounded-full h-full sm:flex items-center'>
-            <PrimaryButtom link='https://example.com' text='Contact us' />
+            <PrimaryButtom link='/contact' text='Contact us' />
           </div>
           <button
             className='md:hidden bg-white rounded-full flex items-center h-full cursor-pointer'
