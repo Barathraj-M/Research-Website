@@ -2,6 +2,8 @@ import React from 'react'
 import image from '../assets/9224444.jpg'; // Update with the correct path to your image
 import { useRef,useEffect } from 'react';
 
+import '../index.css';
+
 const About = () => {
     const logos = [
     'https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683d3b2d6d119a92715751a6_client-image-06.svg',
@@ -38,43 +40,70 @@ const About = () => {
 
     return (
         <div>
-            <div className="w-[100vw] relative lg:h-[655px] md:h-[565px] h-[500px]">
-                <img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684129d5df974c68c80cbd41_7f31505442587e86e496054776f573fd_about-hero-image.jpg" loading="eager" alt="About Image" className='absolute w-full h-full'></img>
+            <div className="w-full relative min-h-[400px] sm:min-h-[500px] lg:min-h-[655px]">
+                <img 
+                    src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684129d5df974c68c80cbd41_7f31505442587e86e496054776f573fd_about-hero-image.jpg" 
+                    loading="eager" 
+                    alt="About Image" 
+                    className='absolute w-full h-full object-cover'
+                />
                 <div className="absolute inset-0 gradient"></div>
-                <div className='w-full h-full flex flex-col justify-between'>
-                    <div className='relative flex flex-col justify-evenly sm:gap-4 gap-1 lg:w-[350px] lg:h-[385px] lg:ms-22 lg:mt-30 md:w-[760px] md:h-[230px] md:ms-12 md:mt-30 mt-25 ms-5 me-5'>
-                        <h1 className='text-white! overflow-hidden'>About Mivora<span className='md:text-3xl text-lg absolute me-10 overflow-hidden'>TM</span></h1>
-                        <p className='mb-2 text-white overflow-hidden'>We are pioneers in sustainable logistics, delivering smart and efficient supply chain solutions that minimize environmental impact and maximize value for businesses worldwide.</p>
-                        <button className='text-black bg-[#7EEA57] md:h-12 h-12 w-45 rounded-full hover:text-white p-3 text-center hover:bg-transparent hover:border border-white overflow-hidden'>Get a green quote</button>
+                <div className='w-full h-full flex flex-col justify-between px-4 pt-4 sm:px-6 sm:pt-4 lg:px-8 lg:pt-8'>
+                    <div className='relative flex flex-col justify-center gap-3 sm:gap-4 max-w-md lg:max-w-lg mt-16 sm:mt-20 lg:mt-24 mb-5'>
+                        <h1 className='text-white! font-bold overflow-hidden'>
+                            About Mivora<span className='align-top ml-1'>TM</span>
+                        </h1>
+                        <p className='text-white! leading-relaxed overflow-hidden'>
+                            We are pioneers in sustainable logistics, delivering smart and efficient supply chain solutions that minimize environmental impact and maximize value for businesses worldwide.
+                        </p>
+                        <button className='text-black bg-[#7EEA57] h-10 sm:h-12 px-6 py-2 rounded-full hover:text-white hover:bg-transparent hover:border border-white transition-all duration-300 font-medium self-start overflow-hidden'>
+                            Get a green quote
+                        </button>
                     </div>
-                    <div className='relative flex self-end lg:me-17 ps-6 pe-6 lg:ms-17 md:me-10 md:ms-10 ms-2 me-2 text-gray-500'>
-                        <div className='absolute left-0 w-10 h-10 bg-white z-40 self-end'></div>
-                        <div className='md:w-[590px] w-[auto] sm:h-auto h-[180px] bg-white flex lg:justify-between justify-evenly rounded-[10px] flex-wrap overflow-hidden'>
-                            <div className='flex flex-col  items-center justify-center p-2 md:gap-7 md:p-4 gap-3'>
-                                <p>Lower CO2 Emission</p>
-                                <div className='flex gap-5 justify-center items-center'>
-                                    <img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683976f56676896290088678_counter-icon-01.svg" loading="lazy" alt="Icon" className='md:h-8 h-5'></img>
-                                    <div className='md:text-2xl text-lg text-gray-900'>30%</div>
+                    
+                    <div className='relative flex self-end w-full max-w-4xl -mb-[0.8px]'>
+                        <div className='absolute left-0 w-6 sm:w-8 lg:w-10 h-6 sm:h-8 lg:h-10 bg-white z-40 self-end'></div>
+                        <div className='w-full bg-gray-8 flex justify-around items-center rounded-lg p-3 sm:p-4 lg:p-6 overflow-hidden'>
+                            <div className='flex flex-col items-center justify-center gap-2 sm:gap-3 lg:gap-4 text-center'>
+                                <p className='text-gray-600'>Lower CO2 Emission</p>
+                                <div className='flex gap-2 sm:gap-3 lg:gap-4 justify-center items-center'>
+                                    <img 
+                                        src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683976f56676896290088678_counter-icon-01.svg" 
+                                        loading="lazy" 
+                                        alt="Icon" 
+                                        className='h-4 sm:h-6 lg:h-8'
+                                    />
+                                    <div className='text-lg sm:text-xl lg:text-2xl text-gray-900 font-bold'>30%</div>
                                 </div>
                             </div>
-                            <div className="h-auto w-px  mt-2 mb-5 bg-gray-300"></div>
-                            <div className='flex flex-col items-center p-2 justify-center md:gap-7 md:p-4 gap-3'>
-                                <p>Fuel Cost Saving</p>
-                                <div className='flex gap-5 justify-center items-center'>
-                                    <img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683976f506218de3dbfbee9e_counter-icon-02.svg" loading="lazy" alt="Icon" className='md:h-8 h-5'></img>
-                                    <div className='md:text-2xl text-lg text-gray-900'>60%</div>
+                            <div className="h-12 sm:h-16 lg:h-20 w-px bg-gray-300"></div>
+                            <div className='flex flex-col items-center justify-center gap-2 sm:gap-3 lg:gap-4 text-center'>
+                                <p className='text-gray-600'>Fuel Cost Saving</p>
+                                <div className='flex gap-2 sm:gap-3 lg:gap-4 justify-center items-center'>
+                                    <img 
+                                        src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683976f506218de3dbfbee9e_counter-icon-02.svg" 
+                                        loading="lazy" 
+                                        alt="Icon" 
+                                        className='h-4 sm:h-6 lg:h-8'
+                                    />
+                                    <div className='text-lg sm:text-xl lg:text-2xl text-gray-900 font-bold'>60%</div>
                                 </div>
                             </div>
-                            <div className="h-auto w-px  mt-2 mb-5 bg-gray-300"></div>
-                            <div className='flex flex-col items-center justify-center md:gap-7 p-2 md:p-4 gap-3'>
-                                <p>Tons of CO2 saved anually</p>
-                                <div className='flex gap-5 justify-center items-center'>
-                                    <img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683976f5384d68e5ba0c57c7_counter-icon-03.svg" loading="lazy" alt="Icon" className='md:h-8 h-5'></img>
-                                    <div className='md:text-2xl text-lg text-gray-900'>90%</div>
+                            <div className="h-12 sm:h-16 lg:h-20 w-px bg-gray-300"></div>
+                            <div className='flex flex-col items-center justify-center gap-2 sm:gap-3 lg:gap-4 text-center'>
+                                <p className='text-gray-600'>Tons of CO2 saved annually</p>
+                                <div className='flex gap-2 sm:gap-3 lg:gap-4 justify-center items-center'>
+                                    <img 
+                                        src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683976f5384d68e5ba0c57c7_counter-icon-03.svg" 
+                                        loading="lazy" 
+                                        alt="Icon" 
+                                        className='h-4 sm:h-6 lg:h-8'
+                                    />
+                                    <div className='text-lg sm:text-xl lg:text-2xl text-gray-900 font-bold'>90%</div>
                                 </div>
                             </div>
                         </div>
-                        <div className='absolute right-0 w-10 h-10 bg-white self-end'></div>
+                        <div className='absolute right-0 w-6 sm:w-8 lg:w-10 h-6 sm:h-8 lg:h-10 bg-white self-end'></div>
                     </div>
                 </div>
             </div>

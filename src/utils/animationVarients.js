@@ -131,3 +131,24 @@ export const sectionPillVariants = {
         }
     }
 }
+
+export const serviceCardVariants = {
+    hidden: { 
+        opacity: 0, 
+        x: 100 
+    },
+    visible: { 
+        opacity: 1, 
+        x: 0, 
+        transition: { 
+            duration: 1,
+            ease: "easeInOut",
+            type: "spring",
+            bounce: 0.5,
+            damping: 20,
+            stiffness: 70,
+            mass: 0.3,
+            velocity: 0.5
+        } 
+    },
+}
