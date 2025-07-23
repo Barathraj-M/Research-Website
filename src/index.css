@@ -180,7 +180,7 @@ p {
   transition: color .3s ease-in-out;
 } */
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1440px) {
   body {
     font-size: var(--font-size-2);
   }
@@ -204,7 +204,7 @@ p {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   body {
     font-size: var(--font-size-1);
   }
@@ -228,7 +228,7 @@ p {
   }
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 480px) {
   body {
     font-size: var(--font-size-1);
   }
@@ -236,10 +236,10 @@ p {
     font-size: var(--font-size-8);
   }
   h2 {
-    font-size: var(--font-size-7);
+    font-size: var(--font-size-6);
   }
   h3 {
-    font-size: var(--font-size-7);
+    font-size: var(--font-size-6);
   }
   h4 {
     font-size: var(--font-size-5);
@@ -251,6 +251,31 @@ p {
     font-size: var(--font-size-3);
   }
 }
+
+@media screen and (max-width: 330px) {
+  body {
+    font-size: var(--font-size-1);
+  }
+  h1 {
+    font-size: var(--font-size-8);
+  }
+  h2 {
+    font-size: var(--font-size-5);
+  }
+  h3 {
+    font-size: var(--font-size-5);
+  }
+  h4 {
+    font-size: var(--font-size-4);
+  }
+  h5 {
+    font-size: var(--font-size-3);
+  }
+  h6 {
+    font-size: var(--font-size-2);
+  }
+}
+
 
 .gradient{
   background-image: linear-gradient(90deg, rgb(34, 33, 33), transparent);
