@@ -5,6 +5,7 @@ import star from "./assets/star.svg";
 import cross from "./assets/cross.svg";
 import crosses from "./assets/crosses.svg";
 import "./HomeAbout.css"; // For custom `.custom-box`, `.box`, etc.
+import SectionPill from "./components/SectionPill";
 
 const HomeAbout = () => {
   const head = useRef(null);
@@ -27,9 +28,7 @@ const HomeAbout = () => {
         className="flex flex-col items-center text-center"
       >
         <img src={bulb} alt="bulb" className="mt-2" />
-        <div className="border border-gray-400 rounded-full px-4 py-1 mt-1">
-          Driving change
-        </div>
+        <SectionPill sectionTitle={'Driving Changes'} className={'h-auto w-auto'}/>
         <div className="w-full lg:w-1/2 text-[2.3rem] font-semibold mx-auto mt-2">
           At Eco-Supply Transportation, we are{" "}
           <span className="text-gray-500">redefining</span> logistics by

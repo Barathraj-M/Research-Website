@@ -9,7 +9,7 @@ import PrimaryButtom from '../components/PrimaryButtom'
 
 import CollapsableCard from '../components/CollapsableCard'
 
-import { contentBasicAnimation, overlayAnimation } from '../utils/animationVarients'
+import { contentBasicVariants, overlayVariants } from '../utils/animationVarients'
 
 import '../index.css';
 
@@ -21,7 +21,7 @@ const Contact = () => {
                     <div className='w-full h-full relative'>
                         <motion.div
                             className='w-full h-full absolute inset-0 bg-linear-to-t from-transparent via-gray-1/50 to-gray-1'
-                            variants={overlayAnimation}
+                            variants={overlayVariants}
                             initial='initial'
                             whileInView='whileInView'
                             exit='exit'
@@ -35,7 +35,7 @@ const Contact = () => {
                             <div className='flex flex-col justify-center items-center gap-y-7 max-w-md'>
                                 <motion.h1
                                     className='mx-auto text-white!'
-                                    variants={contentBasicAnimation}
+                                    variants={contentBasicVariants}
                                     initial='initial'
                                     whileInView='whileInView'
                                     custom={1}
@@ -46,7 +46,7 @@ const Contact = () => {
                                 </motion.h1>
                                 <motion.p
                                     className='mx-auto text-white font-medium text-center'
-                                    variants={contentBasicAnimation}
+                                    variants={contentBasicVariants}
                                     initial='initial'
                                     whileInView='whileInView'
                                     viewport={{ once: true, amount: "some" }}
@@ -77,7 +77,7 @@ const Contact = () => {
                                 >
                                     <motion.div
                                         className='flex flex-col justify-center items-center gap-y-2 h-full xs:border-b-1 md:border-b-0 md:border-r-1 border-dashed border-gray-4 p-4'
-                                        variants={contentBasicAnimation}
+                                        variants={contentBasicVariants}
                                         initial='initial'
                                         whileInView='whileInView'
                                         custom={1}
@@ -89,7 +89,7 @@ const Contact = () => {
                                     </motion.div>
                                     <motion.div
                                         className='flex flex-col justify-center items-center gap-y-2 h-full xs:border-b-1 md:border-b-0 md:border-r-1 border-dashed border-gray-4 p-4'
-                                        variants={contentBasicAnimation}
+                                        variants={contentBasicVariants}
                                         initial='initial'
                                         whileInView='whileInView'
                                         custom={4}
@@ -101,7 +101,7 @@ const Contact = () => {
                                     </motion.div>
                                     <motion.div
                                         className='text-center flex flex-col justify-center items-center gap-y-2 h-full p-4'
-                                        variants={contentBasicAnimation}
+                                        variants={contentBasicVariants}
                                         initial='initial'
                                         whileInView='whileInView'
                                         custom={8}
@@ -124,7 +124,7 @@ const Contact = () => {
                     <div className='w-full flex flex-col justify-center items-center gap-y-10 my-10'>
                         <motion.h2
                             className='text-center'
-                            variants={contentBasicAnimation}
+                            variants={contentBasicVariants}
                             initial='initial'
                             whileInView='whileInView'
                             viewport={{ once: true, amount: "some" }}
@@ -135,7 +135,7 @@ const Contact = () => {
                         </motion.h2>
                         <motion.form
                             className='w-9/10 md:w-7/10 h-full flex flex-col justify-start items-start sm:gap-y-5 md:gap-y-10 rounded-3xl xs:p-5 md:p-10 bg-white border-0 focus-within:shadow-2xl'
-                            variants={contentBasicAnimation}
+                            variants={contentBasicVariants}
                             initial='initial'
                             whileInView='whileInView'
                             viewport={{ once: true, amount: "some" }}
@@ -203,7 +203,7 @@ const Contact = () => {
             <section className='w-full min-h-screen p-2 flex flex-col justify-start items-center gap-y-8'>
                 <motion.h2 
                     className='text-center font-semibold mt-20! max-w-lg'
-                    variants={contentBasicAnimation}
+                    variants={contentBasicVariants}
                     initial='initial'
                     whileInView='whileInView'
                     custom={1}

@@ -1,5 +1,3 @@
-
-import { useState } from 'react'
 import React, { Suspense, lazy } from 'react'
 import {
   BrowserRouter,

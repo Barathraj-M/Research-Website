@@ -53,7 +53,7 @@ export const footerContainerVariants = {
     }
 }
 
-export const contentBasicAnimation = {
+export const contentBasicVariants = {
     initial: {
         opacity: 0,
         y: 100
@@ -78,7 +78,7 @@ export const contentBasicAnimation = {
     }
 }
 
-export const overlayAnimation = {
+export const overlayVariants = {
     initial: {
         opacity: 0,
     },
@@ -116,5 +116,18 @@ export const collapsableContentVariants = {
             duration: 0.3,
             ease: 'easeInOut',
         },
+    }
+}
+
+export const sectionPillVariants = {
+    initial: {
+        opacity: 0,
+    },
+    whileInView: {
+        opacity: 1,
+        transition: {
+            duration: 0.5,
+            ease: "easeInOut",
+        }
     }
 }

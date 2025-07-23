@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import "./OurServices.css";
 import { motion, useInView } from "framer-motion";
+import SectionPill from "./components/SectionPill";
 
 const OurServices = () => {
   const ref = useRef(null);
@@ -15,9 +16,7 @@ const OurServices = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="w-full"
       >
-        <span className="border-2 border px-3 py-1 rounded-full uppercase font-semibold text-sm text-gray-500 inline-block">
-          Our Services
-        </span>
+        <SectionPill sectionTitle={'Our Services'} className={'h-auto w-auto'}/>
 
         <div className="mt-5 text-2xl font-bold text-white flex justify-between items-center w-full flex-wrap gap-4">
           <div>

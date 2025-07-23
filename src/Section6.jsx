@@ -6,6 +6,8 @@ import drop from "./assets/drop.svg";
 import cloud from "./assets/cloud.svg";
 import { BsSunFill } from "react-icons/bs";
 import location from "./assets/location.svg";
+
+import SectionPill from "./components/SectionPill";
 const icons = [arrow, drop, cloud, location];
 const containerVariants = {
   hidden: {},
@@ -37,9 +39,7 @@ const Section6 = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="m-5 text-center"
         >
-          <span className="border-2 border px-3 py-1 rounded-full uppercase font-semibold text-sm text-gray-500">
-            Sustainability in numbers
-          </span>
+          <SectionPill sectionTitle={'Sustainability in numbers'} className={'h-auto w-auto'}/>
           <div
             className="mt-5 ms-2 text-2xl max-w-xl"
             style={{ fontSize: "2.5rem" }}
