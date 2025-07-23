@@ -18,7 +18,7 @@ const HomeAbout = () => {
   const bottomInView = useInView(bottomRef, { once: false });
 
   return (
-    <div className="home-about flex flex-col items-center text-center p-2 berkshire-swash-regular">
+    <div className="home-about flex flex-col items-center text-center p-2">
       {/* Header */}
       <motion.div
         ref={head}
@@ -29,12 +29,12 @@ const HomeAbout = () => {
       >
         <img src={bulb} alt="bulb" className="mt-2" />
         <SectionPill sectionTitle={'Driving Changes'} className={'h-auto w-auto'}/>
-        <div className="w-full lg:w-1/2 text-[2.3rem] font-semibold mx-auto mt-2">
+        <h3 className="w-full lg:w-1/2 text-[2.3rem] font-semibold mx-auto mt-2">
           At Eco-Supply Transportation, we are{" "}
           <span className="text-gray-500">redefining</span> logistics by
           integrating sustainability{" "}
           <span className="text-gray-500">into every mile.</span>
-        </div>
+        </h3>
       </motion.div>
 
       {/* 3 Boxes */}

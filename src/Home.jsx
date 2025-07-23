@@ -25,7 +25,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="landing-page berkshire-swash-regular">
+      <div className="landing-page">
         {/* Always render both videos and fade between them */}
         <motion.video
           className="background-video"

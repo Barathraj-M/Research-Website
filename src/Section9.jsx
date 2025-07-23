@@ -7,7 +7,7 @@ const itemVariants = {
 };
 const Section9 = () => {
   return (
-    <div className='section9 flex flex-col items-center justify-center berkshire-swash-regular'>
+    <div className='section9 flex flex-col items-center justify-center'>
         <motion.div
          viewport={{once:false}}
          variants={itemVariants}
@@ -15,9 +15,9 @@ const Section9 = () => {
           whileInView="show"
           className='flex flex-col items-center'
         >
-            <div className='text-center p-2' style={{fontSize:"3rem"}}>
+            <h3 className='text-center p-2' style={{fontSize:"3rem"}}>
             Join the mission for smarter,<br/> cleaner transportation
-        </div>
+        </h3>
         <div className='text-center p-10' style={{fontSize:"1rem"}}>
             Let’s work together to reduce emissions, optimize our operations, and make a positive impact on the planet.
         </div>

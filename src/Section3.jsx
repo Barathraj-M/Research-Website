@@ -35,7 +35,7 @@ const Section3 = () => {
   const isCardInView = useInView(cardRef, { once: false });
 
   return (
-    <div className="section3 berkshire-swash-regular">
+    <div className="section3">
       <div className="section3-container p-8">
         <motion.div
           ref={ref}

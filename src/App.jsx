@@ -14,6 +14,7 @@ const Contact = lazy(() => import('./pages/Contact'))
 const About = lazy(() => import('./pages/About.jsx'))
 const Environment = lazy(() => import('./pages/Environment.jsx'))
 const Social = lazy(() => import('./pages/Social.jsx'))
+
 const Loading = lazy(() => import('./components/Loading'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 

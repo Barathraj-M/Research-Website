@@ -30,7 +30,7 @@ const Section6 = () => {
   const bottomRef=useRef(null)
   const bottomInView=useInView(bottomRef,{once:false})
   return (
-    <div className="section6 berkshire-swash-regular">
+    <div className="section6">
       <div className="top flex justify-center">
         <motion.div
           ref={ref}
