@@ -9,10 +9,10 @@
     --font-family-heading: "Instrument Sans", sans-serif;
     
     /* Breakpoint for different screens */
-    --breakpoint-xs: 200px;
-    --breakpoint-sm: 500px;
-    --breakpoint-md: 980px;
-    --breakpoint-lg: 1024px;
+    --breakpoint-xs: 330px;
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 1024px;
+    --breakpoint-lg: 1440px;
     
     /* Website Theme Colors */
     --color-black: #212121;

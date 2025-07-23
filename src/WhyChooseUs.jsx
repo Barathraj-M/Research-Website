@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import "./WhyChooseUs.css";
 import { motion, useInView } from "framer-motion";
 import asterick from "./assets/asterisk.png";
+
+import SectionPill from "./components/SectionPill";
 const WhyChooseUs = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
@@ -27,9 +29,7 @@ const WhyChooseUs = () => {
           transition={{ duration: 1, ease: "easeIn" }}
           className="flex-1"
         >
-          <span className="border-2 px-3 py-1 rounded-full uppercase font-semibold text-sm text-gray-500 inline-block ">
-            Why Choose Us
-          </span>
+          <SectionPill sectionTitle={'Why Choose Us'} className={'h-auto w-auto'}/>
 
           <div
             className="mt-5 ml-2 text-2xl max-w-xl font-semibold text-black"

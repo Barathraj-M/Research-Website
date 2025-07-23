@@ -3,6 +3,8 @@ import { useRef } from "react";
 import bullet from "./assets/bullet.svg";
 import "./Section3.css";
 
+import SectionPill from "./components/SectionPill";
+
 const industries = [
   "Retail & E-commerce",
   "Manufacturing",
@@ -42,11 +44,7 @@ const Section3 = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="m-5"
         >
-          <span
-            className="border-2 border px-3 py-1 rounded-full uppercase font-semibold text-sm text-gray-500"
-          >
-            Industries we serve
-          </span>
+          <SectionPill sectionTitle={'Industries we serve'} className={'h-auto w-auto'}/>
           <div className="mt-5 ms-2 text-2xl max-w-xl" style={{fontSize:"2.5rem"}}>
             Building smarter, cleaner supply chains across diverse industries
           </div>
