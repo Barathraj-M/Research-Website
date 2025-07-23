@@ -1,3 +1,5 @@
+
+import { useState } from 'react'
 import React, { Suspense, lazy } from 'react'
 import {
   BrowserRouter,
@@ -11,7 +13,7 @@ import Footer from './components/Footer'
 
 const Home = lazy(() => import('./Home'))
 const Contact = lazy(() => import('./temp pages/Contact'))
-const About = lazy(() => import('./temp pages/About'))
+import About from './About.jsx'
 const Environment = lazy(() => import('./temp pages/Environment'))
 const Social = lazy(() => import('./temp pages/Social'))
 const Loading = lazy(() => import('./components/Loading'))
