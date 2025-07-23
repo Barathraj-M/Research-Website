@@ -40,7 +40,7 @@ const About = () => {
         <div>
             <div className="w-[100vw] relative lg:h-[655px] md:h-[565px] h-[500px]">
                 <img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684129d5df974c68c80cbd41_7f31505442587e86e496054776f573fd_about-hero-image.jpg" loading="eager" alt="About Image" className='absolute w-full h-full'></img>
-                <div class="absolute inset-0 gradient"></div>
+                <div className="absolute inset-0 gradient"></div>
                 <div className='w-full h-full flex flex-col justify-between'>
                     <div className='relative flex flex-col justify-evenly sm:gap-4 gap-1 lg:w-[350px] lg:h-[385px] lg:ms-22 lg:mt-30 md:w-[760px] md:h-[230px] md:ms-12 md:mt-30 mt-25 ms-5 me-5'>
                         <h1 className='text-white! overflow-hidden'>About Mivora<span className='md:text-3xl text-lg absolute me-10 overflow-hidden'>TM</span></h1>
@@ -57,7 +57,7 @@ const About = () => {
                                     <div className='md:text-2xl text-lg text-gray-900'>30%</div>
                                 </div>
                             </div>
-                            <div class="h-auto w-px  mt-2 mb-5 bg-gray-300"></div>
+                            <div className="h-auto w-px  mt-2 mb-5 bg-gray-300"></div>
                             <div className='flex flex-col items-center p-2 justify-center md:gap-7 md:p-4 gap-3'>
                                 <p>Fuel Cost Saving</p>
                                 <div className='flex gap-5 justify-center items-center'>
@@ -65,7 +65,7 @@ const About = () => {
                                     <div className='md:text-2xl text-lg text-gray-900'>60%</div>
                                 </div>
                             </div>
-                            <div class="h-auto w-px  mt-2 mb-5 bg-gray-300"></div>
+                            <div className="h-auto w-px  mt-2 mb-5 bg-gray-300"></div>
                             <div className='flex flex-col items-center justify-center md:gap-7 p-2 md:p-4 gap-3'>
                                 <p>Tons of CO2 saved anually</p>
                                 <div className='flex gap-5 justify-center items-center'>
@@ -160,8 +160,8 @@ const About = () => {
                             <p className='text-lg pb-1 text-white overflow-hidden'>Head of Eco Logistics</p>
                         </div>
                         <div className='flex self-end me-4'>
-                            <span className='px-1'><a href="https://www.facebook.com/" target="_blank" class="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd33_29047fa70e115d4afde718b0a7db48ac_twitter.svg" alt="social-icon" class="team-social-icon" /></a></span>
-                            <span className='px-1'><a href="https://www.instagram.com/" target="_blank" class="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd32_fc3b1b7df4e2556e27f870ca3d006c96_instagram.svg" alt="social-icon" class="" /></a></span>
+                            <span className='px-1'><a href="https://www.facebook.com/" target="_blank" className="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd33_29047fa70e115d4afde718b0a7db48ac_twitter.svg" alt="social-icon" className="team-social-icon" /></a></span>
+                            <span className='px-1'><a href="https://www.instagram.com/" target="_blank" className="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd32_fc3b1b7df4e2556e27f870ca3d006c96_instagram.svg" alt="social-icon"  /></a></span>
                         </div>
                     </div>
                     <div className='rounded-2xl flex justify-center items-center flex-col bg-[#282828]'>
@@ -171,8 +171,8 @@ const About = () => {
                             <p className='text-lg pb-1 text-white overflow-hidden'>Head of Eco Logistics</p>
                         </div>
                         <div className='flex self-end me-4'>
-                            <span className='px-1'><a href="https://www.facebook.com/" target="_blank" class="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd33_29047fa70e115d4afde718b0a7db48ac_twitter.svg" alt="social-icon" class="team-social-icon" /></a></span>
-                            <span className='px-1'><a href="https://www.instagram.com/" target="_blank" class="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd32_fc3b1b7df4e2556e27f870ca3d006c96_instagram.svg" alt="social-icon" class="" /></a></span>
+                            <span className='px-1'><a href="https://www.facebook.com/" target="_blank" className="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd33_29047fa70e115d4afde718b0a7db48ac_twitter.svg" alt="social-icon" className="team-social-icon" /></a></span>
+                            <span className='px-1'><a href="https://www.instagram.com/" target="_blank" className="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd32_fc3b1b7df4e2556e27f870ca3d006c96_instagram.svg" alt="social-icon"  /></a></span>
                         </div>
                     </div>
                     <div className='rounded-2xl flex justify-center items-center flex-col bg-[#282828]'>
@@ -182,8 +182,8 @@ const About = () => {
                             <p className='text-lg pb-1 text-white overflow-hidden'>Head of Eco Logistics</p>
                         </div>
                         <div className='flex self-end me-4'>
-                            <span className='px-1'><a href="https://www.facebook.com/" target="_blank" class="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd33_29047fa70e115d4afde718b0a7db48ac_twitter.svg" alt="social-icon" class="team-social-icon" /></a></span>
-                            <span className='px-1'><a href="https://www.instagram.com/" target="_blank" class="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd32_fc3b1b7df4e2556e27f870ca3d006c96_instagram.svg" alt="social-icon" class="" /></a></span>
+                            <span className='px-1'><a href="https://www.facebook.com/" target="_blank" className="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd33_29047fa70e115d4afde718b0a7db48ac_twitter.svg" alt="social-icon" className="team-social-icon" /></a></span>
+                            <span className='px-1'><a href="https://www.instagram.com/" target="_blank" className="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd32_fc3b1b7df4e2556e27f870ca3d006c96_instagram.svg" alt="social-icon"  /></a></span>
                         </div>
                     </div>
                     <div className='rounded-2xl flex justify-center items-center flex-col bg-[#282828]'>
@@ -193,8 +193,8 @@ const About = () => {
                             <p className='text-lg pb-1 text-white overflow-hidden'>Head of Eco Logistics</p>
                         </div>
                         <div className='flex self-end me-4'>
-                            <span className='px-1'><a href="https://www.facebook.com/" target="_blank" class="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd33_29047fa70e115d4afde718b0a7db48ac_twitter.svg" alt="social-icon" class="team-social-icon" /></a></span>
-                            <span className='px-1'><a href="https://www.instagram.com/" target="_blank" class="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd32_fc3b1b7df4e2556e27f870ca3d006c96_instagram.svg" alt="social-icon" class="" /></a></span>
+                            <span className='px-1'><a href="https://www.facebook.com/" target="_blank" className="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd33_29047fa70e115d4afde718b0a7db48ac_twitter.svg" alt="social-icon" className="team-social-icon" /></a></span>
+                            <span className='px-1'><a href="https://www.instagram.com/" target="_blank" className="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd32_fc3b1b7df4e2556e27f870ca3d006c96_instagram.svg" alt="social-icon"  /></a></span>
                         </div>
                     </div>
                 </div>
