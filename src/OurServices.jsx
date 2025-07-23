@@ -7,7 +7,7 @@ const OurServices = () => {
   const isInView = useInView(ref, { once: false });
 
   return (
-    <div className="our-services p-9 berkshire-swash-regular w-full">
+    <div className="our-services p-9  w-full">
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 50 }}
