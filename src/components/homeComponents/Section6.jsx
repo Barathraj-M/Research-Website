@@ -9,7 +9,11 @@ import location from "../../assets/Images/location.svg";
 
 import SectionPill from "../SectionPill";
 import PrimaryButtom from "../PrimaryButtom";
+
+// Icons used in box items
 const icons = [arrow, drop, cloud, location];
+
+// Staggered animation for boxes
 const containerVariants = {
   hidden: {},
   show: {
@@ -19,19 +23,25 @@ const containerVariants = {
   },
 };
 
+// Animate individual items from bottom to top
 const itemVariants = {
   hidden: { opacity: 0, y: 50 },
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
+
 const Section6 = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
+
   const boxRef = useRef(null);
   const boxInView = useInView(boxRef, { once: false });
+
   const bottomRef = useRef(null);
   const bottomInView = useInView(bottomRef, { once: false });
+
   return (
     <div className="section6">
+      {/* Top Heading */}
       <div className="top flex justify-center">
         <motion.div
           ref={ref}
@@ -53,21 +63,23 @@ const Section6 = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Animated Icon Boxes */}
       <motion.div
         ref={boxRef}
-        className="  p-7"
+        className="p-7"
         variants={containerVariants}
         initial="hidden"
         animate={boxInView ? "show" : "hidden"}
       >
-        <div className="flex justify-center  gap-1">
+        <div className="flex flex-wrap justify-center gap-4">
           {icons.map((imgSrc, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className="flex-1 w-1/4 border border-dashed border-gray-300 pl-2 pr-2 pt-4 pb-4 flex flex-col items-center gap-5 min-h-[250px] justify-between"
+              className="flex-1 min-w-[200px] max-w-[250px] border border-dashed border-gray-300 p-6 flex flex-col items-center gap-5 min-h-[250px] justify-between"
             >
-              <h6 className="text-gray-500 text-[1.5rem]">
+              <h6 className="text-gray-500 text-[1.5rem] text-center">
                 Lower CO2 Emissions
               </h6>
               <div className="gap-2 flex flex-col items-center">
@@ -82,35 +94,37 @@ const Section6 = () => {
           ))}
         </div>
       </motion.div>
+
+      {/* Bottom Section */}
       <motion.div
         ref={bottomRef}
-        initial={{ opacity: 0, x: 250 }}
-        animate={bottomInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 250 }}
+        initial={{ opacity: 0, y: 150 }}
+        animate={bottomInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 150 }}
         transition={{ duration: 1, ease: "easeIn" }}
         className="flex flex-col lg:flex-row justify-center items-center p-10 gap-20"
       >
-        {/* Left */}
-        <div className="flex flex-col items-center max-w-sm justify-center  w-full">
+        {/* Left Column */}
+        <div className="flex flex-col items-center max-w-sm justify-center w-full">
           <h2 className="text-4xl font-light text-gray-500 leading-snug text-center">
             Low-emission <br />
-            <span className="text-black font-semibold">
-              transportation
-            </span>{" "}
+            <span className="text-black font-semibold">transportation</span>{" "}
             <br />
             powered by <br />
             <span className="text-gray-500">innovation</span>
           </h2>
-          <button className=" text-black font-semibold px-6 py-3  mt-6">
+          <button className="text-black font-semibold px-6 py-3 mt-6">
             <PrimaryButtom text={"Explore service"} />
           </button>
         </div>
 
-        {/* Center Circle Map */}
-        <div className="relative w-[350px] md:w-[450px] lg:w-[500px] aspect-square bg-gray-100 rounded-full flex items-center justify-center"></div>
+        {/* Center Circle Map Placeholder */}
+        <div className="relative w-[350px] md:w-[450px] lg:w-[500px] aspect-square bg-gray-100 rounded-full flex items-center justify-center">
+          {/* Map or globe visualization can go here */}
+        </div>
 
-        {/* Right Text */}
+        {/* Right Column */}
         <div className="max-w-sm">
-          <p className="text-gray-600 mb-6" style={{textAlign:"justify"}}>
+          <p className="text-gray-600 mb-6 text-justify">
             At Eco-Supply Transportation, our fleet and technology go
             hand-in-hand to deliver smart, sustainable, and future-ready
             logistics solutions.

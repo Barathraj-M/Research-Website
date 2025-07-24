@@ -12,8 +12,8 @@ const HomeAbout = () => {
   const head = useRef(null);
   const headInView = useInView(head, { once: false });
 
-  const imgage = useRef(null);
-  const imgageInView = useInView(imgage, { once: false });
+  const image = useRef(null);
+  const imageInView = useInView(image, { once: false });
 
   const bottomRef = useRef(null);
   const bottomInView = useInView(bottomRef, { once: false });
@@ -43,19 +43,19 @@ const HomeAbout = () => {
 
       {/* 3 Boxes */}
       <motion.div
-        ref={imgage}
-        initial={{ opacity: 0, scale: 1.1 }}
+        ref={image}
+        initial={{ opacity: 0, y: 100 }}
         animate={{
-          opacity: imgageInView ? 1 : 0,
-          scale: imgageInView ? 1 : 1.1,
+          opacity: imageInView ? 1 : 0,
+          y: imageInView ? 0 : 100,
         }}
-        transition={{ duration: 2, ease: "backOut" }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
         className="flex flex-wrap justify-center gap-4 mt-6 w-full boxs md:p-6 lg:p-10"
       >
         {[1, 2, 3].map((_, idx) => (
           <div
             key={idx}
-            className="custom-box box w-full sm:w-[48%] md:w-[30%] flex-1 p-4"
+            className="custom-box box w-full sm:w-[48%] md:w-[30%] flex-1"
           ></div>
         ))}
       </motion.div>
@@ -63,8 +63,8 @@ const HomeAbout = () => {
       {/* CTA and Features */}
       <motion.div
         ref={bottomRef}
-        initial={{ opacity: 0, y: -150 }}
-        animate={{ opacity: bottomInView ? 1 : 0, y: bottomInView ? 0 : -150 }}
+        initial={{ opacity: 0, y: 150 }}
+        animate={{ opacity: bottomInView ? 1 : 0, y: bottomInView ? 0 : 150 }}
         transition={{ duration: 1, ease: "easeInOut" }}
         className="mt-20 flex flex-col items-center"
       >

@@ -2,7 +2,6 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import bullet from "../../assets/Images/bullet.svg";
 import "./Section3.css";
-
 import SectionPill from "../SectionPill";
 
 const industries = [
@@ -13,6 +12,7 @@ const industries = [
   "Technology & Electronics",
 ];
 
+// Parent variant for stagger effect
 const containerVariants = {
   hidden: {},
   show: {
@@ -22,9 +22,10 @@ const containerVariants = {
   },
 };
 
+// Each item slides up
 const itemVariants = {
-  hidden: { opacity: 0, x: -50 },
-  show: { opacity: 1, x: 0, transition: { duration: 0.4, ease: "easeOut" } },
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
 };
 
 const Section3 = () => {
@@ -37,6 +38,7 @@ const Section3 = () => {
   return (
     <div className="section3">
       <div className="section3-container p-8">
+        {/* Top heading section */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -56,6 +58,7 @@ const Section3 = () => {
           </div>
         </motion.div>
 
+        {/* Industries tags */}
         <motion.div
           className="mt-5 flex flex-wrap gap-2 ms-7"
           variants={containerVariants}
@@ -74,20 +77,19 @@ const Section3 = () => {
           ))}
         </motion.div>
 
-        <div className="flex justify-center mt-5 ">
+        {/* Card Section */}
+        <div className="flex justify-center mt-5">
           <motion.div
             ref={cardRef}
-            initial={{ opacity: 0, y: 150 }}
-            animate={
-              isCardInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 150 }
-            }
+            initial={{ opacity: 0, y: 100 }}
+            animate={isCardInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
             <div className="flex flex-wrap bg-white shadow p-6 rounded-md w-full max-w-5xl">
               <div className="w-full md:w-5/12">
                 <img
                   src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/6837f8b64e79d9a9a3b00b7f_tab-image-01.webp"
-                  alt=""
+                  alt="industry"
                   className="w-full h-auto"
                 />
               </div>
