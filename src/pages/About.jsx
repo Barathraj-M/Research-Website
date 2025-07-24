@@ -1,5 +1,4 @@
-import React from 'react'
-import image from '../assets/9224444.jpg'; // Update with the correct path to your image
+// import image from '../assets/Images/9224444.jpg'; // Update with the correct path to your image
 import { useRef, useEffect } from 'react';
 
 import '../index.css';
@@ -44,18 +43,18 @@ const About = () => {
 
     return (
         <div>
-            <div className="w-full relative h-[400px] sm:h-[500px] lg:h-[655px]">
-                <img
-                    src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684129d5df974c68c80cbd41_7f31505442587e86e496054776f573fd_about-hero-image.jpg"
-                    loading="eager"
-                    alt="About Image"
+            <div className="w-full relative h-[450px] sm:h-[500px] md:h-[600px] lg:h-[655px]">
+                <img 
+                    src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684129d5df974c68c80cbd41_7f31505442587e86e496054776f573fd_about-hero-image.jpg" 
+                    loading="eager" 
+                    alt="About Image" 
                     className='absolute w-full h-full object-cover'
                 />
                 <div className="absolute inset-0 gradient"></div>
-                <div className='w-full h-full flex flex-col justify-between px-4 pt-4 sm:px-6 sm:pt-4 lg:px-8 lg:pt-8'>
-                    <div className='relative flex flex-col justify-center gap-3 sm:gap-4 max-w-md lg:max-w-lg mt-16 sm:mt-20 lg:mt-24 mb-5'>
+                <div className='w-full h-full flex flex-col justify-between px-4 sm:px-10 sm:pt-1 pt-6 lg:px-15 lg:pt-8'>
+                    <div className='relative flex flex-col justify-center gap-3 lg:gap-4 xl:h-[400px] lg:h-[400px] md:h-[360px] max-w-md lg:max-w-lg mt-16 sm:mt-20 lg:mt-24 mb-5'>
                         <h1 className='text-white! font-bold overflow-hidden'>
-                            About Mivora<span className='align-top ml-1'>TM</span>
+                            About Mivora<span className='md:text-3xl text-lg align-top'>TM</span>
                         </h1>
                         <p className='text-white! leading-relaxed overflow-hidden'>
                             We are pioneers in sustainable logistics, delivering smart and efficient supply chain solutions that minimize environmental impact and maximize value for businesses worldwide.
@@ -67,12 +66,12 @@ const About = () => {
                             />
                         </div>
                     </div>
-
-                    <div className='relative flex self-end w-full max-w-4xl'>
-                        {/* <div className='absolute left-0 w-6 sm:w-8 lg:w-10 h-6 sm:h-8 lg:h-10 bg-white z-40 self-end'></div> */}
-                        <div className='w-full bg-gray-8 flex justify-around items-center rounded-lg p-3 sm:p-4 lg:p-6 overflow-hidden'>
-                            <div className='flex flex-col items-center justify-center gap-2 sm:gap-3 lg:gap-4 text-center'>
-                                <p className='text-gray-600'>Lower CO2 Emission</p>
+                    
+                    <div className='relative flex self-end w-full max-w-4xl -mb-[0.8px] md:h-auto sm:h-[170px] h-[150px]'>
+                        <div className='absolute -left-6 bottom-0 z-40 self-end'><img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683e866c5a5df0d7b03e41e6_hero-bottom-left.svg" loading="eager" alt="Icon" class="about-left-decorative"/></div>
+                        <div className='w-full bg-gray-8 flex justify-around items-center rounded-t-lg p-3 sm:p-4 md:p-6 overflow-hidden'>
+                            <div className='flex flex-col items-center justify-center gap-2 sm:gap-3 md:gap-4 text-center'>
+                                <div className='sm:text-lg text-md text-gray-600'>Lower CO2 Emission</div>
                                 <div className='flex gap-2 sm:gap-3 lg:gap-4 justify-center items-center'>
                                     <img
                                         src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683976f56676896290088678_counter-icon-01.svg"
@@ -80,12 +79,12 @@ const About = () => {
                                         alt="Icon"
                                         className='h-4 sm:h-6 lg:h-8'
                                     />
-                                    <div className='text-lg sm:text-xl lg:text-2xl text-gray-900 font-bold'>30%</div>
+                                    <div className='text-lg sm:text-xl md:text-2xl text-gray-900 font-bold'>30%</div>
                                 </div>
                             </div>
                             <div className="h-12 sm:h-16 lg:h-20 w-px bg-gray-300"></div>
-                            <div className='flex flex-col items-center justify-center gap-2 sm:gap-3 lg:gap-4 text-center'>
-                                <p className='text-gray-600'>Fuel Cost Saving</p>
+                            <div className='flex flex-col items-center justify-center gap-2 sm:gap-3 md:gap-4 text-center'>
+                                <div className='sm:text-lg text-md text-gray-600'>Fuel Cost Saving</div>
                                 <div className='flex gap-2 sm:gap-3 lg:gap-4 justify-center items-center'>
                                     <img
                                         src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683976f506218de3dbfbee9e_counter-icon-02.svg"
@@ -93,12 +92,12 @@ const About = () => {
                                         alt="Icon"
                                         className='h-4 sm:h-6 lg:h-8'
                                     />
-                                    <div className='text-lg sm:text-xl lg:text-2xl text-gray-900 font-bold'>60%</div>
+                                    <div className='text-lg sm:text-xl md:text-2xl text-gray-900 font-bold'>60%</div>
                                 </div>
                             </div>
                             <div className="h-12 sm:h-16 lg:h-20 w-px bg-gray-300"></div>
-                            <div className='flex flex-col items-center justify-center gap-2 sm:gap-3 lg:gap-4 text-center'>
-                                <p className='text-gray-600'>Tons of CO2 saved annually</p>
+                            <div className='flex flex-col items-center justify-center gap-2 sm:gap-3 md:gap-4 text-center'>
+                                <div className='sm:text-lg text-md  text-gray-600'>Tons of CO2 saved annually</div>
                                 <div className='flex gap-2 sm:gap-3 lg:gap-4 justify-center items-center'>
                                     <img
                                         src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683976f5384d68e5ba0c57c7_counter-icon-03.svg"
@@ -106,11 +105,11 @@ const About = () => {
                                         alt="Icon"
                                         className='h-4 sm:h-6 lg:h-8'
                                     />
-                                    <div className='text-lg sm:text-xl lg:text-2xl text-gray-900 font-bold'>90%</div>
+                                    <div className='text-lg sm:text-xl md:text-2xl text-gray-900 font-bold'>90%</div>
                                 </div>
                             </div>
                         </div>
-                        {/* <div className='absolute right-0 w-6 sm:w-8 lg:w-10 h-6 sm:h-8 lg:h-10 bg-white self-end'></div> */}
+                        <div className='absolute -right-6 self-end'><img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/6841390341d0511acefa1664_hero-bottom-right.svg" loading="eager" alt="Icon" class="about-right-decorative" /></div>
                     </div>
                 </div>
             </div>
@@ -191,7 +190,7 @@ const About = () => {
             <div className='xl:h-[700px] lg:h-[1200px] w-full bg-[#212121] flex flex-col items-center'>
                 <p className='border-gray-500 border-1 text-gray-500 mt-23  inline-block pt-1 xl:pb-5 pb-2 pe-4 ps-4 rounded-full overflow-hidden'>OUR TEAM</p>
                 <h2 className='text-white!  pt-3 xl:pb-20 sm:pb-13 pb-7 overflow-hidden lg:w-[600px] text-center font-semibold'>The <span className='text-green-400'>team</span> powering green transport</h2>
-                <div className='flex grid xl:grid-cols-[3fr_3fr_3fr_3fr] lg:grid-cols-3 sm:grid-cols-2  flex-wrap xl:h-[1100px] lg:h-[900px] md:h-[800px] sm:w-full md:w-[90%] lg:w-full w-full md:px-18 px-10 xl:py-8 md:gap-9 gap-4'>
+                <div className='grid xl:grid-cols-[3fr_3fr_3fr_3fr] lg:grid-cols-3 sm:grid-cols-2 xl:h-[1100px] lg:h-[900px] md:h-[800px] sm:w-full md:w-[90%] lg:w-full w-full md:px-18 px-10 xl:py-8 md:gap-9 gap-4'>
                     <div className='rounded-2xl flex justify-center items-center flex-col bg-[#282828]'>
                         <div className='h-[85%] w-[80%] flex flex-col items-start py-2'>
                             <div className='overflow-hidden rounded-[10px] w-full h-full'><img alt="Team Image" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/685bd35fc345fac7fb41d911_team-image-01.webp" loading="eager" className="object-cover w-full h-full transition-transform duration-500 transform hover:scale-110" /></div>
