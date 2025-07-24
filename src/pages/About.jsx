@@ -40,7 +40,7 @@ const About = () => {
 
     return (
         <div>
-            <div className="w-full relative min-h-[400px] sm:min-h-[500px] lg:min-h-[655px]">
+            <div className="w-full relative h-[400px] sm:h-[500px] lg:h-[655px]">
                 <img 
                     src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684129d5df974c68c80cbd41_7f31505442587e86e496054776f573fd_about-hero-image.jpg" 
                     loading="eager" 
@@ -61,8 +61,8 @@ const About = () => {
                         </button>
                     </div>
                     
-                    <div className='relative flex self-end w-full max-w-4xl -mb-[0.8px]'>
-                        <div className='absolute left-0 w-6 sm:w-8 lg:w-10 h-6 sm:h-8 lg:h-10 bg-white z-40 self-end'></div>
+                    <div className='relative flex self-end w-full max-w-4xl'>
+                        {/* <div className='absolute left-0 w-6 sm:w-8 lg:w-10 h-6 sm:h-8 lg:h-10 bg-white z-40 self-end'></div> */}
                         <div className='w-full bg-gray-8 flex justify-around items-center rounded-lg p-3 sm:p-4 lg:p-6 overflow-hidden'>
                             <div className='flex flex-col items-center justify-center gap-2 sm:gap-3 lg:gap-4 text-center'>
                                 <p className='text-gray-600'>Lower CO2 Emission</p>
@@ -103,7 +103,7 @@ const About = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='absolute right-0 w-6 sm:w-8 lg:w-10 h-6 sm:h-8 lg:h-10 bg-white self-end'></div>
+                        {/* <div className='absolute right-0 w-6 sm:w-8 lg:w-10 h-6 sm:h-8 lg:h-10 bg-white self-end'></div> */}
                     </div>
                 </div>
             </div>
