@@ -54,7 +54,7 @@ const Testimonials = () => {
     className="mt-20 p-2" 
     >
       <motion.div
-        className="flex flex-wrap justify-center gap-6 items-center"
+        className="flex flex-wrap justify-center gap-6 "
         variants={containerVariants}
         initial="hidden"
         whileInView="show"

@@ -1,6 +1,6 @@
 .home-about{
     width: 100vw;
-    box-shadow: -5px -100px 20px 0px rgb(255, 255, 255);
+    box-shadow: -6.5px -100px 20px 0px var( --color-gray-8);
     overflow: hidden;
 }
 .custom-box {
