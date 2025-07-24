@@ -1,6 +1,6 @@
 // import image from '../assets/Images/9224444.jpg'; // Update with the correct path to your image
 import { useRef, useEffect } from 'react';
-
+import { motion, useInView } from "framer-motion";
 import '../index.css';
 
 import SectionPill from '../components/SectionPill';
@@ -8,6 +8,18 @@ import PrimaryButtom from '../components/PrimaryButtom';
 
 
 const About = () => {
+    const head = useRef(null);
+    const headInView = useInView(head, { once: false });
+    
+    const head1 = useRef(null);
+    const headInView1 = useInView(head1, { once: false });
+
+    const head2 = useRef(null);
+    const headInView2 = useInView(head2, { once: false });
+
+    const head3 = useRef(null);
+    const headInView3 = useInView(head3, { once: false });
+    
     const logos = [
         'https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683d3b2d6d119a92715751a6_client-image-06.svg',
         'https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683d3b2c0697f0f74387041e_client-image-04.svg',
@@ -115,6 +127,13 @@ const About = () => {
             </div>
 
             <div className='flex flex-col items-center justify-center lg:mt-28 md:mt-20 mt-10'>
+                <motion.div
+        ref={head}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: headInView ? 1 : 0, y: headInView ? 0 : 100 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className="flex flex-col items-center text-center"
+      >
                 <div className='lg:w-[800px] md:w-[700px] text-center flex flex-col md:space-y-5 space-y-3'>
                     <h2 className='overflow-hidden md:pe-5 md:ps-5 p-2'>Smart <span className='text-gray-500'>Eco-transportation</span> solutions for modern <span className='text-gray-500'>supply chains</span></h2>
                     <p className='text-[17px] text-gray-500 lg:pe-25 lg:ps-25 pe-5 ps-5'>At Mivora, we believe logistics should be as kind to the planet as it is efficient for business. Born from a vision to create cleaner, smarter transportation solutions, we set out to challenge the conventional supply chain model.</p>
@@ -158,9 +177,18 @@ const About = () => {
                     link={'#'}
                     text={'Learn more'}
                 />
+                </motion.div>
             </div>
 
+            
             <div className='lg:m-22 md:m-15 m-5 mt-10'>
+                <motion.div
+        ref={head1}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: headInView1 ? 1 : 0, y: headInView1 ? 0 : 100 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className="flex flex-col"
+      >
                 <div className='overflow-hidden'>
                     <SectionPill sectionTitle={'Our Mission & Vision'} />
                     <h2 className='font-semibold overflow-hidden '>Committed to an eco-friendly world: <span className='text-gray-400'>Our vision & mission</span> explained</h2>
@@ -185,8 +213,16 @@ const About = () => {
                         </div>
                     </div>
                 </div>
+                 </motion.div>
             </div>
-
+           
+            <motion.div
+        ref={head2}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: headInView2 ? 1 : 0, y: headInView2 ? 0 : 100 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className=""
+      >
             <div className='xl:h-[700px] lg:h-[1200px] w-full bg-[#212121] flex flex-col items-center'>
                 <p className='border-gray-500 border-1 text-gray-500 mt-23  inline-block pt-1 xl:pb-5 pb-2 pe-4 ps-4 rounded-full overflow-hidden'>OUR TEAM</p>
                 <h2 className='text-white!  pt-3 xl:pb-20 sm:pb-13 pb-7 overflow-hidden lg:w-[600px] text-center font-semibold'>The <span className='text-green-400'>team</span> powering green transport</h2>
@@ -237,15 +273,27 @@ const About = () => {
                     </div>
                 </div>
             </div>
+
             <div className='bg-[#212121] h-[100px] w-full'>
             </div>
+            </motion.div>
+
+            
             <div className='flex flex-col items-center md:gap-5 gap-3 xl:m-35 lg:m-25 md:m-15 sm:mt-10 m-5 sm:pt-0 pt-10'>
+                <motion.div
+        ref={head3}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: headInView3 ? 1 : 0, y: headInView3 ? 0 : 100 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className="flex flex-col items-center text-center"
+      >
                 <h2 className=' text-center overflow-hidden p-2 xl:w-[800px]'>Join the mission for smarter, cleaner transportation</h2>
                 <p className='text-lg text-center text-gray-500 md:w-[500px] sm:w-[400px] w-auto'>Let’s work together to reduce emissions, optimize our operations, and make a positive impact on the planet.</p>
                 <PrimaryButtom
                     link={'#'}
                     text={'Talk to our experts'}
                 />
+                </motion.div>
             </div>
 
             <div className="overflow-hidden w-full lg:px-25 md:px-18 px-5 mx-auto mt-10">
