@@ -8,6 +8,9 @@ import PrimaryButtom from '../components/PrimaryButtom';
 
 
 const About = () => {
+    const title = useRef(null);
+    const title1 = useInView(title, { once: false });
+
     const head = useRef(null);
     const headInView = useInView(head, { once: false });
     
@@ -55,6 +58,13 @@ const About = () => {
 
     return (
         <div>
+            <motion.div
+        ref={title}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: title1 ? 1 : 0, y: title1 ? 0 : 100 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className=""
+      >
             <div className="w-full relative h-[450px] sm:h-[500px] md:h-[600px] lg:h-[655px]">
                 <img 
                     src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684129d5df974c68c80cbd41_7f31505442587e86e496054776f573fd_about-hero-image.jpg" 
@@ -125,6 +135,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
+            </motion.div>
 
             <div className='flex flex-col items-center justify-center lg:mt-28 md:mt-20 mt-10'>
                 <motion.div
