@@ -10,7 +10,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop.jsx'
 
-const Home = lazy(() => import('./Home.jsx'))
+const Home = lazy(() => import('./pages/Home.jsx'))
 const Contact = lazy(() => import('./pages/Contact'))
 const About = lazy(() => import('./pages/About.jsx'))
 const Environment = lazy(() => import('./pages/Environment.jsx'))
