@@ -90,8 +90,8 @@ const Section6 = () => {
         className="flex flex-col lg:flex-row justify-center items-center p-10 gap-20"
       >
         {/* Left */}
-        <div className="flex flex-col items-start max-w-sm justify-center">
-          <h2 className="text-4xl font-light text-gray-500 leading-snug">
+        <div className="flex flex-col items-center max-w-sm justify-center  w-full">
+          <h2 className="text-4xl font-light text-gray-500 leading-snug text-center">
             Low-emission <br />
             <span className="text-black font-semibold">
               transportation
@@ -110,7 +110,7 @@ const Section6 = () => {
 
         {/* Right Text */}
         <div className="max-w-sm">
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-600 mb-6" style={{textAlign:"justify"}}>
             At Eco-Supply Transportation, our fleet and technology go
             hand-in-hand to deliver smart, sustainable, and future-ready
             logistics solutions.
