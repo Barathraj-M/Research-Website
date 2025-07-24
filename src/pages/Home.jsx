@@ -94,7 +94,7 @@ const Home = () => {
             transition={{ duration: 0.6, ease: "easeInOut" }}
             style={{ position: swap ? "absolute" : "relative" }}
           >
-            <h1 className="text-white">Discover the Universe</h1>
+            <h1 className="text-white force-white">Discover the Universe</h1>
             <p className="text-white">
               Join us in our journey to understand the cosmos.
             </p>

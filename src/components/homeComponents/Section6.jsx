@@ -87,10 +87,10 @@ const Section6 = () => {
         initial={{ opacity: 0, x: 250 }}
         animate={bottomInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 250 }}
         transition={{ duration: 1, ease: "easeIn" }}
-        className="flex flex-col lg:flex-row justify-center items-center p-10 gap-20 ms-5"
+        className="flex flex-col lg:flex-row justify-center items-center p-10 gap-20"
       >
         {/* Left */}
-        <div className="flex flex-col items-start max-w-sm">
+        <div className="flex flex-col items-start max-w-sm justify-center">
           <h2 className="text-4xl font-light text-gray-500 leading-snug">
             Low-emission <br />
             <span className="text-black font-semibold">

@@ -72,3 +72,6 @@
     transition: transform 0.3s ease;
     object-fit: contain;
 }
+.force-white {
+  color: white !important;
+}
