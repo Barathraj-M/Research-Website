@@ -24,7 +24,9 @@ const Clients = () => {
         Trusted by forward-thinking businesses for sustainable logistics excellence
       </div>
       </motion.div>
+      <div className="flex justify-center items-center">
       <Testimonials/>
+      </div>
     </div>
   );
 };

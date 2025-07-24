@@ -51,10 +51,10 @@ const itemVariants = {
 const Testimonials = () => {
   return (
     <div
-    className="mt-20 p-2 pr-6" 
+    className="mt-20 p-2" 
     >
       <motion.div
-        className="flex flex-wrap justify-center gap-6"
+        className="flex flex-wrap justify-center gap-6 items-center"
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
