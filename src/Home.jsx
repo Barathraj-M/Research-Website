@@ -24,7 +24,7 @@ const Home = () => {
   }, []);
 
   return (
-    <>
+    <div className="home w-full">
       <div className="landing-page">
         {/* Always render both videos and fade between them */}
         <motion.video
@@ -129,7 +129,7 @@ const Home = () => {
        <Section6/>
        <Clients/>
        <Section9/>
-    </>
+    </div>
   );
 };
 
