@@ -62,13 +62,13 @@ const Footer = () => {
           <img
             src={FooterDivider}
             alt='footer-divider'
-            className='xs:w-10 xs:h-auto lg:h-10 lg:w-auto xs:rotate-90 lg:rotate-0 self-center m-0 p-0 object-fill'
+            className='xs:w-7 xs:h-auto lg:h-10 lg:w-auto xs:rotate-90 lg:rotate-0 self-center object-cover -my-3.5'
           />
 
           <div className='grid grid-cols-2 bg-white rounded-2xl p-10 border-white'>
             <div className='border-b-1 border-e-1 border-gray-5 border-dashed flex flex-col justify-between items-start gap-y-3 py-4'>
               <h2>Pages</h2>
-              <div className='grid grid-cols-2 gap-x-2'>
+              <div className='grid xs:grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-2'>
                 <div className='flex flex-col justify-center items-start gap-y-2'>
                   <a href='/' className='text-decoration-none hover:text-black hover:underline active:text-black active:underline underline-offset-5 transition-all duration-300 ease-in-out'>Home</a>
                   <a href='/about' className='text-decoration-none hover:text-black hover:underline active:text-black active:underline underline-offset-5 transition-all duration-300 ease-in-out'>About</a>
@@ -91,7 +91,7 @@ const Footer = () => {
                     src={BrixLogo} 
                     alt='brix-logo' 
                     className='w-15 h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
-                    loading='eager' 
+                    loading='lazy' 
                   />
                 </a>
                 <a href='' target='_blank' rel='noopener noreferrer'>
@@ -99,7 +99,7 @@ const Footer = () => {
                     src={QdotzLogo} 
                     alt='qdotz-logo' 
                     className='w-15 h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
-                    loading='eager' 
+                    loading='lazy' 
                   />
                 </a>
                 <a href='' target='_blank' rel='noopener noreferrer'>
@@ -107,7 +107,7 @@ const Footer = () => {
                     src={CoreverseLogo} 
                     alt='coreverse-logo' 
                     className='w-20 h-20 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto grayscale'
-                    loading='eager' 
+                    loading='lazy' 
                   />
                 </a>
                 <a href='' target='_blank' rel='noopener noreferrer'>
@@ -115,7 +115,7 @@ const Footer = () => {
                     src={SavantLogo} 
                     alt='savant-logo' 
                     className='w-15 h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
-                    loading='eager' 
+                    loading='lazy' 
                   />
                 </a>
               </div>
