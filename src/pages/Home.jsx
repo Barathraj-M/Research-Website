@@ -327,14 +327,12 @@ const Home = () => {
           </motion.div>
         </motion.div>
       </div>
-
       {/* <HomeAbout /> */}
       <OurServices />
-
-      <Section9 />
       <Section6 />
+       {/* <Section9 />
       <Clients />
-      <Section3 />
+      <Section3 /> */}
     </div>
   );
 };

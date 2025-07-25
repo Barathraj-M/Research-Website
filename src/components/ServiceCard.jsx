@@ -7,7 +7,7 @@ import '../index.css';
 const ServiceCard = ({ cardHeading, description, link, img, imgAlt, tagLines }) => {
   return (
     <motion.div 
-        className='w-xl min-h-7xl bg-white xs:p-3 md:p-5 flex flex-col justify-center items-center gap-y-5 cursor-pointer rounded-xl group'
+        className='w-xl min-h-7xl bg-white xs:p-3 md:p-5 flex flex-col  items-center gap-y-5 cursor-pointer rounded-xl group'
         variants={serviceCardVariants}
         initial='hidden'
         whileInView='visible'
@@ -21,7 +21,7 @@ const ServiceCard = ({ cardHeading, description, link, img, imgAlt, tagLines }) 
                 <h5 className=''>{cardHeading}</h5>
                 <p className='text-gray-2'>{description}</p>
                 <div className="flex-grow" />
-                <a className='text-xs! px-3 py-2 rounded-full bg-black text-white! hover:bg-primary-1 hover:text-black! transition-colors duration-500 ease-in-out' href={link} target='_blank'>View details</a>
+                {/* <a className='text-xs! px-3 py-2 rounded-full bg-black text-white! hover:bg-primary-1 hover:text-black! transition-colors duration-500 ease-in-out' href={link} target='_blank'>View details</a> */}
             </div>
             <div className="overflow-hidden rounded-xl w-full h-full flex">
                 <img 

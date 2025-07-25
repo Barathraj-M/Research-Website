@@ -150,7 +150,7 @@ const Section6 = () => {
           </p>
         </div>
       </motion.div>
-      <div className="flex flex-col items-center justify-center mb-4">
+      <div className="flex flex-col items-center justify-center">
         <blockquote className="border-l-4 border-black pl-4 ml-2 italic text-lg text-gray-700 bg-gray-300 p-2 rounded-lg">
           <span className="font-semibold">SLSRP</span> ≠ space —{" "}
           <span className="font-semibold">it’s a purpose.</span>
