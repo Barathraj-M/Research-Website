@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react'
+import React, { Suspense, lazy, useState, useEffect } from 'react'
 import {
   BrowserRouter,
   Routes,
@@ -9,6 +9,7 @@ import {
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop.jsx'
+import InitialLoader from './components/InitialLoader';
 
 const Home = lazy(() => import('./pages/Home.jsx'))
 const Contact = lazy(() => import('./pages/Contact'))
@@ -42,6 +43,24 @@ function AppContent() {
 }
 
 function App() {
+  const [showInitialLoader, setShowInitialLoader] = useState(() => {
+    return sessionStorage.getItem('slsrp-initial-loader-shown') !== 'true';
+  });
+
+  useEffect(() => {
+    if(showInitialLoader) {
+      const timer = setTimeout(() => {
+        setShowInitialLoader(false);
+        sessionStorage.setItem('slsrp-initial-loader-shown', 'true');
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [showInitialLoader]);
+
+  if(showInitialLoader) {
+    return <InitialLoader />;
+  }
+
   return (
     <Suspense fallback={<Loading />}>
       <BrowserRouter>
@@ -49,7 +68,7 @@ function App() {
         <AppContent />
       </BrowserRouter>
     </Suspense>
-  )
+  );
 }
 
 export default App
