@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 // eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 
 import ContactHeroImage from '../assets/Images/contact-hero-image.jpg'
 import RoundedBottomRight from '../assets/Images/hero-bottom-right.svg'
 import RoundedBottomLeft from '../assets/Images/hero-bottom-left.svg'
-import PrimaryButtom from '../components/PrimaryButtom'
+// import PrimaryButtom from '../components/PrimaryButtom'
 
 import CollapsableCard from '../components/CollapsableCard'
 
@@ -14,6 +15,65 @@ import { contentBasicVariants, overlayVariants } from '../utils/animationVarient
 import '../index.css';
 
 const Contact = () => {
+    const [errors, setErrors] = useState({})
+
+    const validate = (fields) => {
+        const errs = {}
+        if (!fields.name || fields.name.trim() === '') {
+            errs.name = 'Name is required.'
+        }
+        if (!fields.email || fields.email.trim() === '') {
+            errs.email = 'Email is required.'
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email)) {
+            errs.email = 'Enter a valid email address.'
+        }
+        if (!fields.phone || fields.phone.trim() === '') {
+            errs.phone = 'Phone number is required.'
+        } else {
+            // Remove non-digit characters
+            const digits = fields.phone.replace(/\D/g, '');
+            if (digits.length !== 10) {
+                errs.phone = 'Phone number must be exactly 10 digits.';
+            }
+        }
+        if (!fields.message || fields.message.trim() === '') {
+            errs.message = 'Message is required.'
+        } else if (fields.message.trim().length < 10) {
+            errs.message = 'Message should be at least 10 characters.'
+        }
+        return errs
+    }
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        const form = e.target
+        const fields = {
+            name: form.name.value,
+            email: form.email.value,
+            phone: form.phone.value,
+            message: form.message.value,
+        }
+        const validationErrors = validate(fields)
+        setErrors(validationErrors)
+        if (Object.keys(validationErrors).length > 0) {
+            return
+        }
+        console.log('Submitted... ');
+
+        emailjs.sendForm(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            e.target,
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        ). then(() => {
+            alert('Success');
+            e.target.reset();
+            setErrors({})
+        }).catch((error) => {
+            console.error(error);
+        })
+    }
+
     return (
         <>
             <section className='w-full h-full'>
@@ -141,6 +201,7 @@ const Contact = () => {
                             viewport={{ once: true, amount: "some" }}
                             exit='exit'
                             custom={3}
+                            onSubmit={sendEmail}
                         >
                             <div className='w-full'>
                                 <label htmlFor='name' className='block mb-2 text-black'>
@@ -151,11 +212,14 @@ const Contact = () => {
                                     name='name'
                                     id='name'
                                     placeholder='Type your full name'
-                                    className='w-full p-4 border border-dashed border-gray-4 focus:outline-dashed focus:ring-gray-2 focus:border-transparent rounded-md transition-all duration-200'
+                                    className={`w-full p-4 border border-dashed border-gray-4 focus:outline-dashed focus:ring-gray-2 focus:border-transparent rounded-md transition-all duration-200${errors.name ? ' border-red-500' : ''}`}
                                 />
+                                <div className='h-6 mt-1'>
+                                    {errors.name && <span className='text-red-500 text-sm'>{errors.name}</span>}
+                                </div>
                             </div>
-                            <div className='w-full flex xs:flex-col md:flex-row justify-between items-center gap-x-8 xs:gap-y-5 md:gap-y-10'>
-                                <div className='w-full'>
+                            <div className='w-full flex xs:flex-col md:flex-row justify-between items-start gap-x-8 xs:gap-y-5 md:gap-y-10'>
+                                <div className='w-full self-start'>
                                     <label htmlFor='email' className='block mb-2 text-black'>
                                         Email Address
                                     </label>
@@ -164,10 +228,13 @@ const Contact = () => {
                                         name='email'
                                         id='email'
                                         placeholder='Type your email address'
-                                        className='w-full p-4 border border-dashed border-gray-4 focus:outline-dashed focus:ring-gray-2 focus:border-transparent rounded-md transition-all duration-200'
+                                        className={`w-full p-4 border border-dashed border-gray-4 focus:outline-dashed focus:ring-gray-2 focus:border-transparent rounded-md transition-all duration-200${errors.email ? ' border-red-500' : ''}`}
                                     />
+                                    <div className='h-5 mt-1'>
+                                        {errors.email && <span className='text-red-500 text-xs'>{errors.email}</span>}
+                                    </div>
                                 </div>
-                                <div className='w-full'>
+                                <div className='w-full self-start'>
                                     <label htmlFor='phone' className='block mb-2 text-black'>
                                         Phone Number
                                     </label>
@@ -176,8 +243,11 @@ const Contact = () => {
                                         name='phone'
                                         id='phone'
                                         placeholder='Type your phone number'
-                                        className='w-full p-4 border border-dashed border-gray-4 focus:outline-dashed focus:ring-gray-2 focus:border-transparent rounded-md transition-all duration-200'
+                                        className={`w-full p-4 border border-dashed border-gray-4 focus:outline-dashed focus:ring-gray-2 focus:border-transparent rounded-md transition-all duration-200${errors.phone ? ' border-red-500' : ''}`}
                                     />
+                                    <div className='h-5 mt-1'>
+                                        {errors.phone && <span className='text-red-500 text-sm'>{errors.phone}</span>}
+                                    </div>
                                 </div>
                             </div>
                             <div className='w-full'>
@@ -189,19 +259,25 @@ const Contact = () => {
                                     id='message'
                                     rows='5'
                                     placeholder='Type your message here'
-                                    className='w-full p-4 border border-dashed border-gray-4 focus:outline-dashed focus:ring-gray-2 focus:border-transparent rounded-md transition-all duration-200 resize-vertical'
+                                    className={`w-full p-4 border border-dashed border-gray-4 focus:outline-dashed focus:ring-gray-2 focus:border-transparent rounded-md transition-all duration-200 resize-vertical${errors.message ? ' border-red-500' : ''}`}
                                 />
+                                <div className='h-6 mt-1'>
+                                    {errors.message && <span className='text-red-500 text-sm'>{errors.message}</span>}
+                                </div>
                             </div>
-                            <PrimaryButtom
-                                text={'Send Message'}
-                                link={'#'}
+                            <input
+                                type='submit'
+                                name='submit'
+                                id='submit'
+                                value='Send Message'
+                                className='rounded-full bg-primary-1 border-1 border-dashed border-primary-1 hover:bg-black hover:text-white text-black px-4 py-2 transition-colors duration-300 ease-in-out text-nowrap font-medium cursor-pointer'
                             />
                         </motion.form>
                     </div>
                 </AnimatePresence>
             </section>
             <section className='w-full min-h-screen p-2 flex flex-col justify-start items-center gap-y-8'>
-                <motion.h2 
+                <motion.h2
                     className='text-center font-semibold mt-20! max-w-lg'
                     variants={contentBasicVariants}
                     initial='initial'
