@@ -42,7 +42,7 @@ const Section6 = () => {
   return (
     <div className="section6">
       {/* Top Heading */}
-      <div className="top flex justify-center">
+      {/* <div className="top flex justify-center">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -62,10 +62,10 @@ const Section6 = () => {
             partnership.
           </div>
         </motion.div>
-      </div>
+      </div> */}
 
       {/* Animated Icon Boxes */}
-      <motion.div
+      {/* <motion.div
         ref={boxRef}
         className="p-7"
         variants={containerVariants}
@@ -93,7 +93,7 @@ const Section6 = () => {
             </motion.div>
           ))}
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* Bottom Section */}
       <motion.div
@@ -106,15 +106,11 @@ const Section6 = () => {
         {/* Left Column */}
         <div className="flex flex-col items-center max-w-sm justify-center w-full">
           <h2 className="text-4xl font-light text-gray-500 leading-snug text-center">
-            Low-emission <br />
-            <span className="text-black font-semibold">transportation</span>{" "}
-            <br />
-            powered by <br />
-            <span className="text-gray-500">innovation</span>
+            Building Global & National Impact
           </h2>
-          <button className="text-black font-semibold px-6 py-3 mt-6">
+          {/* <button className="text-black font-semibold px-6 py-3 mt-6">
             <PrimaryButtom text={"Explore service"} />
-          </button>
+          </button> */}
         </div>
 
         {/* Center Circle Map Placeholder */}
@@ -125,26 +121,41 @@ const Section6 = () => {
         {/* Right Column */}
         <div className="max-w-sm">
           <p className="text-gray-600 mb-6 text-justify">
-            At Eco-Supply Transportation, our fleet and technology go
-            hand-in-hand to deliver smart, sustainable, and future-ready
-            logistics solutions.
+            <span className="text-black font-bold">SLSRP</span> is not a siloed
+            think tank—it is a{" "}
+            <span className="text-black font-bold">
+              collaborative, evolving ecosystem.
+            </span>{" "}
+            We actively partner with ministries like AYUSH, Tribal Affairs,
+            MoEFCC, and CSIR. We engage with universities, CSR wings of global
+            corporations, public health bodies, and international development
+            agencies.
           </p>
-          <ul className="space-y-3 text-gray-700">
-            {[
-              "Electric & Hybrid vehicles",
-              "Low-Emission freight solutions",
-              "Last-mile electric delivery hubs",
-              "Real-time tracking & monitoring",
-              "AI-Powered route optimization",
-            ].map((point, index) => (
-              <li key={index} className="flex items-start gap-2">
-                <BsSunFill className="mt-1 text-gray-400" />
-                {point}
-              </li>
-            ))}
-          </ul>
+          <p className="text-gray-600 mb-6 text-justify">
+            Our aim is to{" "}
+            <span className="text-black font-bold">
+              co-create solutions, generate policy insights,{" "}
+            </span>
+            and
+            <span className="text-black font-bold">
+              {" "}
+              empower the next generation of scientific and spiritual leaders.
+            </span>{" "}
+            Our impact is both{" "}
+            <span className="text-black font-bold">
+              ground - level and high-level
+            </span>{" "}
+            —from digitizing endangered medicinal flora to contributing to
+            global discourses on wellness, climate, and consciousness.
+          </p>
         </div>
       </motion.div>
+      <div className="flex flex-col items-center justify-center mb-4">
+        <blockquote className="border-l-4 border-black pl-4 ml-2 italic text-lg text-gray-700 bg-gray-300 p-2 rounded-lg">
+          <span className="font-semibold">SLSRP</span> ≠ space —{" "}
+          <span className="font-semibold">it’s a purpose.</span>
+        </blockquote>
+      </div>
     </div>
   );
 };

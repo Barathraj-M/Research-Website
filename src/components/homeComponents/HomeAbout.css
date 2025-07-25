@@ -1,13 +1,12 @@
 .home-about{
-    width: 100vw;
-    box-shadow: -6.5px -100px 20px 0px var( --color-gray-8);
+    width: 99vw;
+    height: 100vh;
     overflow: hidden;
 }
 .custom-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #e0e0e0;
   color: #333;
   font-weight: bold;
   border-radius: 1rem;

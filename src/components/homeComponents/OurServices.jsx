@@ -21,43 +21,92 @@ const OurServices = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="w-full"
+        className="w-full flex flex-col items-center"
       >
-        <SectionPill
-          sectionTitle={"Our Services"}
-          className={"h-auto w-auto ms-9"}
-        />
+        <SectionPill sectionTitle={"ACTION"} className={"h-auto w-auto ms-9"} />
 
-        <div className="mt-5 text-2xl font-bold text-white flex justify-between items-center w-full flex-wrap gap-4 px-9">
-          <div>
-            Clean mobility & supply chain{" "}
-            <span className="text-primary-1">services</span>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <button
-              className="border border-gray-400 hover:bg-gray-100 flex justify-center items-center"
-              style={{
-                borderRadius: "50%",
-                width: "2.5rem",
-                height: "2.5rem",
-              }}
-            >
-              -
-            </button>
-            <button
-              className="border border-gray-400 hover:bg-gray-100 flex justify-center items-center"
-              style={{
-                borderRadius: "50%",
-                width: "2.5rem",
-                height: "2.5rem",
-              }}
-            >
-              +
-            </button>
-          </div>
+        <div className="mt-5 text-lg font-bold text-white flex justify-center items-center w-2/3  gap-4 px-9 text-center">
+          At SLSRP, we operate at the intersection of deep science, cultural
+          responsibility, and systemic transformation. Our work is divided into
+          two mission-driven verticals with distinct but interlinked approaches
         </div>
-        <HorizontalScrollSection>
+        <div className="w-full px-4 py-8">
+          <motion.div
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.3 }}
+            className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+          >
+            {/* Left Text Box */}
+            <div
+              className=" space-y-4 p-4 text-white"
+              style={{ textAlign: "justify" }}
+            >
+              <div className="text-2xl sm:text-3xl ">
+                Environmental Innovation
+              </div>
+              <p>
+                SLSRP functions as an incubation and development platform for
+                breakthrough environmental initiatives. We fund, prototype, and
+                scale solutions that restore ecosystems, protect biodiversity,
+                and promote sustainable living. This includes technology-driven
+                projects with real-world implementation potential, supported by
+                expert mentorship, cross-sectoral collaboration, and
+                impact-aligned investment. Flagship programs under this vertical
+                include.
+              </p>
+              <div className="flex justify-center w-full items-center mt-10">
+                <ServiceCard
+                  cardHeading={"Ecofriendly transportation"}
+                  description={
+                    "We offer responsible logistics that minimize pollution and maximize operational efficiency."
+                  }
+                  link={"#"}
+                  img={ServiceCardImg1}
+                  imgAlt={"service-card-image-avif"}
+                  tagLines={""}
+                />
+              </div>
+            </div>
+
+            {/* Right Image Box */}
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }}
+              className=" space-y-4 p-4 text-white"
+              style={{ textAlign: "justify" }}
+            >
+              <div className="text-2xl sm:text-3xl ">
+                Noetic Science Research & Validation
+              </div>
+              <p>
+                Our noetic science vertical is dedicated to the research,
+                validation, and structured delivery of consciousness-based
+                practices grounded in Eastern wisdom systems. This includes
+                methodical study, ethical dissemination, and structured
+                certification—without commercialization. The aim is to cultivate
+                individual and social transformation through verifiable mental,
+                emotional, and behavioral resilience. Focus areas include
+              </p>
+              <div className="flex justify-center w-full items-center mt-10">
+                <ServiceCard
+                  cardHeading={"Ecofriendly transportation"}
+                  description={
+                    "We offer responsible logistics that minimize pollution and maximize operational efficiency."
+                  }
+                  link={"#"}
+                  img={ServiceCardImg1}
+                  imgAlt={"service-card-image-avif"}
+                  tagLines={""}
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+        {/* <HorizontalScrollSection>
           <ServiceCard
             cardHeading={"Ecofriendly transportation"}
             description={
@@ -108,7 +157,7 @@ const OurServices = () => {
             imgAlt={"service-card-image-avif"}
             tagLines={""}
           />
-        </HorizontalScrollSection>
+        </HorizontalScrollSection> */}
       </motion.div>
     </div>
   );
