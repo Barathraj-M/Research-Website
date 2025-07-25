@@ -26,9 +26,9 @@ const Header = () => {
     <header className='fixed w-full top-0 left-0 z-50'>
       <div className='xs:h-17 md:h-19 px-3 md:px-10 py-2 flex flex-row justify-between items-center gap-x-1 h-full relative z-50'>
         <nav className='flex flex-row justify-start items-center gap-3 w-full h-full bg-white rounded-full relative '>
-          <div className='m-1 p-2 ms-2 h-full flex items-center'>
+          <div className='m-1 ms-5 h-full flex items-center'>
             <Link to='/' className='text-decoration-none'>
-              <img src={DummyLogo} alt='logo' className='w-25 h-25' loading='eager' />
+              <img src={DummyLogo} alt='logo' className='w-13 h-13' loading='eager' />
             </Link>
           </div>
           <div className='md:flex flex-row justify-center items-center gap-y-1 gap-x-5 w-full xs:hidden'>
