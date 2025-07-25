@@ -1,0 +1,26 @@
+.clients {
+  position: relative;
+  width: 100vw;
+  background: url("../../assets/Images/bottom1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  z-index: 0;
+}
+
+.clients::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* adjust opacity here */
+  z-index: 1;
+}
+
+.clients > * {
+  position: relative;
+  z-index: 2; /* content above overlay */
+}

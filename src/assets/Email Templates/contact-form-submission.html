@@ -1,0 +1,160 @@
+<!--
+Contact Form Submission Email Template
+Theme: Matches SLRP Research Park website (Inter/Instrument Sans, green #7eea57, black #212121, gray #636363, white, large border-radius, dashed borders)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form Submission</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f9f9f9;
+      font-family: 'Inter', Arial, sans-serif;
+      color: #636363;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 24px rgba(33,33,33,0.07);
+      overflow: hidden;
+      border: 1.5px dashed #7eea57;
+    }
+    .header {
+      background: linear-gradient(90deg, #eaffea 0%, #f9f9f9 100%);
+      padding: 2.5rem 2rem 1.5rem 2rem;
+      text-align: center;
+    }
+    .header h1 {
+      font-family: 'Instrument Sans', Arial, sans-serif;
+      color: #212121;
+      font-size: 2.2rem;
+      margin: 0 0 0.5rem 0;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+    .header p {
+      color: #636363;
+      font-size: 1.1rem;
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+    }
+    .content {
+      padding: 2rem 2rem 1.5rem 2rem;
+    }
+    .content h2 {
+      font-family: 'Instrument Sans', Arial, sans-serif;
+      color: #212121;
+      font-size: 1.3rem;
+      margin-bottom: 1.2rem;
+      font-weight: 600;
+    }
+    .details {
+      background: #f9f9f9;
+      border-radius: 0.5rem;
+      padding: 1.2rem 1rem;
+      margin-bottom: 1.5rem;
+      border: 1.5px dashed #bebebe;
+    }
+    .details p {
+      margin: 0.5rem 0;
+      color: #212121;
+      font-size: 1rem;
+      font-family: 'Inter', Arial, sans-serif;
+    }
+    .details strong {
+      color: #7eea57;
+      font-weight: 500;
+    }
+    .button-primary {
+      display: inline-block;
+      border: 1.5px dashed #7eea57;
+      border-radius: 1.5rem;
+      background-color: #7eea57;
+      color: #212121 !important;
+      text-align: center;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-family: 'Instrument Sans', Arial, sans-serif;
+      font-weight: 500;
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: background 0.3s, color 0.3s;
+    }
+    .button-primary:hover {
+      background-color: #212121;
+      color: #fff !important;
+    }
+    .footer {
+      background: #212121;
+      color: #fff;
+      text-align: center;
+      padding: 1.2rem 2rem;
+      font-size: 1rem;
+      font-family: 'Inter', Arial, sans-serif;
+      border-top: 1.5px dashed #7eea57;
+    }
+    .footer a {
+      color: #7eea57;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+    /* Style for Other Services links */
+    .other-services-link {
+      color: #636363 !important;
+      text-decoration: underline;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .other-services-link:hover, .other-services-link:focus, .other-services-link:active {
+      color: #212121 !important;
+    }
+    @media (max-width: 600px) {
+      .container { border-radius: 0.5rem; }
+      .header, .content, .footer { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Contact Form Submission</h1>
+      <p>Thank you for reaching out to SLRP Research Park. We have received your message and will get back to you soon.</p>
+    </div>
+    <div class="content">
+      <h2>Submitted Details</h2>
+      <div class="details">
+        <p><strong>Name:</strong> {{name}}</p>
+        <p><strong>Email:</strong> {{email}}</p>
+        <p><strong>Phone:</strong> {{phone}}</p>
+        <p><strong>Message:</strong><br>{{message}}</p>
+      </div>
+      <p style="color:#636363;">Our team will review your inquiry and respond as soon as possible. If you have urgent questions, feel free to call us at <a href="tel:+91 6383499920" style="color:#7eea57; text-decoration:underline;">+91 6383499920</a>.</p>
+      <a href="https://slrp-research-park.com" class="button-primary">Visit Our Website</a>
+      <p>And also feel free to check out our other services below</p>
+      <div class="other-services-section" style="margin-top:1rem; padding:1.2rem 1rem; background:#f9f9f9; border:1.5px dashed #bebebe; border-radius:0.5rem; text-align:center;">
+        <h3 style="font-family:'Instrument Sans', Arial, sans-serif; color:#212121; font-size:1.1rem; font-weight:600; margin-bottom:1rem; margin-top:0;">Other Services</h3>
+        <ul style="list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; justify-content:center; gap:1.5rem;">
+          <li><a href="#" class="other-services-link">Brix</a></li>
+          <li><a href="#" class="other-services-link">Qdotz</a></li>
+          <li><a href="#" class="other-services-link">Coreverse</a></li>
+          <li><a href="#" class="other-services-link">Savant</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer">
+      &copy; 2025 SLRP Research Park. All rights reserved.<br>
+      <a href="https://slrp-research-park.com">slrp-research-park.com</a>
+    </div>
+    <div className="">
+      <span class></span>
+    </div>
+  </div>
+</body>
+</html>

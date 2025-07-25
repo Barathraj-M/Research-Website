@@ -1,0 +1,12 @@
+.why-choose-us{
+    width: 100vw;
+    background-color: rgba(238, 238, 238, 0.103);
+    position: relative;
+}
+.whybox{
+    position: absolute;
+    height: 3rem;
+    border: 5px solid white;
+    border-radius: 3rem;
+    color: rgb(255, 255, 255);
+}
