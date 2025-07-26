@@ -5,7 +5,7 @@ import '../index.css';
 
 import SectionPill from '../components/SectionPill';
 import PrimaryButtom from '../components/PrimaryButtom';
-import aboutimage from '../assets/Images/aboutimage.png'; // Update with the correct path to your image
+import aboutimage from '../assets/Images/aboutimage2.jpg'; // Update with the correct path to your image
 
 const About = () => {
 
