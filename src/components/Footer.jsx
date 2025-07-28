@@ -40,7 +40,7 @@ const Footer = () => {
             <div className='flex flex-col justify-start items-start gap-y-5 w-full'>
               <h2>We believe real change starts deep within the supply chain.</h2>
               <div className='flex flex-col justify-start items-center gap-y-3 w-full'>
-                <p>Join our eco-supply community.</p>
+                <p>Join our community.</p>
                 <form className='flex flex-row justify-around items-center gap-x-2 w-full rounded-full p-1 border-1 border-gray-3 focus-within:ring-1 focus-within:ring-gray-2'>
                   <input 
                     type='text'
@@ -84,9 +84,9 @@ const Footer = () => {
               </div>
             </div>
             <div className='border-b-1 border-gray-5 border-dashed py-4 ps-4'>
-              <h2>Other Services</h2>
+              <h2>Our Conglomerate</h2>
               <div className='grid grid-cols-2 gap-x-2 gap-y-5 text-center mt-5'>
-                <a href='' target='_blank' rel='noopener noreferrer'>
+                <a href='https://brixnet.in/' target='_blank' rel='noopener noreferrer'>
                   <img 
                     src={BrixLogo} 
                     alt='brix-logo' 
@@ -94,7 +94,7 @@ const Footer = () => {
                     loading='lazy' 
                   />
                 </a>
-                <a href='' target='_blank' rel='noopener noreferrer'>
+                <a href='https://qdotz.in/' target='_blank' rel='noopener noreferrer'>
                   <img 
                     src={QdotzLogo} 
                     alt='qdotz-logo' 
@@ -102,7 +102,7 @@ const Footer = () => {
                     loading='lazy' 
                   />
                 </a>
-                <a href='' target='_blank' rel='noopener noreferrer'>
+                <a href='https://coreverse.in/' target='_blank' rel='noopener noreferrer'>
                   <img 
                     src={CoreverseLogo} 
                     alt='coreverse-logo' 
@@ -110,7 +110,7 @@ const Footer = () => {
                     loading='lazy' 
                   />
                 </a>
-                <a href='' target='_blank' rel='noopener noreferrer'>
+                <a href='https://snaedu.in/' target='_blank' rel='noopener noreferrer'>
                   <img 
                     src={SavantLogo} 
                     alt='savant-logo' 

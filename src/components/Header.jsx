@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import PrimaryButtom from './PrimaryButtom';
 import '../index.css'
 
-import DummyLogo from '../assets/Images/dummy-icon.svg';
+import DummyLogo from '../assets/Images/dummy-icon-with-name.svg';
 import NavDivider from '../assets/Images/nav-divider.svg';
 import NavHoverLogo from '../assets/Images/nav-hover-icon.svg';
 import { MenuIcon } from '../assets/Icons/Icons';
@@ -28,7 +28,7 @@ const Header = () => {
         <nav className='flex flex-row justify-start items-center gap-3 w-full h-full bg-white/70 backdrop-blur-sm rounded-full relative '>
           <div className='m-1 ms-5 h-full flex items-center'>
             <Link to='/' className='text-decoration-none'>
-              <img src={DummyLogo} alt='logo' className='w-13 h-13' loading='eager' />
+              <img src={DummyLogo} alt='logo' className='w-30 h-13' loading='eager' />
             </Link>
           </div>
           <div className='md:flex flex-row justify-center items-center gap-y-1 gap-x-5 w-full xs:hidden'>
