@@ -1,0 +1,1 @@
+import{j as e,L as a}from"./index-DOKqtn9n.js";const i=()=>e.jsx("div",{className:"w-full h-screen flex justify-center items-center",children:e.jsx("img",{src:a,alt:"loading",className:"w-20 h-20 animate-ping",loading:"eager"})});export{i as default};
