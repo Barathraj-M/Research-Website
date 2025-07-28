@@ -89,7 +89,7 @@ const Home = () => {
         ))}
 
         {/* Text content area */}
-        <div className="content berkshire-swash-regular">
+        <div className="content">
           {videoSlides.map((video, index) =>
             videoIndex === index ? (
               <motion.div
@@ -97,7 +97,8 @@ const Home = () => {
                 initial={false}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
-                style={{ position: "relative" }}
+                // style={{ position: "relative" }}
+                className="absolute xs:top-3/20 sm:top-4/20 md:top-3/10 lg:top-4/10 left-0"
               >
                 <div
                   className={`font-bold leading-tight ${video.textColor} text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl ml-6`}
@@ -144,7 +145,7 @@ const Home = () => {
                 viewport={{ once: true, amount: "some" }}
                 exit='exit'
               >
-                <h5 className="text-center text-gray-1">SLSRP - The timeless mission</h5>
+                <h5 className="text-center text-gray-1 font-semibold!">SLSRP - The timeless mission</h5>
                 <InifiteIcon width={50} height={50} />
               </motion.div>
               <motion.div
@@ -156,7 +157,7 @@ const Home = () => {
                 viewport={{ once: true, amount: "some" }}
                 exit='exit'
               >
-                <h5 className="text-center text-gray-1">Forging a Civilizational Shift - For sustenance</h5>
+                <h5 className="text-center text-gray-1 font-semibold!">Forging a Civilizational Shift - For sustenance</h5>
                 <HandsGlobeIcon width={40} height={40} />
               </motion.div>
               <motion.div
@@ -168,7 +169,7 @@ const Home = () => {
                 viewport={{ once: true, amount: "some" }}
                 exit='exit'
               >
-                <h5 className="text-center text-gray-1">Sustaining Humanity</h5>
+                <h5 className="text-center text-gray-1 font-semibold!">Sustaining Humanity</h5>
                 <ShieldCheckIcon width={40} height={40} />
               </motion.div>
             </motion.div>

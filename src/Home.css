@@ -33,7 +33,7 @@
   z-index: -2;
 }
 .content{
-    z-index: 10;
+    z-index: 1;
     position: relative;
     display: flex;
     align-items: center;
