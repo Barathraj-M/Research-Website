@@ -7,15 +7,18 @@ import SectionPill from "../SectionPill";
 import PrimaryButtom from "../PrimaryButtom";
 import { title } from "framer-motion/client";
 
-const contents = [{
-  title:"Social Transformation through Noetic Science",
-  description:"We aim to validate and promote consciousness-based practices rooted in Eastern systems — such as meditation, mental reflux, Siddha traditions, and integrated emotional frameworks. These are studied through rigorous scientific research and then scaled through certified programs, workshops, and youth engagement models."
-},
-{
-  title:"Environmental Stewardship through Innovation",
-  description:"SLSRP also pioneers solutions to some of the most pressing ecological problems — such as biodiversity loss, pollution, and climate degradation. Through innovations like the PhytoVault (a digital repository of India’s medicinal and aromatic plants), AI-enabled eco-technologies, and STEM - driven regenerative design, we translate research into real - world environmental impact."
-}
-]
+const contents = [
+  {
+    title: "Social Transformation through Noetic Science",
+    description:
+      "We aim to validate and promote consciousness-based practices rooted in Eastern systems — such as meditation, mental reflux, Siddha traditions, and integrated emotional frameworks. These are studied through rigorous scientific research and then scaled through certified programs, workshops, and youth engagement models.",
+  },
+  {
+    title: "Environmental Stewardship through Innovation",
+    description:
+      "SLSRP also pioneers solutions to some of the most pressing ecological problems — such as biodiversity loss, pollution, and climate degradation. Through innovations like the PhytoVault (a digital repository of India’s medicinal and aromatic plants), AI-enabled eco-technologies, and STEM - driven regenerative design, we translate research into real - world environmental impact.",
+  },
+];
 const WhyChooseUs = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
@@ -25,7 +28,7 @@ const WhyChooseUs = () => {
   const rightInView = useInView(rightRef, { once: false });
 
   return (
-    <div className="why-choose-us pl-15 pr-15">
+    <div className="why-choose-us pl-15 pr-15 p-10">
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 50 }}
@@ -41,16 +44,42 @@ const WhyChooseUs = () => {
           transition={{ duration: 1, ease: "easeIn" }}
           className="flex-1"
         >
-          <SectionPill sectionTitle={"Our Core"} className={"h-auto w-auto"} />
+          <div className="flex gap-4 items-center">
+  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full mb-4" style={{ backgroundColor: '#ffbb00' }}>
+          <svg
+            className="w-8 h-8 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.637l1.318-1.319a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z"
+            />
+          </svg> 
+          </div> 
+          <h3>Our Core</h3>
+          </div>
+        
 
           <div
-            className="mt-5 ml-2 text-2xl max-w-xl font-semibold text-gray-500"
+            className="mt-5 ml-2 text-2xl max-w-xl font-semibold text-gray-900"
             style={{ fontSize: "1.2rem" }}
           >
-          <span className="text-black">  At SLSRP</span>, we believe that the future of humanity depends on our
-            ability to evolve — internally and externally. Our research park is
-            built upon a <span className="text-black">dual-core mission</span> that touches both the <span className="text-black">inner
-            consciousness of individuals</span> and the <span className="text-black">outer ecosystems of the planet.</span>
+            <span className="text-[#ffbb00]"> At SLSRP</span>, we believe that
+            the future of humanity depends on our ability to evolve — internally
+            and externally. Our research park is built upon a{" "}
+            <span className="text-[#ffbb00]">dual-core mission</span> that
+            touches both the{" "}
+            <span className="text-[#ffbb00]">
+              inner consciousness of individuals
+            </span>{" "}
+            and the{" "}
+            <span className="text-[#ffbb00]">
+              outer ecosystems of the planet.
+            </span>
           </div>
 
           <div className="border-t border-dashed border-gray-500 mt-5" />

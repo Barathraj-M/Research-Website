@@ -42,7 +42,30 @@ const OurServices = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="w-full flex flex-col items-center"
       >
-        <SectionPill sectionTitle={"ACTION"} className={"h-auto w-auto ms-9"} />
+        <div className="flex gap-3 items-center">
+          <div
+            className="inline-flex items-center justify-center w-12 h-12 rounded-full"
+            style={{ backgroundColor: "#ffbb00" }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="32"
+              color="white"
+              height="32"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+              />
+            </svg>
+          </div>
+          <h3 className="text-white! mb-0!">Action</h3>
+        </div>
 
         <div className="mt-5 text-lg font-bold text-white flex justify-center items-center w-2/3  gap-4 px-9 text-center">
           At SLSRP, we operate at the intersection of deep science, cultural
@@ -55,7 +78,7 @@ const OurServices = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.3 }}
-            className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+            className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 "
           >
             {/* Left Text Box */}
             <div
@@ -76,7 +99,9 @@ const OurServices = () => {
                 include.
               </p>
               <div className="flex justify-center w-full items-center mt-10">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+               <div  className='w-full h-[450px] bg-white  flex flex-col items-center gap-y-5 cursor-pointer rounded-xl group'>
+
+            
                   <ServiceCard
                     cardHeading={"Environmental Innovation"}
                     description={
@@ -94,8 +119,7 @@ const OurServices = () => {
                     imgAlt={"service-card-image-avif"}
                     tagLines={""}
                   />
-                  {/* Add more ServiceCards here with same structure */}
-                </div>
+                      </div>
               </div>
             </div>
 
@@ -121,7 +145,9 @@ const OurServices = () => {
                 emotional, and behavioral resilience. Focus areas include
               </p>
               <div className="flex justify-center w-full items-center mt-10">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+                <div  className='w-full h-[450px] bg-white  flex flex-col items-center gap-y-5 cursor-pointer rounded-xl group'>
+
+            
                   <ServiceCard
                     cardHeading={"Noetic Science Research & Validation"}
                     description={
@@ -139,15 +165,12 @@ const OurServices = () => {
                     imgAlt={"service-card-image-avif"}
                     tagLines={""}
                   />
-                  {/* Add more ServiceCards here with same structure */}
-                </div>
-                
-              </div>
+                      </div>
+            
               
+              </div>
             </motion.div>
-           
           </motion.div>
-           
         </div>
         {/* <HorizontalScrollSection>
           <ServiceCard

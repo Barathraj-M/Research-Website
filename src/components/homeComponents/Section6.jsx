@@ -6,7 +6,7 @@ import drop from "../../assets/Images/drop.svg";
 import cloud from "../../assets/Images/cloud.svg";
 import { BsSunFill } from "react-icons/bs";
 import location from "../../assets/Images/location.svg";
-
+import earthVideo from "../../assets/Videos/earth.mp4";
 import SectionPill from "../SectionPill";
 import PrimaryButtom from "../PrimaryButtom";
 
@@ -41,6 +41,9 @@ const Section6 = () => {
 
   return (
     <div className="section6">
+      <video autoPlay muted playsInline>
+        <source src={earthVideo} type="video/mp4" />
+      </video>
       {/* Top Heading */}
       {/* <div className="top flex justify-center">
         <motion.div
@@ -101,61 +104,49 @@ const Section6 = () => {
         initial={{ opacity: 0, y: 150 }}
         animate={bottomInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 150 }}
         transition={{ duration: 1, ease: "easeIn" }}
-        className="flex flex-col lg:flex-row justify-center items-center p-10 gap-20"
+        className="flex flex-col lg:flex-row justify-center items-center gap-8 section6-content lg:justify-around"
       >
         {/* Left Column */}
-        <div className="flex flex-col items-center max-w-sm justify-center w-full">
-          <h2 className="text-4xl font-light text-gray-500 leading-snug text-center">
-            Building Global & National Impact
+        <div className="flex flex-col items-center text-center max-w-sm justify-center w-full">
+          <h2 className="text-3xl sm:text-4xl font-light leading-snug mb-4 text-white! flex flex-col gap-2">
+            <div>Building Global</div>
+            <div> & </div>
+            <div>National Impact</div>
           </h2>
-          {/* <button className="text-black font-semibold px-6 py-3 mt-6">
-            <PrimaryButtom text={"Explore service"} />
-          </button> */}
-        </div>
-
-        {/* Center Circle Map Placeholder */}
-        <div className="relative w-[350px] md:w-[450px] lg:w-[500px] aspect-square bg-gray-100 rounded-full flex items-center justify-center">
-          {/* Map or globe visualization can go here */}
         </div>
 
         {/* Right Column */}
-        <div className="max-w-sm">
-          <p className="text-gray-600 mb-6 text-justify">
-            <span className="text-black font-bold">SLSRP</span> is not a siloed
-            think tank—it is a{" "}
-            <span className="text-black font-bold">
+        <div className="max-w-sm text-sm sm:text-base px-3 sm:px-0 ">
+          <p className="mb-6 text-justify">
+            <span className="font-bold">SLSRP</span> is not a siloed think
+            tank—it is a{" "}
+            <span className="font-bold">
               collaborative, evolving ecosystem.
             </span>{" "}
             We actively partner with ministries like AYUSH, Tribal Affairs,
-            MoEFCC, and CSIR. We engage with universities, CSR wings of global
-            corporations, public health bodies, and international development
-            agencies.
+            MoEFCC, and CSIR...
           </p>
-          <p className="text-gray-600 mb-6 text-justify">
+          <p className="mb-6 text-justify">
             Our aim is to{" "}
-            <span className="text-black font-bold">
+            <span className="font-bold">
               co-create solutions, generate policy insights,{" "}
             </span>
-            and
-            <span className="text-black font-bold">
-              {" "}
+            and{" "}
+            <span className="font-bold">
               empower the next generation of scientific and spiritual leaders.
-            </span>{" "}
-            Our impact is both{" "}
-            <span className="text-black font-bold">
-              ground - level and high-level
-            </span>{" "}
-            —from digitizing endangered medicinal flora to contributing to
-            global discourses on wellness, climate, and consciousness.
+            </span>
           </p>
-        </div>
-      </motion.div>
-      <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center">
         <blockquote className="border-l-4 border-black pl-4 ml-2 italic text-lg text-gray-700 bg-gray-300 p-2 rounded-lg">
           <span className="font-semibold">SLSRP</span> ≠ space —{" "}
           <span className="font-semibold">it’s a purpose.</span>
         </blockquote>
       </div>
+        </div>
+        
+      </motion.div>
+
+      
     </div>
   );
 };

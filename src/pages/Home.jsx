@@ -115,13 +115,13 @@ const Home = () => {
           )}
         </div>
 
-        <div className="flex justify-center items-center w-full">
+        <div className="flex justify-center items-center w-full ">
           <motion.div
             ref={bottomRef}
             variants={heroSectionBottomContainerVariants}
             initial='initial'
             animate='animate'
-            className="absolute bottom-0 xs:w-full md:w-9/10 lg:w-9/10 flex flex-row justify-between items-center gap-0"
+            className="absolute bottom-0 xs:w-full md:w-9/10 lg:w-9/10 flex flex-row justify-between items-center gap-0 "
           >
             <img
               src={RoundedBottomLeft}
@@ -129,7 +129,7 @@ const Home = () => {
               className='self-end -mb-[0.8px] -me-[0.8px]'
             />
             <motion.div
-              className='w-full grid xs:grid-cols-1 md:grid-cols-3 md:gap-x-5 rounded-tl-xl rounded-tr-xl bg-gray-8 px-4 pt-4 pb-2'
+              className='w-full grid xs:grid-cols-1 md:grid-cols-3 md:gap-x-5 rounded-tl-xl rounded-tr-xl bg-gray-8 px-4 pt-4 pb-2 bg-gradient-to-t from-[#fffaf0] to-[#fff3d1]'
               variants={heroSectionBottomContainerVariants}
               initial='initial'
               animate='animate'
@@ -181,13 +181,13 @@ const Home = () => {
       </div>
 
       {/* Other sections */}
-      <div className="w-full px-4 py-8">
+      <div className="w-full px-4 py-8  bg-gradient-to-b from-[#fffaf0] to-[#fff3d1] ">
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.3 }}
-          className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+          className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center "
         >
           {/* Left Text Box */}
           <div
@@ -195,8 +195,8 @@ const Home = () => {
             style={{ textAlign: "justify" }}
           >
             <div className="text-3xl sm:text-4xl font-bold flex items-center gap-3">
-              <hr style={{ width: "2rem", border: "4px solid black" }} />
-              Welcome to SLSRP
+              <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div>
+              Welcome to <span className="text-[#ffbb00]">SLSRP</span>
             </div>
             <div className="text-2xl sm:text-3xl text-gray-500">
               Semporutkalai Life Science Research Park (SLSRP)
@@ -236,28 +236,51 @@ const Home = () => {
             />
           </motion.div>
         </motion.div>
+        <WhyChooseUs />
       </div>
 
-      <WhyChooseUs />
-      <div className="flex flex-col items-center justify-center mb-4 mt-8 pt-3">
+      <div className="flex flex-col items-center justify-center mb-4 pt-3 ">
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-
           viewport={{ once: false }}
           transition={{ duration: 1, ease: "easeIn" }}
           className="flex flex-col items-center text-center"
         >
           <div className="lg:w-[800px] md:w-[700px] text-center flex flex-col md:space-y-5 space-y-3">
-            <h2 className="overflow-hidden md:pe-5 md:ps-5 p-2">
-              Whats
-              <span className="text-gray-500"> Matters</span>{" "}
+            <h2
+              className="overflow-hidden md:pe-5 md:ps-5 p-2 flex justify-center items-center gap-2"
+              style={{ fontWeight: "700" }}
+            >
+              <div
+                className="inline-flex items-center justify-center w-12 h-12 rounded-full"
+                style={{ backgroundColor: "#ffbb00" }}
+              >
+                <svg
+                  className="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4M7 4h10a2 2 0 012 2v12a2 2 0 01-2 2H7a2 2 0 01-2-2V6a2 2 0 012-2z"
+                  />
+                </svg>
+              </div>
+              <div>
+                Whats
+                <span className="text-[#ffbb00]"> Matters</span>{" "}
+              </div>
             </h2>
-            <p className="text-[18px] text-gray-500 lg:pe-25 lg:ps-25 pe-5 ps-5">
+            <p className="text-[17px] text-gray-500 lg:pe-20 lg:ps-20 pe-5 ps-5">
               We live in a world overwhelmed by complexity—mental stress,
               environmental collapse, socio-political fragmentation, and
-              disconnected knowledge systems. SLSRP addresses this through a{" "}
-              <span className="text-black">
+              disconnected knowledge systems. <br />
+              SLSRP addresses this through a{" "}
+              <span className="text-[#ffbb00]">
                 Wholistic model of transformation
               </span>{" "}
               that does not separate science from spirit, or technology from
@@ -316,19 +339,78 @@ const Home = () => {
             >
               <div className="w-full flex flex-wrap justify-center gap-4 mt-5">
                 <div className="w-1/2 sm:w-1/3 flex flex-col items-center">
-                  <img src={star} alt="star" className="w-10 sm:w-12" />
+                  <div
+                    className="inline-flex items-center justify-center w-12 h-12 rounded-full"
+                    style={{ backgroundColor: "#ffbb00" }}
+                  >
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 3l8 4v5c0 5.25-3.75 9.75-8 11-4.25-1.25-8-5.75-8-11V7l8-4z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4"
+                      />
+                    </svg>
+                  </div>
+
                   <div className="text-gray-500 mt-1 text-sm sm:text-base">
                     responsible
                   </div>
                 </div>
                 <div className="w-1/2 sm:w-1/3 flex flex-col items-center">
-                  <img src={cross} alt="cross" className="w-10 sm:w-12" />
+                  <div
+                    className="inline-flex items-center justify-center w-12 h-12 rounded-full"
+                    style={{ backgroundColor: "#ffbb00" }}
+                  >
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 3c.132.92.303 1.98-.248 2.894a3 3 0 01-4.753.342C6.28 7.653 5 9.87 5 12a7 7 0 1014 0c0-2.243-1.306-4.84-3.167-6.834-.64-.712-1.533-1.064-2.045-2.166z"
+                      />
+                    </svg>
+                  </div>
+
                   <div className="text-gray-500 mt-1 text-sm sm:text-base">
                     resilient
                   </div>
                 </div>
                 <div className="w-full sm:w-1/3 flex flex-col items-center">
-                  <img src={crosses} alt="crosses" className="w-10 sm:w-12" />
+                  <div
+                    className="inline-flex items-center justify-center w-12 h-12 rounded-full"
+                    style={{ backgroundColor: "#ffbb00" }}
+                  >
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 3v18h18M9 17l3-4 4 5 4-7"
+                      />
+                    </svg>
+                  </div>
                   <div className="text-gray-500 mt-1 text-sm sm:text-base">
                     research validated future
                   </div>
