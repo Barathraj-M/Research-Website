@@ -137,7 +137,7 @@ const Section6 = () => {
             </span>
           </p>
           <div className="flex flex-col items-center justify-center">
-        <blockquote className="border-l-4 border-black pl-4 ml-2 italic text-lg text-gray-700 bg-gray-300 p-2 rounded-lg">
+        <blockquote className="border-l-4 border-black pl-4 ml-2 italic text-lg text-gray-700 bg-gradient-to-br from-[#ffbb00] to-[#fff3d1] p-2 rounded-lg">
           <span className="font-semibold">SLSRP</span> ≠ space —{" "}
           <span className="font-semibold">it’s a purpose.</span>
         </blockquote>

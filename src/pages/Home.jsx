@@ -1,28 +1,30 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import "../Home.css";
 import space from "../assets/Videos/space.mp4";
 import nature from "../assets/Videos/nature.mp4";
 import ocean from "../assets/Videos/ocean.mp4";
 import { motion, useInView } from "framer-motion";
-import Section3 from "../components/homeComponents/Section3";
+
 import OurServices from "../components/homeComponents/OurServices";
 import WhyChooseUs from "../components/homeComponents/WhyChooseUs";
 import Section6 from "../components/homeComponents/Section6";
-import Clients from "../components/homeComponents/Clients";
-import Section9 from "../components/homeComponents/Section9";
-import PrimaryButtom from "../components/PrimaryButtom";
-import star from "../assets/Images/star.svg";
-import cross from "../assets/Images/cross.svg";
-import crosses from "../assets/Images/crosses.svg";
+
 import jc from "../assets/Images/jc.png";
-import RoundedBottomRight from '../assets/Images/hero-bottom-right.svg'
-import RoundedBottomLeft from '../assets/Images/hero-bottom-left.svg'
-import YogaBannerImage from '../assets/Images/ancient-yoga-banner-image.png'
-import resilient from "../assets/Images/resilient.jpg"
+import RoundedBottomRight from "../assets/Images/hero-bottom-right.svg";
+import RoundedBottomLeft from "../assets/Images/hero-bottom-left.svg";
+import YogaBannerImage from "../assets/Images/ancient-yoga-banner-image.png";
+import resilient from "../assets/Images/resilient.jpg";
 import research from "../assets/Images/research.jpg";
-import responsible from "../assets/Images/responsible.jpg"; 
-import { heroSectionBottomContainerVariants, contentBasicVariants } from "../utils/animationVarients";
-import { HandsGlobeIcon, InifiteIcon, ShieldCheckIcon } from "../assets/Icons/Icons";
+import responsible from "../assets/Images/responsible.jpg";
+import {
+  heroSectionBottomContainerVariants,
+  contentBasicVariants,
+} from "../utils/animationVarients";
+import {
+  HandsGlobeIcon,
+  InifiteIcon,
+  ShieldCheckIcon,
+} from "../assets/Icons/Icons";
 import SectionPill from "../components/SectionPill";
 
 const videoSlides = [
@@ -122,62 +124,68 @@ const Home = () => {
           <motion.div
             ref={bottomRef}
             variants={heroSectionBottomContainerVariants}
-            initial='initial'
-            animate='animate'
+            initial="initial"
+            animate="animate"
             className="absolute bottom-0 xs:w-full md:w-9/10 lg:w-9/10 flex flex-row justify-between items-center gap-0 "
           >
             <img
               src={RoundedBottomLeft}
-              alt='Rounded bottom left decoration'
-              className='self-end -mb-[0.8px] -me-[0.8px]'
+              alt="Rounded bottom left decoration"
+              className="self-end -mb-[0.8px] -me-[0.8px]"
             />
             <motion.div
-              className='w-full grid xs:grid-cols-1 md:grid-cols-3 md:gap-x-5 rounded-tl-xl rounded-tr-xl bg-gray-8 px-4 pt-4 pb-2 bg-gradient-to-t from-[#fffaf0] to-[#fff3d1]'
+              className="w-full grid xs:grid-cols-1 md:grid-cols-3 md:gap-x-5 rounded-tl-xl rounded-tr-xl bg-gray-8 px-4 pt-4 pb-2 bg-gradient-to-t from-[#fffaf0] to-[#fff3d1]"
               variants={heroSectionBottomContainerVariants}
-              initial='initial'
-              animate='animate'
+              initial="initial"
+              animate="animate"
             >
               <motion.div
-                className='flex flex-col justify-center items-center gap-y-0.5 h-full xs:border-b-1 md:border-b-0 md:border-r-1 border-dashed border-gray-4 p-2'
+                className="flex flex-col justify-center items-center gap-y-0.5 h-full xs:border-b-1 md:border-b-0 md:border-r-1 border-dashed border-gray-4 p-2"
                 variants={contentBasicVariants}
-                initial='initial'
-                whileInView='whileInView'
+                initial="initial"
+                whileInView="whileInView"
                 custom={1}
                 viewport={{ once: true, amount: "some" }}
-                exit='exit'
+                exit="exit"
               >
-                <h5 className="text-center text-gray-1 font-semibold!">SLSRP - The timeless mission</h5>
+                <h5 className="text-center text-gray-1 font-semibold!">
+                  SLSRP - The timeless mission
+                </h5>
                 <InifiteIcon width={50} height={50} />
               </motion.div>
               <motion.div
-                className='flex flex-col justify-center items-center gap-y-2 h-full xs:border-b-1 md:border-b-0 md:border-r-1 border-dashed border-gray-4 p-2'
+                className="flex flex-col justify-center items-center gap-y-2 h-full xs:border-b-1 md:border-b-0 md:border-r-1 border-dashed border-gray-4 p-2"
                 variants={contentBasicVariants}
-                initial='initial'
-                whileInView='whileInView'
+                initial="initial"
+                whileInView="whileInView"
                 custom={4}
                 viewport={{ once: true, amount: "some" }}
-                exit='exit'
+                exit="exit"
               >
-                <h5 className="text-center text-gray-1 font-semibold!">Forging a Civilizational Shift - For sustenance</h5>
+                <h5 className="text-center text-gray-1 font-semibold!">
+                  Forging a Civilizational Shift - For sustenance
+                </h5>
                 <HandsGlobeIcon width={40} height={40} />
               </motion.div>
               <motion.div
-                className='text-center flex flex-col justify-center items-center gap-y-2 h-full p-2'
+                className="text-center flex flex-col justify-center items-center gap-y-2 h-full p-2"
                 variants={contentBasicVariants}
-                initial='initial'
-                whileInView='whileInView'
+                initial="initial"
+                whileInView="whileInView"
                 custom={8}
                 viewport={{ once: true, amount: "some" }}
-                exit='exit'
+                exit="exit"
               >
-                <h5 className="text-center text-gray-1 font-semibold!">Sustaining Humanity</h5>
+                <h5 className="text-center text-gray-1 font-semibold!">
+                  Sustaining Humanity
+                </h5>
                 <ShieldCheckIcon width={40} height={40} />
               </motion.div>
             </motion.div>
             <img
               src={RoundedBottomRight}
-              alt='Rounded bottom right decoration'
-              className='self-end -mb-[0.8px] -ms-[0.8px]'
+              alt="Rounded bottom right decoration"
+              className="self-end -mb-[0.8px] -ms-[0.8px]"
             />
           </motion.div>
         </div>
@@ -199,7 +207,7 @@ const Home = () => {
           >
             <div className="text-3xl sm:text-4xl font-bold flex items-center gap-3">
               <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div>
-              Welcome to <span className="text-[#ffbb00]">SLSRP</span>
+              <div> Welcome to <span className="text-[#ffbb00]">SLSRP</span></div>
             </div>
             <div className="text-2xl sm:text-3xl text-gray-500">
               Semporutkalai Life Science Research Park (SLSRP)
@@ -437,59 +445,64 @@ const Home = () => {
       <div className="grid auto-rows-auto gap-y-10 min-h-screen w-full px-10 pt-15">
         <div className="grid sm:auto-rows-auto md:grid-rows-none md:grid-cols-5 gap-y-5 gap-x-5 w-full">
           <div className="md:col-span-2 flex flex-col justify-start items-start gap-y-2">
-            <SectionPill sectionTitle={'SLSRP'} />
+            <SectionPill sectionTitle={"SLSRP"} />
             <motion.h2
               className="mt-5!"
               variants={contentBasicVariants}
-              initial='initial'
-              whileInView='whileInView'
+              initial="initial"
+              whileInView="whileInView"
               custom={1}
               viewport={{ once: true, amount: "all" }}
             >
-              A <span className="text-primary-1">Deep Respect</span> for Ancient Knowledge
+              A <span className="text-primary-1">Deep Respect</span> for Ancient
+              Knowledge
             </motion.h2>
           </div>
           <div className="md:col-span-3">
             <motion.p
               className="text-gray-2"
               variants={contentBasicVariants}
-              initial='initial'
-              whileInView='whileInView'
+              initial="initial"
+              whileInView="whileInView"
               custom={4}
               viewport={{ once: true, amount: "all" }}
             >
-              SLSRP stands at the frontier where Applied noetic science research, Tamil Siddha science,
-              Eastern ancient traditional medicine systems, Physical Reflex practices, and indigenous
-              healing traditions are not merely preserved but scientifically validated and globally positioned. We
-              operate in close coordination with government ministries, research institutions, and thought
-              leaders to create academic pathways and practical platforms that connect the past with the future
+              SLSRP stands at the frontier where Applied noetic science
+              research, Tamil Siddha science, Eastern ancient traditional
+              medicine systems, Physical Reflex practices, and indigenous
+              healing traditions are not merely preserved but scientifically
+              validated and globally positioned. We operate in close
+              coordination with government ministries, research institutions,
+              and thought leaders to create academic pathways and practical
+              platforms that connect the past with the future
             </motion.p>
             <motion.p
               className="text-gray-2 md:mt-5!"
               variants={contentBasicVariants}
-              initial='initial'
-              whileInView='whileInView'
+              initial="initial"
+              whileInView="whileInView"
               custom={7}
               viewport={{ once: true, amount: "all" }}
             >
-              Our Noetic Science Enablement on Unified Wholeness (nseUW) program exemplifies this,
-              offering a non-commercial, merit-based certification ecosystem that brings structure,
-              credibility, and measurable outcomes to traditionally oral knowledge systems.
+              Our Noetic Science Enablement on Unified Wholeness (nseUW) program
+              exemplifies this, offering a non-commercial, merit-based
+              certification ecosystem that brings structure, credibility, and
+              measurable outcomes to traditionally oral knowledge systems.
             </motion.p>
           </div>
         </div>
-        <motion.div 
+        <motion.div
           className="overflow-hidden w-full rounded-2xl mb-20 group"
           initial={{
-            opacity: 0
+            opacity: 0,
           }}
           whileInView={{
             opacity: 1,
             transition: {
               duration: 1.7,
-              ease: 'easeIn',
-              delay: 2
-            }
+              ease: "easeIn",
+              delay: 2,
+            },
           }}
         >
           <img

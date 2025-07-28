@@ -78,11 +78,11 @@ const OurServices = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.3 }}
-            className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 "
+            className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8  "
           >
             {/* Left Text Box */}
             <div
-              className=" space-y-4 p-4 text-white"
+              className=" space-y-4 p-4 text-white "
               style={{ textAlign: "justify" }}
             >
               <div className="text-2xl sm:text-3xl ">
@@ -98,8 +98,8 @@ const OurServices = () => {
                 impact-aligned investment. Flagship programs under this vertical
                 include.
               </p>
-              <div className="flex justify-center w-full items-center mt-10">
-               <div  className='w-full h-[450px] bg-white  flex flex-col items-center gap-y-5 cursor-pointer rounded-xl group'>
+              <div className="flex justify-center w-full items-center mt-10 border border-[#ffaa00] shadow-lg hover:shadow-xl rounded-xl ">
+               <div  className='w-full min-h-[350px] bg-white  flex flex-col items-center gap-y-5 cursor-pointer rounded-xl group bg-gradient-to-b from-[#fffaf0] to-[#ffbb40]'>
 
             
                   <ServiceCard
@@ -144,8 +144,8 @@ const OurServices = () => {
                 individual and social transformation through verifiable mental,
                 emotional, and behavioral resilience. Focus areas include
               </p>
-              <div className="flex justify-center w-full items-center mt-10">
-                <div  className='w-full h-[450px] bg-white  flex flex-col items-center gap-y-5 cursor-pointer rounded-xl group'>
+              <div className="flex justify-center w-full items-center mt-10 border border-[#ffaa00] shadow-lg hover:shadow-xl rounded-xl">
+                <div  className='w-full min-h-[350px] bg-white  flex flex-col items-center gap-y-5 cursor-pointer rounded-xl group bg-gradient-to-b from-[#fffaf0] to-[#ffbb40] '>
 
             
                   <ServiceCard
