@@ -18,8 +18,9 @@ import jc from "../assets/Images/jc.png";
 import RoundedBottomRight from '../assets/Images/hero-bottom-right.svg'
 import RoundedBottomLeft from '../assets/Images/hero-bottom-left.svg'
 import YogaBannerImage from '../assets/Images/ancient-yoga-banner-image.png'
-
-
+import resilient from "../assets/Images/resilient.jpg"
+import research from "../assets/Images/research.jpg";
+import responsible from "../assets/Images/responsible.jpg"; 
 import { heroSectionBottomContainerVariants, contentBasicVariants } from "../utils/animationVarients";
 import { HandsGlobeIcon, InifiteIcon, ShieldCheckIcon } from "../assets/Icons/Icons";
 import SectionPill from "../components/SectionPill";
@@ -292,7 +293,7 @@ const Home = () => {
           <div className="grid lg:grid-cols-[3fr_2fr_3fr] sm:grid-cols-[3fr_3fr_3fr] grid-cols-2 lg:gap-9 sm:gap-3 gap-4 max-w-[1100px] lg:h-[290px] md:h-[320px] sm:h-[290px] h-[500px] mx-5 md:mt-20 mt-10">
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/685bd03b38b28d909fd48630_about-01.webp"
+                src={responsible}
                 loading="eager"
                 alt="Image"
                 className="object-cover w-full h-full"
@@ -301,7 +302,7 @@ const Home = () => {
 
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/6837f52f1097f34d589ada2c_about-image-02.webp"
+                src={resilient}
                 loading="eager"
                 alt="About Image"
                 className="w-full h-full object-cover"
@@ -310,7 +311,7 @@ const Home = () => {
 
             <div className="rounded-2xl overflow-hidden sm:col-span-1 col-span-2">
               <img
-                src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/685bd03a536b0ac4772d1def_about-02.webp"
+                src={research}
                 loading="eager"
                 alt="Image"
                 className="w-full h-full object-cover"
