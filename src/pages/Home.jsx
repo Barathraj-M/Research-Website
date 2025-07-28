@@ -14,6 +14,7 @@ import PrimaryButtom from "../components/PrimaryButtom";
 import star from "../assets/Images/star.svg";
 import cross from "../assets/Images/cross.svg";
 import crosses from "../assets/Images/crosses.svg";
+import jc from "../assets/Images/jc.png";
 import RoundedBottomRight from '../assets/Images/hero-bottom-right.svg'
 import RoundedBottomLeft from '../assets/Images/hero-bottom-left.svg'
 import YogaBannerImage from '../assets/Images/ancient-yoga-banner-image.png'
@@ -230,9 +231,9 @@ const Home = () => {
             className="flex justify-center"
           >
             <img
-              src="/path/to/your/image.jpg" // Replace with actual image path
+              src={jc} // Replace with actual image path
               alt="SLSRP"
-              className="w-full max-w-md rounded-lg shadow-lg"
+              className="w-full max-w-md "
             />
           </motion.div>
         </motion.div>
