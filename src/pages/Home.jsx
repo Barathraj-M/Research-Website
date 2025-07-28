@@ -14,6 +14,14 @@ import PrimaryButtom from "../components/PrimaryButtom";
 import star from "../assets/Images/star.svg";
 import cross from "../assets/Images/cross.svg";
 import crosses from "../assets/Images/crosses.svg";
+import RoundedBottomRight from '../assets/Images/hero-bottom-right.svg'
+import RoundedBottomLeft from '../assets/Images/hero-bottom-left.svg'
+import YogaBannerImage from '../assets/Images/ancient-yoga-banner-image.png'
+
+
+import { heroSectionBottomContainerVariants, contentBasicVariants } from "../utils/animationVarients";
+import { HandsGlobeIcon, InifiteIcon, ShieldCheckIcon } from "../assets/Icons/Icons";
+import SectionPill from "../components/SectionPill";
 
 const videoSlides = [
   {
@@ -107,61 +115,69 @@ const Home = () => {
           )}
         </div>
 
-        <motion.div
-          ref={bottomRef}
-          initial={{ opacity: 0, y: 40 }}
-          animate={bottomInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1, ease: "easeInOut" }}
-          className="flex self-end w-full  bottom-imagess"
-        >
-          <div className="absolute -left-6 bottom-0 z-40 self-end">
-            <img
-              src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683e866c5a5df0d7b03e41e6_hero-bottom-left.svg"
-              loading="eager"
-              alt="Icon"
-              class="about-left-decorative"
-            />
-          </div>
-          <div
-            className="w-full bg-gray-8 flex justify-around items-center  p-3 sm:p-4 md:p-6 overflow-hidden"
-            style={{
-              borderTopLeftRadius: "3rem",
-              borderTopRightRadius: "3rem",
-            }}
+        <div className="flex justify-center items-center w-full">
+          <motion.div
+            ref={bottomRef}
+            variants={heroSectionBottomContainerVariants}
+            initial='initial'
+            animate='animate'
+            className="absolute bottom-0 xs:w-full md:w-9/10 lg:w-9/10 flex flex-row justify-between items-center gap-0"
           >
-            <div className="flex flex-col items-center justify-center gap-2 sm:gap-3 md:gap-4 text-center">
-              <div className="flex gap-2 sm:gap-3 lg:gap-4 justify-center items-center">
-                <div className="text-gray-500 font-bold">
-                  SLSRP The Timeless Mission
-                </div>
-              </div>
-            </div>
-            <div className="h-12 sm:h-16 lg:h-20 w-px bg-gray-300"></div>
-            <div className="flex flex-col items-center justify-center gap-2 sm:gap-3 md:gap-4 text-center">
-              <div className="flex gap-2 sm:gap-3 lg:gap-4 justify-center items-center">
-                <div className="text-gray-500 font-bold">
-                  Forging a Civilizational Shift For sustenance
-                </div>
-              </div>
-            </div>
-            <div className="h-12 sm:h-16 lg:h-20 w-px bg-gray-300"></div>
-            <div className="flex flex-col items-center justify-center gap-2 sm:gap-3 md:gap-4 text-center">
-              <div className="flex gap-2 sm:gap-3 lg:gap-4 justify-center items-center">
-                <div className="text-gray-500 font-bold">
-                  Sustaining Humanity
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="absolute -right-6 self-end">
             <img
-              src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/6841390341d0511acefa1664_hero-bottom-right.svg"
-              loading="eager"
-              alt="Icon"
-              class="about-right-decorative"
+              src={RoundedBottomLeft}
+              alt='Rounded bottom left decoration'
+              className='self-end -mb-[0.8px] -me-[0.8px]'
             />
-          </div>
-        </motion.div>
+            <motion.div
+              className='w-full grid xs:grid-cols-1 md:grid-cols-3 md:gap-x-5 rounded-tl-xl rounded-tr-xl bg-gray-8 px-4 pt-4 pb-2'
+              variants={heroSectionBottomContainerVariants}
+              initial='initial'
+              animate='animate'
+            >
+              <motion.div
+                className='flex flex-col justify-center items-center gap-y-0.5 h-full xs:border-b-1 md:border-b-0 md:border-r-1 border-dashed border-gray-4 p-2'
+                variants={contentBasicVariants}
+                initial='initial'
+                whileInView='whileInView'
+                custom={1}
+                viewport={{ once: true, amount: "some" }}
+                exit='exit'
+              >
+                <h5 className="text-center text-gray-1">SLSRP - The timeless mission</h5>
+                <InifiteIcon width={50} height={50} />
+              </motion.div>
+              <motion.div
+                className='flex flex-col justify-center items-center gap-y-2 h-full xs:border-b-1 md:border-b-0 md:border-r-1 border-dashed border-gray-4 p-2'
+                variants={contentBasicVariants}
+                initial='initial'
+                whileInView='whileInView'
+                custom={4}
+                viewport={{ once: true, amount: "some" }}
+                exit='exit'
+              >
+                <h5 className="text-center text-gray-1">Forging a Civilizational Shift - For sustenance</h5>
+                <HandsGlobeIcon width={40} height={40} />
+              </motion.div>
+              <motion.div
+                className='text-center flex flex-col justify-center items-center gap-y-2 h-full p-2'
+                variants={contentBasicVariants}
+                initial='initial'
+                whileInView='whileInView'
+                custom={8}
+                viewport={{ once: true, amount: "some" }}
+                exit='exit'
+              >
+                <h5 className="text-center text-gray-1">Sustaining Humanity</h5>
+                <ShieldCheckIcon width={40} height={40} />
+              </motion.div>
+            </motion.div>
+            <img
+              src={RoundedBottomRight}
+              alt='Rounded bottom right decoration'
+              className='self-end -mb-[0.8px] -ms-[0.8px]'
+            />
+          </motion.div>
+        </div>
       </div>
 
       {/* Other sections */}
@@ -227,7 +243,7 @@ const Home = () => {
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-     
+
           viewport={{ once: false }}
           transition={{ duration: 1, ease: "easeIn" }}
           className="flex flex-col items-center text-center"
@@ -330,9 +346,74 @@ const Home = () => {
       {/* <HomeAbout /> */}
       <OurServices />
       <Section6 />
-       {/* <Section9 />
+      {/* <Section9 />
       <Clients />
       <Section3 /> */}
+      <div className="grid auto-rows-auto gap-y-10 min-h-screen w-full px-10 pt-15">
+        <div className="grid sm:auto-rows-auto md:grid-rows-none md:grid-cols-5 gap-y-5 gap-x-5 w-full">
+          <div className="md:col-span-2 flex flex-col justify-start items-start gap-y-2">
+            <SectionPill sectionTitle={'SLSRP'} />
+            <motion.h2
+              className="mt-5!"
+              variants={contentBasicVariants}
+              initial='initial'
+              whileInView='whileInView'
+              custom={1}
+              viewport={{ once: true, amount: "all" }}
+            >
+              A <span className="text-primary-1">Deep Respect</span> for Ancient Knowledge
+            </motion.h2>
+          </div>
+          <div className="md:col-span-3">
+            <motion.p
+              className="text-gray-2"
+              variants={contentBasicVariants}
+              initial='initial'
+              whileInView='whileInView'
+              custom={4}
+              viewport={{ once: true, amount: "all" }}
+            >
+              SLSRP stands at the frontier where Applied noetic science research, Tamil Siddha science,
+              Eastern ancient traditional medicine systems, Physical Reflex practices, and indigenous
+              healing traditions are not merely preserved but scientifically validated and globally positioned. We
+              operate in close coordination with government ministries, research institutions, and thought
+              leaders to create academic pathways and practical platforms that connect the past with the future
+            </motion.p>
+            <motion.p
+              className="text-gray-2 md:mt-5!"
+              variants={contentBasicVariants}
+              initial='initial'
+              whileInView='whileInView'
+              custom={7}
+              viewport={{ once: true, amount: "all" }}
+            >
+              Our Noetic Science Enablement on Unified Wholeness (nseUW) program exemplifies this,
+              offering a non-commercial, merit-based certification ecosystem that brings structure,
+              credibility, and measurable outcomes to traditionally oral knowledge systems.
+            </motion.p>
+          </div>
+        </div>
+        <motion.div 
+          className="overflow-hidden w-full rounded-2xl mb-20 group"
+          initial={{
+            opacity: 0
+          }}
+          whileInView={{
+            opacity: 1,
+            transition: {
+              duration: 1.7,
+              ease: 'easeIn',
+              delay: 2
+            }
+          }}
+        >
+          <img
+            src={YogaBannerImage}
+            alt="banner-image-yoga"
+            className="w-full h-full object-cover rounded-2xl transition-transform duration-500 ease-in-out group-hover:scale-102"
+          />
+        </motion.div>
+      </div>
     </div>
   );
 };

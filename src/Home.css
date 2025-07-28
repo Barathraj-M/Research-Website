@@ -54,7 +54,7 @@
     margin-top: 1rem;
     margin-left: 1.5rem;
 }
-.bottom-imagess{
+/* .bottom-imagess{
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -62,7 +62,7 @@
     justify-content: space-around;
     left:-0.5rem
     
-}
+} */
 .bottom-images div{
     background-color: transparent;
    

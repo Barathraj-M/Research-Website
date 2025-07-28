@@ -10,7 +10,11 @@ import RoundedBottomLeft from '../assets/Images/hero-bottom-left.svg'
 
 import CollapsableCard from '../components/CollapsableCard'
 
-import { contentBasicVariants, overlayVariants } from '../utils/animationVarients'
+import { 
+    contentBasicVariants, 
+    heroSectionBottomContainerVariants, 
+    overlayVariants 
+} from '../utils/animationVarients'
 
 import '../index.css';
 
@@ -124,16 +128,9 @@ const Contact = () => {
                                 />
                                 <motion.div
                                     className='w-full grid xs:grid-cols-1 md:grid-cols-3 md:gap-x-5 rounded-tl-xl rounded-tr-xl bg-gray-8 px-4 pt-4 pb-2'
-                                    initial={{
-                                        y: 140
-                                    }}
-                                    animate={{
-                                        y: 0,
-                                        transition: {
-                                            duration: 1.2,
-                                            ease: "easeInOut"
-                                        }
-                                    }}
+                                    variants={heroSectionBottomContainerVariants}
+                                    initial='initial'
+                                    animate='animate'
                                 >
                                     <motion.div
                                         className='flex flex-col justify-center items-center gap-y-2 h-full xs:border-b-1 md:border-b-0 md:border-r-1 border-dashed border-gray-4 p-4'
@@ -194,7 +191,7 @@ const Contact = () => {
                             Let's start a <span className='text-primary-1!'>conversation</span>
                         </motion.h2>
                         <motion.form
-                            className='w-9/10 md:w-7/10 h-full flex flex-col justify-start items-start xs:gap-y-5 md:gap-y-10 rounded-3xl xs:p-5 md:p-10 bg-white border-0 focus-within:shadow-2xl'
+                            className='w-9/10 md:w-7/10 h-full flex flex-col justify-start items-start xs:gap-y-5 md:gap-y-7 rounded-3xl xs:p-5 md:p-10 bg-white border-0 focus-within:shadow-2xl'
                             variants={contentBasicVariants}
                             initial='initial'
                             whileInView='whileInView'
@@ -218,7 +215,7 @@ const Contact = () => {
                                     {errors.name && <span className='text-red-500 text-sm'>{errors.name}</span>}
                                 </div>
                             </div>
-                            <div className='w-full flex xs:flex-col md:flex-row justify-between items-start gap-x-8 xs:gap-y-5 md:gap-y-10'>
+                            <div className='w-full flex xs:flex-col md:flex-row justify-between items-start gap-x-8 xs:gap-y-5 md:gap-y-7'>
                                 <div className='w-full self-start'>
                                     <label htmlFor='email' className='block mb-2 text-black'>
                                         Email Address

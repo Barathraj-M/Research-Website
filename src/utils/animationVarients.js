@@ -98,6 +98,19 @@ export const overlayVariants = {
     }
 }
 
+export const heroSectionBottomContainerVariants = {
+    initial: {
+        y: 140
+    },
+    animate: {
+        y: 0,
+        transition: {
+            duration: 1.2,
+            ease: "easeInOut"
+        }
+    }
+}
+
 export const collapsableContentVariants = {
     collapsed: {
         opacity: 0,

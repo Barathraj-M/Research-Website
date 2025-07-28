@@ -29,6 +29,7 @@ function AppContent() {
   return (
     <>
       {isValidRoute && <Header />}
+      <div className='selection:bg-primary-1/90 selection:text-white'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
@@ -37,6 +38,7 @@ function AppContent() {
           <Route path='/social' element={<Social />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
+      </div>
       {isValidRoute && <Footer />}
     </>
   )
