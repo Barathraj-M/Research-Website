@@ -21,7 +21,9 @@
     --color-gray-3: #7b7b7b;
     /* --color-primary-1: #7eea57; */
     --color-primary-1: #ffbb00;
-    /* #fae576, , #f4c415, #fcc909, #fcd73a, #fcac04  */
+    --color-primary-variant-2: #f4c415;
+    --color-primary-variant-3: #fae576;
+    /* , , , #fcc909, #fcd73a, #fcac04  */
     --color-gray-6: #ebebeb;
     --color-gray-4: #bebebe;
     --color-gray-7: whitesmoke;
