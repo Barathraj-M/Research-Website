@@ -28,7 +28,7 @@ const Header = () => {
         <nav className='flex flex-row justify-start items-center gap-3 w-full h-full bg-white/70 backdrop-blur-sm rounded-full relative '>
           <div className='m-1 ms-5 h-full flex items-center'>
             <Link to='/' className='text-decoration-none'>
-              <img src={DummyLogo} alt='logo' className='w-30 h-13' loading='eager' />
+              <img src={DummyLogo} alt='logo' className='xs:h-12 xs:w-25 md:w-30 md:h-13' loading='eager' />
             </Link>
           </div>
           <div className='md:flex flex-row justify-center items-center gap-y-1 gap-x-5 w-full xs:hidden'>
