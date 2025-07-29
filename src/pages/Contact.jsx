@@ -8,7 +8,10 @@ import RoundedBottomRight from '../assets/Images/hero-bottom-right.svg'
 import RoundedBottomLeft from '../assets/Images/hero-bottom-left.svg'
 // import PrimaryButtom from '../components/PrimaryButtom'
 
+import { ConversationSparkIcon } from '../assets/Icons/Icons'
+
 import CollapsableCard from '../components/CollapsableCard'
+import SectionPill from '../components/SectionPill'
 
 import { 
     contentBasicVariants, 
@@ -94,6 +97,7 @@ const Contact = () => {
                             src={ContactHeroImage}
                             alt='Contact-hero-section-header-img'
                             className='w-full h-[100vh] object-cover overflow-hidden'
+                            loading='eager'
                         />
                         <div className='absolute w-full flex flex-col justify-center items-center gap-y-2 md:gap-y-15 bottom-0 left-0 right-0'>
                             <div className='flex flex-col justify-center items-center gap-y-7 max-w-md'>
@@ -127,7 +131,7 @@ const Contact = () => {
                                     className='self-end -mb-[0.8px] -me-[0.8px]'
                                 />
                                 <motion.div
-                                    className='w-full grid xs:grid-cols-1 md:grid-cols-3 md:gap-x-5 rounded-tl-xl rounded-tr-xl bg-gray-8 px-4 pt-4 pb-2'
+                                    className='w-full grid xs:grid-cols-1 md:grid-cols-3 md:gap-x-5 rounded-tl-xl rounded-tr-xl bg-gray-8 px-4 pt-4 pb-2 bg-gradient-to-t from-gray-8 to-[#fff3d1]'
                                     variants={heroSectionBottomContainerVariants}
                                     initial='initial'
                                     animate='animate'
@@ -179,6 +183,12 @@ const Contact = () => {
                         </div>
                     </div>
                     <div className='w-full flex flex-col justify-center items-center gap-y-10 my-10'>
+                        <span className="relative flex w-16 h-16 items-center justify-center -mb-3 mt-10">
+                            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary-1/50 opacity-75"></span>
+                            <span className="relative inline-flex w-16 h-16 rounded-full bg-primary-1 items-center justify-center">
+                                <ConversationSparkIcon width={30} height={30} />
+                            </span>
+                        </span>
                         <motion.h2
                             className='text-center'
                             variants={contentBasicVariants}
@@ -273,9 +283,10 @@ const Contact = () => {
                     </div>
                 </AnimatePresence>
             </section>
-            <section className='w-full min-h-screen p-2 flex flex-col justify-start items-center gap-y-8'>
+            <section className='w-full min-h-screen p-2 flex flex-col justify-start items-center gap-y-8 pt-20!'>
+                <SectionPill sectionTitle={'FAQ'}/>
                 <motion.h2
-                    className='text-center font-semibold mt-20! max-w-lg'
+                    className='text-center font-semibold max-w-lg'
                     variants={contentBasicVariants}
                     initial='initial'
                     whileInView='whileInView'
@@ -286,24 +297,24 @@ const Contact = () => {
                     Clearing doubts about our <span className='text-primary-1'>organisation & services</span>
                 </motion.h2>
                 <CollapsableCard
-                    heading={'What is eco-supply transportation?'}
-                    text={'Eco-supply transportation refers to environmentally sustainable methods of transporting goods within the supply chain. The goal is to reduce the carbon footprint, energy consumption, and environmental impact associated with logistics and distribution.'}
+                    heading={'Who founded SLSRP and what is its core philosophy?'}
+                    text={'SLSRP was founded by Thiru. Jeyachandran Srinivasan, a distinguished socialpreneur and thought leader. Its philosophy emphasizes a wholistic model of transformation that integrates science with spirit, technology with ethics, and intangible human consciousness with tangible global development goals.'}
                 />
                 <CollapsableCard
-                    heading={'How does Eco-Supply reduce environmental impact?'}
-                    text={'Eco-supply transportation reduces environmental impact by making the entire logistics process more sustainable, from how goods are packaged and shipped to how vehicles are powered and routes are planned.'}
+                    heading={'What is the Noetic Science Enablement on Unified Wholeness (nseUW) program?'}
+                    text={'nseUW is a non-commercial, merit-based certification ecosystem offered by SLSRP. It provides a three-year progression-based certification in noetic science, focusing on consciousness practices rooted in Eastern wisdom. It includes capacity building through institutional scopes of work and certifies subject matter experts based on merit.'}
                 />
                 <CollapsableCard
-                    heading={'Do you offer customized supply chain solutions?'}
-                    text={'Yes, every business has unique needs. We provide tailor-made logistics strategies designed to maximize efficiency, reduce costs, and support your sustainability goals.'}
+                    heading={'How does SLSRP integrate ancient knowledge with modern science?'}
+                    text={'SLSRP validates and positions ancient systems like Tamil Siddha science, Eastern traditional medicine, and indigenous healing through rigorous scientific research. It bridges East-West integration via mixed-method studies, symposia, and publications that compare ancient practices with Western models.'}
                 />
                 <CollapsableCard
-                    heading={'What areas do you currently serve?'}
-                    text={'We proudly provide eco-friendly supply chain solutions across a growing network of regions, focusing on sustainability, efficiency, and impact.'}
+                    heading={'What are SLSRP\'s funding sources?'}
+                    text={'SLSRP uses diversified streams such as government grants from ministries like AYUSH and CSIR, angel and venture capital, NRI investments, corporate CSR projects, project-based revenue, IP commercialization, and merit-based certifications. Revenue is allocated with 80% toward core programs and 20% for operations, with full reinvestment for national development.'}
                 />
                 <CollapsableCard
-                    heading={'Can Eco-Supply handle large-scale industrial logistics?'}
-                    text={'Eco-Supply can handle large-scale industrial logistics—and it’s becoming increasingly common for major industries to adopt sustainable logistics solutions without compromising on scale, speed, or efficiency.'}
+                    heading={'How can individuals or organizations collaborate with SLSRP?'}
+                    text={'SLSRP partners with ministries, universities, CSR wings, and international agencies for co-creation, policy insights, and empowerment programs. Opportunities include research collaborations, youth cohorts, startup incubation, and participation in noetic certification. Contact SLSRP for merit-based involvement in programs like nseUW or environmental initiatives.'}
                 />
             </section>
             <div className='w-full h-30'></div>
