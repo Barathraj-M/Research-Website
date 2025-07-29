@@ -26,9 +26,7 @@ const About = () => {
             id: 'social',
             title: 'Social Initiatives',
             icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m3 5.197V9a3 3 0 00-6 0v2m0 0V9a3 3 0 016 0v2m-3 7h3m-3 0h-3m3 0v3m0-3V9" />
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 1024 1024" className=''><path fill="currentColor" d="M746 835.28L544.529 723.678c74.88-58.912 95.216-174.688 95.216-239.601v-135.12c0-89.472-118.88-189.12-238.288-189.12c-119.376 0-241.408 99.664-241.408 189.12v135.12c0 59.024 24.975 178.433 100.624 239.089L54 835.278S0 859.342 0 889.342v81.088c0 29.84 24.223 54.064 54 54.064h692c29.807 0 54.031-24.224 54.031-54.064v-81.087c0-31.808-54.032-54.064-54.032-54.064zm-9.967 125.215H64.002V903.28c4.592-3.343 11.008-7.216 16.064-9.536c1.503-.688 3.007-1.408 4.431-2.224l206.688-112.096c18.848-10.224 31.344-29.184 33.248-50.528s-7.008-42.256-23.712-55.664c-53.664-43.024-76.656-138.32-76.656-189.152V348.96c0-45.968 86.656-125.12 177.408-125.12c92.432 0 174.288 78.065 174.288 125.12v135.12c0 50.128-15.568 145.84-70.784 189.28a64.1 64.1 0 0 0-24.224 55.664a64.1 64.1 0 0 0 33.12 50.849l201.472 111.6c1.777.975 4.033 2.031 5.905 2.848c4.72 2 10.527 5.343 14.783 8.288v57.887zM969.97 675.936L765.505 564.335c74.88-58.912 98.224-174.688 98.224-239.601v-135.12c0-89.472-121.872-190.128-241.28-190.128c-77.6 0-156.943 42.192-203.12 96.225c26.337 1.631 55.377 1.664 80.465 9.664c33.711-26.256 76.368-41.872 122.656-41.872c92.431 0 177.278 79.055 177.278 126.128v135.12c0 50.127-18.56 145.84-73.775 189.28a64.1 64.1 0 0 0-24.224 55.664a64.1 64.1 0 0 0 33.12 50.848l204.465 111.6c1.776.976 4.032 2.032 5.904 2.848c4.72 2 10.527 5.344 14.783 8.288v56.912H830.817c19.504 14.72 25.408 35.776 32.977 64h106.192c29.807 0 54.03-24.224 54.03-54.064V730.03c-.015-31.84-54.047-54.096-54.047-54.096z"/></svg>
             ),
             color: 'from-amber-400 to-orange-500',
             items: [
@@ -70,9 +68,7 @@ const About = () => {
             id: 'environmental',
             title: 'Environmental Initiatives',
             icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 12q7 1 8 8q1-7 8-8q-7-1-8-8q-1 7-8 8M4 2v6M1 5h6M4 16v6m-3-3h6"/></svg>
             ),
             color: 'from-green-400 to-emerald-600',
             items: [
@@ -183,6 +179,9 @@ const About = () => {
 
     const head3 = useRef(null);
     const headInView3 = useInView(head3, { once: false });
+
+    const head4 = useRef(null);
+    const headInView4 = useInView(head4, { once: false });
 
     const logos = [
         'https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683d3b2d6d119a92715751a6_client-image-06.svg',
@@ -548,11 +547,16 @@ const About = () => {
             <div className="min-h-screen bg-gradient-to-br from-white via-amber-25 to-orange-50 ">
                 {/* Hero Section */}
                 <div className="bg-gradient-to-r from-white via-amber-100 to-orange-100 py-16 px-6">
+                    <motion.div
+                    ref={head}
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: headInView ? 1 : 0, y: headInView ? 0 : 100 }}
+                    transition={{ duration: 1, ease: "easeInOut" }}
+                    
+                >
                     <div className="max-w-6xl mx-auto text-center">
                         <div className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-6" style={{ backgroundColor: '#ffbb00' }}>
-                            <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 16 16" className='text-white'><g fill="currentColor"><path d="m14.12 10.163l1.715.858c.22.11.22.424 0 .534L8.267 15.34a.6.6 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858l5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.6.6 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.6.6 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535z"/><path d="m14.12 6.576l1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.6.6 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858l5.317 2.659c.505.252 1.1.252 1.604 0z"/></g></svg>
                         </div>
                         <div className="text-5xl font-bold mb-6 text-gray-800">
                             Core Initiatives
@@ -621,17 +625,30 @@ const About = () => {
                             </div>
                         ))}
                     </div>
+                    </motion.div>
                 </div>
 
                 {/* Main Content */}
                 <div className="max-w-7xl mx-auto px-6 py-16">
 
                     {/* Core Initiatives */}
-
-
+                    
                     {/* Enabling Pillars */}
                     <div className="mb-20">
+                        <motion.div
+                    ref={head4}
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: headInView4 ? 1 : 0, y: headInView4 ? 0 : 100 }}
+                    transition={{ duration: 1, ease: "easeInOut" }}
+                    className="flex flex-col items-center text-center"
+                >
                         <div className="text-center mb-12">
+                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: '#ffbb00' }}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512" className='text-white'><path fill="currentColor" d="M247.759 14.358L16 125.946V184h480v-58.362ZM464 152H48v-5.946l200.241-96.412L464 146.362ZM16 496h480V392H16Zm32-72h416v40H48Zm24-216h32v160H72zm336 0h32v160h-32zm-224 0h32v160h-32zm112 0h32v160h-32z"/></svg>
+                                {/* <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg> */}
+                            </div>
                             <div className="text-4xl font-bold text-gray-800 mb-4">Enabling Pillars</div>
                             <div className="text-lg text-gray-600 max-w-2xl mx-auto">
                                 Four foundational pillars that support our mission and drive sustainable impact
@@ -650,15 +667,24 @@ const About = () => {
                                 </div>
                             ))}
                         </div>
+                        </motion.div>
                     </div>
 
                     {/* Financial Model */}
                     <div className="bg-gradient-to-r from-amber-50 to-orange-100 rounded-2xl p-8 border-2 border-amber-200">
+                        <motion.div
+                    ref={head2}
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: headInView2 ? 1 : 0, y: headInView2 ? 0 : 100 }}
+                    transition={{ duration: 1, ease: "easeInOut" }}
+                    className="flex flex-col items-center text-center"
+                >
                         <div className="text-center mb-8">
                             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: '#ffbb00' }}>
-                                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="2.3em" height="2.3em" viewBox="0 0 24 24" className='text-white'><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16.7 8A3 3 0 0 0 14 6h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1-2.7-2M12 3v3m0 12v3"/></svg>
+                                {/* <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
+                                </svg> */}
                             </div>
                             <div className="text-3xl font-bold mb-4 text-gray-800">Financial & Revenue Model</div>
                             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
@@ -696,6 +722,7 @@ const About = () => {
                                 </div>
                             </div>
                         </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
