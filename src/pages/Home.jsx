@@ -207,7 +207,10 @@ const Home = () => {
           >
             <div className="text-3xl sm:text-4xl font-bold flex items-center gap-3">
               <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div>
-              <div> Welcome to <span className="text-[#ffbb00]">SLSRP</span></div>
+              <div>
+                {" "}
+                Welcome to <span className="text-[#ffbb00]">SLSRP</span>
+              </div>
             </div>
             <div className="text-2xl sm:text-3xl text-gray-500">
               Semporutkalai Life Science Research Park (SLSRP)
@@ -385,17 +388,19 @@ const Home = () => {
                     style={{ backgroundColor: "#ffbb00" }}
                   >
                     <svg
-                      className="w-8 h-8 text-white"
+                      width="54"
+                      height="54"
+                      viewBox="-8 -10 84 84"
+                      xmlns="http://www.w3.org/2000/svg"
                       fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
                     >
                       <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 3c.132.92.303 1.98-.248 2.894a3 3 0 01-4.753.342C6.28 7.653 5 9.87 5 12a7 7 0 1014 0c0-2.243-1.306-4.84-3.167-6.834-.64-.712-1.533-1.064-2.045-2.166z"
+                        d="M8 48L24 24L32 36L40 28L56 48H8Z"
+                        stroke="#ffffffff"
+                        stroke-width="4"
+                        fill="none"
                       />
+                      <circle cx="48" cy="16" r="6" fill="#ffffffff" />
                     </svg>
                   </div>
 
@@ -409,7 +414,7 @@ const Home = () => {
                     style={{ backgroundColor: "#ffbb00" }}
                   >
                     <svg
-                      className="w-8 h-8 text-white"
+                      className="w-7 h-7 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -418,7 +423,7 @@ const Home = () => {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
-                        d="M3 3v18h18M9 17l3-4 4 5 4-7"
+                        d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
                       />
                     </svg>
                   </div>
