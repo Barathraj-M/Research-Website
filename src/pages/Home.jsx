@@ -121,11 +121,11 @@ const Home = () => {
         </div>
 
         <div className="flex justify-center items-center w-full ">
-          <motion.div
+          <div
             ref={bottomRef}
-            variants={heroSectionBottomContainerVariants}
-            initial="initial"
-            animate="animate"
+            // variants={heroSectionBottomContainerVariants}
+            // initial="initial"
+            // animate="animate"
             className="absolute bottom-0 xs:w-full md:w-9/10 lg:w-9/10 flex flex-row justify-between items-center gap-0 "
           >
             <img
@@ -187,7 +187,7 @@ const Home = () => {
               alt="Rounded bottom right decoration"
               className="self-end -mb-[0.8px] -ms-[0.8px]"
             />
-          </motion.div>
+          </div>
         </div>
       </div>
 
