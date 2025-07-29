@@ -1,6 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 
+import AnimatedTextCycler from './AnimatedTextCycler.jsx';
+
 import DummyLogo from '../assets/Images/dummy-icon.svg';
 import FooterDivider from '../assets/Images/nav-divider.svg';
 import BrixLogo from '../assets/Images/brix-logo.jpg';
@@ -38,7 +40,7 @@ const Footer = () => {
           <div className='lg:w-10/20 flex flex-col justify-between items-center gap-3 bg-white rounded-2xl p-5 border-white'>
             <img src={DummyLogo} alt='brand-logo' className='w-30 h-30 self-start'/>
             <div className='flex flex-col justify-start items-start gap-y-5 w-full'>
-              <h2>We believe real change starts deep within the supply chain.</h2>
+              <AnimatedTextCycler />
               <div className='flex flex-col justify-start items-center gap-y-3 w-full'>
                 <p>Join our community.</p>
                 <form className='flex flex-row justify-around items-center gap-x-2 w-full rounded-full p-1 border-1 border-gray-3 focus-within:ring-1 focus-within:ring-gray-2'>

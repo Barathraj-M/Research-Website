@@ -7,6 +7,9 @@ import SectionPill from '../components/SectionPill';
 import PrimaryButtom from '../components/PrimaryButtom';
 import aboutimage from '../assets/Images/aboutimage2.jpg'; // Update with the correct path to your image
 
+
+import { contentBasicVariants, heroSectionBottomContainerVariants } from '../utils/animationVarients';
+
 const About = () => {
 
     const [expandedSections, setExpandedSections] = useState({});
@@ -253,8 +256,22 @@ const About = () => {
 
                         <div className='relative flex self-end w-full max-w-5xl -mb-[0.8px] md:h-auto sm:h-[170px] rounded-t-lg h-[150px]'>
                             <div className='absolute -left-6 bottom-0 z-40 self-end'><img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683e866c5a5df0d7b03e41e6_hero-bottom-left.svg" loading="eager" alt="Icon" class="about-left-decorative" /></div>
-                            <div className='w-full bg-gray-8 flex justify-around items-center rounded-t-lg p-3 sm:p-4 md:p-6 overflow-hidden'>
-                                <div className='flex flex-col items-center justify-center text-center'>
+                            <motion.div
+                                className='w-full bg-gray-8 flex justify-around items-center rounded-t-lg p-3 sm:p-4 md:p-6 overflow-hidden bg-gradient-to-t from-gray-8 to-[#fff3d1]'
+                                variants={heroSectionBottomContainerVariants}
+                                initial='initial'
+                                animate='animate'
+
+                            >
+                                <motion.div
+                                    className='flex flex-col items-center justify-center text-center'
+                                    variants={contentBasicVariants}
+                                    initial='initial'
+                                    whileInView='whileInView'
+                                    custom={1}
+                                    viewport={{ once: true, amount: "some" }}
+                                    exit='exit'
+                                >
                                     <h5 className="text-lg font-semibold text-gray-800">Mission-Driven Verticals</h5>
                                     <p className="text-sm sm:block hidden text-gray-700 ">Social & Environmental Initiatives</p>
                                     {/* <div className='flex gap-2 sm:gap-3 lg:gap-4 justify-center items-center'>
@@ -266,9 +283,17 @@ const About = () => {
                                         />
                                         <div className='text-lg sm:text-xl md:text-2xl text-gray-900 font-bold'>30%</div>
                                     </div> */}
-                                </div>
+                                </motion.div>
                                 <div className="h-12 sm:h-16 lg:h-20 w-px bg-gray-300"></div>
-                                <div className='flex flex-col items-center justify-center text-center'>
+                                <motion.div
+                                    className='flex flex-col items-center justify-center text-center'
+                                    variants={contentBasicVariants}
+                                    initial='initial'
+                                    whileInView='whileInView'
+                                    custom={4}
+                                    viewport={{ once: true, amount: "some" }}
+                                    exit='exit'
+                                >
                                     <h5 className="text-lg font-semibold text-gray-800">Strategic Pillars</h5>
                                     <p className="text-sm sm:block hidden text-gray-700 ">STEM, Ethical Governance, Policy Advocacy</p>
                                     {/* <div className='flex gap-2 sm:gap-3 lg:gap-4 justify-center items-center'>
@@ -280,9 +305,17 @@ const About = () => {
                                         />
                                         <div className='text-lg sm:text-xl md:text-2xl text-gray-900 font-bold'>60%</div>
                                     </div> */}
-                                </div>
+                                </motion.div>
                                 <div className="h-12 sm:h-16 lg:h-20 w-px bg-gray-300"></div>
-                                <div className='flex flex-col items-center justify-center  text-center'>
+                                <motion.div
+                                    className='flex flex-col items-center justify-center  text-center'
+                                    variants={contentBasicVariants}
+                                    initial='initial'
+                                    whileInView='whileInView'
+                                    custom={8}
+                                    viewport={{ once: true, amount: "some" }}
+                                    exit='exit'
+                                >
                                     <h5 className="text-lg font-semibold text-gray-800">Funding Streams</h5>
                                     <p className="text-sm sm:block hidden text-gray-700">Sustainability & Project Scalability</p>
                                     {/* <div className='flex gap-2 sm:gap-3 lg:gap-4 justify-center items-center'>
@@ -294,8 +327,8 @@ const About = () => {
                                         />
                                         <div className='text-lg sm:text-xl md:text-2xl text-gray-900 font-bold'>90%</div>
                                     </div> */}
-                                </div>
-                            </div>
+                                </motion.div>
+                            </motion.div>
                             <div className='absolute -right-6 self-end'><img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/6841390341d0511acefa1664_hero-bottom-right.svg" loading="eager" alt="Icon" class="about-right-decorative" /></div>
                         </div>
                     </div>
@@ -594,7 +627,7 @@ const About = () => {
                 <div className="max-w-7xl mx-auto px-6 py-16">
 
                     {/* Core Initiatives */}
-                    
+
 
                     {/* Enabling Pillars */}
                     <div className="mb-20">

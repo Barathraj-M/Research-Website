@@ -22,7 +22,7 @@ const NotFound = lazy(() => import('./pages/NotFound'))
 
 function AppContent() {
   const location = useLocation()
-  
+
   const validRoutes = ['/', '/about', '/contact', '/environment', '/social']
   const isValidRoute = validRoutes.includes(location.pathname)
   
