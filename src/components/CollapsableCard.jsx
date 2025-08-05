@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-import { CollapseIcon, PlusIcon } from '../assets/Icons/Icons';
-
 import { collapsableContentVariants } from '../utils/animationVarients';
 
 import '../App.css';

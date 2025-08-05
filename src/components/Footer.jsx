@@ -69,7 +69,7 @@ const Footer = () => {
 
           <div className='grid grid-cols-2 bg-white rounded-2xl p-10 border-white'>
             <div className='border-b-1 border-e-1 border-gray-5 border-dashed flex flex-col justify-between items-start gap-y-3 py-4'>
-              <h2>Pages</h2>
+              <h4>Pages</h4>
               <div className='grid xs:grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-2'>
                 <div className='flex flex-col justify-center items-start gap-y-2'>
                   <a href='/' className='text-decoration-none hover:text-black hover:underline active:text-black active:underline underline-offset-5 transition-all duration-300 ease-in-out'>Home</a>
@@ -86,7 +86,7 @@ const Footer = () => {
               </div>
             </div>
             <div className='border-b-1 border-gray-5 border-dashed py-4 ps-4'>
-              <h2>Our Conglomerate</h2>
+              <h4>Our Conglomerate</h4>
               <div className='grid grid-cols-2 gap-x-2 gap-y-5 text-center mt-5'>
                 <a href='https://brixnet.in/' target='_blank' rel='noopener noreferrer'>
                   <img 
@@ -123,12 +123,12 @@ const Footer = () => {
               </div>
             </div>
             <div className='border-e-1 border-gray-5 border-dashed flex flex-col justify-between items-start gap-y-3 py-4'>
-              <h2>Contact</h2>
+              <h4>Contact</h4>
               <a href='mailto:hello@slrp-research-park.com' className='text-decoration-none hover:text-black active:text-black transition-all duration-300 ease-in-out'>hello@slrp-research-park.com</a>
               <a href='tel:+91 6383499920' className='text-decoration-none hover:text-black active:text-black transition-all duration-300 ease-in-out'>+91 6383499920</a>
             </div>
             <div className='border-gray-5 border-dashed py-4 ps-4'>
-              <h2>Social Media</h2>
+              <h4>Social Media</h4>
               <div className='flex flex-row justify-start items-center gap-x-4 mt-5'>
                 <a href='https://www.linkedin.com/company/slrp-research-park/' target='_blank' rel='noopener noreferrer' className='hover:text-blue-700'>
                   <LinkedIn width='30' height='30' />
