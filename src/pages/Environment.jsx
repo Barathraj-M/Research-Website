@@ -7,6 +7,7 @@ import InnovationSection from '../components/environment-components/InnovationSe
 import IncubationSection from '../components/environment-components/IncubationSection';
 import EnvironmentIntelligence from '../components/environment-components/EnvironmentIntelligence';
 import CollaborativeEcosystem from '../components/environment-components/CollaborativeEcosystem';
+import EngineeringSection from '../components/environment-components/EngineeringSection';
 
 import HeroImage from '../assets/Images/environment-hero-image.webp';
 import HeroBottomLeft from '../assets/Images/hero-bottom-left.svg';
@@ -190,6 +191,8 @@ const Environment = () => {
       <InnovationSection />
 
       <IncubationSection />
+
+      <EngineeringSection />
 
       <div className="grid auto-rows-auto gap-y-10 min-h-screen w-full px-10 pt-15">
         <div className="grid sm:auto-rows-auto md:grid-rows-none md:grid-cols-5 gap-y-5 gap-x-5 w-full">
