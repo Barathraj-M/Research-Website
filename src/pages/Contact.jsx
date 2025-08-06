@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 
-import ContactHeroImage from '../assets/Images/contact-hero-image.jpg'
+import ContactHeroImage from '../assets/Images/contact-hero-image1.jpg'
 import RoundedBottomRight from '../assets/Images/hero-bottom-right.svg'
 import RoundedBottomLeft from '../assets/Images/hero-bottom-left.svg'
 // import PrimaryButtom from '../components/PrimaryButtom'
@@ -100,7 +100,7 @@ const Contact = () => {
                             loading='eager'
                         />
                         <div className='absolute w-full flex flex-col justify-center items-center gap-y-2 md:gap-y-15 bottom-0 left-0 right-0'>
-                            <div className='flex flex-col justify-center items-center gap-y-7 max-w-md'>
+                            <div className='flex flex-col justify-center items-center gap-y-7 max-w-lg'>
                                 <motion.h1
                                     className='mx-auto text-white!'
                                     variants={contentBasicVariants}
@@ -121,7 +121,7 @@ const Contact = () => {
                                     exit='exit'
                                     custom={3}
                                 >
-                                    Eco-supply solutions start with a conversation. Whether you're exploring green logistics or need tailored support, we're ready to assist.
+                                    Innovations for life sciences begin with conscious collaboration. Whether you're advancing noetic research, incubating green technologies, or seeking wholistic environmental solutions, SLSRP is ready to empower your journey.
                                 </motion.p>
                             </div>
                             <div className='xs:w-full sm:w-8/10 md:w-9/10 lg:w-8/10 flex flex-row justify-between items-center gap-0'>

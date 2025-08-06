@@ -72,6 +72,31 @@ export const contentBasicVariants = {
         opacity: 0,
         y: -100,
         transition: {
+            duration: 0.5,
+            ease: "easeInOut"
+        }
+    }
+}
+
+export const heroSectionMainContainerVariants = {
+    initial: {
+        opacity: 0,
+        y: 60
+    },
+    whileInView: delaySec => ({
+        opacity: [0, 0.4, 0.8, 1],
+        y: 0,
+        transition: {
+            duration: 1,
+            delay: 0.1 * delaySec,
+            ease: "easeInOut",
+            staggerChildren: 0.5
+        }
+    }),
+    exit: {
+        opacity: 0,
+        y: -100,
+        transition: {
             duration: 1,
             ease: "easeInOut"
         }
@@ -145,6 +170,57 @@ export const sectionPillVariants = {
     }
 }
 
+export const visibleAnimationVariants = {
+    initial: {
+        opacity: 0,
+    },
+    whileInView: delaySec => ({
+        opacity: [0, 0.4, 0.8, 1],
+        transition: {
+            duration: 1,
+            delay: 0.5 * delaySec,
+            ease: "easeInOut",
+            staggerChildren: 0.5
+        }
+    }),
+    exit: {
+        opacity: 0,
+        transition: {
+            duration: 1,
+            ease: "easeInOut"
+        }
+    }
+}
+
+export const basicCardVariants = {
+    initial: {
+        opacity: 0,
+        y: 60
+    },
+    whileInView: delaySec => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1,
+            delay: 0.1 * delaySec,
+            ease: "easeInOut",
+            type: "spring",
+            bounce: 0.5,
+            damping: 20,
+            stiffness: 70,
+            mass: 0.3,
+            velocity: 0.5
+        }
+    }),
+    exit: {
+        opacity: 0,
+        transition: {
+            duration: 1,
+            ease: "easeInOut"
+        }
+    }
+}
+
 export const serviceCardVariants = {
     hidden: {
         opacity: 0,
@@ -206,6 +282,18 @@ export const animatedTextCyclerVariants = {
         transition: {
             duration: 0.4,
             ease: [0.55, 0.06, 0.68, 0.19]
+        }
+    }
+};
+
+export const quoteIconDanceVariants = {
+    animate: {
+        y: [0, -10, 0],
+        rotate: [0, 5, -5, 0],
+        transition: {
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut"
         }
     }
 };

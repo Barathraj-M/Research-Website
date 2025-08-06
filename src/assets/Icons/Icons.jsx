@@ -62,3 +62,49 @@ export const ConversationSparkIcon = (props) => {
     )
 }
 
+export const BlockChainIcon = (props) => {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} viewBox="0 0 24 24"><g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" color="currentColor"><path d="M12 19c.21 0 .404-.099.793-.297l3.13-1.59C17.308 16.409 18 16.057 18 15.5v-7M12 19c-.21 0-.404-.099-.793-.297l-3.13-1.59C6.692 16.409 6 16.057 6 15.5v-7M12 19v-7m6-3.5c0-.557-.692-.91-2.077-1.613l-3.13-1.59C12.404 5.099 12.21 5 12 5s-.404.099-.793.297l-3.13 1.59C6.692 7.591 6 7.943 6 8.5m12 0c0 .557-.692.91-2.077 1.613l-3.13 1.59c-.389.198-.584.297-.793.297M6 8.5c0 .557.692.91 2.077 1.613l3.13 1.59c.389.198.584.297.793.297"/><path d="m13.19 21.576l4.694-2.272C19.961 18.3 21 17.796 21 17V7c0-.796-1.039-1.299-3.116-2.304L13.19 2.424h0C12.606 2.141 12.314 2 12 2s-.606.141-1.19.424L6.116 4.696C4.039 5.7 3 6.204 3 7v10c0 .796 1.039 1.299 3.116 2.304h0l4.694 2.272c.584.283.876.424 1.19.424s.606-.141 1.19-.424"/></g></svg>
+    )
+}
+
+export const TargetIcon = (props) => {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} viewBox="0 0 24 24"><g fill="none"><circle cx="12" cy="12" r="9.25" stroke="currentColor" strokeWidth="1.5"/><circle cx="12" cy="12" r="5.25" stroke="currentColor" strokeWidth="1.5"/><circle cx="12" cy="12" r="2" fill="currentColor"/></g></svg>
+    )
+}
+
+export const DroneIcon = (props) => {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} viewBox="0 0 32 32"><path fill="currentColor" d="M7 12a5 5 0 1 1 5-5h-2a3 3 0 1 0-3 3zm18 0v-2a3 3 0 1 0-3-3h-2a5 5 0 1 1 5 5M7 30a5 5 0 0 1 0-10v2a3 3 0 1 0 3 3h2a5.006 5.006 0 0 1-5 5m18 0a5.006 5.006 0 0 1-5-5h2a3 3 0 1 0 3-3v-2a5 5 0 0 1 0 10"/><path fill="currentColor" d="M20 18.586v-5.172l5.707-5.707a1 1 0 1 0-1.414-1.414l-4.5 4.5a3.973 3.973 0 0 0-7.587 0l-4.499-4.5a1 1 0 0 0-1.414 0a1 1 0 0 0 0 1.414L12 13.414v5.172l-5.707 5.707a1 1 0 0 0 0 1.414a1 1 0 0 0 1.414 0l4.5-4.5a3.973 3.973 0 0 0 7.587 0l4.5 4.5a1 1 0 0 0 1.414-1.414ZM18 20a2 2 0 0 1-4 0v-8a2 2 0 0 1 4 0Z"/></svg>
+    )
+}
+
+export const LightBulbIcon = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} viewBox="0 0 24 24"><g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" color="currentColor"><path d="M5.143 14A7.8 7.8 0 0 1 4 9.919C4 5.545 7.582 2 12 2s8 3.545 8 7.919A7.8 7.8 0 0 1 18.857 14"/><path d="M14 10c-.613.643-1.289 1-2 1s-1.387-.357-2-1m-2.617 7.098c-.092-.276-.138-.415-.133-.527a.6.6 0 0 1 .382-.53c.104-.041.25-.041.54-.041h7.656c.291 0 .436 0 .54.04a.6.6 0 0 1 .382.531c.005.112-.041.25-.133.527c-.17.511-.255.767-.386.974a2 2 0 0 1-1.2.869c-.238.059-.506.059-1.043.059h-3.976c-.537 0-.806 0-1.043-.06a2 2 0 0 1-1.2-.868c-.131-.207-.216-.463-.386-.974M15 19l-.13.647c-.14.707-.211 1.06-.37 1.34a2 2 0 0 1-1.113.912C13.082 22 12.72 22 12 22s-1.082 0-1.387-.1a2 2 0 0 1-1.113-.913c-.159-.28-.23-.633-.37-1.34L9 19m3-3.5V11"/></g></svg>
+);
+
+export const FocusIcon = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9.134 2.5c-2.666.06-4.223.315-5.287 1.375C2.915 4.803 2.604 6.108 2.5 8.2m12.366-5.7c2.666.06 4.223.315 5.287 1.375c.932.928 1.243 2.233 1.347 4.325m-6.634 13.3c2.666-.06 4.223-.315 5.287-1.375c.932-.928 1.243-2.233 1.347-4.325M9.134 21.5c-2.666-.06-4.223-.315-5.287-1.375c-.932-.928-1.243-2.233-1.347-4.325M16 12a4 4 0 1 1-8 0a4 4 0 0 1 8 0" color="currentColor"/></svg>
+);
+
+export const AcademicCapIcon = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4.26 10.147a60 60 0 0 0-.491 6.347A48.6 48.6 0 0 1 12 20.904a48.6 48.6 0 0 1 8.232-4.41a61 61 0 0 0-.491-6.347m-15.482 0a51 51 0 0 0-2.658-.813A60 60 0 0 1 12 3.493a60 60 0 0 1 10.399 5.84q-1.345.372-2.658.814m-15.482 0A51 51 0 0 1 12 13.489a50.7 50.7 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5m0 0v-3.675A55 55 0 0 1 12 8.443m-7.007 11.55A5.98 5.98 0 0 0 6.75 15.75v-1.5"/></svg>
+);
+
+export const DocumentCheckIcon = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} viewBox="0 0 24 24"><g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" color="currentColor"><path d="M11.47 22c-3.992 0-5.989 0-7.23-1.172C3 19.657 3 17.771 3 14v-4c0-3.771 0-5.657 1.24-6.828C5.481 2 7.478 2 11.47 2h1.06c3.993 0 5.989 0 7.23 1.172C21 4.343 21 6.229 21 10m-9.5 12H13M8 7h8m-8 5h5"/><path d="m17.5 18.59l-.902 3.153a.2.2 0 0 0 .268.235l1.985-.793a.4.4 0 0 1 .298 0l2.004.8a.2.2 0 0 0 .27-.226l-.764-3.268M22 15.995A3 3 0 0 0 19 13c-1.657 0-3 1.341-3 2.995a2.997 2.997 0 0 0 3 2.995c1.657 0 3-1.34 3-2.995"/></g></svg>
+);
+
+export const ArrowPathIcon = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19.5 12q0-1.848-.138-3.662a4.006 4.006 0 0 0-3.7-3.7a49 49 0 0 0-7.324 0a4.006 4.006 0 0 0-3.7 3.7q-.025.33-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3q0 1.848.138 3.662a4.006 4.006 0 0 0 3.7 3.7a49 49 0 0 0 7.324 0a4.006 4.006 0 0 0 3.7-3.7q.025-.33.046-.662M4.5 12l3 3m-3-3l-3 3"/></svg>
+);
+
+export const QuoteUpIcon = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} viewBox="0 0 24 24"><g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" color="currentColor"><path d="M10 8c0 1.886 0 2.828-.586 3.414S7.886 12 6 12s-2.828 0-3.414-.586S2 9.886 2 8s0-2.828.586-3.414S4.114 4 6 4s2.828 0 3.414.586S10 6.114 10 8"/><path d="M10 7v4.482c0 3.973-2.516 7.342-6 8.518M22 8c0 1.886 0 2.828-.586 3.414S19.886 12 18 12s-2.828 0-3.414-.586S14 9.886 14 8s0-2.828.586-3.414S16.114 4 18 4s2.828 0 3.414.586S22 6.114 22 8"/><path d="M22 7v4.482c0 3.973-2.516 7.342-6 8.518"/></g></svg>
+);
+
+export const QuoteDownIcon = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} viewBox="0 0 24 24"><g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" color="currentColor"><path d="M14 16c0-1.886 0-2.828.586-3.414S16.114 12 18 12s2.828 0 3.414.586S22 14.114 22 16s0 2.828-.586 3.414S19.886 20 18 20s-2.828 0-3.414-.586S14 17.886 14 16"/><path d="M14 16v-4.137C14 8.196 16.516 5.086 20 4M2 16c0-1.886 0-2.828.586-3.414S4.114 12 6 12s2.828 0 3.414.586S10 14.114 10 16s0 2.828-.586 3.414S7.886 20 6 20s-2.828 0-3.414-.586S2 17.886 2 16"/><path d="M2 16v-4.137C2 8.196 4.516 5.086 8 4"/></g></svg>
+);
+
