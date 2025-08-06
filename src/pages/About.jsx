@@ -170,6 +170,9 @@ const About = () => {
 
     const head = useRef(null);
     const headInView = useInView(head, { once: false });
+    
+    const head5 = useRef(null);
+    const headInView5 = useInView(head5, { once: false });
 
     const head1 = useRef(null);
     const headInView1 = useInView(head1, { once: false });
@@ -443,10 +446,10 @@ const About = () => {
                 </motion.div>
             </div>
 
-            {/* <motion.div
-                ref={head2}
+            <motion.div
+                ref={head5}
                 initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: headInView2 ? 1 : 0, y: headInView2 ? 0 : 100 }}
+                animate={{ opacity: headInView5 ? 1 : 0, y: headInView5 ? 0 : 100 }}
                 transition={{ duration: 1, ease: "easeInOut" }}
                 className=""
             >
@@ -503,7 +506,7 @@ const About = () => {
 
                 <div className='bg-[#212121] h-[100px] w-full'>
                 </div>
-            </motion.div> */}
+            </motion.div>
 
 
             <div className='flex flex-col items-center md:gap-5 gap-3 xl:m-35 lg:m-25 md:m-15 sm:mt-10 m-5 sm:pt-0 pt-10'>
