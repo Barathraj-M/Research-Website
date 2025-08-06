@@ -23,7 +23,12 @@
     --color-primary-1: #ffbb00;
     --color-primary-variant-2: #f4c415;
     --color-primary-variant-3: #fae576;
-    /* , , , #fcc909, #fcd73a, #fcac04  */
+    --color-primary-variant-4: #fcc909;
+    --color-primary-variant-5: #fcd73a;
+    --color-primary-variant-6: #fcac04;
+    --color-primary-variant-7: #fffaf0;
+    --color-primary-variant-8: #fff3d1;
+
     --color-gray-6: #ebebeb;
     --color-gray-4: #bebebe;
     --color-gray-7: whitesmoke;
