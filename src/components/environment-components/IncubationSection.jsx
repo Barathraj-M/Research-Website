@@ -10,6 +10,7 @@ import {
 } from '../../utils/animationVarients'
 
 import NavHoverLogo from '../../assets/Images/nav-hover-icon.svg';
+import StepConnector from '../../assets/Images/step-connector.svg';
 
 import {
     LightBulbIcon,
@@ -95,7 +96,7 @@ const IncubationSection = () => {
     const activeContent = tabData.find(tab => tab.id === activeTab);
 
     return (
-        <div className='w-full min-h-screen flex flex-col justify-center items-center gap-y-10 xs:px-2 sm:px-5 md:px-10 lg:px-15 py-5 mt-10'>
+        <div className='w-full min-h-screen flex flex-col justify-center items-center gap-y-10 xs:px-2 sm:px-5 md:px-10 lg:px-15 py-5 my-10'>
             <div>
                 <SectionPill sectionTitle={'Incubation'} />
             </div>
@@ -168,7 +169,7 @@ const IncubationSection = () => {
 
                             <div className='lg:w-3/5 p-8 lg:p-10 flex flex-col justify-center'>
                                 <motion.h3
-                                    className='text-2xl font-bold text-gray-1 mb-4'
+                                    className='text-2xl font-semibold text-gray-1 mb-4'
                                     variants={contentBasicVariants}
                                     initial='initial'
                                     whileInView='whileInView'
@@ -217,65 +218,81 @@ const IncubationSection = () => {
             </div>
 
             <div className='w-full'>
-                <div className='flex xs:flex-col sm:flex-row justify-center items-start sm:gap-1 md:gap-8'>
-                    <div className='flex flex-col justify-center items-center group'>
-                        <div className='p-1 border-1 border-dashed border-primary-1 rounded-xl mb-2 relative'>
-                            <span className='w-12 h-12 bg-primary-1 rounded-lg flex items-center justify-center text-white font-bold text-sm relative z-10'>
+                <div className='flex xs:flex-col md:flex-row justify-center items-center gap-0'>
+                    <div className='flex flex-row justify-start items-center gap-2 group p-5 bg-primary-variant-8 rounded-lg xs:min-w-[15rem] md:min-w-auto'>
+                        <div className='p-1 relative border-1 border-dashed border-primary-1 rounded-xl'>
+                            <span className='w-12 h-12 bg-primary-1 rounded-lg flex items-center justify-center text-white font-semibold text-sm relative z-10'>
                                 1
                             </span>
                             <span className="absolute inset-0 flex items-center justify-center">
                                 <span className="w-10 h-10 rounded-lg bg-primary-1 opacity-75 group-hover:animate-ping"></span>
                             </span>
                         </div>
-                        <span className='text-sm font-medium text-center text-gray-1'>Ideation</span>
+                        <h6 className='text-sm text-center text-gray-1 mb-0!'>Ideation</h6>
                     </div>
-                    <div className='block w-16 h-0.5 bg-primary-1 mt-7 rounded-full'></div>
-                    <div className='flex flex-col justify-center items-center group'>
-                        <div className='p-1 border-1 border-dashed border-primary-1 rounded-xl mb-2 relative'>
-                            <span className='w-12 h-12 bg-primary-1 rounded-lg flex items-center justify-center text-white font-bold text-sm relative z-10'>
+                    <img
+                        src={StepConnector}
+                        alt='step-divider'
+                        className='xs:w-4 xs:h-auto md:h-7 md:w-auto xs:rotate-90 md:rotate-0 self-center object-cover -my-1'
+                    />
+                    <div className='flex flex-row justify-start items-center gap-2 group p-5 bg-primary-variant-8 rounded-lg xs:min-w-[15rem] md:min-w-auto'>
+                        <div className='p-1 relative border-1 border-dashed border-primary-1 rounded-xl'>
+                            <span className='w-12 h-12 bg-primary-1 rounded-lg flex items-center justify-center text-white font-semibold text-sm relative z-10'>
                                 2
                             </span>
                             <span className="absolute inset-0 flex items-center justify-center">
                                 <span className="w-10 h-10 rounded-lg bg-primary-1 opacity-75 group-hover:animate-ping"></span>
                             </span>
                         </div>
-                        <span className='text-sm font-medium text-center text-gray-1'>Incubation</span>
+                        <h6 className='text-sm text-center text-gray-1 mb-0!'>Incubation</h6>
                     </div>
-                    <div className='block w-16 h-0.5 bg-primary-1 mt-7 rounded-full'></div>
-                    <div className='flex flex-col justify-center items-center group'>
-                        <div className='p-1 border-1 border-dashed border-primary-1 rounded-xl mb-2 relative'>
-                            <span className='w-12 h-12 bg-primary-1 rounded-lg flex items-center justify-center text-white font-bold text-sm relative z-10'>
+                    <img
+                        src={StepConnector}
+                        alt='step-divider'
+                        className='xs:w-4 xs:h-auto md:h-7 md:w-auto xs:rotate-90 md:rotate-0 self-center object-cover -my-1'
+                    />
+                    <div className='flex flex-row justify-start items-center gap-2 group p-5 bg-primary-variant-8 rounded-lg xs:min-w-[15rem] md:min-w-auto'>
+                        <div className='p-1 relative border-1 border-dashed border-primary-1 rounded-xl'>
+                            <span className='w-12 h-12 bg-primary-1 rounded-lg flex items-center justify-center text-white font-semibold text-sm relative z-10'>
                                 3
                             </span>
                             <span className="absolute inset-0 flex items-center justify-center">
                                 <span className="w-10 h-10 rounded-lg bg-primary-1 opacity-75 group-hover:animate-ping"></span>
                             </span>
                         </div>
-                        <span className='text-sm font-medium text-center text-gray-1'>Prototype</span>
+                        <h6 className='text-sm text-center text-gray-1 mb-0!'>Prototype</h6>
                     </div>
-                    <div className='block w-16 h-0.5 bg-primary-1 mt-7 rounded-full'></div>
-                    <div className='flex flex-col justify-center items-center group'>
-                        <div className='p-1 border-1 border-dashed border-primary-1 rounded-xl mb-2 relative'>
-                            <span className='w-12 h-12 bg-primary-1 rounded-lg flex items-center justify-center text-white font-bold text-sm relative z-10'>
+                    <img
+                        src={StepConnector}
+                        alt='step-divider'
+                        className='xs:w-4 xs:h-auto md:h-7 md:w-auto xs:rotate-90 md:rotate-0 self-center object-cover -my-1'
+                    />
+                    <div className='flex flex-row justify-start items-center gap-2 group p-5 bg-primary-variant-8 rounded-lg xs:min-w-[15rem] md:min-w-auto'>
+                        <div className='p-1 relative border-1 border-dashed border-primary-1 rounded-xl'>
+                            <span className='w-12 h-12 bg-primary-1 rounded-lg flex items-center justify-center text-white font-semibold text-sm relative z-10'>
                                 4
                             </span>
                             <span className="absolute inset-0 flex items-center justify-center">
                                 <span className="w-10 h-10 rounded-lg bg-primary-1 opacity-75 group-hover:animate-ping"></span>
                             </span>
                         </div>
-                        <span className='text-sm font-medium text-center xs:text-wrap text-gray-1'>Market Access</span>
+                        <h6 className='text-sm text-center xs:text-wrap text-gray-1 mb-0!'>Market Access</h6>
                     </div>
-                    <div className='block w-16 h-0.5 bg-primary-1 mt-7 rounded-full'></div>
-                    <div className='flex flex-col justify-center items-center group'>
-                        <div className='p-1 border-1 border-dashed border-primary-1 rounded-xl mb-2 relative'>
-                            <span className='w-12 h-12 bg-primary-1 rounded-lg flex items-center justify-center text-white font-bold text-sm relative z-10'>
+                    <img
+                        src={StepConnector}
+                        alt='step-divider'
+                        className='xs:w-4 xs:h-auto md:h-7 md:w-auto xs:rotate-90 md:rotate-0 self-center object-cover -my-1'
+                    />
+                    <div className='flex flex-row justify-start items-center gap-2 group p-5 bg-primary-variant-8 rounded-lg xs:min-w-[15rem] md:min-w-auto'>
+                        <div className='p-1 relative border-1 border-dashed border-primary-1 rounded-xl'>
+                            <span className='w-12 h-12 bg-primary-1 rounded-lg flex items-center justify-center text-white font-semibold text-sm relative z-10'>
                                 5
                             </span>
                             <span className="absolute inset-0 flex items-center justify-center">
                                 <span className="w-10 h-10 rounded-lg bg-primary-1 opacity-75 group-hover:animate-ping"></span>
                             </span>
                         </div>
-                        <span className='text-sm font-medium text-center text-gray-1'>Impact</span>
+                        <h6 className='text-sm text-center text-gray-1 mb-0!'>Impact</h6>
                     </div>
                 </div>
             </div>
@@ -288,7 +305,7 @@ const IncubationSection = () => {
                 >
                     <QuoteDownIcon width={40} height={40} />
                 </motion.div>
-                <blockquote className='italic text-white text-center xs:text-sm sm:text-md md:text-xl max-w-3xl font-medium'>
+                <blockquote className='italic text-white text-center xs:text-sm sm:text-md md:text-xl max-w-3xl'>
                     We formally incubate, fund, and co-develop projects under robust legal agreements and strategic protocols.
                 </blockquote>
                 <motion.div
