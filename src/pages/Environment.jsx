@@ -228,7 +228,6 @@ const Environment = () => {
               viewport={{ once: true, amount: "all" }}
             >
               By merging traditional practices with empirical methods, we open new frontiers for public health and environmental stewardship—especially within underserved and indigenous communities.
-
             </motion.p>
           </div>
         </div>
