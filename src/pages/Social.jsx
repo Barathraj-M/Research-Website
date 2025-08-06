@@ -6,25 +6,90 @@ import youth from "../assets/Images/youth1.png";
 import science from "../assets/Images/science.png";
 import newone from "../assets/Images/new.png";
 import new1 from "../assets/Images/new1.png";
+import FooterDivider from "../assets/Images/nav-divider.svg";
 import SectionPill from "../components/SectionPill";
 import PrimaryButtom from "../components/PrimaryButtom";
 import aboutimage from "../assets/Images/aboutimage2.jpg"; // Update with the correct path to your image
+import CardImage1 from "../assets/Images/engineering-card-image-1.webp";
+import CardImage2 from "../assets/Images/engineering-card-image-2.webp";
+
+import ItemsMarquee from "../components/ItemsMaquee";
+import NavHoverLogo from "../assets/Images/nav-hover-icon.svg";
+import InnovationSection from "../components/environment-components/InnovationSection";
+import IncubationSection from "../components/environment-components/IncubationSection";
+import EnvironmentIntelligence from "../components/environment-components/EnvironmentIntelligence";
+import CollaborativeEcosystem from "../components/environment-components/CollaborativeEcosystem";
+import EngineeringSection from "../components/environment-components/EngineeringSection";
+
+import HeroImage from "../assets/Images/environment-hero-image.webp";
+import HeroBottomLeft from "../assets/Images/hero-bottom-left.svg";
+import HeroTopLeft from "../assets/Images/hero-top-left.svg";
+import HeroMarqueeIcon from "../assets/Images/hero-marquee-icon.svg";
+import YogaBannerImage from "../assets/Images/ancient-yoga-banner-image.png";
 
 import {
   contentBasicVariants,
-  heroSectionBottomContainerVariants,
+  heroSectionMainContainerVariants,
+  visibleAnimationVariants,
 } from "../utils/animationVarients";
-import { Button, Popover } from "antd";
 
 const About = () => {
   const [expandedSections, setExpandedSections] = useState({});
-
+  const items = [
+    {
+      src: HeroMarqueeIcon,
+      type: "text",
+      alt: "",
+      text: "Innovation",
+    },
+    {
+      src: HeroMarqueeIcon,
+      type: "text",
+      alt: "",
+      text: "Incubation",
+    },
+    {
+      src: HeroMarqueeIcon,
+      type: "text",
+      alt: "",
+      text: "Engineering",
+    },
+    {
+      src: HeroMarqueeIcon,
+      type: "text",
+      alt: "",
+      text: "Ayush",
+    },
+    {
+      src: HeroMarqueeIcon,
+      type: "text",
+      alt: "",
+      text: "Collaboration",
+    },
+    {
+      src: HeroMarqueeIcon,
+      type: "text",
+      alt: "",
+      text: "Intelligence",
+    },
+  ];
   const toggleSection = (sectionId) => {
     setExpandedSections((prev) => ({
       ...prev,
       [sectionId]: !prev[sectionId],
     }));
   };
+  const naturalSystemRestoration = [
+    "Biofiltration structures",
+    "Closed-loop material cycles",
+    "Climate-responsive habitats",
+  ];
+
+  const stakeholderCollaboration = [
+    "Ecosystem-wide campaigns",
+    "STEM hackathons",
+    "Research showcases",
+  ];
   const content = (
     <p className="text-center">
       <span className="text-lg font-bold text-yellow-400">Our focus</span> is
@@ -306,144 +371,96 @@ const About = () => {
 
   return (
     <div>
-      <motion.div
+      <div
+        className="w-full h-screen mx-auto xs:px-2 sm:px-5 md:px-10 lg:px-15"
         ref={title}
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: title1 ? 1 : 0, y: title1 ? 0 : 100 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        className=""
       >
-        <div className="w-full relative h-[450px] sm:h-[500px] md:h-[600px] lg:h-[655px]">
+        <div className="w-full h-[90vh] overflow-hidden rounded-2xl relative mt-16">
           <img
-            src={aboutimage}
+            src={HeroImage}
+            alt="environment-hero-section"
+            className="w-full h-[90vh] object-cover overflow-hidden absolute inset-0"
             loading="eager"
-            alt="About Image"
-            className="absolute w-full h-full "
           />
-          <div className="absolute inset-0 gradient"></div>
-          <div className="w-full h-full flex flex-col justify-between px-4 sm:px-10 sm:pt-1 pt-6 lg:px-15 lg:pt-8">
-            <div className="md:grid lg:grid-cols-3 md:grid-cols-2  xl:h-[400px] lg:h-[400px] md:h-[360px] border-2 mt-16 sm:mt-20 md:mt-24 lg:mt-24 mb-5">
-              <div className="relative flex flex-col justify-center gap-3 lg:gap-4">
-                <h1 className="text-white! font-bold overflow-hidden">
-                  About SLSRP
-                </h1>
-                <p className="text-white! leading-relaxed overflow-hidden">
-                  SLSRP acts as a national and global platform for researchers,
-                  innovators, youth leaders , and grassroots communities to
-                  co-create impactful solutions that are scientifically
-                  validated and socially inclusive.
-                </p>
-                <div>
-                  <PrimaryButtom link={"#"} text={"Get a green quote"} />
-                </div>
-              </div>
-            </div>
-
-            <div className="relative flex self-end w-full max-w-5xl -mb-[0.8px] md:h-auto sm:h-[170px] rounded-t-lg h-[150px]">
-              <div className="absolute -left-6 bottom-0 z-40 self-end">
-                <img
-                  src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683e866c5a5df0d7b03e41e6_hero-bottom-left.svg"
-                  loading="eager"
-                  alt="Icon"
-                  class="about-left-decorative"
-                />
-              </div>
-              <motion.div
-                className="w-full bg-gray-8 flex justify-around items-center rounded-t-lg p-3 sm:p-4 md:p-6 overflow-hidden bg-gradient-to-t from-gray-8 to-[#fff3d1]"
-                variants={heroSectionBottomContainerVariants}
-                initial="initial"
-                animate="animate"
+          <div className="xs:w-9/10 md:w-7/10 lg:w-6/10 absolute right-0 bottom-0 flex flex-col justify-start items-start gap-0">
+            <div className="w-full flex flex-col justify-start items-center gap-0 bg-gray-8 rounded-tl-3xl rounded-bl-3xl">
+              <img
+                src={HeroBottomLeft}
+                alt="svg-place-holder"
+                className="self-end w-8 h-8 object-cover -mt-8 -me-[0.2px]"
+                loading="eager"
+              />
+              <div
+                className="px-10 py-5"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, ease: "easeInOut" }}
               >
                 <motion.div
-                  className="flex flex-col items-center justify-center text-center"
-                  variants={contentBasicVariants}
-                  initial="initial"
-                  whileInView="whileInView"
-                  custom={1}
-                  viewport={{ once: true, amount: "some" }}
-                  exit="exit"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={
+                    title1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                  }
+                  transition={{ duration: 1, ease: "easeInOut" }}
                 >
-                  <h5 className="text-lg font-semibold text-gray-800">
-                    Mission-Driven Verticals
-                  </h5>
-                  <p className="text-sm sm:block hidden text-gray-700 ">
-                    Social & Environmental Initiatives
-                  </p>
-                  {/* <div className='flex gap-2 sm:gap-3 lg:gap-4 justify-center items-center'>
-                                        <img
-                                            src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683976f56676896290088678_counter-icon-01.svg"
-                                            loading="lazy"
-                                            alt="Icon"
-                                            className='h-4 sm:h-6 lg:h-8'
-                                        />
-                                        <div className='text-lg sm:text-xl md:text-2xl text-gray-900 font-bold'>30%</div>
-                                    </div> */}
+                  <h1>
+                    Defining
+                    <span className="bg-gradient-to-r from-primary-1 via-primary-variant-2 to-primary-variant-3 bg-clip-text text-transparent">
+                      Social
+                    </span>{" "}
+                    Initiative
+                  </h1>
                 </motion.div>
-                <div className="h-12 sm:h-16 lg:h-20 w-px bg-gray-300"></div>
-                <motion.div
-                  className="flex flex-col items-center justify-center text-center"
-                  variants={contentBasicVariants}
-                  initial="initial"
-                  whileInView="whileInView"
-                  custom={4}
-                  viewport={{ once: true, amount: "some" }}
-                  exit="exit"
-                >
-                  <h5 className="text-lg font-semibold text-gray-800">
-                    Strategic Pillars
-                  </h5>
-                  <p className="text-sm sm:block hidden text-gray-700 ">
-                    STEM, Ethical Governance, Policy Advocacy
-                  </p>
-                  {/* <div className='flex gap-2 sm:gap-3 lg:gap-4 justify-center items-center'>
-                                        <img
-                                            src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683976f506218de3dbfbee9e_counter-icon-02.svg"
-                                            loading="lazy"
-                                            alt="Icon"
-                                            className='h-4 sm:h-6 lg:h-8'
-                                        />
-                                        <div className='text-lg sm:text-xl md:text-2xl text-gray-900 font-bold'>60%</div>
-                                    </div> */}
-                </motion.div>
-                <div className="h-12 sm:h-16 lg:h-20 w-px bg-gray-300"></div>
-                <motion.div
-                  className="flex flex-col items-center justify-center  text-center"
-                  variants={contentBasicVariants}
-                  initial="initial"
-                  whileInView="whileInView"
-                  custom={8}
-                  viewport={{ once: true, amount: "some" }}
-                  exit="exit"
-                >
-                  <h5 className="text-lg font-semibold text-gray-800">
-                    Funding Streams
-                  </h5>
-                  <p className="text-sm sm:block hidden text-gray-700">
-                    Sustainability & Project Scalability
-                  </p>
-                  {/* <div className='flex gap-2 sm:gap-3 lg:gap-4 justify-center items-center'>
-                                        <img
-                                            src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683976f5384d68e5ba0c57c7_counter-icon-03.svg"
-                                            loading="lazy"
-                                            alt="Icon"
-                                            className='h-4 sm:h-6 lg:h-8'
-                                        />
-                                        <div className='text-lg sm:text-xl md:text-2xl text-gray-900 font-bold'>90%</div>
-                                    </div> */}
-                </motion.div>
-              </motion.div>
-              <div className="absolute -right-6 self-end">
+              </div>
+              {/* <motion.h1
+                      className='px-10 py-5'
+                      variants={heroSectionMainContainerVariants}
+                      initial='initial'
+                      whileInView='whileInView'
+                      custom={1}
+                      viewport={{ once: true, amount: "some" }}
+                    >
+                      Engineering a Regenerative Future
+                    </motion.h1> */}
+            </div>
+            <div className="w-8/10 bg-gray-8 h-full self-end">
+              <div className="w-full h-full flex flex-col justify-start items-center gap-0">
                 <img
-                  src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/6841390341d0511acefa1664_hero-bottom-right.svg"
+                  src={HeroTopLeft}
+                  alt="svg-place-holder"
+                  className="self-start w-8 h-8 object-cover -ms-8 -mt-[0.4px]"
                   loading="eager"
-                  alt="Icon"
-                  class="about-right-decorative"
+                />
+                <motion.p
+                  className="px-10"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={
+                    title1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                  }
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                >
+                  Nature is not seen as a silent witness to development, but as
+                  the core pillar of human survival and well-being. Our social
+                  initiatives are rooted in the belief that true progress
+                  uplifts both people and the planet.
+                </motion.p>
+                <div className="w-full relative mt-3">
+                  <div className="absolute left-0 top-0 h-full w-20 pointer-events-none z-50 bg-gradient-to-r from-gray-8 via-gray-8/80 to-transparent"></div>
+                  <div className="absolute right-0 top-0 h-full w-20 pointer-events-none z-50 bg-gradient-to-l from-gray-8 via-gray-8/80 to-transparent"></div>
+                  <ItemsMarquee items={items} />
+                </div>
+                <img
+                  src={HeroBottomLeft}
+                  alt="svg-place-holder"
+                  className="self-start w-8 h-8 object-cover -ms-8 -mt-[0.4px]"
+                  loading="eager"
                 />
               </div>
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* <div className='flex flex-col items-center justify-center lg:mt-28 md:mt-20 mt-10'>
                 <motion.div
@@ -509,7 +526,6 @@ const About = () => {
         >
           <div className="flex flex-col items-center md:gap-5 gap-3  sm:pt-0 pt-10 "></div>
           <div className="overflow-hidden">
-            <SectionPill sectionTitle={"Defining Social Initiative"} />
             {/* <h2 className="font-semibold overflow-hidden ">
               Social initiatives empower{" "}
               <span className="text-gray-400">
@@ -532,18 +548,6 @@ const About = () => {
               the meaning of social initiative by grounding it in scientific
               validation, ethical frameworks, and cultural intelligence.
             </p>
-            <div
-              className="inline-flex items-center justify-center w-10 h-10 rounded-full mb-6"
-              style={{ backgroundColor: "#ffbb00" }}
-            >
-              <svg
-                className="w-8 h-8 text-white"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 2a10 10 0 1010 10A10.011 10.011 0 0012 2zm3.09 13.09l-6 2.91 2.91-6 6-2.91z" />
-              </svg>
-            </div>
 
             {content}
             <div className="mt-10">
@@ -632,14 +636,14 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.3 }}
-          className="max-w-7xl mx-auto flex gap-8 items-center sm:flex-col lg:flex-row "
+          className="max-w-7xl mx-auto flex gap-8 items-center sm:flex-col lg:flex-row justify-center"
         >
           {/* Left Text Box */}
           <div
-            className="text-gray-800 space-y-4 p-4"
+            className="text-gray-800 space-y-4 p-4 lg:w-800px"
             style={{ textAlign: "justify" }}
           >
-            <div className="text-3xl sm:text-4xl font-bold flex items-center gap-3">
+            <div className="text-3xl sm:text-4xl font-bold flex items-center gap-3 w-full">
               <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div>
               <h3 className="w-8/10">
                 Building Youth for a Responsible Tomorrow
@@ -648,24 +652,56 @@ const About = () => {
             {/* <div className="text-2xl sm:text-3xl text-gray-500">
               Semporutkalai Life Science Research Park (SLSRP)
             </div> */}
-            <p>
-             SLSRP understands that meaningful social change must begin early, especially in a nation with a young demographic profile.
-            </p>
-            <p>
-              Our Youth Resilience and Citizenship programs are tailored to equip the next generation with the competencies needed to face the world with purpose and maturity.
-            </p>
-            <p>
-               These programs combine leadership training, ethics modules, and personal development labs, providing a structured space for youth to explore values, enhance focus, and build resilience.
-            </p>
-            <p>
-               Unlike conventional training that emphasizes hard skills alone, our approach includes emotional intelligence, reflective practices, and measured outcomes.
-            </p>
-            <p>
-               Progress is tracked across academic performance, professional choices, and community behavior.
-            </p>
-            <p>
-               Our long-term goal is to create a generation of citizens who are productive not only in the workplace but also in society—individuals who think critically, act responsibly, and serve collectively.
-            </p>
+            <div className="flex flex-col md:justify-center gap-0 mx-auto ">
+              <div className="bg-white rounded-2xl xs:p-3 md:p-5 flex flex-col justify-start items-start gap-y-5 bg-gradient-to-br from-[#fffaf0] to-[#fff3d1]">
+                <p className="flex items-start gap-2">
+                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />{" "}
+                  SLSRP understands that meaningful social change must begin
+                  early, especially in a nation with a young demographic
+                  profile.
+                </p>
+                <p className="flex items-start gap-2">
+                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />
+                  Our Youth Resilience and Citizenship programs are tailored to
+                  equip the next generation with the competencies needed to face
+                  the world with purpose and maturity.
+                </p>
+                <p className="flex items-start gap-2">
+                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />
+                  These programs combine leadership training, ethics modules,
+                  and personal development labs, providing a structured space
+                  for youth to explore values, enhance focus, and build
+                  resilience.
+                </p>
+              </div>
+
+              {/* <img
+                src={FooterDivider}
+                alt="footer-divider"
+                className=" xs:h-auto md:h-15 md:w-auto xs:rotate-90 md:rotate-0 self-center object-cover -my-3.5 "
+              /> */}
+
+              <div className=" rounded-2xl xs:p-3 md:p-5 flex flex-col justify-start items-start gap-y-5 mt-5 bg-gradient-to-br from-[#fffaf0] to-[#fff3d1]">
+                <p className="flex items-start gap-2 ">
+                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />
+                  Unlike conventional training that emphasizes hard skills
+                  alone, our approach includes emotional intelligence,
+                  reflective practices, and measured outcomes.
+                </p>
+                <p className="flex items-start gap-2">
+                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />
+                  Progress is tracked across academic performance, professional
+                  choices, and community behavior.
+                </p>
+                <p className="flex items-start gap-2">
+                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />
+                  Our long-term goal is to create a generation of citizens who
+                  are productive not only in the workplace but also in
+                  society—individuals who think critically, act responsibly, and
+                  serve collectively.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Right Image Box */}
@@ -684,6 +720,7 @@ const About = () => {
           </motion.div>
         </motion.div>
       </div>
+
       <div className="w-full px-4 py-8 ">
         <motion.div
           initial={{ opacity: 0, y: 80 }}
@@ -693,7 +730,7 @@ const About = () => {
           className="max-w-7xl mx-auto flex
           sm:flex-col lg:flex-row sm:flex-col-reverse gap-8 items-center "
         >
-            {/* left Image Box */}
+          {/* left Image Box */}
           <motion.div
             initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -718,30 +755,58 @@ const About = () => {
                 A Confluence of Cultures, Sciences, and Systems
               </h3>
             </div>
+            <div className="flex flex-col md:justify-center gap-0 mx-auto">
+              <div className="bg-white rounded-2xl xs:p-3 md:p-5 flex flex-col justify-start items-start gap-y-5 bg-gradient-to-br from-[#fffaf0] to-[#fff3d1]">
+                <p className="flex items-start gap-2">
+                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />{" "}
+                  SLSRP also plays a critical role in bridging Eastern and
+                  Western knowledge traditions.
+                </p>
+                <p className="flex items-start gap-2">
+                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />
+                  Our social initiatives extend into cross-cultural scientific
+                  integration, where traditional Indian practices are studied
+                  alongside contemporary global models.
+                </p>
+                <p className="flex items-start gap-2">
+                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />
+                  In partnership with international universities, we conduct
+                  mixed-method studies, co-author publications, and organize
+                  collaborative symposia.
+                </p>
+              </div>
+
+              {/* <img
+                src={FooterDivider}
+                alt="footer-divider"
+                className=" xs:h-auto md:h-15 md:w-auto xs:rotate-90 md:rotate-0 self-center object-cover -my-3.5 "
+              /> */}
+
+              <div className=" rounded-2xl xs:p-3 md:p-5 flex flex-col justify-start items-start gap-y-5 mt-5 bg-gradient-to-br from-[#fffaf0] to-[#fff3d1]">
+                <p className="flex items-start gap-2 ">
+                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />
+                  This allows for mutual learning, deeper insight, and global
+                  positioning of Indian knowledge systems—not as alternatives,
+                  but as complements to modern scientific understanding.
+                </p>
+                <p className="flex items-start gap-2">
+                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />
+                  This integration is not symbolic—it is structural. It shapes
+                  curriculum, influences policy, and opens up new areas of
+                  inquiry where values and science intersect meaningfully.
+                </p>
+                <p className="flex items-start gap-2">
+                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />
+                  As a result, SLSRP becomes a hub for a new type of scientific
+                  diplomacy—one that values ancestral intelligence and academic
+                  sophistication equally.
+                </p>
+              </div>
+            </div>
             {/* <div className="text-2xl sm:text-3xl text-gray-500">
               Semporutkalai Life Science Research Park (SLSRP)
             </div> */}
-            <p>
-             SLSRP also plays a critical role in bridging Eastern and Western knowledge traditions.
-            </p>
-            <p>
-              Our social initiatives extend into cross-cultural scientific integration, where traditional Indian practices are studied alongside contemporary global models.
-            </p>
-            <p>
-              In partnership with international universities, we conduct mixed-method studies, co-author publications, and organize collaborative symposia.
-            </p>
-            <p>
-               This allows for mutual learning, deeper insight, and global positioning of Indian knowledge systems—not as alternatives, but as complements to modern scientific understanding.
-            </p>
-            <p>
-             This integration is not symbolic—it is structural. It shapes curriculum, influences policy, and opens up new areas of inquiry where values and science intersect meaningfully.
-            </p>
-            <p>
-               As a result, SLSRP becomes a hub for a new type of scientific diplomacy—one that values ancestral intelligence and academic sophistication equally.
-            </p>
           </div>
-
-          
         </motion.div>
       </div>
 
@@ -830,7 +895,6 @@ const About = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-white via-amber-25 to-orange-50 ">
         {/* Hero Section */}
-       
 
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-6 py-16">
@@ -961,124 +1025,138 @@ const About = () => {
               </div>
             </div>
           </div> */}
-          
-      <div className="w-full px-4 py-8 ">
-        <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="max-w-7xl mx-auto flex
-          sm:flex-col lg:flex-row sm:flex-col-reverse gap-8 items-center "
-        >
-            {/* left Image Box */}
-        <div
-            className="text-gray-800 space-y-4 p-4 contianer"
-            style={{ textAlign: "justify" }}
-          >
-            <div className="text-3xl sm:text-4xl font-bold flex items-center gap-3">
-              <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div>
-              <h3 className="w-8/10">
-                A Future Designed with Purpose
-              </h3>
-            </div>
-            {/* <div className="text-2xl sm:text-3xl text-gray-500">
-              Semporutkalai Life Science Research Park (SLSRP)
-            </div> */}
-            <p>
-             In a world grappling with fragmentation—social, psychological, environmental—SLSRP offers a unifying model that connects science with culture, youth with leadership, and knowledge with measurable outcomes.
-            </p>
-            <p>
-             We define social initiative as a high-stakes responsibility—one that demands clarity, discipline, and vision.
-            </p>
-            <p>
-              In partnership with international universities, we conduct mixed-method studies, co-author publications, and organize collaborative symposia.
-            </p>
-            <p>
-              Through our sustained efforts, we aim to build a more stable, thoughtful, and ethically grounded society.
-            </p>
-            <p>
-             A society where ancient knowledge is not lost but refined; where modern science is not isolated but inclusive; and where individuals rise not by chance but through well-designed platforms that empower growth with integrity.
-            </p>
-          </div>
-          {/* right Text Box */}
+
+          <div className="w-full px-4 py-8 ">
             <motion.div
-            initial={{ opacity: 0, y: 80 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.3 }}
-            className="flex justify-center"
-          >
-            <img
-              src={new1} // Replace with actual image path
-              alt="SLSRP"
-              className="w-3/4"
-            />
-          </motion.div>
-          
-
-          
-        </motion.div>
-      </div>
-      <div className="w-full px-4 py-8 ">
-        <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="max-w-7xl mx-auto flex gap-8 items-center sm:flex-col lg:flex-row "
-        >
-            {/* Right Image Box */}
-          <motion.div
-            initial={{ opacity: 0, y: 80 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.3 }}
-            className="flex justify-center"
-          >
-            <img
-              src={newone} // Replace with actual image path
-              alt="SLSRP"
-              className="w-3/4"
-            />
-          </motion.div>
-          {/* Left Text Box */}
-          <div
-            className="text-gray-800 space-y-4 p-4"
-            style={{ textAlign: "justify" }}
-          >
-            <div className="text-3xl sm:text-4xl font-bold flex items-center gap-3">
-              <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div>
-              <h3 className="w-8/10">
-                Positioning Social Change as Systemic Impact
-              </h3>
-            </div>
-            {/* <div className="text-2xl sm:text-3xl text-gray-500">
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: false, amount: 0.3 }}
+              className="max-w-7xl mx-auto flex
+          sm:flex-col lg:flex-row sm:flex-col-reverse gap-8 items-center "
+            >
+              {/* left Image Box */}
+              <div
+                className="text-gray-800 space-y-4 p-4 contianer"
+                style={{ textAlign: "justify" }}
+              >
+                <div className="text-3xl sm:text-4xl font-bold flex items-center gap-3">
+                  <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div>
+                  <h3 className="w-8/10">A Future Designed with Purpose</h3>
+                </div>
+                {/* <div className="text-2xl sm:text-3xl text-gray-500">
               Semporutkalai Life Science Research Park (SLSRP)
             </div> */}
-            <p>
-             What makes SLSRP’s social initiatives resilient is their strategic embedding into national and global development goals.
-            </p>
-            <p>
-              Every initiative—whether research, training, or certification—is designed with a systems view.
-            </p>
-            <p>
-               We align our frameworks with Sustainable Development Goals (SDGs), collaborate with ministries, and engage with academic and community stakeholders to ensure that our work is replicable, scalable, and policy-relevant.
-            </p>
-            <p>
-               By treating social initiatives not as fragmented efforts but as part of a structured ecosystem, we eliminate randomness and enhance accountability.
-            </p>
-            <p>
-              Our programs are tested for impact, documented for reproducibility, and continually improved through feedback loops and research insights.
-            </p>
+                <p>
+                  In a world grappling with fragmentation—social, psychological,
+                  environmental—SLSRP offers a unifying model that connects
+                  science with culture, youth with leadership, and knowledge
+                  with measurable outcomes.
+                </p>
+                <p>
+                  We define social initiative as a high-stakes
+                  responsibility—one that demands clarity, discipline, and
+                  vision.
+                </p>
+                <p>
+                  In partnership with international universities, we conduct
+                  mixed-method studies, co-author publications, and organize
+                  collaborative symposia.
+                </p>
+                <p>
+                  Through our sustained efforts, we aim to build a more stable,
+                  thoughtful, and ethically grounded society.
+                </p>
+                <p>
+                  A society where ancient knowledge is not lost but refined;
+                  where modern science is not isolated but inclusive; and where
+                  individuals rise not by chance but through well-designed
+                  platforms that empower growth with integrity.
+                </p>
+              </div>
+              {/* right Text Box */}
+              <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
+                className="flex justify-center"
+              >
+                <img
+                  src={new1} // Replace with actual image path
+                  alt="SLSRP"
+                  className="w-3/4"
+                />
+              </motion.div>
+            </motion.div>
           </div>
-
-          
-        </motion.div>
-      </div>
+          <div className="w-full px-4 py-8 ">
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: false, amount: 0.3 }}
+              className="max-w-7xl mx-auto flex gap-8 items-center sm:flex-col lg:flex-row "
+            >
+              {/* Right Image Box */}
+              <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
+                className="flex justify-center"
+              >
+                <img
+                  src={newone} // Replace with actual image path
+                  alt="SLSRP"
+                  className="w-3/4"
+                />
+              </motion.div>
+              {/* Left Text Box */}
+              <div
+                className="text-gray-800 space-y-4 p-4"
+                style={{ textAlign: "justify" }}
+              >
+                <div className="text-3xl sm:text-4xl font-bold flex items-center gap-3">
+                  <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div>
+                  <h3 className="w-8/10">
+                    Positioning Social Change as Systemic Impact
+                  </h3>
+                </div>
+                {/* <div className="text-2xl sm:text-3xl text-gray-500">
+              Semporutkalai Life Science Research Park (SLSRP)
+            </div> */}
+                <p>
+                  What makes SLSRP’s social initiatives resilient is their
+                  strategic embedding into national and global development
+                  goals.
+                </p>
+                <p>
+                  Every initiative—whether research, training, or
+                  certification—is designed with a systems view.
+                </p>
+                <p>
+                  We align our frameworks with Sustainable Development Goals
+                  (SDGs), collaborate with ministries, and engage with academic
+                  and community stakeholders to ensure that our work is
+                  replicable, scalable, and policy-relevant.
+                </p>
+                <p>
+                  By treating social initiatives not as fragmented efforts but
+                  as part of a structured ecosystem, we eliminate randomness and
+                  enhance accountability.
+                </p>
+                <p>
+                  Our programs are tested for impact, documented for
+                  reproducibility, and continually improved through feedback
+                  loops and research insights.
+                </p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
-       {/* <div className="bg-gradient-to-r from-white via-amber-100 to-orange-100 py-16 px-6">
+      {/* <div className="bg-gradient-to-r from-white via-amber-100 to-orange-100 py-16 px-6">
           <div className="max-w-6xl mx-auto text-center">
             <div
               className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-6"
