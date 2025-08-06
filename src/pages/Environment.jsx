@@ -5,7 +5,8 @@ import ItemsMarquee from '../components/ItemsMaquee';
 import SectionPill from '../components/SectionPill'
 import InnovationSection from '../components/environment-components/InnovationSection';
 import IncubationSection from '../components/environment-components/IncubationSection';
-import EngineeringSection from '../components/environment-components/EngineeringSection';
+import EnvironmentIntelligence from '../components/environment-components/EnvironmentIntelligence';
+import CollaborativeEcosystem from '../components/environment-components/CollaborativeEcosystem';
 
 import HeroImage from '../assets/Images/environment-hero-image.webp';
 import HeroBottomLeft from '../assets/Images/hero-bottom-left.svg';
@@ -190,8 +191,6 @@ const Environment = () => {
 
       <IncubationSection />
 
-      <EngineeringSection />
-
       <div className="grid auto-rows-auto gap-y-10 min-h-screen w-full px-10 pt-15">
         <div className="grid sm:auto-rows-auto md:grid-rows-none md:grid-cols-5 gap-y-5 gap-x-5 w-full">
           <div className="md:col-span-2 flex flex-col justify-start items-start gap-y-2">
@@ -247,6 +246,10 @@ const Environment = () => {
           />
         </motion.div>
       </div>
+
+      <CollaborativeEcosystem />
+
+      <EnvironmentIntelligence />
     </section>
   )
 }
