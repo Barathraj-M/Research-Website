@@ -9,11 +9,16 @@ import EnvironmentIntelligence from '../components/environment-components/Enviro
 import CollaborativeEcosystem from '../components/environment-components/CollaborativeEcosystem';
 import EngineeringSection from '../components/environment-components/EngineeringSection';
 
-import HeroImage from '../assets/Images/environment-hero-image.webp';
+// import HeroImage from '../assets/Images/environment-hero-image.webp';
+// import HeroImage from '../assets/Images/environment-hero-image-1.jpeg';
+// import HeroImage from '../assets/Images/environment-hero-image-2.jpeg';
+import HeroImage from '../assets/Images/environment-hero-image-3.jpg';
+// import HeroImage from '../assets/Images/environment-hero-image-4.jpg';
 import HeroBottomLeft from '../assets/Images/hero-bottom-left.svg';
 import HeroTopLeft from '../assets/Images/hero-top-left.svg';
 import HeroMarqueeIcon from '../assets/Images/hero-marquee-icon.svg';
-import YogaBannerImage from "../assets/Images/ancient-yoga-banner-image.png";
+import AyushBannerImage from "../assets/Images/ayush-integration-image.jpg";
+import BackgroundImage from "../assets/Images/pexels-googledeepmind-17485706.jpg";
 
 import {
   contentBasicVariants,
@@ -63,6 +68,26 @@ const Environment = () => {
     },
   ];
 
+  const scrollToInnovation = () => {
+    const element = document.getElementById('innovation-section');
+    if(element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  const scrollToCollaboration = () => {
+    const element = document.getElementById('collaboration-section');
+    if(element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
+
 
   return (
     <section className='w-full min-h-screen'>
@@ -86,9 +111,9 @@ const Environment = () => {
                 className='px-10 py-5'
                 variants={heroSectionMainContainerVariants}
                 initial='initial'
-                whileInView='whileInView'
+                animate='whileInView'
                 custom={1}
-                viewport={{ once: true, amount: "some" }}
+                viewport={{ once: true, amount: "0.1" }}
               >
                 <span className='bg-gradient-to-r from-primary-1 via-primary-variant-2 to-primary-variant-3 bg-clip-text text-transparent'>Environment</span>al solutions, driven by innovation
               </motion.h1>
@@ -115,8 +140,8 @@ const Environment = () => {
                   className='px-10'
                   variants={heroSectionMainContainerVariants}
                   initial='initial'
-                  whileInView='whileInView'
-                  viewport={{ once: true, amount: "some" }}
+                  animate='whileInView'
+                  viewport={{ once: true, amount: "0.1" }}
                   custom={3}
                 >
                   At Semporutkalai Life Science Research Park (SLSRP), environmental responsibility is not a passive commitment—it is a proactive mission. We do not treat nature as a backdrop to progress but as the very foundation of human continuity.
@@ -138,8 +163,18 @@ const Environment = () => {
         </div>
       </div>
 
-      <div className='w-full h-screen flex flex-col justify-center items-center gap-y-10 xs:px-2 sm:px-5 md:px-10 lg:px-15'>
-        <div className='text-center max-w-2xl flex flex-col gap-y-5'>
+      <div className='w-full h-screen flex flex-col justify-center items-center gap-y-10 xs:px-2 sm:px-5 md:px-10 lg:px-15 relative'>
+        <img
+          src={BackgroundImage}
+          alt="background-pattern"
+          className='absolute inset-0 w-full h-full object-cover opacity-20'
+          loading='lazy'
+        />
+
+        <div className='h-15 w-full absolute inset-0 bg-linear-to-t from-transparent via-gray-8/60 to-gray-8'></div>
+        <div className='h-15 w-full absolute bottom-0 bg-linear-to-b from-transparent via-primary-variant-7/60 to-primary-variant-7'></div>
+
+        <div className='text-center max-w-2xl flex flex-col gap-y-5 relative z-10'>
           <motion.h2
             className="font-semibold!"
             variants={contentBasicVariants}
@@ -164,7 +199,7 @@ const Environment = () => {
             scientific validation, long-term sustainability, and community relevance.
           </motion.p>
         </div>
-        <div className='flex flex-row justify-center items-center gap-x-5'>
+        <div className='flex flex-row justify-center items-center gap-x-5 relative z-10'>
           <motion.button
             className='text-decoration-none cursor-pointer rounded-full bg-primary-1 border-1 border-dashed border-primary-1 hover:bg-black hover:text-white text-black px-4 py-2 transition-colors duration-300 ease-in-out text-nowrap font-medium'
             variants={visibleAnimationVariants}
@@ -172,6 +207,7 @@ const Environment = () => {
             whileInView='whileInView'
             viewport={{ once: true, amount: "all" }}
             custom={2}
+            onClick={scrollToInnovation}
           >
             Explore Our Research
           </motion.button>
@@ -182,6 +218,7 @@ const Environment = () => {
             whileInView='whileInView'
             viewport={{ once: true, amount: "all" }}
             custom={3}
+            onClick={scrollToCollaboration}
           >
             Join Our Mission
           </motion.button>
@@ -242,7 +279,7 @@ const Environment = () => {
           viewport={{ once: true, amount: "some" }}
         >
           <img
-            src={YogaBannerImage}
+            src={AyushBannerImage}
             alt="banner-image-yoga"
             className="w-full h-full object-cover rounded-2xl transition-transform duration-500 ease-in-out group-hover:scale-102"
           />
