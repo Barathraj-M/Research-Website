@@ -417,7 +417,7 @@ const Home = () => {
       {/* <Section9 />
       <Clients />
       <Section3 /> */}
-      <div className="grid auto-rows-auto gap-y-10 min-h-screen w-full px-10 pt-15">
+      <div className="grid auto-rows-auto gap-y-10 min-h-screen w-full xs:px-2 sm:px-5 md:px-10 lg:px-15 pt-15">
         <div className="grid sm:auto-rows-auto md:grid-rows-none md:grid-cols-5 gap-y-5 gap-x-5 w-full">
           <div className="md:col-span-2 flex flex-col justify-start items-start gap-y-2">
          
@@ -483,7 +483,7 @@ const Home = () => {
           <img
             src={YogaBannerImage}
             alt="banner-image-yoga"
-            className="w-full h-full object-cover rounded-2xl transition-transform duration-500 ease-in-out group-hover:scale-102"
+            className="w-full h-full object-cover rounded-2xl transition-transform duration-500 ease-in-out group-hover:scale-102 md:h-[20rem]"
           />
         </motion.div>
       </div>
