@@ -8,9 +8,8 @@ import '../index.css';
 import SectionPill from '../components/SectionPill';
 import PrimaryButtom from '../components/PrimaryButtom';
 import aboutimage from '../assets/Images/aboutimage2.jpg'; // Update with the correct path to your image
-
-
 import { contentBasicVariants, heroSectionBottomContainerVariants } from '../utils/animationVarients';
+import PercentageCounter from '../components/aboutComponents/PercentageCounter';
 
 const About = () => {
 
@@ -206,15 +205,6 @@ const About = () => {
 
     const head4 = useRef(null);
     const headInView4 = useInView(head4, { once: false });
-
-    const logos = [
-        'https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683d3b2d6d119a92715751a6_client-image-06.svg',
-        'https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683d3b2c0697f0f74387041e_client-image-04.svg',
-        'https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683d3b2d25c68b4a9554c777_client-image-05.svg',
-        'https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683d3b2bcaa5306b96f81a26_client-image-01.svg',
-        'https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683d3b2b5d9336ef0d5af39b_client-image-03.svg',
-        'https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683d3b2b2fa3839b7b64a960_client-image-02.svg',
-    ];
     const containerRef = useRef(null);
 
     useEffect(() => {
@@ -237,18 +227,10 @@ const About = () => {
         return () => clearInterval(interval);
     }, []);
 
-    // Duplicate images to create the infinite effect
-    const loopedLogos = [...logos, ...logos];
 
     return (
         <div>
-            <motion.div
-                ref={title}
-                initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: title1 ? 1 : 0, y: title1 ? 0 : 100 }}
-                transition={{ duration: 1, ease: "easeInOut" }}
-                className=""
-            >
+            
                 <div className="w-full relative h-[450px] sm:h-[500px] md:h-[600px] lg:h-[655px]">
                     <img
                         src={aboutimage}
@@ -270,8 +252,8 @@ const About = () => {
                                 </p>
                                 <div>
                                     <PrimaryButtom
-                                        link={'#'}
-                                        text={'Get a green quote'}
+                                        link={'core-initiatives'}
+                                        text={'Know More ->'}
                                     />
                                 </div>
                             </div>
@@ -307,7 +289,9 @@ const About = () => {
                                         <div className='text-lg sm:text-xl md:text-2xl text-gray-900 font-bold'>30%</div>
                                     </div> */}
                                 </motion.div>
-                                <div className="h-12 sm:h-16 lg:h-20 w-px bg-gray-300"></div>
+                                
+                                {/* <div className="h-12 sm:h-16 lg:h-20 w-px bg-gray-300"></div> */}
+                                <div className=" h-full xs:border-b-1 md:border-b-0 md:border-r-1 border-dashed border-gray-4 p-2"></div>
                                 <motion.div
                                     className='flex flex-col items-center justify-center text-center'
                                     variants={contentBasicVariants}
@@ -329,7 +313,8 @@ const About = () => {
                                         <div className='text-lg sm:text-xl md:text-2xl text-gray-900 font-bold'>60%</div>
                                     </div> */}
                                 </motion.div>
-                                <div className="h-12 sm:h-16 lg:h-20 w-px bg-gray-300"></div>
+                                    <div className=" h-full xs:border-b-1 md:border-b-0 md:border-r-1 border-dashed border-gray-4 p-2"></div>
+
                                 <motion.div
                                     className='flex flex-col items-center justify-center  text-center'
                                     variants={contentBasicVariants}
@@ -356,7 +341,6 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-            </motion.div>
 
             {/* <div className='flex flex-col items-center justify-center lg:mt-28 md:mt-20 mt-10'>
                 <motion.div
@@ -453,7 +437,7 @@ const About = () => {
 
                             <div className="flex items-center gap-3 mb-6">
                                 {/* <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div> */}
-                                <h3 className="text-2xl font-bold text-gray-800">Vision</h3>
+                                <h3 className="">Vision</h3>
                             </div>
 
                             <ul className="space-y-4 text-[1rem] leading-relaxed list-disc list-inside">
@@ -475,7 +459,7 @@ const About = () => {
                 transition={{ duration: 1, ease: "easeInOut" }}
                 className=""
             >
-                <div className='xl:h-[700px] lg:h-[1200px] w-full bg-[#212121] flex flex-col items-center'>
+                <div className='xl:h-[700px] lg:h-[1200px] w-full bg-gray-1 flex flex-col items-center'>
                     <p className='border-gray-500 border-1 text-gray-500 mt-23  inline-block pt-1 xl:pb-5 pb-2 pe-4 ps-4 rounded-full overflow-hidden'>OUR TEAM</p>
                     <h2 className='text-white!  pt-3 xl:pb-20 sm:pb-13 pb-7 overflow-hidden lg:w-[600px] text-center'>The <span className='text-primary-1'>team</span> powering green transport</h2>
                     <div className='grid xl:grid-cols-[3fr_3fr_3fr_3fr] lg:grid-cols-3 sm:grid-cols-2 xl:h-[1100px] lg:h-[900px] md:h-[800px] sm:w-full md:w-[90%] lg:w-full w-full md:px-18 px-10 xl:py-8 md:gap-9 gap-4'>
@@ -509,8 +493,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-
-                <div className='bg-[#212121] h-[100px] w-full'>
+                <div className='bg-gray-1 h-[100px] w-full'>
                 </div>
             </motion.div>
 
@@ -579,23 +562,23 @@ const About = () => {
                         {initiatives.map((category) => (
                             <div key={category.id} className="mb-8">
                                 <div
-                                    className={`flex items-center justify-between p-6 ${category.bgColor} rounded-2xl border-1 border-dashed border-primary-variant-5 ${category.borderColor} hover:shadow-lg transition-all duration-300 cursor-pointer`}
+                                    className={`flex items-center justify-between p-6 rounded-2xl border-1 border-dashed border-primary-variant-5 ${category.borderColor} hover:shadow-lg transition-all duration-300 cursor-pointer`}
                                     onClick={() => toggleSection(category.id)}
                                 >
                                     <div className="flex items-center space-x-4">
                                         <div className="p-3 rounded-xl text-white" style={{ backgroundColor: '#ffbb00' }}>
                                             {category.icon}
                                         </div>
-                                        <div className="text-2xl font-bold text-gray-800">{category.title}</div>
+                                        <h5 className="pt-2">{category.title}</h5>
                                     </div>
                                     {expandedSections[category.id] ?
                                         (
-                                            <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <svg className="w-6 h-6 " fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
                                             </svg>
                                         ) :
                                         (
-                                            <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                             </svg>
                                         )
@@ -608,19 +591,19 @@ const About = () => {
                                             <div key={idx} className="bg-white hover:shadow-md transition-shadow duration-300 rounded-xl border-1 border-dashed border-primary-variant-5">
                                                 <div className="p-6">
                                                     <div className="flex items-start space-x-4">
-                                                        <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold" style={{ backgroundColor: '#ffbb00' }}>
+                                                        <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold bg-primary-1" >
                                                             {idx + 1}
                                                         </div>
                                                         <div className="flex-1">
-                                                            <div className="text-xl font-semibold text-gray-800 mb-3">
+                                                            <div className="text-xl mb-3 text-gray-1">
                                                                 {item.title}
                                                             </div>
-                                                            <p className="text-gray-600 mb-4 leading-relaxed">{item.description}</p>
+                                                            <p className="mb-4 leading-relaxed text-gray-2">{item.description}</p>
                                                             <div className="space-y-2">
                                                                 {item.details.map((detail, detailIdx) => (
                                                                     <div key={detailIdx} className="flex items-start space-x-3">
                                                                         <img src={NavHoverLogo} alt='nav-logo' className='p-1'/>
-                                                                        <span className="text-sm text-gray-600 leading-relaxed">{detail}</span>
+                                                                        <span className="text-sm leading-relaxed">{detail}</span>
                                                                     </div>
                                                                 ))}
                                                             </div>
@@ -667,12 +650,12 @@ const About = () => {
                             {enablingPillars.map((pillar, idx) => (
                                 <div key={idx} className={`${pillar.bgColor} rounded-2xl border-1 border-dashed border-primary-variant-5 hover:shadow-lg transition-all duration-300 p-8`}>
                                     <div className="flex items-center space-x-4 mb-4">
-                                        <div className="p-3 rounded-xl text-white" style={{ backgroundColor: '#ffbb00' }}>
+                                        <div className="p-3 rounded-xl text-white bg-primary-1">
                                             {pillar.icon}
                                         </div>
-                                        <div className="text-xl font-bold text-gray-800">{pillar.title}</div>
+                                        <div className="text-xl font-bold text-gray-1">{pillar.title}</div>
                                     </div>
-                                    <p className="text-gray-600 leading-relaxed">{pillar.description}</p>
+                                    <p className="text-gray-3 leading-relaxed">{pillar.description}</p>
                                 </div>
                             ))}
                         </div>
@@ -689,14 +672,14 @@ const About = () => {
                     className="flex flex-col items-center text-center"
                 >
                         <div className="text-center mb-8">
-                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: '#ffbb00' }}>
+                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 bg-primary-1">
                                <svg xmlns="http://www.w3.org/2000/svg" width="2.3em" height="2.3em" viewBox="0 0 24 24" className='text-white'><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16.7 8A3 3 0 0 0 14 6h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1-2.7-2M12 3v3m0 12v3"/></svg>
                                 {/* <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg> */}
                             </div>
-                            <h3 className="text-3xl font-bold mb-4 text-gray-800">Financial & Revenue Model</h3>
-                            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+                            <h3 className="text-3xl font-bold mb-4 text-gray-1">Financial & Revenue Model</h3>
+                            <p className="text-gray-3 max-w-2xl mx-auto text-lg">
                                 Diversified funding streams ensuring sustainable impact and growth
                             </p>
                         </div>
@@ -708,25 +691,25 @@ const About = () => {
                                         <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold" style={{ backgroundColor: '#ffbb00' }}>
                                             {idx + 1}
                                         </div>
-                                        <span className="text-sm font-medium text-gray-700">{stream}</span>
+                                        <span className="text-sm font-medium text-gray-2">{stream}</span>
                                     </div>
                                 </div>
                             ))}
                         </div>
 
-                        <div className="border-t-2 border-amber-300 pt-8">
-                            <div className="text-2xl font-bold mb-6 text-center text-gray-800">Allocation Principles</div>
+                        <div className="border-t-2 border-primary-1 pt-8">
+                            <div className="text-2xl font-bold mb-6 text-center text-gray-1">Allocation Principles</div>
                             <div className="grid md:grid-cols-3 gap-6">
                                 <div className="bg-white  p-6 text-center shadow-sm rounded-2xl border-1 border-dashed border-primary-variant-5">
-                                    <div className="text-4xl font-bold mb-2" style={{ color: '#ffbb00' }}>80%</div>
+                                    <PercentageCounter target={80}/>
                                     <div className="text-sm font-medium text-gray-700">Core programs, research, and impact initiatives</div>
                                 </div>
                                 <div className="bg-white p-6 text-center shadow-sm rounded-2xl border-1 border-dashed border-primary-variant-5">
-                                    <div className="text-4xl font-bold mb-2" style={{ color: '#ffbb00' }}>20%</div>
+                                    <PercentageCounter target={20}/>
                                     <div className="text-sm font-medium text-gray-700">Administration and operations</div>
                                 </div>
                                 <div className="bg-white rounded-xl p-6 text-center shadow-sm border-1 border-dashed border-primary-variant-5">
-                                    <div className="text-4xl font-bold mb-2" style={{ color: '#ffbb00' }}>100%</div>
+                                    <PercentageCounter target={100}/>
                                     <div className="text-sm font-medium text-gray-700">Revenue reinvestment for national development</div>
                                 </div>
                             </div>
