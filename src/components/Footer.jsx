@@ -19,6 +19,16 @@ import '../index.css'
 import { footerContainerVariants } from '../utils/animationVarients.js';
 
 const Footer = () => {
+  const scrollToCoreInitiatives = () => {
+    const element = document.getElementById('core-initiatives');
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <footer className='w-full pt-20 relative flex flex-col items-center justify-center overflow-hidden'>
       <div className='h-15 w-full absolute inset-0 bg-linear-to-t from-transparent via-gray-8/60 to-gray-8'></div>
@@ -74,7 +84,7 @@ const Footer = () => {
                 <div className='flex flex-col justify-center items-start gap-y-2'>
                   <a href='/' className='text-decoration-none hover:text-black hover:underline active:text-black active:underline underline-offset-5 transition-all duration-300 ease-in-out'>Home</a>
                   <a href='/about' className='text-decoration-none hover:text-black hover:underline active:text-black active:underline underline-offset-5 transition-all duration-300 ease-in-out'>About</a>
-                  <a href='/services' className='text-decoration-none hover:text-black hover:underline active:text-black active:underline underline-offset-5 transition-all duration-300 ease-in-out'>Services</a>
+                  <a href='/about?scroll=core-initiatives' className='text-decoration-none hover:text-black hover:underline active:text-black active:underline underline-offset-5 transition-all duration-300 ease-in-out' onClick={scrollToCoreInitiatives}>Services</a>
                   <a href='/environment' className='text-decoration-none hover:text-black hover:underline active:text-black active:underline underline-offset-5 transition-all duration-300 ease-in-out'>Environment</a>
                   <a href='/social' className='text-decoration-none hover:text-black hover:underline active:text-black active:underline underline-offset-5 transition-all duration-300 ease-in-out'>Social</a>
                   <a href='/contact' className='text-decoration-none hover:text-black hover:underline active:text-black active:underline underline-offset-5 transition-all duration-300 ease-in-out'>Contact</a>

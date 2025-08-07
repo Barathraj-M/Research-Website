@@ -1,5 +1,6 @@
 // import image from '../assets/Images/9224444.jpg'; // Update with the correct path to your image
 import { useRef, useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { motion, useInView } from "framer-motion";
 import '../index.css';
 
@@ -13,6 +14,25 @@ import { contentBasicVariants, heroSectionBottomContainerVariants } from '../uti
 const About = () => {
 
     const [expandedSections, setExpandedSections] = useState({});
+    const [searchParams] = useSearchParams();
+
+    useEffect(() => {
+        const value = searchParams.get('scroll');
+
+        if(value) {
+            const element = document.getElementById(value);
+
+            if(element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+        else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }, [searchParams]);
 
     const toggleSection = (sectionId) => {
         setExpandedSections(prev => ({
@@ -547,7 +567,7 @@ const About = () => {
                 </div>
             </div> */}
 
-            <div className="min-h-screen bg-gradient-to-br from-white via-amber-25 to-orange-50 ">
+            <div id="core-initiatives" className="min-h-screen bg-gradient-to-br from-white via-amber-25 to-orange-50 ">
                 {/* Hero Section */}
                 <div className="bg-gradient-to-r from-white via-amber-100 to-orange-100 py-16 px-6">
                     <motion.div
