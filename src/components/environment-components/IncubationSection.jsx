@@ -115,7 +115,7 @@ const IncubationSection = () => {
                     viewport={{ once: true, amount: "some" }}
                     custom={1}
                 >
-                    Eco-Tech Incubation and Green Enterprise
+                    <span className='bg-gradient-to-r from-primary-1 via-primary-variant-2 to-primary-variant-3 bg-clip-text text-transparent'>Eco-Tech Incubation</span> and Green Enterprise
                 </motion.h2>
                 <motion.p
                     variants={contentBasicVariants}

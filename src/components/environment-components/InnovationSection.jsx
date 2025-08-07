@@ -26,7 +26,7 @@ const InnovationSection = () => {
           exit='exit'
           custom={1}
         >
-          Innovation at the Core of Ecology
+          Innovation at the <span className='bg-gradient-to-r from-primary-1 via-primary-variant-2 to-primary-variant-3 bg-clip-text text-transparent'>Core of Ecology</span>
         </motion.h2>
         <motion.p
           variants={contentBasicVariants}

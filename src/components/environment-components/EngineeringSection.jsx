@@ -44,7 +44,7 @@ const EngineeringSection = () => {
                         viewport={{ once: true, amount: "some" }}
                         custom={1}
                     >
-                        Environmental Engineering with Purpose
+                        <span className='bg-gradient-to-r from-primary-1 via-primary-variant-2 to-primary-variant-3 bg-clip-text text-transparent'>Environmental Engineering</span> with Purpose
                     </motion.h2>
                     <motion.p
                         className='text-gray-8'

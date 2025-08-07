@@ -1,13 +1,14 @@
 import React from 'react'
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion'
 
 import ItemsMarquee from '../components/ItemsMaquee';
 import SectionPill from '../components/SectionPill'
 import InnovationSection from '../components/environment-components/InnovationSection';
 import IncubationSection from '../components/environment-components/IncubationSection';
-import EnvironmentIntelligence from '../components/environment-components/EnvironmentIntelligence';
-import CollaborativeEcosystem from '../components/environment-components/CollaborativeEcosystem';
 import EngineeringSection from '../components/environment-components/EngineeringSection';
+import CollaborationSection from '../components/environment-components/CollaborationSection';
+import IntelligenceSection from '../components/environment-components/IntelligenceSection';
 
 // import HeroImage from '../assets/Images/environment-hero-image.webp';
 // import HeroImage from '../assets/Images/environment-hero-image-1.jpeg';
@@ -231,7 +232,7 @@ const Environment = () => {
 
       <EngineeringSection />
 
-      <div className="grid auto-rows-auto gap-y-10 min-h-screen w-full px-10 pt-15">
+      <div className="grid auto-rows-auto gap-y-10 min-h-screen w-full xs:px-2 sm:px-5 md:px-10 lg:px-15 pt-15">
         <div className="grid sm:auto-rows-auto md:grid-rows-none md:grid-cols-5 gap-y-5 gap-x-5 w-full">
           <div className="md:col-span-2 flex flex-col justify-start items-start gap-y-2">
             <SectionPill sectionTitle={"Ayush"} />
@@ -243,7 +244,7 @@ const Environment = () => {
               custom={1}
               viewport={{ once: true, amount: "all" }}
             >
-              Science Meets Ecology: The AYUSH Integration
+              Science meets Ecology: The <span className='bg-gradient-to-r from-primary-1 via-primary-variant-2 to-primary-variant-3 bg-clip-text text-transparent'>AYUSH Integration</span>
             </motion.h2>
           </div>
           <div className="md:col-span-3">
@@ -281,14 +282,14 @@ const Environment = () => {
           <img
             src={AyushBannerImage}
             alt="banner-image-yoga"
-            className="w-full h-full object-cover rounded-2xl transition-transform duration-500 ease-in-out group-hover:scale-102"
+            className="w-full h-full object-cover rounded-2xl transition-transform duration-500 ease-in-out group-hover:scale-102 md:h-[20rem]"
           />
         </motion.div>
       </div>
 
-      <CollaborativeEcosystem />
+      <CollaborationSection />
 
-      <EnvironmentIntelligence />
+      <IntelligenceSection />
     </section>
   )
 }
