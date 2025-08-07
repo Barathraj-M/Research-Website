@@ -10,8 +10,6 @@ import FooterDivider from "../assets/Images/nav-divider.svg";
 import SectionPill from "../components/SectionPill";
 import PrimaryButtom from "../components/PrimaryButtom";
 import aboutimage from "../assets/Images/aboutimage2.jpg"; // Update with the correct path to your image
-import CardImage1 from "../assets/Images/engineering-card-image-1.webp";
-import CardImage2 from "../assets/Images/engineering-card-image-2.webp";
 
 import ItemsMarquee from "../components/ItemsMaquee";
 import NavHoverLogo from "../assets/Images/nav-hover-icon.svg";
@@ -462,60 +460,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* <div className='flex flex-col items-center justify-center lg:mt-28 md:mt-20 mt-10'>
-                <motion.div
-                    ref={head}
-                    initial={{ opacity: 0, y: 100 }}
-                    animate={{ opacity: headInView ? 1 : 0, y: headInView ? 0 : 100 }}
-                    transition={{ duration: 1, ease: "easeInOut" }}
-                    className="flex flex-col items-center text-center"
-                >
-                    <div className='lg:w-[800px] md:w-[700px] text-center flex flex-col md:space-y-5 space-y-3'>
-                        <h2 className='overflow-hidden md:pe-5 md:ps-5 p-2'>Smart <span className='text-gray-500'>Eco-transportation</span> solutions for modern <span className='text-gray-500'>supply chains</span></h2>
-                        <p className='text-[17px] text-gray-500 lg:pe-25 lg:ps-25 pe-5 ps-5'>At Mivora, we believe logistics should be as kind to the planet as it is efficient for business. Born from a vision to create cleaner, smarter transportation solutions, we set out to challenge the conventional supply chain model.</p>
-                    </div>
-                    <div className='grid lg:grid-cols-[3fr_2fr_3fr] sm:grid-cols-[3fr_3fr_3fr] grid-cols-2 lg:gap-9 sm:gap-3 gap-4 max-w-[1100px] lg:h-[290px] md:h-[320px] sm:h-[290px] h-[500px] mx-5 md:mt-20 mt-10'>
-                        <div className='rounded-2xl overflow-hidden'>
-                            <img
-                                src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/685bd03b38b28d909fd48630_about-01.webp"
-                                loading="eager"
-                                alt="Image"
-                                className="object-cover w-full h-full"
-                            />
-                        </div>
-
-                        <div className='rounded-2xl overflow-hidden'>
-                            <img
-                                src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/6837f52f1097f34d589ada2c_about-image-02.webp"
-                                loading="eager"
-                                alt="About Image"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
-
-                        <div className='rounded-2xl overflow-hidden sm:col-span-1 col-span-2'>
-                            <img
-                                src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/685bd03a536b0ac4772d1def_about-02.webp"
-                                loading="eager"
-                                alt="Image"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
-                    </div>
-
-                    <div className='flex md:flex-row flex-col justify-evenly items-center lg:gap-25 md:gap-10 gap-5 p-5 text-gray-500 mt-8'>
-                        <p className='xl:w-[440px] xl:px-0 lg:px-4 text-center h-auto'>Over the years, we've built a global network dedicated to eco-supply transportation — blending technology, innovation, and sustainability.</p>
-                        <img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/68380c88b7e106bfe4fe4980_about-icon-02.svg" loading="eager" alt="Icon" className='xl:h-12 md:h-35 h-10'></img>
-                        <p className='xl:w-[440px] h-auto text-center'>From electric fleets to carbon-neutral strategies, every solution we offer is designed to minimize environmental impact while maximizing operational value.</p>
-                    </div>
-                    <p className='text-gray-500 xl:mt-8 lg:mt-5 mt-2 text-center'>Together, we can redefine logistics for a better tomorrow.</p>
-                    <PrimaryButtom
-                        link={'#'}
-                        text={'Learn more'}
-                    />
-                </motion.div>
-            </div> */}
-
       <div className="p-10  bg-gradient-to-b from-gray-8 to-[#fff3d1]">
         <motion.div
           ref={head1}
@@ -526,13 +470,6 @@ const About = () => {
         >
           <div className="flex flex-col items-center md:gap-5 gap-3  sm:pt-0 pt-10 "></div>
           <div className="overflow-hidden">
-            {/* <h2 className="font-semibold overflow-hidden ">
-              Social initiatives empower{" "}
-              <span className="text-gray-400">
-                communities and drive inclusive, sustainable
-              </span>{" "}
-              change
-            </h2> */}
           </div>
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}

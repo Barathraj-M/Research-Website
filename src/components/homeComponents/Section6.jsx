@@ -9,6 +9,8 @@ import location from "../../assets/Images/location.svg";
 import earthVideo from "../../assets/Videos/earth.mp4";
 import SectionPill from "../SectionPill";
 import PrimaryButtom from "../PrimaryButtom";
+import { QuoteDownIcon, QuoteUpIcon } from "../../assets/Icons/Icons";
+import { quoteIconDanceVariants } from "../../utils/animationVarients";
 
 // Icons used in box items
 const icons = [arrow, drop, cloud, location];
@@ -136,12 +138,26 @@ const Section6 = () => {
               empower the next generation of scientific and spiritual leaders.
             </span>
           </p>
-          <div className="flex flex-col items-center justify-center">
-        <blockquote className="border-l-4 border-black pl-4 ml-2 italic text-lg text-gray-700 bg-gradient-to-br from-[#ffbb00] to-[#fff3d1] p-2 rounded-lg">
-          <span className="font-semibold">SLSRP</span> ≠ space —{" "}
-          <span className="font-semibold">it’s a purpose.</span>
-        </blockquote>
-      </div>
+          
+                      <div className='bg-gray-1 rounded-full flex flex-row justify-center items-center gap-x-5 p-5'>
+                          <motion.div
+                              className='self-start text-primary-1'
+                              variants={quoteIconDanceVariants}
+                              animate='animate'
+                          >
+                              <QuoteDownIcon width={40} height={40} />
+                          </motion.div>
+                          <blockquote className='italic text-white text-center xs:text-sm sm:text-md md:text-xl max-w-3xl'>
+                             SLSRP ≠ space — it’s a purpose
+                          </blockquote>
+                          <motion.div
+                              className='self-end text-primary-1'
+                              variants={quoteIconDanceVariants}
+                              animate='animate'
+                          >
+                              <QuoteUpIcon width={40} height={40} />
+                          </motion.div>
+                      </div>
         </div>
         
       </motion.div>
