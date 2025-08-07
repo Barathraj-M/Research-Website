@@ -98,8 +98,8 @@ const OurServices = () => {
                 impact-aligned investment. Flagship programs under this vertical
                 include.
               </p>
-              <div className="flex justify-center w-full items-center mt-10  shadow-lg hover:shadow-xl rounded-xl ">
-               <div  className='w-full min-h-[350px] bg-white  flex flex-col items-center gap-y-5 cursor-pointer rounded-xl group '>
+              <div className="flex justify-center w-full items-center mt-10  shadow-lg hover:shadow-xl rounded-xl rounded-xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300">
+               <div  className='w-full min-h-[350px] bg-white  flex flex-col items-center gap-y-5 cursor-pointer rounded-xl group  '>
 
             
                   <ServiceCard
@@ -145,7 +145,7 @@ const OurServices = () => {
                 individual and social transformation through verifiable mental,
                 emotional, and behavioral resilience. Focus areas include
               </p>
-              <div className="flex justify-center w-full items-center mt-10  shadow-lg hover:shadow-xl rounded-xl">
+              <div className="flex justify-center w-full items-center mt-10  shadow-lg hover:shadow-xl rounded-xl rounded-xl border  border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300" >
                 <div  className='w-full min-h-[350px] bg-white  flex flex-col items-center gap-y-5 cursor-pointer rounded-xl group  '>
 
             

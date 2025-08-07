@@ -109,11 +109,9 @@ const Section6 = () => {
         className="flex flex-col lg:flex-row justify-center items-center gap-8 section6-content lg:justify-around"
       >
         {/* Left Column */}
-        <div className="flex flex-col items-center text-center max-w-sm justify-center w-full">
-          <h2 className="text-3xl sm:text-4xl font-light leading-snug mb-4 text-white! flex flex-col gap-2">
-            <div>Building Global</div>
-            <div> & </div>
-            <div>National Impact</div>
+        <div className="flex flex-col items-center text-center max-w-sm justify-center w-full gap-1">
+          <h2 className=" text-white! gap-2 lg:text-7xl!">
+            Building Global <br /> & <br /> National Impact
           </h2>
         </div>
 

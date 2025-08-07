@@ -28,7 +28,7 @@ const WhyChooseUs = () => {
   const rightInView = useInView(rightRef, { once: false });
 
   return (
-    <div className="why-choose-us pl-15 pr-15 p-10">
+    <div className="why-choose-us pl-15 pr-15 p-10 mt-12">
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 50 }}
