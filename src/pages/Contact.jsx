@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 
-import ContactHeroImage from '../assets/Images/contact-hero-image1.jpg'
+import ContactHeroImage from '../assets/Images/contact-hero-image2.png'
 import RoundedBottomRight from '../assets/Images/hero-bottom-right.svg'
 import RoundedBottomLeft from '../assets/Images/hero-bottom-left.svg'
 // import PrimaryButtom from '../components/PrimaryButtom'
@@ -198,7 +198,7 @@ const Contact = () => {
                             exit='exit'
                             custom={1}
                         >
-                            Let's start a <span className='text-primary-1!'>conversation</span>
+                            Let's start a <span className='bg-gradient-to-r from-primary-1 via-primary-variant-2 to-primary-variant-3 bg-clip-text text-transparent'>conversation</span>
                         </motion.h2>
                         <motion.form
                             className='w-9/10 md:w-7/10 h-full flex flex-col justify-start items-start xs:gap-y-5 md:gap-y-7 rounded-3xl xs:p-5 md:p-10 bg-white border-0 focus-within:shadow-2xl'
@@ -294,7 +294,7 @@ const Contact = () => {
                     viewport={{ once: true, amount: "some" }}
                     exit='exit'
                 >
-                    Clearing doubts about our <span className='text-primary-1'>organisation & services</span>
+                    Clearing doubts about our <span className='bg-gradient-to-r from-primary-1 via-primary-variant-2 to-primary-variant-3 bg-clip-text text-transparent'>organisation & services</span>
                 </motion.h2>
                 <CollapsableCard
                     heading={'Who founded SLSRP and what is its core philosophy?'}
