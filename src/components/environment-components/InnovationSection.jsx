@@ -41,7 +41,7 @@ const InnovationSection = () => {
       </div>
       <div className='w-full flex flex-row flex-wrap justify-center items-center gap-y-0 xs:gap-y-5 md:gap-y-6 xs:gap-x-5 md:gap-x-8 px-4 md:px-0'>
         <motion.div
-          className='flex flex-col justify-around items-center bg-white rounded-xl border border-primary-variant-3 hover:border-primary-1 transition-all duration-300 text-center w-full xs:h-[40vh] md:h-[50vh] max-w-sm p-5 group'
+          className='flex flex-col justify-around items-center bg-white rounded-xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300 text-center w-full h-[20rem] max-w-sm p-5 group'
           variants={basicCardVariants}
           initial='initial'
           whileInView='whileInView'
@@ -58,7 +58,7 @@ const InnovationSection = () => {
         </motion.div>
 
         <motion.div
-          className='flex flex-col justify-around items-center bg-white rounded-xl border border-primary-variant-3 hover:border-primary-1 transition-all duration-300 text-center w-full xs:h-[40vh] md:h-[50vh] max-w-sm p-5 group'
+          className='flex flex-col justify-around items-center bg-white rounded-xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300 text-center w-full h-[20rem] max-w-sm p-5 group'
           variants={basicCardVariants}
           initial='initial'
           whileInView='whileInView'
@@ -75,7 +75,7 @@ const InnovationSection = () => {
         </motion.div>
 
         <motion.div
-          className='flex flex-col justify-around items-center bg-white rounded-xl border border-primary-variant-3 hover:border-primary-1 transition-all duration-300 text-center w-full xs:h-[40vh] md:h-[50vh] max-w-sm p-5 group'
+          className='flex flex-col justify-around items-center bg-white rounded-xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300 text-center w-full h-[20rem] max-w-sm p-5 group'
           variants={basicCardVariants}
           initial='initial'
           whileInView='whileInView'

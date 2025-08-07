@@ -55,7 +55,7 @@ const EngineeringSection = () => {
                         exit='exit'
                         custom={3}
                     >
-                        Our definition of engineering goes beyond infrastructure—it includes soil, water, atmosphere, and biodiversity. SLSRP pioneers regenerative environmental engineering that aims not just to reduce harm, but to reverse degradation.
+                        Our definition of engineering goes beyond infrastructure - it includes soil, water, atmosphere, and biodiversity. SLSRP pioneers regenerative environmental engineering that aims not just to reduce harm, but to reverse degradation.
                     </motion.p>
                 </div>
 

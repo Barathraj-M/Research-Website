@@ -91,8 +91,8 @@ const Environment = () => {
 
   return (
     <section className='w-full min-h-screen'>
-      <div className='w-full h-screen mx-auto xs:px-2 sm:px-5 md:px-10 lg:px-15'>
-        <div className='w-full h-[90vh] overflow-hidden rounded-2xl relative mt-16'>
+      <div className='w-full h-screen mx-auto xs:px-2 sm:px-5 md:px-10 lg:px-15 bg-primary-variant-7'>
+        <div className='w-full h-[90vh] overflow-hidden rounded-2xl relative mt-16 -mb-0.5'>
           <img
             src={HeroImage}
             alt="environment-hero-section"
@@ -100,11 +100,11 @@ const Environment = () => {
             loading='eager'
           />
           <div className='xs:w-9/10 md:w-7/10 lg:w-6/10 absolute right-0 bottom-0 flex flex-col justify-start items-start gap-0'>
-            <div className='w-full flex flex-col justify-start items-center gap-0 bg-gray-8 rounded-tl-3xl rounded-bl-3xl'>
+            <div className='w-full flex flex-col justify-start items-center gap-0 bg-primary-variant-7 rounded-tl-3xl rounded-bl-3xl'>
               <img
                 src={HeroBottomLeft}
                 alt='svg-place-holder'
-                className='self-end w-8 h-8 object-cover -mt-8 -me-[0.2px]'
+                className='self-end w-8 h-8 object-cover -mt-8 -me-[0.3px]'
                 loading='eager'
               />
               <motion.h1
@@ -115,7 +115,7 @@ const Environment = () => {
                 custom={1}
                 viewport={{ once: true, amount: "0.1" }}
               >
-                <span className='bg-gradient-to-r from-primary-1 via-primary-variant-2 to-primary-variant-3 bg-clip-text text-transparent'>Environment</span>al solutions, driven by innovation
+                Environmental solutions, driven by innovation
               </motion.h1>
               {/* <motion.h1
                 className='px-10 py-5'
@@ -128,7 +128,7 @@ const Environment = () => {
                 Engineering a Regenerative Future
               </motion.h1> */}
             </div>
-            <div className='w-8/10 bg-gray-8 h-full self-end'>
+            <div className='w-8/10 bg-primary-variant-7 h-full self-end'>
               <div className='w-full h-full flex flex-col justify-start items-center gap-0'>
                 <img
                   src={HeroTopLeft}
@@ -144,11 +144,11 @@ const Environment = () => {
                   viewport={{ once: true, amount: "0.1" }}
                   custom={3}
                 >
-                  At Semporutkalai Life Science Research Park (SLSRP), environmental responsibility is not a passive commitment—it is a proactive mission. We do not treat nature as a backdrop to progress but as the very foundation of human continuity.
+                  At Semporutkalai Life Science Research Park (SLSRP), environmental responsibility is not a passive commitment - it is a proactive mission. We do not treat nature as a backdrop to progress but as the very foundation of human continuity.
                 </motion.p>
                 <div className='w-full relative mt-3'>
-                  <div className='absolute left-0 top-0 h-full w-20 pointer-events-none z-50 bg-gradient-to-r from-gray-8 via-gray-8/80 to-transparent'></div>
-                  <div className='absolute right-0 top-0 h-full w-20 pointer-events-none z-50 bg-gradient-to-l from-gray-8 via-gray-8/80 to-transparent'></div>
+                  <div className='absolute left-0 top-0 h-full w-20 pointer-events-none z-10 bg-gradient-to-r from-primary-variant-7 via-primary-variant-7/80 to-transparent'></div>
+                  <div className='absolute right-0 top-0 h-full w-20 pointer-events-none z-10 bg-gradient-to-l from-primary-variant-7 via-primary-variant-7/80 to-transparent'></div>
                   <ItemsMarquee items={items} />
                 </div>
                 <img
@@ -168,10 +168,10 @@ const Environment = () => {
           src={BackgroundImage}
           alt="background-pattern"
           className='absolute inset-0 w-full h-full object-cover opacity-20'
-          loading='lazy'
+          loading='eager'
         />
 
-        <div className='h-15 w-full absolute inset-0 bg-linear-to-t from-transparent via-gray-8/60 to-gray-8'></div>
+        <div className='h-15 w-full absolute inset-0 bg-linear-to-t from-transparent via-primary-variant-7/60 to-primary-variant-7'></div>
         <div className='h-15 w-full absolute bottom-0 bg-linear-to-b from-transparent via-primary-variant-7/60 to-primary-variant-7'></div>
 
         <div className='text-center max-w-2xl flex flex-col gap-y-5 relative z-10'>
@@ -255,7 +255,7 @@ const Environment = () => {
               custom={3}
               viewport={{ once: true, amount: "all" }}
             >
-              Our work includes a critical dimension often overlooked in mainstream environmental science—the ecological intelligence embedded in India's traditional wellness systems.
+              Our work includes a critical dimension often overlooked in mainstream environmental science - the ecological intelligence embedded in India's traditional wellness systems.
               At SLSRP, we conduct clinical and field research on AYUSH-based ecological protocols, positioning them as integral components of preventive healthcare, forest biodiversity, and eco-conscious living.
             </motion.p>
             <motion.p
@@ -266,7 +266,7 @@ const Environment = () => {
               custom={5}
               viewport={{ once: true, amount: "all" }}
             >
-              By merging traditional practices with empirical methods, we open new frontiers for public health and environmental stewardship—especially within underserved and indigenous communities.
+              By merging traditional practices with empirical methods, we open new frontiers for public health and environmental stewardship - especially within underserved and indigenous communities.
             </motion.p>
           </div>
         </div>

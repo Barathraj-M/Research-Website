@@ -20,7 +20,6 @@ const ItemsMarquee = ({ items }) => {
         <div
             className='w-full h-10 overflow-hidden flex flex-row justify-start items-center gap-x-10 md:gap-x-20'
         >
-            <div className='absolute inset-0 z-50 marquee-gradient'></div>
             <motion.div
                 className='flex flex-row flex-shrink-0 justify-start items-center gap-x-10 md:gap-x-20'
                 initial={{ x: 0 }}
