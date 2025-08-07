@@ -536,7 +536,7 @@ const About = () => {
                 </div>
             </div> */}
 
-            <div id="core-initiatives" className="min-h-screen bg-gradient-to-br from-white via-amber-25 to-orange-50 ">
+            <div id="core-initiatives" className="min-h-screen">
                 {/* Hero Section */}
                 <div className="bg-primary-variant-7 py-16 px-6">
                     <motion.div
