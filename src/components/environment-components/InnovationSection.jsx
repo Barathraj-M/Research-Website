@@ -12,7 +12,7 @@ import { BlockChainIcon, TargetIcon, DroneIcon } from '../../assets/Icons/Icons'
 
 const InnovationSection = () => {
   return (
-    <div className='w-full min-h-screen flex flex-col justify-center items-center gap-y-10 xs:px-2 sm:px-5 md:px-10 lg:px-15 py-5 bg-gradient-to-br from-primary-variant-7 to-primary-variant-8'>
+    <div id="innovation-section" className='w-full min-h-screen flex flex-col justify-center items-center gap-y-10 xs:px-2 sm:px-5 md:px-10 lg:px-15 py-5 bg-primary-variant-7'>
       <div>
         <SectionPill sectionTitle={'Innovation'} />
       </div>
