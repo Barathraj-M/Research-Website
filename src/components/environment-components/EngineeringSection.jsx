@@ -6,8 +6,8 @@ import ServiceCard from '../ServiceCard';
 
 import FooterDivider from '../../assets/Images/nav-divider.svg';
 
-import CardImage1 from '../../assets/Images/engineering-card-image-1.webp';
-import CardImage2 from '../../assets/Images/engineering-card-image-2.webp'
+import CardImage1 from '../../assets/Images/holding-global-recycle.jpg';
+import CardImage2 from '../../assets/Images/stackholder-collaboration-image.jpg';
 
 import {
     contentBasicVariants,
