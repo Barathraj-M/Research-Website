@@ -8,11 +8,12 @@ import StepConnector from "../assets/Images/step-connector.svg";
 import OurServices from "../components/homeComponents/OurServices";
 import WhyChooseUs from "../components/homeComponents/WhyChooseUs";
 import Section6 from "../components/homeComponents/Section6";
-
+import science from "../assets/Images/science.png";
 import jc from "../assets/Images/jc.png";
 import RoundedBottomRight from "../assets/Images/hero-bottom-right.svg";
 import RoundedBottomLeft from "../assets/Images/hero-bottom-left.svg";
 import YogaBannerImage from "../assets/Images/ancient-yoga-banner-image.png";
+import NavHoverLogo from "../assets/Images/nav-hover-icon.svg";
 import resilient from "../assets/Images/resilient.jpg";
 import research from "../assets/Images/research.jpg";
 import responsible from "../assets/Images/responsible.jpg";
@@ -75,7 +76,11 @@ const Home = () => {
 
   return (
     <div className="home w-full">
-      <div className="landing-page">
+      <div
+        className="landing-page"
+        role="region"
+        aria-label="Landing Section with Background Videos"
+      >
         {/* Render all videos and fade between them */}
         {videoSlides.map((video, index) => (
           <motion.video
@@ -86,13 +91,18 @@ const Home = () => {
             loop
             muted
             playsInline
+            aria-hidden="true" // Hide video from screen readers
             animate={getVideoStyle(index)}
             transition={{ duration: 1, ease: "easeInOut" }}
           />
         ))}
 
         {/* Text content area */}
-        <div className="content">
+        <div
+          className="content"
+          role="region"
+          aria-label="Landing text content"
+        >
           {videoSlides.map((video, index) =>
             videoIndex === index ? (
               <motion.div
@@ -100,19 +110,23 @@ const Home = () => {
                 initial={false}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
-                // style={{ position: "relative" }}
                 className="absolute xs:top-3/20 sm:top-4/20 md:top-3/10 lg:top-4/10 left-0"
               >
-                <div
+                <h1
                   className={`font-bold leading-tight ${video.textColor} text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl ml-6`}
+                  style={{ color: "white" }}
                 >
                   {video.title.split("\n").map((line, i) => (
-                    <div key={i} style={{ color: "white" }}>
+                    <span key={i}>
                       {line}
-                    </div>
+                      <br />
+                    </span>
                   ))}
-                </div>
-                <p className={` w-3/4  ${video.textColor}`}>
+                </h1>
+                <p
+                  className={`w-3/4 ${video.textColor}`}
+                  style={{ color: "white" }}
+                >
                   {video.description}
                 </p>
               </motion.div>
@@ -120,21 +134,27 @@ const Home = () => {
           )}
         </div>
 
-        <div className="flex justify-center items-center w-full ">
+        {/* Decorative bottom with info icons */}
+        <div
+          className="flex justify-center items-center w-full"
+          role="contentinfo"
+          aria-label="Bottom Highlights"
+        >
           <div
             ref={bottomRef}
-            // variants={heroSectionBottomContainerVariants}
-            // initial="initial"
-            // animate="animate"
-            className="absolute bottom-0 xs:w-full md:w-9/10 lg:w-9/10 flex flex-row justify-between items-center gap-0 "
+            className="absolute bottom-0 xs:w-full md:w-9/10 lg:w-9/10 flex flex-row justify-between items-center gap-0"
           >
             <img
               src={RoundedBottomLeft}
-              alt="Rounded bottom left decoration"
+              alt=""
+              aria-hidden="true"
               className="self-end -mb-[0.8px] -me-[0.8px]"
             />
+
             <motion.div
-              className="w-full grid xs:grid-cols-1 md:grid-cols-3 md:gap-x-5 rounded-tl-xl rounded-tr-xl bg-gray-8 px-4 pt-4 pb-2 bg-gradient-to-t from-[#fffaf0] to-[#fff3d1]"
+              className="w-full grid xs:grid-cols-1 md:grid-cols-3 md:gap-x-5 rounded-tl-xl rounded-tr-xl bg-gray-8 px-4 pt-4 pb-2 bg-gradient-to-t from-gray-8 to-[#fff3d1]"
+              role="list"
+              aria-label="Mission highlights"
               variants={heroSectionBottomContainerVariants}
               initial="initial"
               animate="animate"
@@ -147,12 +167,18 @@ const Home = () => {
                 custom={1}
                 viewport={{ once: true, amount: "some" }}
                 exit="exit"
+                role="listitem"
               >
-                <h6 className="text-center  font-semibold!">
+                <h6 className="text-center font-semibold">
                   SLSRP - The timeless mission
                 </h6>
-                <InifiteIcon width={50} height={50} />
+                <InifiteIcon
+                  width={50}
+                  height={50}
+                  title="Timeless Mission Icon"
+                />
               </motion.div>
+
               <motion.div
                 className="flex flex-col justify-center items-center gap-y-2 h-full xs:border-b-1 md:border-b-0 md:border-r-1 border-dashed border-gray-4 p-2"
                 variants={contentBasicVariants}
@@ -161,12 +187,18 @@ const Home = () => {
                 custom={4}
                 viewport={{ once: true, amount: "some" }}
                 exit="exit"
+                role="listitem"
               >
-                <h6 className="text-center  font-semibold!">
+                <h6 className="text-center font-semibold">
                   Forging a Civilizational Shift - For sustenance
                 </h6>
-                <HandsGlobeIcon width={40} height={40} />
+                <HandsGlobeIcon
+                  width={40}
+                  height={40}
+                  title="Global Shift Icon"
+                />
               </motion.div>
+
               <motion.div
                 className="text-center flex flex-col justify-center items-center gap-y-2 h-full p-2"
                 variants={contentBasicVariants}
@@ -175,41 +207,57 @@ const Home = () => {
                 custom={8}
                 viewport={{ once: true, amount: "some" }}
                 exit="exit"
+                role="listitem"
               >
-                <h6 className="text-center  font-semibold!">
+                <h6 className="text-center font-semibold">
                   Sustaining Humanity
                 </h6>
-                <ShieldCheckIcon width={40} height={40} />
+                <ShieldCheckIcon
+                  width={40}
+                  height={40}
+                  title="Humanity Protection Icon"
+                />
               </motion.div>
             </motion.div>
+
             <img
               src={RoundedBottomRight}
-              alt="Rounded bottom right decoration"
+              alt=""
+              aria-hidden="true"
               className="self-end -mb-[0.8px] -ms-[0.8px]"
             />
           </div>
         </div>
       </div>
 
-      {/* Other sections */}
-      <div className="w-full px-4 py-8  bg-primary-variant-7 ">
+      <div
+        className="w-full px-4 py-8 bg-primary-variant-7"
+        role="region"
+        aria-labelledby="welcome-heading"
+      >
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.3 }}
-          className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center "
+          className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
         >
           {/* Left Text Box */}
-          <div className=" space-y-4 p-4" style={{ textAlign: "justify" }}>
-            <div className="text-3xl sm:text-4xl font-bold flex items-center gap-3">
-              <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div>
-              <h2>
-                {" "}
-                Welcome to <span className="text-[#ffbb00]">SLSRP</span>
+          <section
+            className="space-y-4 p-4"
+            style={{ textAlign: "justify" }}
+            aria-label="Introduction about SLSRP"
+          >
+            <SectionPill sectionTitle={"SLSRP"} />
+            <div className="flex items-center gap-3">
+              <h2 id="welcome-heading" className="mt-2! text-3xl font-bold">
+                Welcome to <span className="text-primary-1">SLSRP</span>
               </h2>
             </div>
-            <h3 className="text-2xl sm:text-3xl ">
+            <h3
+              className="text-xl font-semibold"
+              style={{ textAlign: "start" }}
+            >
               Semporutkalai Life Science Research Park (SLSRP)
             </h3>
             <p>
@@ -230,7 +278,7 @@ const Home = () => {
               engineering, and youth transformation programs, with deep roots in
               Indian cultural heritage and a bold vision for global impact.
             </p>
-          </div>
+          </section>
 
           {/* Right Image Box */}
           <motion.div
@@ -239,39 +287,54 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.3 }}
             className="flex justify-center"
+            role="img"
+            aria-label="Portrait of Thiru. Jeyachandran Srinivasan, founder of SLSRP"
           >
             <img
-              src={jc} // Replace with actual image path
-              alt="SLSRP"
-              className="w-full max-w-md "
+              src={jc}
+              alt="Portrait of Thiru. Jeyachandran Srinivasan"
+              className="w-full max-w-md rounded-md"
             />
           </motion.div>
         </motion.div>
-        <WhyChooseUs />
+
+        {/* Additional Section */}
+        <div aria-label="Why Choose Us Section">
+          <WhyChooseUs />
+        </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center mb-4 pt-3 ">
+      <div className="flex flex-col items-center justify-center mb-4 pt-3">
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 1, ease: "easeIn" }}
           className="flex flex-col items-center text-center"
+          role="region"
+          aria-label="Introduction section"
         >
-          <div className="lg:w-[800px] md:w-[700px] text-center flex flex-col md:space-y-5 space-y-3">
-            <h2
+          <div
+            className="lg:w-[800px] md:w-[700px] text-center flex flex-col md:space-y-5 space-y-3"
+            role="group"
+            aria-labelledby="section-title"
+          >
+            <div
               className="overflow-hidden md:pe-5 md:ps-5 p-2 flex justify-center items-center gap-2"
               style={{ fontWeight: "700" }}
             >
               <div
                 className="inline-flex items-center justify-center w-12 h-12 rounded-full"
                 style={{ backgroundColor: "#ffbb00" }}
+                aria-hidden="true"
               >
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
+                  role="img"
+                  aria-label="Checklist icon"
                 >
                   <path
                     strokeLinecap="round"
@@ -281,12 +344,11 @@ const Home = () => {
                   />
                 </svg>
               </div>
-              <h3 className="mt-3!">
-                Whats
-                <span className="text-[#ffbb00]"> Matters</span>{" "}
+              <h3 id="section-title" className="mt-3!">
+                Whats<span className="text-primary-1"> Matters</span>
               </h3>
-            </h2>
-            <p className="text-[17px]  lg:pe-20 lg:ps-20 pe-5 ps-5">
+            </div>
+            <p className="text-[17px] lg:pe-20 lg:ps-20 pe-5 ps-5">
               We live in a world overwhelmed by complexity—mental stress,
               environmental collapse, socio-political fragmentation, and
               disconnected knowledge systems. <br />
@@ -295,12 +357,17 @@ const Home = () => {
               ethics.
             </p>
           </div>
-          <div className="grid lg:grid-cols-[3fr_2fr_3fr] sm:grid-cols-[3fr_3fr_3fr] grid-cols-2 lg:gap-9 sm:gap-3 gap-4 max-w-[1100px] lg:h-[290px] md:h-[320px] sm:h-[290px] h-[500px] mx-5 md:mt-20 mt-10">
+
+          <div
+            className="grid lg:grid-cols-[3fr_2fr_3fr] sm:grid-cols-[3fr_3fr_3fr] grid-cols-2 lg:gap-9 sm:gap-3 gap-4 max-w-[1100px] lg:h-[290px] md:h-[320px] sm:h-[290px] h-[500px] mx-5 md:mt-20 mt-10"
+            role="group"
+            aria-label="Visual representations of core values"
+          >
             <div className="rounded-2xl overflow-hidden">
               <img
                 src={responsible}
                 loading="eager"
-                alt="Image"
+                alt="Representation of responsibility"
                 className="object-cover w-full h-full"
               />
             </div>
@@ -309,7 +376,7 @@ const Home = () => {
               <img
                 src={resilient}
                 loading="eager"
-                alt="About Image"
+                alt="Representation of resilience"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -318,7 +385,7 @@ const Home = () => {
               <img
                 src={research}
                 loading="eager"
-                alt="Image"
+                alt="Representation of research and inquiry"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -329,25 +396,34 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 1, ease: "easeInOut" }}
-            className="flex md:flex-row flex-col justify-center 
-            items-center lg:gap-25 md:gap-10 gap-5 p-5  mt-4"
+            className="flex md:flex-row flex-col justify-center items-center lg:gap-25 md:gap-10 gap-5 p-5 mt-4"
+            role="region"
+            aria-label="Core message section"
           >
-            <p className="  text-center h-auto">
+            <p className="text-center h-auto">
               We bridge the intangible aspects of human consciousness with the
               tangible, measurable goals of global development—offering society
               a roadmap that is both deeply philosophical and radically
               practical.
             </p>
+
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
               transition={{ duration: 1, ease: "easeInOut" }}
               className="flex flex-col items-center justify-center"
+              role="group"
+              aria-label="Step progression for transformation"
             >
               <div className="w-1/4">
                 <div className="flex xs:flex-col md:flex-row justify-center items-center gap-0">
-                  <div className="flex flex-row justify-start items-center gap-2 group p-5 bg-primary-variant-8 rounded-lg xs:min-w-[15rem] md:min-w-auto">
+                  {/* Step 1 */}
+                  <div
+                    className="flex flex-row justify-start items-center gap-2 group p-5 bg-primary-variant-8 rounded-lg xs:min-w-[15rem] md:min-w-auto"
+                    role="listitem"
+                    aria-label="Step 1: Responsible"
+                  >
                     <div className="p-1 relative border-1 border-dashed border-primary-1 rounded-xl">
                       <span className="w-12 h-12 bg-primary-1 rounded-lg flex items-center justify-center text-white font-semibold text-sm relative z-10">
                         1
@@ -356,14 +432,24 @@ const Home = () => {
                         <span className="w-10 h-10 rounded-lg bg-primary-1 opacity-75 group-hover:animate-ping"></span>
                       </span>
                     </div>
-                    <h6 className="text-sm text-center  mb-0!">Responsible</h6>
+                    <h6 className="text-sm text-center mb-0!">Responsible</h6>
                   </div>
+
+                  {/* Connector */}
                   <img
                     src={StepConnector}
-                    alt="step-divider"
+                    alt=""
+                    role="presentation"
                     className="xs:w-4 xs:h-auto md:h-7 md:w-auto xs:rotate-90 md:rotate-0 self-center object-cover -my-1"
+                    aria-hidden="true"
                   />
-                  <div className="flex flex-row justify-start items-center gap-2 group p-5 bg-primary-variant-8 rounded-lg xs:min-w-[15rem] md:min-w-auto">
+
+                  {/* Step 2 */}
+                  <div
+                    className="flex flex-row justify-start items-center gap-2 group p-5 bg-primary-variant-8 rounded-lg xs:min-w-[15rem] md:min-w-auto"
+                    role="listitem"
+                    aria-label="Step 2: Resilient"
+                  >
                     <div className="p-1 relative border-1 border-dashed border-primary-1 rounded-xl">
                       <span className="w-12 h-12 bg-primary-1 rounded-lg flex items-center justify-center text-white font-semibold text-sm relative z-10">
                         2
@@ -372,14 +458,24 @@ const Home = () => {
                         <span className="w-10 h-10 rounded-lg bg-primary-1 opacity-75 group-hover:animate-ping"></span>
                       </span>
                     </div>
-                    <h6 className="text-sm text-center  mb-0!">Resilient</h6>
+                    <h6 className="text-sm text-center mb-0!">Resilient</h6>
                   </div>
+
+                  {/* Connector */}
                   <img
                     src={StepConnector}
-                    alt="step-divider"
+                    alt=""
+                    role="presentation"
                     className="xs:w-4 xs:h-auto md:h-7 md:w-auto xs:rotate-90 md:rotate-0 self-center object-cover -my-1"
+                    aria-hidden="true"
                   />
-                  <div className="flex flex-row justify-start items-center gap-2 group p-5 bg-primary-variant-8 rounded-lg xs:min-w-[15rem] md:min-w-auto">
+
+                  {/* Step 3 */}
+                  <div
+                    className="flex flex-row justify-start items-center gap-2 group p-5 bg-primary-variant-8 rounded-lg xs:min-w-[15rem] md:min-w-auto"
+                    role="listitem"
+                    aria-label="Step 3: Research"
+                  >
                     <div className="p-1 relative border-1 border-dashed border-primary-1 rounded-xl">
                       <span className="w-12 h-12 bg-primary-1 rounded-lg flex items-center justify-center text-white font-semibold text-sm relative z-10">
                         3
@@ -388,12 +484,13 @@ const Home = () => {
                         <span className="w-10 h-10 rounded-lg bg-primary-1 opacity-75 group-hover:animate-ping"></span>
                       </span>
                     </div>
-                    <h6 className="text-sm text-center  mb-0!">Research</h6>
+                    <h6 className="text-sm text-center mb-0!">Research</h6>
                   </div>
                 </div>
               </div>
             </motion.div>
-            <p className=" h-auto text-center">
+
+            <p className="h-auto text-center">
               Whether it’s building an AI system to map biodiversity or helping
               youth tap into their emotional intelligence, our work is about
               crafting a responsible, resilient, and research-validated future.
@@ -401,75 +498,102 @@ const Home = () => {
           </motion.div>
         </motion.div>
       </div>
+
       <OurServices />
       <Section6 />
-      <div className="grid auto-rows-auto gap-y-10 min-h-screen w-full xs:px-2 sm:px-5 md:px-10 lg:px-15 pt-15">
-        <div className="grid sm:auto-rows-auto md:grid-rows-none md:grid-cols-5 gap-y-5 gap-x-5 w-full">
-          <div className="md:col-span-2 flex flex-col justify-start items-start gap-y-2">
-            <motion.h2
-              className="mt-5!"
-              variants={contentBasicVariants}
-              initial="initial"
-              whileInView="whileInView"
-              custom={1}
-              viewport={{ once: true, amount: "all" }}
-            >
-              A <span className="text-primary-1">Deep Respect</span> for Ancient
-              Knowledge
-            </motion.h2>
-          </div>
-          <div className="md:col-span-3">
-            <motion.p
-              className=""
-              variants={contentBasicVariants}
-              initial="initial"
-              whileInView="whileInView"
-              custom={4}
-              viewport={{ once: true, amount: "all" }}
-            >
-              SLSRP stands at the frontier where Applied noetic science
-              research, Tamil Siddha science, Eastern ancient traditional
-              medicine systems, Physical Reflex practices, and indigenous
-              healing traditions are not merely preserved but scientifically
-              validated and globally positioned. We operate in close
-              coordination with government ministries, research institutions,
-              and thought leaders to create academic pathways and practical
-              platforms that connect the past with the future
-            </motion.p>
-            <motion.p
-              className=" md:mt-5!"
-              variants={contentBasicVariants}
-              initial="initial"
-              whileInView="whileInView"
-              custom={7}
-              viewport={{ once: true, amount: "all" }}
-            >
-              Our Noetic Science Enablement on Unified Wholeness (nseUW) program
-              exemplifies this, offering a non-commercial, merit-based
-              certification ecosystem that brings structure, credibility, and
-              measurable outcomes to traditionally oral knowledge systems.
-            </motion.p>
-          </div>
-        </div>
+      <div className="w-full px-4 py-8">
         <motion.div
-          className="overflow-hidden w-full rounded-2xl mb-20 group"
-          initial={{
-            opacity: 0,
-          }}
-          whileInView={{
-            opacity: 1,
-            transition: {
-              duration: 1.7,
-              ease: "easeIn",
-              delay: 2,
-            },
-          }}
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="max-w-7xl mx-auto flex sm:flex-col lg:flex-row sm:flex-col-reverse gap-8 items-center"
         >
-          <img
-            src={YogaBannerImage}
-            alt="banner-image-yoga"
-            className="w-full h-full object-cover rounded-2xl transition-transform duration-500 ease-in-out group-hover:scale-102 md:h-[20rem]"
-          />
+          {/* left Image Box */}
+          <motion.div
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="flex justify-center"
+            role="img"
+            aria-label="SLSRP conceptual illustration"
+          >
+            <img
+              src={science}
+              alt="Illustration representing SLSRP scientific focus"
+              className="w-3/4"
+            />
+          </motion.div>
+
+          {/* right Text Box */}
+          <div
+            className="space-y-4 p-4"
+            style={{ textAlign: "justify" }}
+            role="region"
+            aria-labelledby="ancient-wisdom-heading"
+          >
+            <SectionPill sectionTitle={"Ancient Wisdom"} />
+            <div
+              className="text-3xl sm:text-4xl font-bold flex items-center gap-3 mt-2"
+              id="ancient-wisdom-heading"
+            >
+              <h3 style={{ textAlign: "start" }}>
+                A <span className="text-primary-1">Deep Respect</span> for
+                Ancient Knowledge
+              </h3>
+            </div>
+
+            <div className="flex flex-col md:justify-center gap-0 mx-auto">
+              <div
+                className="bg-white rounded-2xl xs:p-3 md:p-5 flex flex-col justify-start items-start gap-y-5 bg-gradient-to-t from-gray-8 to-[#fff3d1] border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300"
+                role="group"
+                aria-label="Ancient knowledge descriptions"
+              >
+                <p className="flex items-start gap-2">
+                  <img
+                    src={NavHoverLogo}
+                    alt="Decorative navigation logo"
+                    className="mt-1"
+                    role="presentation"
+                    aria-hidden="true"
+                  />
+                  SLSRP stands at the frontier where Applied noetic science
+                  research, Tamil Siddha science, Eastern ancient traditional
+                  medicine systems, Physical Reflex practices, and indigenous
+                  healing traditions are not merely preserved but scientifically
+                  validated and globally positioned.
+                </p>
+                <p className="flex items-start gap-2">
+                  <img
+                    src={NavHoverLogo}
+                    alt="Decorative navigation logo"
+                    className="mt-1"
+                    role="presentation"
+                    aria-hidden="true"
+                  />
+                  We operate in close coordination with government ministries,
+                  research institutions, and thought leaders to create academic
+                  pathways and practical platforms that connect the past with
+                  the future
+                </p>
+                <p className="flex items-start gap-2">
+                  <img
+                    src={NavHoverLogo}
+                    alt="Decorative navigation logo"
+                    className="mt-1"
+                    role="presentation"
+                    aria-hidden="true"
+                  />
+                  Our Noetic Science Enablement on Unified Wholeness (nseUW)
+                  program exemplifies this, offering a non-commercial,
+                  merit-based certification ecosystem that brings structure,
+                  credibility, and measurable outcomes to traditionally oral
+                  knowledge systems.
+                </p>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </div>
