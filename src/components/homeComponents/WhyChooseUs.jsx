@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import  { useRef } from "react";
 import "./WhyChooseUs.css";
 import { motion, useInView } from "framer-motion";
 import NavHoverLogo from "../../assets/Images/nav-hover-icon.svg";

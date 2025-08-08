@@ -58,7 +58,6 @@ const videoSlides = [
 const Home = () => {
   const [videoIndex, setVideoIndex] = useState(0);
   const bottomRef = useRef(null);
-  const bottomInView = useInView(bottomRef, { once: true });
 
   useEffect(() => {
     const interval = setInterval(() => {
