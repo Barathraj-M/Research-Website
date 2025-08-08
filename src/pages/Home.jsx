@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "../Home.css";
+
 import space from "../assets/Videos/space.mp4";
 import nature from "../assets/Videos/nature.mp4";
 import ocean from "../assets/Videos/ocean.mp4";
@@ -58,7 +59,7 @@ const videoSlides = [
 const Home = () => {
   const [videoIndex, setVideoIndex] = useState(0);
   const bottomRef = useRef(null);
-  const bottomInView = useInView(bottomRef, { once: false });
+  const bottomInView = useInView(bottomRef, { once: true });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -113,18 +114,17 @@ const Home = () => {
                 className="absolute xs:top-3/20 sm:top-4/20 md:top-3/10 lg:top-4/10 left-0"
               >
                 <h1
-                  className={`font-bold leading-tight ${video.textColor} text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl ml-6`}
+                  className={`font-semibold! leading-tight ${video.textColor}  ml-6`}
                   style={{ color: "white" }}
                 >
                   {video.title.split("\n").map((line, i) => (
                     <span key={i}>
                       {line}
-                      <br />
                     </span>
                   ))}
                 </h1>
                 <p
-                  className={`w-3/4 ${video.textColor}`}
+                  className={`w-3/4 ${video.textColor} ml-6`}
                   style={{ color: "white" }}
                 >
                   {video.description}
@@ -239,7 +239,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
         >
           {/* Left Text Box */}
@@ -308,7 +308,7 @@ const Home = () => {
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{ duration: 1, ease: "easeIn" }}
           className="flex flex-col items-center text-center"
           role="region"
@@ -394,7 +394,7 @@ const Home = () => {
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeInOut" }}
             className="flex md:flex-row flex-col justify-center items-center lg:gap-25 md:gap-10 gap-5 p-5 mt-4"
             role="region"
@@ -410,7 +410,7 @@ const Home = () => {
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               transition={{ duration: 1, ease: "easeInOut" }}
               className="flex flex-col items-center justify-center"
               role="group"
@@ -506,7 +506,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="max-w-7xl mx-auto flex sm:flex-col lg:flex-row sm:flex-col-reverse gap-8 items-center"
         >
           {/* left Image Box */}

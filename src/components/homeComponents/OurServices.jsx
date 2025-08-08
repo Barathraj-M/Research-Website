@@ -31,7 +31,7 @@ const noeticSciencePoints = [
 
 const OurServices = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true });
 
   return (
     <div
@@ -89,7 +89,7 @@ const OurServices = () => {
             initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8"
             role="region"
             aria-label="Services Details"

@@ -33,13 +33,13 @@ const itemVariants = {
 
 const Section6 = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true });
 
   const boxRef = useRef(null);
-  const boxInView = useInView(boxRef, { once: false });
+  const boxInView = useInView(boxRef, { once: true });
 
   const bottomRef = useRef(null);
-  const bottomInView = useInView(bottomRef, { once: false });
+  const bottomInView = useInView(bottomRef, { once: true });
 
   return (
    <div className="section6" role="region" aria-label="Global and National Impact Section">

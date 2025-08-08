@@ -137,19 +137,19 @@ const About = () => {
   ];
 
   const title = useRef(null);
-  const title1 = useInView(title, { once: false });
+  const title1 = useInView(title, { once: true });
 
   const head = useRef(null);
-  const headInView = useInView(head, { once: false });
+  const headInView = useInView(head, { once: true });
 
   const head1 = useRef(null);
-  const headInView1 = useInView(head1, { once: false });
+  const headInView1 = useInView(head1, { once: true });
 
   const head2 = useRef(null);
-  const headInView2 = useInView(head2, { once: false });
+  const headInView2 = useInView(head2, { once: true });
 
   const head3 = useRef(null);
-  const headInView3 = useInView(head3, { once: false });
+  const headInView3 = useInView(head3, { once: true });
 
   const containerRef = useRef(null);
 
@@ -295,6 +295,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 100 }}
             transition={{ duration: 1, ease: "easeInOut" }}
+            viewport={{once:true}}
             className="flex flex-col items-center text-center"
           >
             {/* Section Pill (assumed to be accessible already) */}
@@ -325,7 +326,7 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, ease: "easeIn" }}
             className="flex flex-col lg:flex-row gap-8 px-6 py-16"
           >
@@ -457,7 +458,7 @@ const About = () => {
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="max-w-7xl mx-auto flex gap-8 items-center sm:flex-col lg:flex-row justify-center"
         >
           {/* Left Text Box */}
@@ -468,7 +469,10 @@ const About = () => {
             <SectionPill sectionTitle={"Resilience"} />
 
             <div className="sm:text-4xl font-bold flex gap-3 w-full mt-2">
-              <h2 id="youth-responsibility-heading">
+              <h2
+                id="youth-responsibility-heading"
+                style={{ textAlign: "start" }}
+              >
                 Building Youth for a Responsible Tomorrow
               </h2>
             </div>
@@ -603,7 +607,7 @@ const About = () => {
                 className="font-bold mb-4 text-center mt-5 text-white!"
               >
                 <span className="bg-gradient-to-r from-primary-1 via-primary-variant-2 to-primary-variant-3 bg-clip-text text-transparent">
-                  nseUW
+                  nseUW{" "}
                 </span>
                 – Structuring Legacy Knowledge into Credible Pathways
               </h2>
@@ -651,7 +655,7 @@ const About = () => {
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="max-w-7xl mx-auto flex sm:flex-col lg:flex-row sm:flex-col-reverse gap-8 items-center"
         >
           {/* Left Image Box */}
@@ -681,6 +685,7 @@ const About = () => {
             <h3
               id="synthesis-heading"
               className="text-3xl sm:text-4xl font-bold flex items-center gap-3 mt-2!"
+              style={{ textAlign: "start" }}
             >
               A Confluence of Cultures, Sciences, and Systems
             </h3>
