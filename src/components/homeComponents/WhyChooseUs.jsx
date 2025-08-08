@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import "./WhyChooseUs.css";
 import { motion, useInView } from "framer-motion";
 import asterick from "../../assets/Images/asterisk.png";
-
+import NavHoverLogo from "../../assets/Images/nav-hover-icon.svg";
 import SectionPill from "../SectionPill";
 import PrimaryButtom from "../PrimaryButtom";
 import { title } from "framer-motion/client";
@@ -28,7 +28,7 @@ const WhyChooseUs = () => {
   const rightInView = useInView(rightRef, { once: false });
 
   return (
-    <div className="why-choose-us pl-15 pr-15 p-10">
+    <div className="why-choose-us pl-15 pr-15 p-10 mt-12">
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 50 }}
@@ -67,35 +67,26 @@ const WhyChooseUs = () => {
             <h3>Our Core</h3>
           </div>
 
-          <div
-            className="mt-5 ml-2 text-2xl max-w-xl font-semibold text-gray-900"
+          <p
+            className="mt-5 ml-2 text-2xl max-w-xl font-semibold"
             style={{ fontSize: "1.2rem" }}
           >
             <span className="text-[#ffbb00]"> At SLSRP</span>, we believe that
             the future of humanity depends on our ability to evolve — internally
-            and externally. Our research park is built upon a{" "}
-            <span className="text-[#ffbb00]">dual-core mission</span> that
-            touches both the{" "}
-            <span className="text-[#ffbb00]">
-              inner consciousness of individuals
-            </span>{" "}
-            and the{" "}
-            <span className="text-[#ffbb00]">
-              outer ecosystems of the planet.
-            </span>
-          </div>
+            and externally. Our research park is built upon a dual-core mission
+            that touches both the inner consciousness of individuals and the{" "}
+            outer ecosystems of the planet.
+          </p>
 
           <div className="border-t border-dashed border-gray-500 mt-5" />
 
           {/* Repeated Content Block */}
           {contents.map((content, i) => (
             <div className="mt-6" key={i}>
-              <div className="text-black font-bold text-lg flex items-center gap-4">
-                <img src={asterick} alt="" width={20} /> {content.title}
-              </div>
-              <div className="text-gray-500 mt-2 text-md">
-                {content.description}
-              </div>
+              <h4 className="text-black font-bold text-lg flex items-center gap-2">
+                <img src={NavHoverLogo} alt="nav-logo" /> {content.title}
+              </h4>
+              <p className="mt-2 text-md">{content.description}</p>
               <div className="border-t border-dashed border-gray-500 mt-5" />
             </div>
           ))}
@@ -114,9 +105,9 @@ const WhyChooseUs = () => {
             alt="Industry Visual"
             className="w-full max-w-[600px] max-h-[650px] object-cover rounded-xl"
           />
-          <div className="whybox flex justify-center items-center absolute bottom-10 lg:bottom-[3.75rem]">
+          {/* <div className="whybox flex justify-center items-center absolute bottom-10 lg:bottom-[3.75rem]">
             <PrimaryButtom text={"Meet our Team"} />
-          </div>
+          </div> */}
         </motion.div>
       </motion.div>
     </div>

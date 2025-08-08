@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion'
 
 import { collapsableContentVariants } from '../utils/animationVarients';
@@ -29,18 +30,26 @@ const CollapsableCard = ({ heading, text }) => {
                     staggerChildren: 0.2
                 }
             }}
+            role='region'
+            aria-labelledby={`collapsible-heading-${heading}`}
         >
             <div
                 className='w-full m-2 p-2 grid grid-cols-10 hover:cursor-pointer hover:px-3! transition-all duration-200 ease-in-out'
                 onClick={toggleCollapse}
+                role='button'
+                tabIndex={0}
+                aria-expanded={!isCollapse}
+                aria-controls={`collapsible-content-${heading}`}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') toggleCollapse(); }}
             >
-                <h6 className='text-wrap mb-0! col-span-9'>{heading}</h6>
+                <h6 id={`collapsible-heading-${heading}`} className='text-wrap mb-0! col-span-9'>{heading}</h6>
                 <motion.div
                     className='w-full h-full flex flex-col justify-center items-center'
                     initial={false}
                     animate={{
                         rotate: 0,
                     }}
+                    aria-hidden='true'
                 >
                     <svg
                         width={24}
@@ -83,6 +92,8 @@ const CollapsableCard = ({ heading, text }) => {
                     <motion.div
                         className='m-2 mt-0 p-1 px-2'
                         key="content"
+                        id={`collapsible-content-${heading}`}
+                        aria-labelledby={`collapsible-heading-${heading}`}
                         variants={collapsableContentVariants}
                         initial="collapsed"
                         animate="expanded"

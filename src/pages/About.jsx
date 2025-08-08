@@ -1,18 +1,38 @@
 // import image from '../assets/Images/9224444.jpg'; // Update with the correct path to your image
 import { useRef, useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import NavHoverLogo from '../assets/Images/nav-hover-icon.svg';
 import { motion, useInView } from "framer-motion";
 import '../index.css';
 
 import SectionPill from '../components/SectionPill';
 import PrimaryButtom from '../components/PrimaryButtom';
 import aboutimage from '../assets/Images/aboutimage2.jpg'; // Update with the correct path to your image
-
-
 import { contentBasicVariants, heroSectionBottomContainerVariants } from '../utils/animationVarients';
+import PercentageCounter from '../components/aboutComponents/PercentageCounter';
 
 const About = () => {
 
     const [expandedSections, setExpandedSections] = useState({});
+    const [searchParams] = useSearchParams();
+
+    useEffect(() => {
+        const value = searchParams.get('scroll');
+
+        if(value) {
+            const element = document.getElementById(value);
+
+            if(element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+        else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }, [searchParams]);
 
     const toggleSection = (sectionId) => {
         setExpandedSections(prev => ({
@@ -185,15 +205,6 @@ const About = () => {
 
     const head4 = useRef(null);
     const headInView4 = useInView(head4, { once: false });
-
-    const logos = [
-        'https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683d3b2d6d119a92715751a6_client-image-06.svg',
-        'https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683d3b2c0697f0f74387041e_client-image-04.svg',
-        'https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683d3b2d25c68b4a9554c777_client-image-05.svg',
-        'https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683d3b2bcaa5306b96f81a26_client-image-01.svg',
-        'https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683d3b2b5d9336ef0d5af39b_client-image-03.svg',
-        'https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683d3b2b2fa3839b7b64a960_client-image-02.svg',
-    ];
     const containerRef = useRef(null);
 
     useEffect(() => {
@@ -216,18 +227,10 @@ const About = () => {
         return () => clearInterval(interval);
     }, []);
 
-    // Duplicate images to create the infinite effect
-    const loopedLogos = [...logos, ...logos];
 
     return (
         <div>
-            <motion.div
-                ref={title}
-                initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: title1 ? 1 : 0, y: title1 ? 0 : 100 }}
-                transition={{ duration: 1, ease: "easeInOut" }}
-                className=""
-            >
+            
                 <div className="w-full relative h-[450px] sm:h-[500px] md:h-[600px] lg:h-[655px]">
                     <img
                         src={aboutimage}
@@ -239,7 +242,7 @@ const About = () => {
                     <div className='w-full h-full flex flex-col justify-between px-4 sm:px-10 sm:pt-1 pt-6 lg:px-15 lg:pt-8'>
                         <div className='md:grid lg:grid-cols-3 md:grid-cols-2  xl:h-[400px] lg:h-[400px] md:h-[360px] border-2 mt-16 sm:mt-20 md:mt-24 lg:mt-24 mb-5'>
                             <div className='relative flex flex-col justify-center gap-3 lg:gap-4'>
-                                <h1 className='text-white! font-bold overflow-hidden'>
+                                <h1 className='text-white! overflow-hidden'>
                                     About SLSRP
                                 </h1>
                                 <p className='text-white! leading-relaxed overflow-hidden'>
@@ -249,8 +252,8 @@ const About = () => {
                                 </p>
                                 <div>
                                     <PrimaryButtom
-                                        link={'#'}
-                                        text={'Get a green quote'}
+                                        link={'core-initiatives'}
+                                        text={'Know More ->'}
                                     />
                                 </div>
                             </div>
@@ -274,8 +277,8 @@ const About = () => {
                                     viewport={{ once: true, amount: "some" }}
                                     exit='exit'
                                 >
-                                    <h5 className="text-lg font-semibold text-gray-800">Mission-Driven Verticals</h5>
-                                    <p className="text-sm sm:block hidden text-gray-700 ">Social & Environmental Initiatives</p>
+                                    <h5 className="">Mission-Driven Verticals</h5>
+                                    <p className="text-sm sm:block hidden ">Social & Environmental Initiatives</p>
                                     {/* <div className='flex gap-2 sm:gap-3 lg:gap-4 justify-center items-center'>
                                         <img
                                             src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683976f56676896290088678_counter-icon-01.svg"
@@ -286,7 +289,9 @@ const About = () => {
                                         <div className='text-lg sm:text-xl md:text-2xl text-gray-900 font-bold'>30%</div>
                                     </div> */}
                                 </motion.div>
-                                <div className="h-12 sm:h-16 lg:h-20 w-px bg-gray-300"></div>
+                                
+                                {/* <div className="h-12 sm:h-16 lg:h-20 w-px bg-gray-300"></div> */}
+                                <div className=" h-full xs:border-b-1 md:border-b-0 md:border-r-1 border-dashed border-gray-4 p-2"></div>
                                 <motion.div
                                     className='flex flex-col items-center justify-center text-center'
                                     variants={contentBasicVariants}
@@ -296,8 +301,8 @@ const About = () => {
                                     viewport={{ once: true, amount: "some" }}
                                     exit='exit'
                                 >
-                                    <h5 className="text-lg font-semibold text-gray-800">Strategic Pillars</h5>
-                                    <p className="text-sm sm:block hidden text-gray-700 ">STEM, Ethical Governance, Policy Advocacy</p>
+                                    <h5 className="text-lg">Strategic Pillars</h5>
+                                    <p className="text-sm sm:block hidden ">STEM, Ethical Governance, Policy Advocacy</p>
                                     {/* <div className='flex gap-2 sm:gap-3 lg:gap-4 justify-center items-center'>
                                         <img
                                             src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683976f506218de3dbfbee9e_counter-icon-02.svg"
@@ -308,7 +313,8 @@ const About = () => {
                                         <div className='text-lg sm:text-xl md:text-2xl text-gray-900 font-bold'>60%</div>
                                     </div> */}
                                 </motion.div>
-                                <div className="h-12 sm:h-16 lg:h-20 w-px bg-gray-300"></div>
+                                    <div className=" h-full xs:border-b-1 md:border-b-0 md:border-r-1 border-dashed border-gray-4 p-2"></div>
+
                                 <motion.div
                                     className='flex flex-col items-center justify-center  text-center'
                                     variants={contentBasicVariants}
@@ -318,8 +324,8 @@ const About = () => {
                                     viewport={{ once: true, amount: "some" }}
                                     exit='exit'
                                 >
-                                    <h5 className="text-lg font-semibold text-gray-800">Funding Streams</h5>
-                                    <p className="text-sm sm:block hidden text-gray-700">Sustainability & Project Scalability</p>
+                                    <h5 className="">Funding Streams</h5>
+                                    <p className="text-sm sm:block hidden">Sustainability & Project Scalability</p>
                                     {/* <div className='flex gap-2 sm:gap-3 lg:gap-4 justify-center items-center'>
                                         <img
                                             src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683976f5384d68e5ba0c57c7_counter-icon-03.svg"
@@ -335,7 +341,6 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-            </motion.div>
 
             {/* <div className='flex flex-col items-center justify-center lg:mt-28 md:mt-20 mt-10'>
                 <motion.div
@@ -392,7 +397,7 @@ const About = () => {
             </div> */}
 
 
-            <div className='lg:m-22 md:m-15 m-5 mt-10'>
+            <div className='lg:p-22 md:p-15 p-5 pt-10  bg-primary-variant-7 '>
                 <motion.div
                     ref={head1}
                     initial={{ opacity: 0, y: 100 }}
@@ -402,41 +407,42 @@ const About = () => {
                 >
                     <div className='overflow-hidden'>
                         <SectionPill sectionTitle={'Our Mission & Vision'} />
-                        <h2 className='font-semibold overflow-hidden '>Committed to an eco-friendly world: <span className='text-gray-400'>Our vision & mission</span> explained</h2>
+                        <h2 className='overflow-hidden '>Committed to an eco-friendly world: <span className='text-primary-1'>Our vision & mission</span> explained</h2>
                     </div>
-                    <div className="flex flex-col lg:flex-row gap-8 px-6 py-16 bg-gradient-to-br from-[#fffaf0] to-[#fff3d1] xl:mt-10 lg:mt-20 md:mt-14">
+                    <div className="flex flex-col lg:flex-row gap-8 sm:px-6 py-16 xl:mt-10 lg:mt-20 md:mt-14">
                         {/* Mission Card */}
-                        <div className="flex-1 bg-white rounded-2xl border border-[#ffaa00] shadow-lg hover:shadow-xl transition-all duration-300 p-8 relative overflow-hidden">
+                        <div className="flex-1 bg-white rounded-2xl border-1 border-dashed border-primary-variant-5 hover:shadow-lg transition-all duration-300 p-8 relative overflow-hidden">
                             {/* Accent Bar */}
                             {/* <span className="absolute top-0 left-0 h-1 w-full bg-[#ffbb00] rounded-t-2xl"></span> */}
 
 
                             {/* Header */}
                             <div className="flex items-center gap-3 mb-6">
-                                <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div>
-                                <h3 className="text-2xl font-bold text-gray-800">Mission</h3>
+                                {/* <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div> */}
+                                
+                                <h3 className="">Mission</h3>
                             </div>
 
                             {/* Content */}
-                            <ul className="space-y-4 text-gray-700 text-[1rem] leading-relaxed list-disc list-inside">
-                                <li>Promote Noetic Science as a validated pathway to peace, wellness, productivity, and Wholistic intelligence.</li>
-                                <li>Incubate and scale eco-technical innovations to restore and protect biodiversity.</li>
-                                <li>Create knowledge platforms, policy frameworks, and capacity-building models that serve both national interests and global wellbeing.</li>
+                            <ul className=" leading-relaxed list-disc list-inside">
+                                <div className='flex gap-2'><img src={NavHoverLogo} alt='nav-logo' className=' p-1.5 self-start'/><p className=''>Promote Noetic Science as a validated pathway to peace, wellness, productivity, and Wholistic intelligence.</p></div>
+                                <div className='flex gap-2'><img src={NavHoverLogo} alt='nav-logo' className=' p-1.5 self-start'/><p className=''>Incubate and scale eco-technical innovations to restore and protect biodiversity.</p></div>
+                                <div className='flex gap-2'><img src={NavHoverLogo} alt='nav-logo' className=' p-1.5 self-start'/><p className=''>Create knowledge platforms, policy frameworks, and capacity-building models that serve both national interests and global wellbeing.</p></div>
                             </ul>
                         </div>
 
                         {/* Vision Card */}
-                        <div className="flex-1 bg-white rounded-2xl border border-[#ffaa00] shadow-lg hover:shadow-2xl transition-all duration-300 p-8 relative overflow-hidden">
+                        <div className="flex-1 bg-white rounded-2xl border-1 border-dashed border-primary-variant-5 hover:shadow-lg transition-all duration-300 p-8 relative overflow-hidden">
                             {/* <span className="absolute top-0 left-0 h-1 w-full bg-[#ffbb00] rounded-t-2xl"></span> */}
 
                             <div className="flex items-center gap-3 mb-6">
-                                <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div>
-                                <h3 className="text-2xl font-bold text-gray-800">Vision</h3>
+                                {/* <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div> */}
+                                <h3 className="">Vision</h3>
                             </div>
 
-                            <ul className="space-y-4 text-gray-700 text-[1rem] leading-relaxed list-disc list-inside">
-                                <li>To achieve sustenance through integrated life science rooted in ancient Eastern knowledge and validated by science.</li>
-                                <li>Foster a global ecosystem where ancient wisdom and modern science coalesce to solve emerging planetary challenges through sustainable innovation.</li>
+                            <ul className="space-y-4 text-[1rem] leading-relaxed list-disc list-inside">
+                                <div className='flex gap-2'><img src={NavHoverLogo} alt='nav-logo' className=' p-1.5 self-start'/><p className=''>To achieve sustenance through integrated life science rooted in ancient Eastern knowledge and validated by science.</p></div>
+                                <div className='flex gap-2'><img src={NavHoverLogo} alt='nav-logo' className=' p-1.5 self-start'/><p className=''>Foster a global ecosystem where ancient wisdom and modern science coalesce to solve emerging planetary challenges through sustainable innovation.</p></div>
                             </ul>
 
                         </div>
@@ -453,63 +459,46 @@ const About = () => {
                 transition={{ duration: 1, ease: "easeInOut" }}
                 className=""
             >
-                <div className='xl:h-[700px] lg:h-[1200px] w-full bg-[#212121] flex flex-col items-center'>
+                <div className='xl:h-[700px] lg:h-[1200px] w-full bg-gray-1 flex flex-col items-center'>
                     <p className='border-gray-500 border-1 text-gray-500 mt-23  inline-block pt-1 xl:pb-5 pb-2 pe-4 ps-4 rounded-full overflow-hidden'>OUR TEAM</p>
-                    <h2 className='text-white!  pt-3 xl:pb-20 sm:pb-13 pb-7 overflow-hidden lg:w-[600px] text-center font-semibold'>The <span className='text-green-400'>team</span> powering green transport</h2>
+                    <h2 className='text-white!  pt-3 xl:pb-20 sm:pb-13 pb-7 overflow-hidden lg:w-[600px] text-center'>The <span className='text-primary-1'>team</span> powering green transport</h2>
                     <div className='grid xl:grid-cols-[3fr_3fr_3fr_3fr] lg:grid-cols-3 sm:grid-cols-2 xl:h-[1100px] lg:h-[900px] md:h-[800px] sm:w-full md:w-[90%] lg:w-full w-full md:px-18 px-10 xl:py-8 md:gap-9 gap-4'>
                         <div className='rounded-2xl flex justify-center items-center flex-col bg-[#282828]'>
                             <div className='h-[85%] w-[80%] flex flex-col items-start py-2'>
-                                <div className='overflow-hidden rounded-[10px] w-full h-full'><img alt="Team Image" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/685bd35fc345fac7fb41d911_team-image-01.webp" loading="eager" className="object-cover w-full h-full transition-transform duration-500 transform hover:scale-110" /></div>
-                                <p className='text-lg font-semibold py-2 text-white overflow-hidden'>Liam Waters</p>
-                                <p className='text-lg pb-1 text-white overflow-hidden'>Head of Eco Logistics</p>
-                            </div>
-                            <div className='flex self-end me-4'>
-                                <span className='px-1'><a href="https://www.facebook.com/" target="_blank" className="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd33_29047fa70e115d4afde718b0a7db48ac_twitter.svg" alt="social-icon" className="team-social-icon" /></a></span>
-                                <span className='px-1'><a href="https://www.instagram.com/" target="_blank" className="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd32_fc3b1b7df4e2556e27f870ca3d006c96_instagram.svg" alt="social-icon" /></a></span>
+                                <div className='overflow-hidden rounded-[10px] mb-4 w-full h-full'><img alt="Team Image" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/685bd35fc345fac7fb41d911_team-image-01.webp" loading="eager" className="object-cover w-full h-full transition-transform duration-500 transform hover:scale-110" /></div>
+                                <p className=' py-2 text-white overflow-hidden'>Liam Waters</p>
+                                <p className=' pb-1 text-white overflow-hidden'>Head of Eco Logistics</p>
                             </div>
                         </div>
                         <div className='rounded-2xl flex justify-center items-center flex-col bg-[#282828]'>
                             <div className='h-[85%] w-[80%] flex flex-col items-start py-2'>
-                                <div className='overflow-hidden rounded-[10px] w-full h-full'><img alt="Team Image" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/685bd35fc345fac7fb41d911_team-image-01.webp" loading="eager" className="object-cover w-full h-full transition-transform duration-500 transform hover:scale-110" /></div>
-                                <p className='text-lg font-semibold py-2 text-white overflow-hidden'>Liam Waters</p>
-                                <p className='text-lg pb-1 text-white overflow-hidden'>Head of Eco Logistics</p>
-                            </div>
-                            <div className='flex self-end me-4'>
-                                <span className='px-1'><a href="https://www.facebook.com/" target="_blank" className="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd33_29047fa70e115d4afde718b0a7db48ac_twitter.svg" alt="social-icon" className="team-social-icon" /></a></span>
-                                <span className='px-1'><a href="https://www.instagram.com/" target="_blank" className="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd32_fc3b1b7df4e2556e27f870ca3d006c96_instagram.svg" alt="social-icon" /></a></span>
+                                <div className='overflow-hidden rounded-[10px] mb-4 w-full h-full'><img alt="Team Image" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/685bd35fc345fac7fb41d911_team-image-01.webp" loading="eager" className="object-cover w-full h-full transition-transform duration-500 transform hover:scale-110" /></div>
+                                <p className=' py-2 text-white overflow-hidden'>Liam Waters</p>
+                                <p className=' pb-1 text-white overflow-hidden'>Head of Eco Logistics</p>
                             </div>
                         </div>
                         <div className='rounded-2xl flex justify-center items-center flex-col bg-[#282828]'>
                             <div className='h-[85%] w-[80%] flex flex-col items-start py-2'>
-                                <div className='overflow-hidden rounded-[10px] w-full h-full'><img alt="Team Image" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/685bd35fc345fac7fb41d911_team-image-01.webp" loading="eager" className="object-cover w-full h-full transition-transform duration-500 transform hover:scale-110" /></div>
-                                <p className='text-lg font-semibold py-2 text-white overflow-hidden'>Liam Waters</p>
-                                <p className='text-lg pb-1 text-white overflow-hidden'>Head of Eco Logistics</p>
-                            </div>
-                            <div className='flex self-end me-4'>
-                                <span className='px-1'><a href="https://www.facebook.com/" target="_blank" className="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd33_29047fa70e115d4afde718b0a7db48ac_twitter.svg" alt="social-icon" className="team-social-icon" /></a></span>
-                                <span className='px-1'><a href="https://www.instagram.com/" target="_blank" className="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd32_fc3b1b7df4e2556e27f870ca3d006c96_instagram.svg" alt="social-icon" /></a></span>
+                                <div className='overflow-hidden rounded-[10px] mb-4 w-full h-full'><img alt="Team Image" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/685bd35fc345fac7fb41d911_team-image-01.webp" loading="eager" className="object-cover w-full h-full transition-transform duration-500 transform hover:scale-110" /></div>
+                                <p className=' py-2 text-white overflow-hidden'>Liam Waters</p>
+                                <p className=' pb-1 text-white overflow-hidden'>Head of Eco Logistics</p>
                             </div>
                         </div>
                         <div className='rounded-2xl flex justify-center items-center flex-col bg-[#282828]'>
                             <div className='h-[85%] w-[80%] flex flex-col items-start py-2'>
-                                <div className='overflow-hidden rounded-[10px] w-full h-full'><img alt="Team Image" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/685bd35fc345fac7fb41d911_team-image-01.webp" loading="eager" className="object-cover w-full h-full transition-transform duration-500 transform hover:scale-110" /></div>
-                                <p className='text-lg font-semibold py-2 text-white overflow-hidden'>Liam Waters</p>
-                                <p className='text-lg pb-1 text-white overflow-hidden'>Head of Eco Logistics</p>
-                            </div>
-                            <div className='flex self-end me-4'>
-                                <span className='px-1'><a href="https://www.facebook.com/" target="_blank" className="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd33_29047fa70e115d4afde718b0a7db48ac_twitter.svg" alt="social-icon" className="team-social-icon" /></a></span>
-                                <span className='px-1'><a href="https://www.instagram.com/" target="_blank" className="team-social-link w-inline-block"><img loading="eager" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/684171f6f686cb5e1e9bfd32_fc3b1b7df4e2556e27f870ca3d006c96_instagram.svg" alt="social-icon" /></a></span>
+                                <div className='overflow-hidden rounded-[10px] mb-4 w-full h-full'><img alt="Team Image" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/685bd35fc345fac7fb41d911_team-image-01.webp" loading="eager" className="object-cover w-full h-full transition-transform duration-500 transform hover:scale-110" /></div>
+                                <p className=' py-2 text-white overflow-hidden'>Liam Waters</p>
+                                <p className=' pb-1 text-white overflow-hidden'>Head of Eco Logistics</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div className='bg-[#212121] h-[100px] w-full'>
+                <div className='bg-gray-1 h-[100px] w-full'>
                 </div>
             </motion.div>
 
 
-            <div className='flex flex-col items-center md:gap-5 gap-3 xl:m-35 lg:m-25 md:m-15 sm:mt-10 m-5 sm:pt-0 pt-10'>
+            {/* <div className='flex flex-col items-center md:gap-5 gap-3 xl:m-35 lg:m-25 md:m-15 sm:mt-10 m-5 sm:pt-0 pt-10'>
                 <motion.div
                     ref={head3}
                     initial={{ opacity: 0, y: 100 }}
@@ -524,7 +513,7 @@ const About = () => {
                         text={'Talk to our experts'}
                     />
                 </motion.div>
-            </div>
+            </div> */}
 
             {/* <div className="overflow-hidden w-full lg:px-25 md:px-18 px-5 mx-auto mt-10">
                 <div
@@ -547,9 +536,9 @@ const About = () => {
                 </div>
             </div> */}
 
-            <div className="min-h-screen bg-gradient-to-br from-white via-amber-25 to-orange-50 ">
+            <div id="core-initiatives" className="min-h-screen">
                 {/* Hero Section */}
-                <div className="bg-gradient-to-r from-white via-amber-100 to-orange-100 py-16 px-6">
+                <div className="bg-primary-variant-7 py-16 px-6">
                     <motion.div
                     ref={head}
                     initial={{ opacity: 0, y: 100 }}
@@ -558,38 +547,38 @@ const About = () => {
                     
                 >
                     <div className="max-w-6xl mx-auto text-center">
-                        <div className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-6" style={{ backgroundColor: '#ffbb00' }}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 16 16" className='text-white'><g fill="currentColor"><path d="m14.12 10.163l1.715.858c.22.11.22.424 0 .534L8.267 15.34a.6.6 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858l5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.6.6 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.6.6 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535z"/><path d="m14.12 6.576l1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.6.6 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858l5.317 2.659c.505.252 1.1.252 1.604 0z"/></g></svg>
+                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-6" style={{ backgroundColor: '#ffbb00' }}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 16 16" className='text-white'><g fill="currentColor"><path d="m14.12 10.163l1.715.858c.22.11.22.424 0 .534L8.267 15.34a.6.6 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858l5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.6.6 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.6.6 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535z"/><path d="m14.12 6.576l1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.6.6 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858l5.317 2.659c.505.252 1.1.252 1.604 0z"/></g></svg>
                         </div>
-                        <div className="text-5xl font-bold mb-6 text-gray-800">
+                        <h3 className=" mb-6">
                             Core Initiatives
-                        </div>
-                        <div className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        </h3>
+                        <p className="max-w-3xl mx-auto leading-relaxed">
                             Bridging ancient wisdom with modern science to create sustainable solutions for humanity's greatest challenges
-                        </div>
+                        </p>
                     </div>
 
                     <div className="max-w-7xl mx-auto sm:px-6 py-16">
                         {initiatives.map((category) => (
                             <div key={category.id} className="mb-8">
                                 <div
-                                    className={`flex items-center justify-between p-6 ${category.bgColor} rounded-2xl border-2 ${category.borderColor} hover:shadow-lg transition-all duration-300 cursor-pointer`}
+                                    className={`flex items-center justify-between p-6 rounded-2xl border-1 border-dashed border-primary-variant-5 ${category.borderColor} hover:shadow-lg transition-all duration-300 cursor-pointer`}
                                     onClick={() => toggleSection(category.id)}
                                 >
                                     <div className="flex items-center space-x-4">
                                         <div className="p-3 rounded-xl text-white" style={{ backgroundColor: '#ffbb00' }}>
                                             {category.icon}
                                         </div>
-                                        <div className="text-2xl font-bold text-gray-800">{category.title}</div>
+                                        <h5 className="pt-2">{category.title}</h5>
                                     </div>
                                     {expandedSections[category.id] ?
                                         (
-                                            <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <svg className="w-6 h-6 " fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
                                             </svg>
                                         ) :
                                         (
-                                            <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                             </svg>
                                         )
@@ -599,22 +588,22 @@ const About = () => {
                                 {expandedSections[category.id] && (
                                     <div className="mt-6 space-y-4">
                                         {category.items.map((item, idx) => (
-                                            <div key={idx} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+                                            <div key={idx} className="bg-white hover:shadow-md transition-shadow duration-300 rounded-xl border-1 border-dashed border-primary-variant-5">
                                                 <div className="p-6">
                                                     <div className="flex items-start space-x-4">
-                                                        <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold" style={{ backgroundColor: '#ffbb00' }}>
+                                                        <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold bg-primary-1" >
                                                             {idx + 1}
                                                         </div>
                                                         <div className="flex-1">
-                                                            <div className="text-xl font-semibold text-gray-800 mb-3">
+                                                            <div className="text-xl mb-3 text-gray-1">
                                                                 {item.title}
                                                             </div>
-                                                            <p className="text-gray-600 mb-4 leading-relaxed">{item.description}</p>
+                                                            <p className="mb-4 leading-relaxed text-gray-2">{item.description}</p>
                                                             <div className="space-y-2">
                                                                 {item.details.map((detail, detailIdx) => (
                                                                     <div key={detailIdx} className="flex items-start space-x-3">
-                                                                        <div className="w-2 h-2 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: '#ffbb00' }}></div>
-                                                                        <span className="text-sm text-gray-600 leading-relaxed">{detail}</span>
+                                                                        <img src={NavHoverLogo} alt='nav-logo' className='p-1'/>
+                                                                        <span className="text-sm leading-relaxed">{detail}</span>
                                                                     </div>
                                                                 ))}
                                                             </div>
@@ -632,12 +621,12 @@ const About = () => {
                 </div>
 
                 {/* Main Content */}
-                <div className="max-w-7xl mx-auto px-6 py-16">
+                <div className="max-w-7xl mx-auto px-6 md:py-16">
 
                     {/* Core Initiatives */}
                     
                     {/* Enabling Pillars */}
-                    <div className="mb-20">
+                    <div className="md:mb-20 mb-10">
                         <motion.div
                     ref={head4}
                     initial={{ opacity: 0, y: 100 }}
@@ -652,21 +641,21 @@ const About = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg> */}
                             </div>
-                            <div className="text-4xl font-bold text-gray-800 mb-4">Enabling Pillars</div>
-                            <div className="text-lg text-gray-600 max-w-2xl mx-auto">
+                            <h3 className=" mb-4">Enabling Pillars</h3>
+                            <p className=" max-w-2xl mx-auto">
                                 Four foundational pillars that support our mission and drive sustainable impact
-                            </div>
+                            </p>
                         </div>
                         <div className="grid md:grid-cols-2 gap-8">
                             {enablingPillars.map((pillar, idx) => (
-                                <div key={idx} className={`${pillar.bgColor} rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-200`}>
+                                <div key={idx} className={`${pillar.bgColor} rounded-2xl border-1 border-dashed border-primary-variant-5 hover:shadow-lg transition-all duration-300 p-8`}>
                                     <div className="flex items-center space-x-4 mb-4">
-                                        <div className="p-3 rounded-xl text-white" style={{ backgroundColor: '#ffbb00' }}>
+                                        <div className="p-3 rounded-xl text-white bg-primary-1">
                                             {pillar.icon}
                                         </div>
-                                        <div className="text-xl font-bold text-gray-800">{pillar.title}</div>
+                                        <div className="text-xl font-bold text-gray-1">{pillar.title}</div>
                                     </div>
-                                    <p className="text-gray-600 leading-relaxed">{pillar.description}</p>
+                                    <p className="text-gray-3 leading-relaxed">{pillar.description}</p>
                                 </div>
                             ))}
                         </div>
@@ -674,7 +663,7 @@ const About = () => {
                     </div>
 
                     {/* Financial Model */}
-                    <div className="bg-gradient-to-r from-amber-50 to-orange-100 rounded-2xl p-8 border-2 border-amber-200">
+                    <div className="rounded-2xl p-8 ">
                         <motion.div
                     ref={head2}
                     initial={{ opacity: 0, y: 100 }}
@@ -683,44 +672,44 @@ const About = () => {
                     className="flex flex-col items-center text-center"
                 >
                         <div className="text-center mb-8">
-                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: '#ffbb00' }}>
+                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 bg-primary-1">
                                <svg xmlns="http://www.w3.org/2000/svg" width="2.3em" height="2.3em" viewBox="0 0 24 24" className='text-white'><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16.7 8A3 3 0 0 0 14 6h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1-2.7-2M12 3v3m0 12v3"/></svg>
                                 {/* <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg> */}
                             </div>
-                            <div className="text-3xl font-bold mb-4 text-gray-800">Financial & Revenue Model</div>
-                            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+                            <h3 className="text-3xl font-bold mb-4 text-gray-1">Financial & Revenue Model</h3>
+                            <p className="text-gray-3 max-w-2xl mx-auto text-lg">
                                 Diversified funding streams ensuring sustainable impact and growth
                             </p>
                         </div>
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
                             {fundingStreams.map((stream, idx) => (
-                                <div key={idx} className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow duration-300 border border-amber-200">
+                                <div key={idx} className="bg-white rounded-2xl border-1 border-dashed border-primary-variant-5 p-4 shadow-sm hover:shadow-md transition-shadow duration-300">
                                     <div className="flex items-center space-x-3">
                                         <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold" style={{ backgroundColor: '#ffbb00' }}>
                                             {idx + 1}
                                         </div>
-                                        <span className="text-sm font-medium text-gray-700">{stream}</span>
+                                        <span className="text-sm font-medium text-gray-2">{stream}</span>
                                     </div>
                                 </div>
                             ))}
                         </div>
 
-                        <div className="border-t-2 border-amber-300 pt-8">
-                            <div className="text-2xl font-bold mb-6 text-center text-gray-800">Allocation Principles</div>
+                        <div className="border-t-2 border-primary-1 pt-8">
+                            <div className="text-2xl font-bold mb-6 text-center text-gray-1">Allocation Principles</div>
                             <div className="grid md:grid-cols-3 gap-6">
-                                <div className="bg-white rounded-xl p-6 text-center shadow-sm border border-amber-200">
-                                    <div className="text-4xl font-bold mb-2" style={{ color: '#ffbb00' }}>80%</div>
+                                <div className="bg-white  p-6 text-center shadow-sm rounded-2xl border-1 border-dashed border-primary-variant-5">
+                                    <PercentageCounter target={80}/>
                                     <div className="text-sm font-medium text-gray-700">Core programs, research, and impact initiatives</div>
                                 </div>
-                                <div className="bg-white rounded-xl p-6 text-center shadow-sm border border-amber-200">
-                                    <div className="text-4xl font-bold mb-2" style={{ color: '#ffbb00' }}>20%</div>
+                                <div className="bg-white p-6 text-center shadow-sm rounded-2xl border-1 border-dashed border-primary-variant-5">
+                                    <PercentageCounter target={20}/>
                                     <div className="text-sm font-medium text-gray-700">Administration and operations</div>
                                 </div>
-                                <div className="bg-white rounded-xl p-6 text-center shadow-sm border border-amber-200">
-                                    <div className="text-4xl font-bold mb-2" style={{ color: '#ffbb00' }}>100%</div>
+                                <div className="bg-white rounded-xl p-6 text-center shadow-sm border-1 border-dashed border-primary-variant-5">
+                                    <PercentageCounter target={100}/>
                                     <div className="text-sm font-medium text-gray-700">Revenue reinvestment for national development</div>
                                 </div>
                             </div>

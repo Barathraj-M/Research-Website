@@ -12,6 +12,12 @@ import {
 import NavHoverLogo from '../../assets/Images/nav-hover-icon.svg';
 import StepConnector from '../../assets/Images/step-connector.svg';
 
+import PolicySignImage from '../../assets/Images/policy-sign-image.jpg';
+import EndToEndSupport from '../../assets/Images/end-to-end-support-image.jpg'
+import IdeaIncubationImage from '../../assets/Images/idea-incubation-image.jpg'
+import ExpertMentoringImage from '../../assets/Images/expert-mentoring-image.jpg'
+import GreenDiscoveryPlantDNAImage from '../../assets/Images/green-discovery-dna-plant-image.jpg'
+
 import {
     LightBulbIcon,
     FocusIcon,
@@ -30,7 +36,7 @@ const IncubationSection = () => {
             id: 'incubation-ecosystem',
             title: 'Incubation Ecosystem',
             icon: <LightBulbIcon width={20} height={20} />,
-            image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=500&fit=crop',
+            image: IdeaIncubationImage,
             description: 'A new generation of eco-technological ventures through our dedicated incubation ecosystem.',
             features: [
                 'Comprehensive startup support and mentorship',
@@ -43,7 +49,7 @@ const IncubationSection = () => {
             id: 'venture-focus',
             title: 'Venture Focus',
             icon: <FocusIcon width={20} height={20} />,
-            image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=500&fit=crop',
+            image: GreenDiscoveryPlantDNAImage,
             description: 'Climate-positive materials, sustainable design, water regeneration, and AI-enabled ecological diagnostics.',
             features: [
                 'Climate-positive materials development',
@@ -56,7 +62,7 @@ const IncubationSection = () => {
             id: 'support-resources',
             title: 'Support & Resources',
             icon: <AcademicCapIcon width={20} height={20} />,
-            image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=500&fit=crop',
+            image: ExpertMentoringImage,
             description: 'Advanced labs, expert mentorship, funding pathways, and policy connections.',
             features: [
                 'State-of-the-art research laboratories',
@@ -69,7 +75,7 @@ const IncubationSection = () => {
             id: 'formal-protocols',
             title: 'Formal Protocols',
             icon: <DocumentCheckIcon width={20} height={20} />,
-            image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=500&fit=crop',
+            image: PolicySignImage,
             description: 'MoUs, Letters of Association, Technology Licensing Agreements ensuring clarity and compliance.',
             features: [
                 'Memoranda of Understanding (MoUs)',
@@ -82,7 +88,7 @@ const IncubationSection = () => {
             id: 'end-to-end-support',
             title: 'End-to-End Support',
             icon: <ArrowPathIcon width={20} height={20} />,
-            image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=500&fit=crop',
+            image: EndToEndSupport,
             description: 'From ideation labs to prototype development and market access with scientific backing.',
             features: [
                 'Ideation and concept development',
@@ -109,7 +115,7 @@ const IncubationSection = () => {
                     viewport={{ once: true, amount: "some" }}
                     custom={1}
                 >
-                    Eco-Tech Incubation and Green Enterprise
+                    <span className='bg-gradient-to-r from-primary-1 via-primary-variant-2 to-primary-variant-3 bg-clip-text text-transparent'>Eco-Tech Incubation</span> and Green Enterprise
                 </motion.h2>
                 <motion.p
                     variants={contentBasicVariants}
@@ -158,7 +164,7 @@ const IncubationSection = () => {
                             <motion.img
                                 src={activeContent.image}
                                 alt={activeContent.title}
-                                className='xs:w-full xs:h-[10rem] sm:h-[20rem] md:w-auto md:h-[20rem] lg:h-[30rem] object-cover rounded-xl'
+                                className='xs:w-full xs:h-[10rem] sm:h-[17rem] md:w-auto md:h-[20rem] lg:h-[27rem] object-cover rounded-xl'
                                 variants={visibleAnimationVariants}
                                 initial='initial'
                                 whileInView='whileInView'
@@ -167,29 +173,32 @@ const IncubationSection = () => {
                                 custom={0.5}
                             />
 
-                            <div className='lg:w-3/5 p-8 lg:p-10 flex flex-col justify-center'>
-                                <motion.h3
-                                    className='text-2xl font-semibold text-gray-1 mb-4'
-                                    variants={contentBasicVariants}
-                                    initial='initial'
-                                    whileInView='whileInView'
-                                    exit='exit'
-                                    viewport={{ once: true, amount: "some" }}
-                                    custom={1}
-                                >
-                                    {activeContent.title}
-                                </motion.h3>
-                                <motion.p
-                                    className='text-base mb-6 leading-relaxed'
-                                    variants={contentBasicVariants}
-                                    initial='initial'
-                                    whileInView='whileInView'
-                                    exit='exit'
-                                    viewport={{ once: true, amount: "some" }}
-                                    custom={3}
-                                >
-                                    {activeContent.description}
-                                </motion.p>
+                            <div className='lg:w-3/5 p-8 lg:p-10 flex flex-col justify-between'>
+                                <div>
+                                    <motion.h3
+                                        className='text-2xl font-semibold text-gray-1 mb-4'
+                                        variants={contentBasicVariants}
+                                        initial='initial'
+                                        whileInView='whileInView'
+                                        exit='exit'
+                                        viewport={{ once: true, amount: "some" }}
+                                        custom={1}
+                                    >
+                                        {activeContent.title}
+                                    </motion.h3>
+                                    <motion.p
+                                        className='text-base mb-6 leading-relaxed'
+                                        variants={contentBasicVariants}
+                                        initial='initial'
+                                        whileInView='whileInView'
+                                        exit='exit'
+                                        viewport={{ once: true, amount: "some" }}
+                                        custom={3}
+                                    >
+                                        {activeContent.description}
+                                    </motion.p>
+                                </div>
+
                                 <ul className='space-y-3'>
                                     {activeContent.features.map((feature, index) => (
                                         <motion.li
@@ -199,7 +208,7 @@ const IncubationSection = () => {
                                             initial='initial'
                                             whileInView='whileInView'
                                             exit='exit'
-                                            viewport={{ once: true, amount: "some" }}
+                                            viewport={{ once: true, amount: "0.1" }}
                                             custom={index + 3}
                                         >
                                             {/* <div className='w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0'></div> */}
@@ -207,7 +216,7 @@ const IncubationSection = () => {
                                                 src={NavHoverLogo}
                                                 alt='nav-logo'
                                             />
-                                            <span className='text-gray-700 text-sm leading-relaxed'>{feature}</span>
+                                            <span className='text-gray-3 text-base leading-relaxed'>{feature}</span>
                                         </motion.li>
                                     ))}
                                 </ul>

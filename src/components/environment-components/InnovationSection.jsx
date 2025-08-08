@@ -12,7 +12,7 @@ import { BlockChainIcon, TargetIcon, DroneIcon } from '../../assets/Icons/Icons'
 
 const InnovationSection = () => {
   return (
-    <div className='w-full min-h-screen flex flex-col justify-center items-center gap-y-10 xs:px-2 sm:px-5 md:px-10 lg:px-15 py-5 bg-gradient-to-br from-primary-variant-7 to-primary-variant-8'>
+    <div id="innovation-section" className='w-full min-h-screen flex flex-col justify-center items-center gap-y-10 xs:px-2 sm:px-5 md:px-10 lg:px-15 xs:pt-2 xs:pb-4 md:py-5 bg-primary-variant-7'>
       <div>
         <SectionPill sectionTitle={'Innovation'} />
       </div>
@@ -26,7 +26,7 @@ const InnovationSection = () => {
           exit='exit'
           custom={1}
         >
-          Innovation at the Core of Ecology
+          Innovation at the <span className='bg-gradient-to-r from-primary-1 via-primary-variant-2 to-primary-variant-3 bg-clip-text text-transparent'>Core of Ecology</span>
         </motion.h2>
         <motion.p
           variants={contentBasicVariants}
@@ -41,7 +41,7 @@ const InnovationSection = () => {
       </div>
       <div className='w-full flex flex-row flex-wrap justify-center items-center gap-y-0 xs:gap-y-5 md:gap-y-6 xs:gap-x-5 md:gap-x-8 px-4 md:px-0'>
         <motion.div
-          className='flex flex-col justify-around items-center bg-white rounded-xl border border-primary-variant-3 hover:border-primary-1 transition-all duration-300 text-center w-full xs:h-[40vh] md:h-[50vh] max-w-sm p-5 group'
+          className='flex flex-col justify-around items-center bg-white rounded-xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300 text-center w-full h-[20rem] max-w-sm p-5 group'
           variants={basicCardVariants}
           initial='initial'
           whileInView='whileInView'
@@ -58,7 +58,7 @@ const InnovationSection = () => {
         </motion.div>
 
         <motion.div
-          className='flex flex-col justify-around items-center bg-white rounded-xl border border-primary-variant-3 hover:border-primary-1 transition-all duration-300 text-center w-full xs:h-[40vh] md:h-[50vh] max-w-sm p-5 group'
+          className='flex flex-col justify-around items-center bg-white rounded-xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300 text-center w-full h-[20rem] max-w-sm p-5 group'
           variants={basicCardVariants}
           initial='initial'
           whileInView='whileInView'
@@ -75,7 +75,7 @@ const InnovationSection = () => {
         </motion.div>
 
         <motion.div
-          className='flex flex-col justify-around items-center bg-white rounded-xl border border-primary-variant-3 hover:border-primary-1 transition-all duration-300 text-center w-full xs:h-[40vh] md:h-[50vh] max-w-sm p-5 group'
+          className='flex flex-col justify-around items-center bg-white rounded-xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300 text-center w-full h-[20rem] max-w-sm p-5 group'
           variants={basicCardVariants}
           initial='initial'
           whileInView='whileInView'

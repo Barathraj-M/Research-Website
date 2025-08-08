@@ -4,7 +4,7 @@ import space from "../assets/Videos/space.mp4";
 import nature from "../assets/Videos/nature.mp4";
 import ocean from "../assets/Videos/ocean.mp4";
 import { motion, useInView } from "framer-motion";
-
+import StepConnector from "../assets/Images/step-connector.svg";
 import OurServices from "../components/homeComponents/OurServices";
 import WhyChooseUs from "../components/homeComponents/WhyChooseUs";
 import Section6 from "../components/homeComponents/Section6";
@@ -148,9 +148,9 @@ const Home = () => {
                 viewport={{ once: true, amount: "some" }}
                 exit="exit"
               >
-                <h5 className="text-center text-gray-1 font-semibold!">
+                <h6 className="text-center  font-semibold!">
                   SLSRP - The timeless mission
-                </h5>
+                </h6>
                 <InifiteIcon width={50} height={50} />
               </motion.div>
               <motion.div
@@ -162,9 +162,9 @@ const Home = () => {
                 viewport={{ once: true, amount: "some" }}
                 exit="exit"
               >
-                <h5 className="text-center text-gray-1 font-semibold!">
+                <h6 className="text-center  font-semibold!">
                   Forging a Civilizational Shift - For sustenance
-                </h5>
+                </h6>
                 <HandsGlobeIcon width={40} height={40} />
               </motion.div>
               <motion.div
@@ -176,9 +176,9 @@ const Home = () => {
                 viewport={{ once: true, amount: "some" }}
                 exit="exit"
               >
-                <h5 className="text-center text-gray-1 font-semibold!">
+                <h6 className="text-center  font-semibold!">
                   Sustaining Humanity
-                </h5>
+                </h6>
                 <ShieldCheckIcon width={40} height={40} />
               </motion.div>
             </motion.div>
@@ -192,7 +192,7 @@ const Home = () => {
       </div>
 
       {/* Other sections */}
-      <div className="w-full px-4 py-8  bg-gradient-to-b from-[#fffaf0] to-[#fff3d1] ">
+      <div className="w-full px-4 py-8  bg-primary-variant-7 ">
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -201,20 +201,17 @@ const Home = () => {
           className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center "
         >
           {/* Left Text Box */}
-          <div
-            className="text-gray-800 space-y-4 p-4"
-            style={{ textAlign: "justify" }}
-          >
+          <div className=" space-y-4 p-4" style={{ textAlign: "justify" }}>
             <div className="text-3xl sm:text-4xl font-bold flex items-center gap-3">
               <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div>
-              <div>
+              <h2>
                 {" "}
                 Welcome to <span className="text-[#ffbb00]">SLSRP</span>
-              </div>
+              </h2>
             </div>
-            <div className="text-2xl sm:text-3xl text-gray-500">
+            <h3 className="text-2xl sm:text-3xl ">
               Semporutkalai Life Science Research Park (SLSRP)
-            </div>
+            </h3>
             <p>
               A global initiative inspired by the Tamil word “Semporul”, which
               means the supreme essence of life. It is founded on the vision
@@ -284,19 +281,16 @@ const Home = () => {
                   />
                 </svg>
               </div>
-              <div>
+              <h3 className="mt-3!">
                 Whats
                 <span className="text-[#ffbb00]"> Matters</span>{" "}
-              </div>
+              </h3>
             </h2>
-            <p className="text-[17px] text-gray-500 lg:pe-20 lg:ps-20 pe-5 ps-5">
+            <p className="text-[17px]  lg:pe-20 lg:ps-20 pe-5 ps-5">
               We live in a world overwhelmed by complexity—mental stress,
               environmental collapse, socio-political fragmentation, and
               disconnected knowledge systems. <br />
-              SLSRP addresses this through a{" "}
-              <span className="text-[#ffbb00]">
-                Wholistic model of transformation
-              </span>{" "}
+              SLSRP addresses this through a Wholistic model of transformation
               that does not separate science from spirit, or technology from
               ethics.
             </p>
@@ -336,9 +330,9 @@ const Home = () => {
             viewport={{ once: false }}
             transition={{ duration: 1, ease: "easeInOut" }}
             className="flex md:flex-row flex-col justify-center 
-            items-center lg:gap-25 md:gap-10 gap-5 p-5 text-gray-500 mt-4"
+            items-center lg:gap-25 md:gap-10 gap-5 p-5  mt-4"
           >
-            <p className="xl:w-[440px] xl:px-0 lg:px-4 text-center h-auto">
+            <p className="  text-center h-auto">
               We bridge the intangible aspects of human consciousness with the
               tangible, measurable goals of global development—offering society
               a roadmap that is both deeply philosophical and radically
@@ -351,89 +345,55 @@ const Home = () => {
               transition={{ duration: 1, ease: "easeInOut" }}
               className="flex flex-col items-center justify-center"
             >
-              <div className="w-full flex flex-wrap justify-center gap-4 mt-5">
-                <div className="w-1/2 sm:w-1/3 flex flex-col items-center">
-                  <div
-                    className="inline-flex items-center justify-center w-12 h-12 rounded-full"
-                    style={{ backgroundColor: "#ffbb00" }}
-                  >
-                    <svg
-                      className="w-8 h-8 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 3l8 4v5c0 5.25-3.75 9.75-8 11-4.25-1.25-8-5.75-8-11V7l8-4z"
-                      />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12l2 2 4-4"
-                      />
-                    </svg>
+              <div className="w-1/4">
+                <div className="flex xs:flex-col md:flex-row justify-center items-center gap-0">
+                  <div className="flex flex-row justify-start items-center gap-2 group p-5 bg-primary-variant-8 rounded-lg xs:min-w-[15rem] md:min-w-auto">
+                    <div className="p-1 relative border-1 border-dashed border-primary-1 rounded-xl">
+                      <span className="w-12 h-12 bg-primary-1 rounded-lg flex items-center justify-center text-white font-semibold text-sm relative z-10">
+                        1
+                      </span>
+                      <span className="absolute inset-0 flex items-center justify-center">
+                        <span className="w-10 h-10 rounded-lg bg-primary-1 opacity-75 group-hover:animate-ping"></span>
+                      </span>
+                    </div>
+                    <h6 className="text-sm text-center  mb-0!">Responsible</h6>
                   </div>
-
-                  <div className="text-gray-500 mt-1 text-sm sm:text-base">
-                    responsible
+                  <img
+                    src={StepConnector}
+                    alt="step-divider"
+                    className="xs:w-4 xs:h-auto md:h-7 md:w-auto xs:rotate-90 md:rotate-0 self-center object-cover -my-1"
+                  />
+                  <div className="flex flex-row justify-start items-center gap-2 group p-5 bg-primary-variant-8 rounded-lg xs:min-w-[15rem] md:min-w-auto">
+                    <div className="p-1 relative border-1 border-dashed border-primary-1 rounded-xl">
+                      <span className="w-12 h-12 bg-primary-1 rounded-lg flex items-center justify-center text-white font-semibold text-sm relative z-10">
+                        2
+                      </span>
+                      <span className="absolute inset-0 flex items-center justify-center">
+                        <span className="w-10 h-10 rounded-lg bg-primary-1 opacity-75 group-hover:animate-ping"></span>
+                      </span>
+                    </div>
+                    <h6 className="text-sm text-center  mb-0!">Resilient</h6>
                   </div>
-                </div>
-                <div className="w-1/2 sm:w-1/3 flex flex-col items-center">
-                  <div
-                    className="inline-flex items-center justify-center w-12 h-12 rounded-full"
-                    style={{ backgroundColor: "#ffbb00" }}
-                  >
-                    <svg
-                      width="54"
-                      height="54"
-                      viewBox="-8 -10 84 84"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                    >
-                      <path
-                        d="M8 48L24 24L32 36L40 28L56 48H8Z"
-                        stroke="#ffffffff"
-                        stroke-width="4"
-                        fill="none"
-                      />
-                      <circle cx="48" cy="16" r="6" fill="#ffffffff" />
-                    </svg>
-                  </div>
-
-                  <div className="text-gray-500 mt-1 text-sm sm:text-base">
-                    resilient
-                  </div>
-                </div>
-                <div className="w-full sm:w-1/3 flex flex-col items-center">
-                  <div
-                    className="inline-flex items-center justify-center w-12 h-12 rounded-full"
-                    style={{ backgroundColor: "#ffbb00" }}
-                  >
-                    <svg
-                      className="w-7 h-7 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
-                      />
-                    </svg>
-                  </div>
-                  <div className="text-gray-500 mt-1 text-sm sm:text-base">
-                    research validated future
+                  <img
+                    src={StepConnector}
+                    alt="step-divider"
+                    className="xs:w-4 xs:h-auto md:h-7 md:w-auto xs:rotate-90 md:rotate-0 self-center object-cover -my-1"
+                  />
+                  <div className="flex flex-row justify-start items-center gap-2 group p-5 bg-primary-variant-8 rounded-lg xs:min-w-[15rem] md:min-w-auto">
+                    <div className="p-1 relative border-1 border-dashed border-primary-1 rounded-xl">
+                      <span className="w-12 h-12 bg-primary-1 rounded-lg flex items-center justify-center text-white font-semibold text-sm relative z-10">
+                        3
+                      </span>
+                      <span className="absolute inset-0 flex items-center justify-center">
+                        <span className="w-10 h-10 rounded-lg bg-primary-1 opacity-75 group-hover:animate-ping"></span>
+                      </span>
+                    </div>
+                    <h6 className="text-sm text-center  mb-0!">Research</h6>
                   </div>
                 </div>
               </div>
             </motion.div>
-            <p className="xl:w-[440px] h-auto text-center">
+            <p className=" h-auto text-center">
               Whether it’s building an AI system to map biodiversity or helping
               youth tap into their emotional intelligence, our work is about
               crafting a responsible, resilient, and research-validated future.
@@ -441,16 +401,11 @@ const Home = () => {
           </motion.div>
         </motion.div>
       </div>
-      {/* <HomeAbout /> */}
       <OurServices />
       <Section6 />
-      {/* <Section9 />
-      <Clients />
-      <Section3 /> */}
-      <div className="grid auto-rows-auto gap-y-10 min-h-screen w-full px-10 pt-15">
+      <div className="grid auto-rows-auto gap-y-10 min-h-screen w-full xs:px-2 sm:px-5 md:px-10 lg:px-15 pt-15">
         <div className="grid sm:auto-rows-auto md:grid-rows-none md:grid-cols-5 gap-y-5 gap-x-5 w-full">
           <div className="md:col-span-2 flex flex-col justify-start items-start gap-y-2">
-            <SectionPill sectionTitle={"SLSRP"} />
             <motion.h2
               className="mt-5!"
               variants={contentBasicVariants}
@@ -465,7 +420,7 @@ const Home = () => {
           </div>
           <div className="md:col-span-3">
             <motion.p
-              className="text-gray-2"
+              className=""
               variants={contentBasicVariants}
               initial="initial"
               whileInView="whileInView"
@@ -482,7 +437,7 @@ const Home = () => {
               platforms that connect the past with the future
             </motion.p>
             <motion.p
-              className="text-gray-2 md:mt-5!"
+              className=" md:mt-5!"
               variants={contentBasicVariants}
               initial="initial"
               whileInView="whileInView"
@@ -513,7 +468,7 @@ const Home = () => {
           <img
             src={YogaBannerImage}
             alt="banner-image-yoga"
-            className="w-full h-full object-cover rounded-2xl transition-transform duration-500 ease-in-out group-hover:scale-102"
+            className="w-full h-full object-cover rounded-2xl transition-transform duration-500 ease-in-out group-hover:scale-102 md:h-[20rem]"
           />
         </motion.div>
       </div>
@@ -522,7 +477,3 @@ const Home = () => {
 };
 
 export default Home;
-
-// SLSRP - The timeless mission
-// Forging a Civilizational Shift — For sustenance
-// Sustaining Humanity
