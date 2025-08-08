@@ -176,12 +176,12 @@ const About = () => {
   return (
     <div>
       <div
-        className="w-full h-screen mx-auto xs:px-2 sm:px-5 md:px-10 lg:px-15"
+        className="w-full h-screen mx-auto xs:px-2 sm:px-5 md:px-10 lg:px-15 bg-primary-variant-7"
         ref={title}
         role="region"
         aria-label="Hero Section - Social Initiative"
       >
-        <div className="w-full h-[90vh] overflow-hidden rounded-2xl relative mt-16">
+        <div className="w-full h-[90vh] overflow-hidden rounded-2xl relative mt-16 ">
           <img
             src={HeroImage}
             alt="Scenic environment backdrop representing nature and social harmony"
@@ -194,7 +194,7 @@ const About = () => {
             role="group"
             aria-labelledby="hero-title"
           >
-            <div className="w-full flex flex-col justify-start items-center gap-0 bg-gray-8 rounded-tl-3xl rounded-bl-3xl">
+            <div className="w-full flex flex-col justify-start items-center gap-0 bg-primary-variant-7 rounded-tl-3xl rounded-bl-3xl">
               <img
                 src={HeroBottomLeft}
                 alt=""
@@ -224,7 +224,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="w-8/10 bg-gray-8 h-full self-end">
+            <div className="w-8/10 bg-primary-variant-7 h-full self-end">
               <div className="w-full h-full flex flex-col justify-start items-center gap-0">
                 <img
                   src={HeroTopLeft}
@@ -250,11 +250,11 @@ const About = () => {
 
                 <div className="w-full relative mt-3">
                   <div
-                    className="absolute left-0 top-0 h-full w-20 pointer-events-none z-50 bg-gradient-to-r from-gray-8 via-gray-8/80 to-transparent"
+                    className="absolute left-0 top-0 h-full w-20 pointer-events-none z-50 bg-gradient-to-r from-primary-variant-7 via-primary-variant-7/80 to-transparent"
                     aria-hidden="true"
                   ></div>
                   <div
-                    className="absolute right-0 top-0 h-full w-20 pointer-events-none z-50 bg-gradient-to-l from-gray-8 via-gray-8/80 to-transparent"
+                    className="absolute right-0 top-0 h-full w-20 pointer-events-none z-50 bg-gradient-to-l from-primary-variant-7 via-primary-variant-7/80 to-transparent"
                     aria-hidden="true"
                   ></div>
 

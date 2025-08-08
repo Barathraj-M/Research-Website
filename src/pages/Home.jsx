@@ -539,7 +539,7 @@ const Home = () => {
               id="ancient-wisdom-heading"
             >
               <h3 style={{ textAlign: "start" }}>
-                A <span className="text-primary-1">Deep Respect</span> for
+                A <span className='bg-gradient-to-r from-primary-1 via-primary-variant-2 to-primary-variant-3 bg-clip-text text-transparent'>Deep Respect</span> for
                 Ancient Knowledge
               </h3>
             </div>
