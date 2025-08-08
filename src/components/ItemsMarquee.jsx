@@ -37,7 +37,7 @@ const ItemsMarquee = ({ items }) => {
                                 key={index}
                                 src={logo.src}
                                 alt={logo.alt}
-                                loading='eager'
+                                loading='lazy'
                                 className='w-20 md:w-35 h-auto mx-2 my-1 grayscale'
                             />
                         ) : (
@@ -46,7 +46,7 @@ const ItemsMarquee = ({ items }) => {
                                     key={index}
                                     src={logo.src}
                                     alt={logo.alt}
-                                    loading='eager'
+                                    loading='lazy'
                                     className='w-5 h-auto my-1'
                                 />
                                 <p className='mb-0!'>{logo.text}</p>
@@ -72,7 +72,7 @@ const ItemsMarquee = ({ items }) => {
                                 key={index}
                                 src={logo.src}
                                 alt={logo.alt}
-                                loading='eager'
+                                loading='lazy'
                                 className='w-20 md:w-35 h-auto mx-2 my-1 grayscale'
                             />
                         ) : (
@@ -81,7 +81,7 @@ const ItemsMarquee = ({ items }) => {
                                     key={index}
                                     src={logo.src}
                                     alt={logo.alt}
-                                    loading='eager'
+                                    loading='lazy'
                                     className='w-5 h-auto my-1'
                                 />
                                 <p className='mb-0!'>{logo.text}</p>

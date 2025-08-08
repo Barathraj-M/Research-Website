@@ -125,6 +125,7 @@ const OurServices = () => {
                           src={NavHoverLogo}
                           alt={`Checkmark icon for item ${index + 1}`}
                           className="w-4 mt-1"
+                          loading="lazy"
                         />
                         {point}
                       </li>
@@ -175,6 +176,7 @@ const OurServices = () => {
                           src={NavHoverLogo}
                           alt={`Checkmark icon for item ${index + 1}`}
                           className="w-4 mt-1"
+                          loading="lazy"
                         />
                         {point}
                       </li>

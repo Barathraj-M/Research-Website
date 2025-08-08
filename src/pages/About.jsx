@@ -234,7 +234,7 @@ const About = () => {
                 <div className="w-full relative h-[450px] sm:h-[500px] md:h-[600px] lg:h-[655px]">
                     <img
                         src={aboutimage}
-                        loading="eager"
+                        loading="lazy"
                         alt="About Image"
                         className='absolute w-full h-full'
                         role='img'
@@ -261,7 +261,7 @@ const About = () => {
                         </div>
 
                         <div className='relative flex self-end w-full max-w-5xl -mb-[0.8px] md:h-auto sm:h-[170px] rounded-t-lg h-[150px]'>
-                            <div className='absolute -left-6 bottom-0 z-40 self-end'><img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683e866c5a5df0d7b03e41e6_hero-bottom-left.svg" loading="eager" alt="Icon" class="about-left-decorative" aria-hidden="true" /></div>
+                            <div className='absolute -left-6 bottom-0 z-40 self-end'><img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683e866c5a5df0d7b03e41e6_hero-bottom-left.svg" loading="lazy" alt="Icon" class="about-left-decorative" aria-hidden="true" /></div>
                             <motion.div
                                 className='w-full bg-gray-8 flex justify-around items-center rounded-t-lg p-3 sm:p-4 md:p-6 overflow-hidden bg-gradient-to-t from-gray-8 to-[#fff3d1]'
                                 variants={heroSectionBottomContainerVariants}
@@ -338,7 +338,7 @@ const About = () => {
                                     </div> */}
                                 </motion.div>
                             </motion.div>
-                            <div className='absolute -right-6 self-end'><img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/6841390341d0511acefa1664_hero-bottom-right.svg" loading="eager" alt="Icon" class="about-right-decorative" aria-hidden="true" /></div>
+                            <div className='absolute -right-6 self-end'><img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/6841390341d0511acefa1664_hero-bottom-right.svg" loading="lazy" alt="Icon" class="about-right-decorative" aria-hidden="true" /></div>
                         </div>
                     </div>
                 </div>
@@ -426,9 +426,9 @@ const About = () => {
 
                             {/* Content */}
                             <ul className=" leading-relaxed list-disc list-inside">
-                                <div className='flex gap-2'><img src={NavHoverLogo} alt='nav-logo' className=' p-1.5 self-start'/><p className=''>Promote Noetic Science as a validated pathway to peace, wellness, productivity, and Wholistic intelligence.</p></div>
-                                <div className='flex gap-2'><img src={NavHoverLogo} alt='nav-logo' className=' p-1.5 self-start'/><p className=''>Incubate and scale eco-technical innovations to restore and protect biodiversity.</p></div>
-                                <div className='flex gap-2'><img src={NavHoverLogo} alt='nav-logo' className=' p-1.5 self-start'/><p className=''>Create knowledge platforms, policy frameworks, and capacity-building models that serve both national interests and global wellbeing.</p></div>
+                                <div className='flex gap-2'><img src={NavHoverLogo} loading='lazy' alt='nav-logo' className=' p-1.5 self-start'/><p className=''>Promote Noetic Science as a validated pathway to peace, wellness, productivity, and Wholistic intelligence.</p></div>
+                                <div className='flex gap-2'><img src={NavHoverLogo} loading='lazy' alt='nav-logo' className=' p-1.5 self-start'/><p className=''>Incubate and scale eco-technical innovations to restore and protect biodiversity.</p></div>
+                                <div className='flex gap-2'><img src={NavHoverLogo} loading='lazy' alt='nav-logo' className=' p-1.5 self-start'/><p className=''>Create knowledge platforms, policy frameworks, and capacity-building models that serve both national interests and global wellbeing.</p></div>
                             </ul>
                         </div>
 
@@ -442,8 +442,8 @@ const About = () => {
                             </div>
 
                             <ul className="space-y-4 text-[1rem] leading-relaxed list-disc list-inside">
-                                <div className='flex gap-2'><img src={NavHoverLogo} alt='nav-logo' className=' p-1.5 self-start'/><p className=''>To achieve sustenance through integrated life science rooted in ancient Eastern knowledge and validated by science.</p></div>
-                                <div className='flex gap-2'><img src={NavHoverLogo} alt='nav-logo' className=' p-1.5 self-start'/><p className=''>Foster a global ecosystem where ancient wisdom and modern science coalesce to solve emerging planetary challenges through sustainable innovation.</p></div>
+                                <div className='flex gap-2'><img src={NavHoverLogo} alt='nav-logo' loading='lazy' className=' p-1.5 self-start'/><p className=''>To achieve sustenance through integrated life science rooted in ancient Eastern knowledge and validated by science.</p></div>
+                                <div className='flex gap-2'><img src={NavHoverLogo} alt='nav-logo' loading='lazy' className=' p-1.5 self-start'/><p className=''>Foster a global ecosystem where ancient wisdom and modern science coalesce to solve emerging planetary challenges through sustainable innovation.</p></div>
                             </ul>
 
                         </div>
@@ -466,28 +466,28 @@ const About = () => {
                     <div className='grid xl:grid-cols-[3fr_3fr_3fr_3fr] lg:grid-cols-3 sm:grid-cols-2 xl:h-[1100px] lg:h-[900px] md:h-[800px] sm:w-full md:w-[90%] lg:w-full w-full md:px-18 px-10 xl:py-8 md:gap-9 gap-4'>
                         <div className='rounded-2xl flex justify-center items-center flex-col bg-[#282828]'>
                             <div className='h-[85%] w-[80%] flex flex-col items-start py-2'>
-                                <div className='overflow-hidden rounded-[10px] mb-4 w-full h-full'><img alt="Team Image" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/685bd35fc345fac7fb41d911_team-image-01.webp" loading="eager" className="object-cover w-full h-full transition-transform duration-500 transform hover:scale-110" /></div>
+                                <div className='overflow-hidden rounded-[10px] mb-4 w-full h-full'><img alt="Team Image" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/685bd35fc345fac7fb41d911_team-image-01.webp" loading="lazy" className="object-cover w-full h-full transition-transform duration-500 transform hover:scale-110" /></div>
                                 <p className=' py-2 text-white overflow-hidden'>Liam Waters</p>
                                 <p className=' pb-1 text-white overflow-hidden'>Head of Eco Logistics</p>
                             </div>
                         </div>
                         <div className='rounded-2xl flex justify-center items-center flex-col bg-[#282828]'>
                             <div className='h-[85%] w-[80%] flex flex-col items-start py-2'>
-                                <div className='overflow-hidden rounded-[10px] mb-4 w-full h-full'><img alt="Team Image" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/685bd35fc345fac7fb41d911_team-image-01.webp" loading="eager" className="object-cover w-full h-full transition-transform duration-500 transform hover:scale-110" /></div>
+                                <div className='overflow-hidden rounded-[10px] mb-4 w-full h-full'><img alt="Team Image" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/685bd35fc345fac7fb41d911_team-image-01.webp" loading="lazy" className="object-cover w-full h-full transition-transform duration-500 transform hover:scale-110" /></div>
                                 <p className=' py-2 text-white overflow-hidden'>Liam Waters</p>
                                 <p className=' pb-1 text-white overflow-hidden'>Head of Eco Logistics</p>
                             </div>
                         </div>
                         <div className='rounded-2xl flex justify-center items-center flex-col bg-[#282828]'>
                             <div className='h-[85%] w-[80%] flex flex-col items-start py-2'>
-                                <div className='overflow-hidden rounded-[10px] mb-4 w-full h-full'><img alt="Team Image" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/685bd35fc345fac7fb41d911_team-image-01.webp" loading="eager" className="object-cover w-full h-full transition-transform duration-500 transform hover:scale-110" /></div>
+                                <div className='overflow-hidden rounded-[10px] mb-4 w-full h-full'><img alt="Team Image" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/685bd35fc345fac7fb41d911_team-image-01.webp" loading="lazy" className="object-cover w-full h-full transition-transform duration-500 transform hover:scale-110" /></div>
                                 <p className=' py-2 text-white overflow-hidden'>Liam Waters</p>
                                 <p className=' pb-1 text-white overflow-hidden'>Head of Eco Logistics</p>
                             </div>
                         </div>
                         <div className='rounded-2xl flex justify-center items-center flex-col bg-[#282828]'>
                             <div className='h-[85%] w-[80%] flex flex-col items-start py-2'>
-                                <div className='overflow-hidden rounded-[10px] mb-4 w-full h-full'><img alt="Team Image" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/685bd35fc345fac7fb41d911_team-image-01.webp" loading="eager" className="object-cover w-full h-full transition-transform duration-500 transform hover:scale-110" /></div>
+                                <div className='overflow-hidden rounded-[10px] mb-4 w-full h-full'><img alt="Team Image" src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/685bd35fc345fac7fb41d911_team-image-01.webp" loading="lazy" className="object-cover w-full h-full transition-transform duration-500 transform hover:scale-110" /></div>
                                 <p className=' py-2 text-white overflow-hidden'>Liam Waters</p>
                                 <p className=' pb-1 text-white overflow-hidden'>Head of Eco Logistics</p>
                             </div>
@@ -625,7 +625,7 @@ const About = () => {
                                                         transitionDelay: expandedSections[category.id] ? `${(idx * 100) + (detailIdx * 50) + 200}ms` : '0ms'
                                                     }}
                                                 >
-                                                    <img src={NavHoverLogo} alt='nav-logo' className='p-1'/>
+                                                    <img src={NavHoverLogo} alt='nav-logo' className='p-1' loading="lazy"/>
                                                     <span className="text-sm leading-relaxed">{detail}</span>
                                                 </div>
                                             ))}

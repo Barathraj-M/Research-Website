@@ -116,17 +116,15 @@ const Home = () => {
                   style={{ color: "white" }}
                 >
                   {video.title.split("\n").map((line, i) => (
-                    <span key={i}>
-                      {line}
-                    </span>
+                    <span key={i}>{line}</span>
                   ))}
                 </h1>
-                <p
+                <h3
                   className={`w-3/4 ${video.textColor} ml-6`}
                   style={{ color: "white" }}
                 >
                   {video.description}
-                </p>
+                </h3>
               </motion.div>
             ) : null
           )}
@@ -147,6 +145,7 @@ const Home = () => {
               alt=""
               aria-hidden="true"
               className="self-end -mb-[0.8px] -me-[0.8px]"
+              loading="lazy"
             />
 
             <motion.div
@@ -223,6 +222,7 @@ const Home = () => {
               alt=""
               aria-hidden="true"
               className="self-end -mb-[0.8px] -ms-[0.8px]"
+              loading="lazy"
             />
           </div>
         </div>
@@ -292,6 +292,7 @@ const Home = () => {
               src={jc}
               alt="Portrait of Thiru. Jeyachandran Srinivasan"
               className="w-full max-w-md rounded-md"
+              loading="lazy"
             />
           </motion.div>
         </motion.div>
@@ -332,6 +333,7 @@ const Home = () => {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                   role="img"
+                  loading="lazy"
                   aria-label="Checklist icon"
                 >
                   <path
@@ -364,7 +366,7 @@ const Home = () => {
             <div className="rounded-2xl overflow-hidden">
               <img
                 src={responsible}
-                loading="eager"
+                loading="lazy"
                 alt="Representation of responsibility"
                 className="object-cover w-full h-full"
               />
@@ -373,7 +375,7 @@ const Home = () => {
             <div className="rounded-2xl overflow-hidden">
               <img
                 src={resilient}
-                loading="eager"
+                loading="lazy"
                 alt="Representation of resilience"
                 className="w-full h-full object-cover"
               />
@@ -382,7 +384,7 @@ const Home = () => {
             <div className="rounded-2xl overflow-hidden sm:col-span-1 col-span-2">
               <img
                 src={research}
-                loading="eager"
+                loading="lazy"
                 alt="Representation of research and inquiry"
                 className="w-full h-full object-cover"
               />
@@ -437,6 +439,7 @@ const Home = () => {
                   <img
                     src={StepConnector}
                     alt=""
+                    loading="lazy"
                     role="presentation"
                     className="xs:w-4 xs:h-auto md:h-7 md:w-auto xs:rotate-90 md:rotate-0 self-center object-cover -my-1"
                     aria-hidden="true"
@@ -462,6 +465,7 @@ const Home = () => {
                   {/* Connector */}
                   <img
                     src={StepConnector}
+                    loading="lazy"
                     alt=""
                     role="presentation"
                     className="xs:w-4 xs:h-auto md:h-7 md:w-auto xs:rotate-90 md:rotate-0 self-center object-cover -my-1"
@@ -519,6 +523,7 @@ const Home = () => {
           >
             <img
               src={ancient}
+              loading="lazy"
               alt="Illustration representing SLSRP scientific focus"
               className="w-3/4"
             />
@@ -537,8 +542,11 @@ const Home = () => {
               id="ancient-wisdom-heading"
             >
               <h3 style={{ textAlign: "start" }}>
-                A <span className='bg-gradient-to-r from-primary-1 via-primary-variant-2 to-primary-variant-3 bg-clip-text text-transparent'>Deep Respect</span> for
-                Ancient Knowledge
+                A{" "}
+                <span className="bg-gradient-to-r from-primary-1 via-primary-variant-2 to-primary-variant-3 bg-clip-text text-transparent">
+                  Deep Respect
+                </span>{" "}
+                for Ancient Knowledge
               </h3>
             </div>
 
@@ -555,6 +563,7 @@ const Home = () => {
                     className="mt-1"
                     role="presentation"
                     aria-hidden="true"
+                    loading="lazy"
                   />
                   SLSRP stands at the frontier where Applied noetic science
                   research, Tamil Siddha science, Eastern ancient traditional
@@ -569,6 +578,7 @@ const Home = () => {
                     className="mt-1"
                     role="presentation"
                     aria-hidden="true"
+                    loading="lazy"
                   />
                   We operate in close coordination with government ministries,
                   research institutions, and thought leaders to create academic
@@ -581,6 +591,7 @@ const Home = () => {
                     alt="Decorative navigation logo"
                     className="mt-1"
                     role="presentation"
+                    loading="lazy"
                     aria-hidden="true"
                   />
                   Our Noetic Science Enablement on Unified Wholeness (nseUW)

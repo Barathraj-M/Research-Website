@@ -103,7 +103,7 @@ const Contact = () => {
                             src={ContactHeroImage}
                             alt='Contact hero section featuring SLSRP office building with modern architecture and green landscaping'
                             className='w-full h-[100vh] object-cover overflow-hidden'
-                            loading='eager'
+                            loading='lazy'
                         />
                         <div className='absolute w-full flex flex-col justify-center items-center gap-y-2 md:gap-y-15 bottom-0 left-0 right-0'>
                             <div className='flex flex-col justify-center items-center gap-y-7 max-w-lg'>
@@ -137,6 +137,7 @@ const Contact = () => {
                                     alt=''
                                     className='self-end -mb-[0.8px] -me-[0.8px]'
                                     aria-hidden="true"
+                                    loading='lazy'
                                 />
                                 <motion.div
                                     className='w-full grid xs:grid-cols-1 md:grid-cols-3 md:gap-x-5 rounded-tl-xl rounded-tr-xl bg-gray-8 px-4 pt-4 pb-2 bg-gradient-to-t from-gray-8 to-[#fff3d1]'
@@ -201,6 +202,7 @@ const Contact = () => {
                                     alt=''
                                     className='self-end -mb-[0.8px] -ms-[0.8px]'
                                     aria-hidden="true"
+                                    loading='lazy'
                                 />
                             </div>
                         </div>

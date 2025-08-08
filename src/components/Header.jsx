@@ -69,6 +69,7 @@ const Header = () => {
         exit='exit'
         src={NavHoverLogo}
         alt=''
+        loading='lazy'
         aria-hidden="true"
       />
       <Link
@@ -101,7 +102,7 @@ const Header = () => {
                 src={DummyLogo} 
                 alt='SLSRP logo' 
                 className='xs:h-12 xs:w-25 md:w-30 md:h-13' 
-                loading='eager' 
+                loading='lazy' 
               />
             </Link>
           </div>

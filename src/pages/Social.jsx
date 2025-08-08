@@ -186,7 +186,7 @@ const About = () => {
             src={HeroImage}
             alt="Scenic environment backdrop representing nature and social harmony"
             className="w-full h-[90vh] object-cover overflow-hidden absolute inset-0"
-            loading="eager"
+            loading="lazy"
           />
 
           <div
@@ -200,7 +200,7 @@ const About = () => {
                 alt=""
                 aria-hidden="true"
                 className="self-end w-8 h-8 object-cover -mt-8 -me-[0.2px]"
-                loading="eager"
+                loading="lazy"
               />
 
               <div
@@ -231,7 +231,7 @@ const About = () => {
                   alt=""
                   aria-hidden="true"
                   className="self-start w-8 h-8 object-cover -ms-8 -mt-[0.4px]"
-                  loading="eager"
+                  loading="lazy"
                 />
 
                 <motion.p
@@ -269,7 +269,7 @@ const About = () => {
                   alt=""
                   aria-hidden="true"
                   className="self-start w-8 h-8 object-cover -ms-8 -mt-[0.4px]"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -348,6 +348,7 @@ const About = () => {
                     alt=""
                     aria-hidden="true"
                     className="mt-1"
+                    loading="lazy"
                   />
                   SLSRP is committed to evidence-based research focused on
                   unlocking human potential.
@@ -358,6 +359,7 @@ const About = () => {
                     alt=""
                     aria-hidden="true"
                     className="mt-1"
+                    loading="lazy"
                   />
                   It explores how thoughts, behaviors, and emotions impact both
                   personal growth and societal outcomes through noetic science.
@@ -368,6 +370,7 @@ const About = () => {
                     alt=""
                     aria-hidden="true"
                     className="mt-1"
+                    loading="lazy"
                   />
                   The initiative integrates ancient Indian systems like Siddha
                   medicine and meditation with modern scientific approaches.
@@ -378,6 +381,7 @@ const About = () => {
                     alt=""
                     aria-hidden="true"
                     className="mt-1"
+                    loading="lazy"
                   />
                   Its goal is to refine and apply traditional wisdom as
                   effective tools for cognitive clarity, emotional stability,
@@ -408,6 +412,7 @@ const About = () => {
                     alt=""
                     aria-hidden="true"
                     className="mt-1"
+                    loading="lazy"
                   />
                   SLSRP uses physiological and psychological assessments to
                   translate subjective experiences into measurable data.
@@ -418,6 +423,7 @@ const About = () => {
                     alt=""
                     aria-hidden="true"
                     className="mt-1"
+                    loading="lazy"
                   />
                   All insights undergo academic scrutiny to ensure scientific
                   validity and real-world relevance.
@@ -428,6 +434,7 @@ const About = () => {
                     alt=""
                     aria-hidden="true"
                     className="mt-1"
+                    loading="lazy"
                   />
                   The research produces a repository of interventions that are
                   both culturally grounded and scientifically sound.
@@ -438,6 +445,7 @@ const About = () => {
                     alt=""
                     aria-hidden="true"
                     className="mt-1"
+                    loading="lazy"
                   />
                   These interventions are designed to be adaptable across
                   settings like education, corporate environments, and community
@@ -496,6 +504,7 @@ const About = () => {
                     alt=""
                     aria-hidden="true"
                     className="mt-1"
+                    loading="lazy"
                   />
                   SLSRP understands that meaningful social change must begin
                   early, especially in a nation with a young demographic
@@ -507,6 +516,7 @@ const About = () => {
                     alt=""
                     aria-hidden="true"
                     className="mt-1"
+                    loading="lazy"
                   />
                   Our Youth Resilience and Citizenship programs are tailored to
                   equip the next generation with the competencies needed to face
@@ -518,6 +528,7 @@ const About = () => {
                     alt=""
                     aria-hidden="true"
                     className="mt-1"
+                    loading="lazy"
                   />
                   These programs combine leadership training, ethics modules,
                   and personal development labs, providing a structured space
@@ -540,6 +551,7 @@ const About = () => {
                     alt=""
                     aria-hidden="true"
                     className="mt-1"
+                    loading="lazy"
                   />
                   Unlike conventional training that emphasizes hard skills
                   alone, our approach includes emotional intelligence,
@@ -551,6 +563,7 @@ const About = () => {
                     alt=""
                     aria-hidden="true"
                     className="mt-1"
+                    loading="lazy"
                   />
                   Progress is tracked across academic performance, professional
                   choices, and community behavior.
@@ -561,6 +574,7 @@ const About = () => {
                     alt=""
                     aria-hidden="true"
                     className="mt-1"
+                    loading="lazy"
                   />
                   Our long-term goal is to create a generation of citizens who
                   are productive not only in the workplace but also in
@@ -583,6 +597,7 @@ const About = () => {
               src={youth}
               alt="Illustration of youth development and community engagement at SLSRP"
               className="w-3/4"
+              loading="lazy"
             />
           </motion.div>
         </motion.div>
@@ -672,6 +687,7 @@ const About = () => {
               src={science}
               alt="Illustration showcasing cultural and scientific convergence at SLSRP"
               className="w-3/4"
+              loading="lazy"
             />
           </motion.div>
 
@@ -702,6 +718,7 @@ const About = () => {
                     alt=""
                     className="mt-1"
                     aria-hidden="true"
+                    loading="lazy"
                   />
                   <span>
                     SLSRP also plays a critical role in bridging Eastern and
@@ -714,6 +731,7 @@ const About = () => {
                     alt=""
                     className="mt-1"
                     aria-hidden="true"
+                    loading="lazy"
                   />
                   <span>
                     Our social initiatives extend into cross-cultural scientific
@@ -727,6 +745,7 @@ const About = () => {
                     alt=""
                     className="mt-1"
                     aria-hidden="true"
+                    loading="lazy"
                   />
                   <span>
                     In partnership with international universities, we conduct
@@ -746,6 +765,7 @@ const About = () => {
                     alt=""
                     className="mt-1"
                     aria-hidden="true"
+                    loading="lazy"
                   />
                   <span>
                     This allows for mutual learning, deeper insight, and global
@@ -759,6 +779,7 @@ const About = () => {
                     alt=""
                     className="mt-1"
                     aria-hidden="true"
+                    loading="lazy"
                   />
                   <span>
                     This integration is not symbolic—it is structural. It shapes
@@ -772,6 +793,7 @@ const About = () => {
                     alt=""
                     className="mt-1"
                     aria-hidden="true"
+                    loading="lazy"
                   />
                   <span>
                     As a result, SLSRP becomes a hub for a new type of

@@ -87,7 +87,7 @@ const IntelligenceSection = () => {
                         src={CardBackgroundBlurImage}
                         alt='Blurred background visual of intelligence section'
                         className='object-cover absolute inset-0 w-full h-full blur-[15px] opacity-95'
-                        loading='eager'
+                        loading='lazy'
                         aria-hidden="true"
                     />
                     <div className="absolute inset-0 flex justify-center items-center z-10">
@@ -95,7 +95,7 @@ const IntelligenceSection = () => {
                             src={CardBackgroundBlurImage}
                             alt='Illustration representing intelligence in environmental design'
                             className='object-cover w-9/10 h-9/10 rounded-xl'
-                            loading='eager'
+                            loading='lazy'
                             variants={visibleAnimationVariants}
                             initial='initial'
                             whileInView='whileInView'

@@ -81,7 +81,7 @@ const WhyChooseUs = () => {
           {contents.map((content, i) => (
             <div className="mt-6" key={i}>
               <h5 className="text-black font-bold flex items-center gap-2">
-                <img src={NavHoverLogo} alt="nav-logo" /> {content.title}
+                <img src={NavHoverLogo} alt="nav-logo"  loading="lazy"/> {content.title}
               </h5>
               <p className="mt-2 text-md">{content.description}</p>
               <div className="border-t border-dashed border-gray-500 mt-5" />
@@ -101,6 +101,7 @@ const WhyChooseUs = () => {
             src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683585dd0346c20307f1e513_3ef414f9ff986dba7104bc7f30ec8a38_why-choose-image.webp"
             alt="Industry Visual"
             className="w-full max-w-[600px] max-h-[650px] object-cover rounded-xl"
+            loading="lazy"
           />
           {/* <div className="whybox flex justify-center items-center absolute bottom-10 lg:bottom-[3.75rem]">
             <PrimaryButton text={"Meet our Team"} />

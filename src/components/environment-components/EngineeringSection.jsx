@@ -77,7 +77,7 @@ const EngineeringSection = () => {
                                 src={CardImage1}
                                 alt='Hand holding recycled globe model symbolizing sustainability'
                                 className='xs:w-auto xs:h-auto sm:w-[10rem] sm:h-auto md:w-[13rem] md-auto lg:w-[15rem] lg:h-auto object-cover rounded-xl'
-                                loading='eager'
+                                loading='lazy'
                                 variants={visibleAnimationVariants}
                                 initial='initial'
                                 whileInView='whileInView'
@@ -130,6 +130,7 @@ const EngineeringSection = () => {
                         alt='decorative divider between cards'
                         className='xs:w-7 xs:h-auto md:h-10 md:w-auto xs:rotate-90 md:rotate-0 self-center object-cover -my-3.5'
                         aria-hidden='true'
+                        loading='lazy'
                     />
 
                     <div
@@ -142,7 +143,7 @@ const EngineeringSection = () => {
                                 src={CardImage2}
                                 alt='People collaborating symbolizing stakeholders'
                                 className='xs:w-auto xs:h-auto sm:w-[10rem] sm:h-auto md:w-[13rem] md-auto lg:w-[15rem] lg:h-auto object-cover rounded-xl'
-                                loading='eager'
+                                loading='lazy'
                                 variants={visibleAnimationVariants}
                                 initial='initial'
                                 whileInView='whileInView'
