@@ -39,16 +39,7 @@
     align-items: center;
     height: 100%;
 }
-.landing-page .content h1{
-    font-size: 3rem;
-    margin: 0 auto;
-    padding: 20px;
-}
-.landing-page .content  p{
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
-    margin-left: 1.5rem;
-}
+
 .explore-button{
     padding: 10px 20px;
     margin-top: 1rem;

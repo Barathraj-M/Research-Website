@@ -4,8 +4,6 @@ import { motion, useInView } from "framer-motion";
 import "../index.css";
 import youth from "../assets/Images/youth1.png";
 import science from "../assets/Images/science.png";
-import newone from "../assets/Images/new.png";
-import new1 from "../assets/Images/new1.png";
 
 import ItemsMarquee from "../components/ItemsMaquee";
 import NavHoverLogo from "../assets/Images/nav-hover-icon.svg";
@@ -15,6 +13,7 @@ import HeroBottomLeft from "../assets/Images/hero-bottom-left.svg";
 import HeroTopLeft from "../assets/Images/hero-top-left.svg";
 import HeroMarqueeIcon from "../assets/Images/hero-marquee-icon.svg";
 import StoryCarousel from "../components/StoryCarousel";
+import SectionPill from "../components/SectionPill";
 
 const About = () => {
   const items = [
@@ -22,45 +21,33 @@ const About = () => {
       src: HeroMarqueeIcon,
       type: "text",
       alt: "",
-      text: "Innovation",
+      text: "Redesign",
     },
     {
       src: HeroMarqueeIcon,
       type: "text",
       alt: "",
-      text: "Incubation",
+      text: "Resilience",
     },
     {
       src: HeroMarqueeIcon,
       type: "text",
       alt: "",
-      text: "Engineering",
+      text: "Wholeness",
     },
     {
       src: HeroMarqueeIcon,
       type: "text",
       alt: "",
-      text: "Ayush",
-    },
-    {
-      src: HeroMarqueeIcon,
-      type: "text",
-      alt: "",
-      text: "Collaboration",
-    },
-    {
-      src: HeroMarqueeIcon,
-      type: "text",
-      alt: "",
-      text: "Intelligence",
+      text: "Synthesis",
     },
   ];
 
   const content = (
     <p className="text-center">
-      <span className="text-lg font-bold text-yellow-400">Our focus</span> is
-      not on surface-level outreach but on building long-term transformation
-      that strengthens individuals, communities, and institutions.
+      <span className="text-lg font-bold text-primary-1">Our focus</span> is not
+      on surface-level outreach but on building long-term transformation that
+      strengthens individuals, communities, and institutions.
       <br />
       This is not about charity—it is about design. Design that is resilient,
       measurable, and embedded with purpose.
@@ -150,19 +137,19 @@ const About = () => {
   ];
 
   const title = useRef(null);
-  const title1 = useInView(title, { once: false });
+  const title1 = useInView(title, { once: true });
 
   const head = useRef(null);
-  const headInView = useInView(head, { once: false });
+  const headInView = useInView(head, { once: true });
 
   const head1 = useRef(null);
-  const headInView1 = useInView(head1, { once: false });
+  const headInView1 = useInView(head1, { once: true });
 
   const head2 = useRef(null);
-  const headInView2 = useInView(head2, { once: false });
+  const headInView2 = useInView(head2, { once: true });
 
   const head3 = useRef(null);
-  const headInView3 = useInView(head3, { once: false });
+  const headInView3 = useInView(head3, { once: true });
 
   const containerRef = useRef(null);
 
@@ -189,26 +176,35 @@ const About = () => {
   return (
     <div>
       <div
-        className="w-full h-screen mx-auto xs:px-2 sm:px-5 md:px-10 lg:px-15 "
+        className="w-full h-screen mx-auto xs:px-2 sm:px-5 md:px-10 lg:px-15"
         ref={title}
+        role="region"
+        aria-label="Hero Section - Social Initiative"
       >
-        <div className="w-full h-[90vh] overflow-hidden rounded-2xl relative mt-16 ">
+        <div className="w-full h-[90vh] overflow-hidden rounded-2xl relative mt-16">
           <img
             src={HeroImage}
-            alt="environment-hero-section"
-            className="w-full h-[90vh] object-cover overflow-hidden absolute inset-0 "
+            alt="Scenic environment backdrop representing nature and social harmony"
+            className="w-full h-[90vh] object-cover overflow-hidden absolute inset-0"
             loading="eager"
           />
-          <div className="xs:w-9/10 md:w-7/10 lg:w-6/10 absolute right-0 bottom-0 flex flex-col justify-start items-start gap-0 ">
+
+          <div
+            className="xs:w-9/10 md:w-7/10 lg:w-6/10 absolute right-0 bottom-0 flex flex-col justify-start items-start gap-0"
+            role="group"
+            aria-labelledby="hero-title"
+          >
             <div className="w-full flex flex-col justify-start items-center gap-0 bg-gray-8 rounded-tl-3xl rounded-bl-3xl">
               <img
                 src={HeroBottomLeft}
-                alt="svg-place-holder"
+                alt=""
+                aria-hidden="true"
                 className="self-end w-8 h-8 object-cover -mt-8 -me-[0.2px]"
                 loading="eager"
               />
+
               <div
-                className="px-10 py-5 "
+                className="px-10 py-5"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -221,24 +217,23 @@ const About = () => {
                   }
                   transition={{ duration: 1, ease: "easeInOut" }}
                 >
-                  <h1>
-                    Defining
-                    <span className="bg-gradient-to-r from-primary-1 via-primary-variant-2 to-primary-variant-3 bg-clip-text text-transparent">
-                      Social
-                    </span>{" "}
-                    Initiative
+                  <h1 id="hero-title" className="text-3xl font-bold">
+                    Defining Social Initiative
                   </h1>
                 </motion.div>
               </div>
             </div>
+
             <div className="w-8/10 bg-gray-8 h-full self-end">
               <div className="w-full h-full flex flex-col justify-start items-center gap-0">
                 <img
                   src={HeroTopLeft}
-                  alt="svg-place-holder"
+                  alt=""
+                  aria-hidden="true"
                   className="self-start w-8 h-8 object-cover -ms-8 -mt-[0.4px]"
                   loading="eager"
                 />
+
                 <motion.p
                   className="px-10"
                   initial={{ opacity: 0, y: 20 }}
@@ -252,14 +247,27 @@ const About = () => {
                   initiatives are rooted in the belief that true progress
                   uplifts both people and the planet.
                 </motion.p>
+
                 <div className="w-full relative mt-3">
-                  <div className="absolute left-0 top-0 h-full w-20 pointer-events-none z-50 bg-gradient-to-r from-gray-8 via-gray-8/80 to-transparent"></div>
-                  <div className="absolute right-0 top-0 h-full w-20 pointer-events-none z-50 bg-gradient-to-l from-gray-8 via-gray-8/80 to-transparent"></div>
-                  <ItemsMarquee items={items} />
+                  <div
+                    className="absolute left-0 top-0 h-full w-20 pointer-events-none z-50 bg-gradient-to-r from-gray-8 via-gray-8/80 to-transparent"
+                    aria-hidden="true"
+                  ></div>
+                  <div
+                    className="absolute right-0 top-0 h-full w-20 pointer-events-none z-50 bg-gradient-to-l from-gray-8 via-gray-8/80 to-transparent"
+                    aria-hidden="true"
+                  ></div>
+
+                  <ItemsMarquee
+                    items={items}
+                    aria-label="Scrolling list of key initiatives"
+                  />
                 </div>
+
                 <img
                   src={HeroBottomLeft}
-                  alt="svg-place-holder"
+                  alt=""
+                  aria-hidden="true"
                   className="self-start w-8 h-8 object-cover -ms-8 -mt-[0.4px]"
                   loading="eager"
                 />
@@ -269,7 +277,11 @@ const About = () => {
         </div>
       </div>
 
-      <div className="p-10  bg-primary-variant-7">
+      <div
+        className="p-10 bg-primary-variant-7"
+        role="region"
+        aria-label="Social Responsibility Section"
+      >
         <motion.div
           ref={head1}
           initial={{ opacity: 0, y: 100 }}
@@ -277,173 +289,285 @@ const About = () => {
           transition={{ duration: 1, ease: "easeInOut" }}
           className="flex flex-col"
         >
-          <div className="flex flex-col items-center md:gap-5 gap-3  sm:pt-0 pt-10 "></div>
-          <div className="overflow-hidden"></div>
+          <div className="flex flex-col items-center md:gap-5 gap-3 sm:pt-0 pt-10"></div>
+
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 100 }}
             transition={{ duration: 1, ease: "easeInOut" }}
+            viewport={{once:true}}
             className="flex flex-col items-center text-center"
           >
-            <h2 className=" text-center overflow-hidden p-2 xl:w-[800px]">
+            {/* Section Pill (assumed to be accessible already) */}
+            <SectionPill sectionTitle={"Redesign"} />
+
+            <h2
+              className="text-center overflow-hidden p-2 xl:w-[800px]"
+              id="social-responsibility-heading"
+            >
               A New Standard for Social Responsibility
             </h2>
-            <p className="text-lg text-center  lg:ms-20 lg:me-20">
+
+            <p className="text-lg text-center lg:ms-20 lg:me-20">
               At Semporutkalai Life Science Research Park (SLSRP), we redefine
               the meaning of social initiative by grounding it in scientific
               validation, ethical frameworks, and cultural intelligence.
             </p>
 
             {content}
+
             <div className="mt-10">
-              <h2>Science as a Catalyst for Social Transformation</h2>
+              <h3 className="text-xl font-semibold">
+                Science as a Catalyst for Social Transformation
+              </h3>
             </div>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, ease: "easeIn" }}
-            className="flex flex-col lg:flex-row gap-8 px-6 py-16 "
+            className="flex flex-col lg:flex-row gap-8 px-6 py-16"
           >
             {/* Mission Card */}
-            <div className="flex-1 bg-white rounded-2xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300 p-8 relative overflow-hidden">
-              {/* Header */}
+            <article
+              className="flex-1 bg-white rounded-2xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300 p-8 relative overflow-hidden"
+              aria-labelledby="mission-heading"
+            >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div>
-                <h3 className="text-2xl font-bold ">
+                <h3 id="mission-heading" className="text-2xl font-bold">
                   Science Meets Wisdom
                 </h3>
               </div>
 
-              {/* Content */}
-              <ul
-                className="space-y-4  text-[1rem] leading-relaxed list-disc list-inside "
-                style={{ listStyle: "none" }}
-              >
+              <ul className="space-y-4 text-[1rem] leading-relaxed" role="list">
                 <li className="flex items-start gap-2">
-                  <img src={NavHoverLogo} alt="" className="mt-1" /> SLSRP is
-                  committed to evidence-based research focused on unlocking
-                  human potential.
+                  <img
+                    src={NavHoverLogo}
+                    alt=""
+                    aria-hidden="true"
+                    className="mt-1"
+                  />
+                  SLSRP is committed to evidence-based research focused on
+                  unlocking human potential.
                 </li>
                 <li className="flex items-start gap-2">
-                  <img src={NavHoverLogo} alt="" className="mt-1" />
+                  <img
+                    src={NavHoverLogo}
+                    alt=""
+                    aria-hidden="true"
+                    className="mt-1"
+                  />
                   It explores how thoughts, behaviors, and emotions impact both
-                  personal growth and societal outcomes through noetic science
+                  personal growth and societal outcomes through noetic science.
                 </li>
                 <li className="flex items-start gap-2">
-                  <img src={NavHoverLogo} alt="" className="mt-1" />
+                  <img
+                    src={NavHoverLogo}
+                    alt=""
+                    aria-hidden="true"
+                    className="mt-1"
+                  />
                   The initiative integrates ancient Indian systems like Siddha
                   medicine and meditation with modern scientific approaches.
                 </li>
                 <li className="flex items-start gap-2">
-                  <img src={NavHoverLogo} alt="" className="mt-1" />
+                  <img
+                    src={NavHoverLogo}
+                    alt=""
+                    aria-hidden="true"
+                    className="mt-1"
+                  />
                   Its goal is to refine and apply traditional wisdom as
                   effective tools for cognitive clarity, emotional stability,
                   and ethical behavior.
                 </li>
               </ul>
-            </div>
+            </article>
 
             {/* Vision Card */}
-            <div className="flex-1 bg-white rounded-2xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300 p-8 relative overflow-hidden">
+            <article
+              className="flex-1 bg-white rounded-2xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300 p-8 relative overflow-hidden"
+              aria-labelledby="vision-heading"
+            >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div>
-                <h3 className="text-2xl font-bold ">
+                <div
+                  className="w-2 h-6 text-primary-1 rounded-sm"
+                  aria-hidden="true"
+                ></div>
+                <h3 id="vision-heading" className="text-2xl font-bold">
                   Evidence-Based Interventions
                 </h3>
               </div>
 
-              <ul className="space-y-4 text-[1rem] leading-relaxed list-disc list-inside">
+              <ul className="space-y-4 text-[1rem] leading-relaxed" role="list">
                 <li className="flex items-start gap-2">
-                  <img src={NavHoverLogo} alt="" className="mt-1" />
+                  <img
+                    src={NavHoverLogo}
+                    alt=""
+                    aria-hidden="true"
+                    className="mt-1"
+                  />
                   SLSRP uses physiological and psychological assessments to
                   translate subjective experiences into measurable data.
                 </li>
                 <li className="flex items-start gap-2">
-                  <img src={NavHoverLogo} alt="" className="mt-1" />
+                  <img
+                    src={NavHoverLogo}
+                    alt=""
+                    aria-hidden="true"
+                    className="mt-1"
+                  />
                   All insights undergo academic scrutiny to ensure scientific
                   validity and real-world relevance.
                 </li>
                 <li className="flex items-start gap-2">
-                  <img src={NavHoverLogo} alt="" className="mt-1" />
+                  <img
+                    src={NavHoverLogo}
+                    alt=""
+                    aria-hidden="true"
+                    className="mt-1"
+                  />
                   The research produces a repository of interventions that are
                   both culturally grounded and scientifically sound.
                 </li>
                 <li className="flex items-start gap-2">
-                  <img src={NavHoverLogo} alt="" className="mt-1" />
+                  <img
+                    src={NavHoverLogo}
+                    alt=""
+                    aria-hidden="true"
+                    className="mt-1"
+                  />
                   These interventions are designed to be adaptable across
                   settings like education, corporate environments, and community
                   programs.
                 </li>
               </ul>
-            </div>
+            </article>
           </motion.div>
         </motion.div>
       </div>
-      <div className="w-full px-4 py-8 ">
+
+      <section
+        className="w-full px-4 py-8"
+        role="region"
+        aria-labelledby="youth-responsibility-heading"
+      >
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="max-w-7xl mx-auto flex gap-8 items-center sm:flex-col lg:flex-row justify-center"
         >
           {/* Left Text Box */}
           <div
-            className=" space-y-4 p-4 lg:w-800px"
+            className="space-y-4 p-4 lg:w-800px"
             style={{ textAlign: "justify" }}
           >
-            <div className="text-3xl sm:text-4xl font-bold flex items-center gap-3 w-full">
-              <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div>
-              <h3 className="w-8/10">
+            <SectionPill sectionTitle={"Resilience"} />
+
+            <div className="sm:text-4xl font-bold flex gap-3 w-full mt-2">
+              <h2
+                id="youth-responsibility-heading"
+                style={{ textAlign: "start" }}
+              >
                 Building Youth for a Responsible Tomorrow
-              </h3>
+              </h2>
             </div>
 
-            <div className="flex flex-col md:justify-center gap-0 mx-auto ">
-              <div className="bg-white rounded-2xl xs:p-3 md:p-5 flex flex-col justify-start items-start gap-y-5 bg-gradient-to-br from-[#fffaf0] to-[#fff3d1] border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300">
+            <div
+              className="flex flex-col md:justify-center gap-0 mx-auto"
+              role="group"
+              aria-label="Youth Development Program Details"
+            >
+              <article
+                className="bg-white rounded-2xl xs:p-3 md:p-5 flex flex-col justify-start items-start gap-y-5 bg-gradient-to-t from-gray-8 to-[#fff3d1] border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300"
+                aria-labelledby="program-intro"
+              >
+                <h3 id="program-intro" className="sr-only">
+                  Youth Resilience and Citizenship Introduction
+                </h3>
+
                 <p className="flex items-start gap-2">
-                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />{" "}
+                  <img
+                    src={NavHoverLogo}
+                    alt=""
+                    aria-hidden="true"
+                    className="mt-1"
+                  />
                   SLSRP understands that meaningful social change must begin
                   early, especially in a nation with a young demographic
                   profile.
                 </p>
                 <p className="flex items-start gap-2">
-                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />
+                  <img
+                    src={NavHoverLogo}
+                    alt=""
+                    aria-hidden="true"
+                    className="mt-1"
+                  />
                   Our Youth Resilience and Citizenship programs are tailored to
                   equip the next generation with the competencies needed to face
                   the world with purpose and maturity.
                 </p>
                 <p className="flex items-start gap-2">
-                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />
+                  <img
+                    src={NavHoverLogo}
+                    alt=""
+                    aria-hidden="true"
+                    className="mt-1"
+                  />
                   These programs combine leadership training, ethics modules,
                   and personal development labs, providing a structured space
                   for youth to explore values, enhance focus, and build
                   resilience.
                 </p>
-              </div>
+              </article>
 
-              <div className=" rounded-2xl xs:p-3 md:p-5 flex flex-col justify-start items-start gap-y-5 mt-5 bg-gradient-to-br from-[#fffaf0] to-[#fff3d1] border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300">
-                <p className="flex items-start gap-2 ">
-                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />
+              <article
+                className="rounded-2xl xs:p-3 md:p-5 flex flex-col justify-start items-start gap-y-5 mt-5 bg-gradient-to-t from-gray-8 to-[#fff3d1] border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300"
+                aria-labelledby="program-impact"
+              >
+                <h3 id="program-impact" className="sr-only">
+                  Youth Program Outcomes
+                </h3>
+
+                <p className="flex items-start gap-2">
+                  <img
+                    src={NavHoverLogo}
+                    alt=""
+                    aria-hidden="true"
+                    className="mt-1"
+                  />
                   Unlike conventional training that emphasizes hard skills
                   alone, our approach includes emotional intelligence,
                   reflective practices, and measured outcomes.
                 </p>
                 <p className="flex items-start gap-2">
-                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />
+                  <img
+                    src={NavHoverLogo}
+                    alt=""
+                    aria-hidden="true"
+                    className="mt-1"
+                  />
                   Progress is tracked across academic performance, professional
                   choices, and community behavior.
                 </p>
                 <p className="flex items-start gap-2">
-                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />
+                  <img
+                    src={NavHoverLogo}
+                    alt=""
+                    aria-hidden="true"
+                    className="mt-1"
+                  />
                   Our long-term goal is to create a generation of citizens who
                   are productive not only in the workplace but also in
                   society—individuals who think critically, act responsibly, and
                   serve collectively.
                 </p>
-              </div>
+              </article>
             </div>
           </div>
 
@@ -456,159 +580,208 @@ const About = () => {
             className="flex justify-center"
           >
             <img
-              src={youth} // Replace with actual image path
-              alt="SLSRP"
+              src={youth}
+              alt="Illustration of youth development and community engagement at SLSRP"
               className="w-3/4"
             />
           </motion.div>
         </motion.div>
-      </div>
+      </section>
+
       <motion.div
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.3 }}
-        className="min-h-screen bg-black text-white!"
+        className="min-h-screen bg-black text-white"
+        role="region"
+        aria-labelledby="nseuw-title"
       >
         <div className="max-w-7xl mx-auto px-6 py-16">
-          {/* Enabling Pillars */}
-          <div className="mb-20">
+          {/* Enabling Pillars Section */}
+          <section aria-labelledby="nseuw-title" className="mb-20">
             <div className="text-center mb-12 flex flex-col items-center">
-              <h2 className="font-bold mb-4 text-white! flex text-center gap-3 items-center">
-                <div
-                  className="p-3 rounded-xl text-white"
-                  style={{ backgroundColor: "#ffbb00", borderRadius: "50%" }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="1em"
-                    height="1em"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M7 12q7 1 8 8q1-7 8-8q-7-1-8-8q-1 7-8 8M4 2v6M1 5h6M4 16v6m-3-3h6"
-                    />
-                  </svg>
-                </div>
-                nseUW
+              <SectionPill sectionTitle={"Wholeness"} />
+              <h2
+                id="nseuw-title"
+                className="font-bold mb-4 text-center mt-5 text-white!"
+              >
+                <span className="bg-gradient-to-r from-primary-1 via-primary-variant-2 to-primary-variant-3 bg-clip-text text-transparent">
+                  nseUW{" "}
+                </span>
+                – Structuring Legacy Knowledge into Credible Pathways
               </h2>
-              <p className="text-lg text-white max-w-2xl mx-auto">
-                Structuring Legacy Knowledge into Credible Pathways
-              </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-8 ">
+
+            {/* Pillar Cards */}
+            <div className="grid md:grid-cols-2 gap-8">
               {enablingPillars.map((pillar, idx) => (
-                <div
+                <article
                   key={idx}
-                  initial={{ opacity: 0, y: 80 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  className={`${pillar.bgColor} rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-200 bg-white border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300`}
+                  className={`${pillar.bgColor} rounded-2xl shadow-lg hover:shadow-xl bg-white border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300`}
+                  aria-label={pillar.title}
+                  role="region"
                 >
-                  <div className="flex items-center space-x-4 mb-4">
+                  <header className="flex items-center space-x-4 mb-4 p-2 mt-2">
                     <div
-                      className="p-3 rounded-xl text-white"
-                      style={{ backgroundColor: "#ffbb00" }}
+                      className="p-3 rounded-xl text-white bg-primary-1"
+                      aria-hidden="true"
                     >
                       {pillar.icon}
                     </div>
-                    <h4 className="text-xl font-bold ">
-                      {pillar.title}
-                    </h4>
-                  </div>
-                  <p className="text-black! leading-relaxed">
+                    <h4 className="font-bold mt-2!">{pillar.title}</h4>
+                  </header>
+                  <p className="text-black leading-relaxed p-5">
                     {pillar.description}
                   </p>
-                </div>
+                </article>
               ))}
             </div>
-          </div>
-          <StoryCarousel />
+          </section>
+
+          {/* Carousel Component */}
+          <section aria-label="SLSRP Story Carousel">
+            <StoryCarousel />
+          </section>
         </div>
       </motion.div>
-      <div className="w-full px-4 py-8 ">
+
+      <div
+        className="w-full px-4 py-8"
+        role="region"
+        aria-label="Cultural Synthesis Section"
+      >
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="max-w-7xl mx-auto flex
-          sm:flex-col lg:flex-row sm:flex-col-reverse gap-8 items-center "
+          viewport={{ once: true, amount: 0.3 }}
+          className="max-w-7xl mx-auto flex sm:flex-col lg:flex-row sm:flex-col-reverse gap-8 items-center"
         >
-          {/* left Image Box */}
+          {/* Left Image Box */}
           <motion.div
             initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.3 }}
             className="flex justify-center"
+            role="img"
+            aria-label="Illustration representing Semporutkalai Life Science Research Park"
           >
             <img
-              src={science} // Replace with actual image path
-              alt="SLSRP"
+              src={science}
+              alt="Illustration showcasing cultural and scientific convergence at SLSRP"
               className="w-3/4"
             />
           </motion.div>
-          {/* right Text Box */}
-          <div
+
+          {/* Right Text Box */}
+          <section
             className="space-y-4 p-4"
             style={{ textAlign: "justify" }}
+            aria-labelledby="synthesis-heading"
           >
-            <div className="text-3xl sm:text-4xl font-bold flex items-center gap-3">
-              <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div>
-              <h3 className="w-8/10">
-                A Confluence of Cultures, Sciences, and Systems
-              </h3>
-            </div>
-            <div className="flex flex-col md:justify-center gap-0 mx-auto">
-              <div className="bg-white rounded-2xl xs:p-3 md:p-5 flex flex-col justify-start items-start gap-y-5 bg-gradient-to-br from-[#fffaf0] to-[#fff3d1] border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300">
-                <p className="flex items-start gap-2">
-                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />{" "}
-                  SLSRP also plays a critical role in bridging Eastern and
-                  Western knowledge traditions.
-                </p>
-                <p className="flex items-start gap-2">
-                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />
-                  Our social initiatives extend into cross-cultural scientific
-                  integration, where traditional Indian practices are studied
-                  alongside contemporary global models.
-                </p>
-                <p className="flex items-start gap-2">
-                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />
-                  In partnership with international universities, we conduct
-                  mixed-method studies, co-author publications, and organize
-                  collaborative symposia.
-                </p>
-              </div>
+            <SectionPill sectionTitle={"Synthesis"} />
+            <h3
+              id="synthesis-heading"
+              className="text-3xl sm:text-4xl font-bold flex items-center gap-3 mt-2!"
+              style={{ textAlign: "start" }}
+            >
+              A Confluence of Cultures, Sciences, and Systems
+            </h3>
 
-              <div className=" rounded-2xl xs:p-3 md:p-5 flex flex-col justify-start items-start gap-y-5 mt-5 bg-gradient-to-br from-[#fffaf0] to-[#fff3d1] border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300">
-                <p className="flex items-start gap-2 ">
-                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />
-                  This allows for mutual learning, deeper insight, and global
-                  positioning of Indian knowledge systems—not as alternatives,
-                  but as complements to modern scientific understanding.
+            {/* Content Block */}
+            <div className="flex flex-col md:justify-center gap-0 mx-auto">
+              <section
+                aria-label="Integration Initiatives - Part 1"
+                className="bg-white rounded-2xl xs:p-3 md:p-5 flex flex-col justify-start items-start gap-y-5 bg-gradient-to-t from-gray-8 to-[#fff3d1] border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300"
+              >
+                <p className="flex items-start gap-2">
+                  <img
+                    src={NavHoverLogo}
+                    alt=""
+                    className="mt-1"
+                    aria-hidden="true"
+                  />
+                  <span>
+                    SLSRP also plays a critical role in bridging Eastern and
+                    Western knowledge traditions.
+                  </span>
                 </p>
                 <p className="flex items-start gap-2">
-                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />
-                  This integration is not symbolic—it is structural. It shapes
-                  curriculum, influences policy, and opens up new areas of
-                  inquiry where values and science intersect meaningfully.
+                  <img
+                    src={NavHoverLogo}
+                    alt=""
+                    className="mt-1"
+                    aria-hidden="true"
+                  />
+                  <span>
+                    Our social initiatives extend into cross-cultural scientific
+                    integration, where traditional Indian practices are studied
+                    alongside contemporary global models.
+                  </span>
                 </p>
                 <p className="flex items-start gap-2">
-                  <img src={NavHoverLogo} alt="nav-logo" className="mt-1" />
-                  As a result, SLSRP becomes a hub for a new type of scientific
-                  diplomacy—one that values ancestral intelligence and academic
-                  sophistication equally.
+                  <img
+                    src={NavHoverLogo}
+                    alt=""
+                    className="mt-1"
+                    aria-hidden="true"
+                  />
+                  <span>
+                    In partnership with international universities, we conduct
+                    mixed-method studies, co-author publications, and organize
+                    collaborative symposia.
+                  </span>
                 </p>
-              </div>
+              </section>
+
+              <section
+                aria-label="Integration Initiatives - Part 2"
+                className="rounded-2xl xs:p-3 md:p-5 flex flex-col justify-start items-start gap-y-5 mt-5 bg-gradient-to-t from-gray-8 to-[#fff3d1] border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300"
+              >
+                <p className="flex items-start gap-2">
+                  <img
+                    src={NavHoverLogo}
+                    alt=""
+                    className="mt-1"
+                    aria-hidden="true"
+                  />
+                  <span>
+                    This allows for mutual learning, deeper insight, and global
+                    positioning of Indian knowledge systems—not as alternatives,
+                    but as complements to modern scientific understanding.
+                  </span>
+                </p>
+                <p className="flex items-start gap-2">
+                  <img
+                    src={NavHoverLogo}
+                    alt=""
+                    className="mt-1"
+                    aria-hidden="true"
+                  />
+                  <span>
+                    This integration is not symbolic—it is structural. It shapes
+                    curriculum, influences policy, and opens up new areas of
+                    inquiry where values and science intersect meaningfully.
+                  </span>
+                </p>
+                <p className="flex items-start gap-2">
+                  <img
+                    src={NavHoverLogo}
+                    alt=""
+                    className="mt-1"
+                    aria-hidden="true"
+                  />
+                  <span>
+                    As a result, SLSRP becomes a hub for a new type of
+                    scientific diplomacy—one that values ancestral intelligence
+                    and academic sophistication equally.
+                  </span>
+                </p>
+              </section>
             </div>
-          </div>
+          </section>
         </motion.div>
       </div>
     </div>

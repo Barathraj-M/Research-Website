@@ -1,0 +1,9 @@
+User-agent: *
+
+Disallow: /src/assets/Email Templates/
+Disallow: /src/components/Loading.jsx
+Disallow: /src/components/aboutComponents/PercentageCounter.jsx
+Disallow: /src/components/InitialLoader.jsx
+Disallow: /src/components/HorizontalScrollSection.jsx
+Disallow: /src/components/ScrollToTop.jsx
+Disallow: /src/components/ConfettiHeart.jsx

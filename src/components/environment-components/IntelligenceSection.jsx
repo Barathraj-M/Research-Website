@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import { motion } from "framer-motion";
 
@@ -11,7 +12,12 @@ import { contentBasicVariants, visibleAnimationVariants } from '../../utils/anim
 
 const IntelligenceSection = () => {
     return (
-        <div className='w-full min-h-screen flex flex-col justify-center items-center gap-y-16 bg-gray-8'>
+        <div
+            className='w-full min-h-screen flex flex-col justify-center items-center gap-y-16 bg-gray-8'
+            role="region"
+            aria-labelledby="intelligence-heading"
+        >
+            <h2 id="intelligence-heading" className="sr-only">Intelligence Section</h2>
             <div className='grid xs:auto-rows-auto md:grid-cols-2 gap-x-5 gap-y-5'>
                 <div className='p-2 flex flex-col justify-start items-start gap-y-2 xs:ps-2 sm:ps-5 md:ps-10 lg:ps-15 pt-20'>
                     <div className='pb-7'>
@@ -62,14 +68,16 @@ const IntelligenceSection = () => {
                         whileInView='whileInView'
                         viewport={{ once: true, amount: "0.1" }}
                         custom={3}
+                        role="list"
+                        aria-label="Learning principles"
                     >
-                        <div className='py-2 px-4 border-r border-dashed border-primary-variant-2'>
+                        <div className='py-2 px-4 border-r border-dashed border-primary-variant-2' role="listitem">
                             <h6 className='mb-0!'>Learn</h6>
                         </div>
-                        <div className='py-2 px-4 border-r border-dashed border-primary-variant-2'>
+                        <div className='py-2 px-4 border-r border-dashed border-primary-variant-2' role="listitem">
                             <h6 className='mb-0!'>Adapt</h6>
                         </div>
-                        <div className='py-2 px-4'>
+                        <div className='py-2 px-4' role="listitem">
                             <h6 className='mb-0!'>Thrive</h6>
                         </div>
                     </motion.div>
@@ -77,14 +85,15 @@ const IntelligenceSection = () => {
                 <div className='xs:w-full xs:h-[20rem] sm:h-[30rem] md:w-auto md:h-full relative overflow-hidden mb-10'>
                     <img
                         src={CardBackgroundBlurImage}
-                        alt='card-background-blur-image'
+                        alt='Blurred background visual of intelligence section'
                         className='object-cover absolute inset-0 w-full h-full blur-[15px] opacity-95'
                         loading='eager'
+                        aria-hidden="true"
                     />
                     <div className="absolute inset-0 flex justify-center items-center z-10">
                         <motion.img
                             src={CardBackgroundBlurImage}
-                            alt='card-background-blur-image'
+                            alt='Illustration representing intelligence in environmental design'
                             className='object-cover w-9/10 h-9/10 rounded-xl'
                             loading='eager'
                             variants={visibleAnimationVariants}

@@ -21,11 +21,11 @@ const contents = [
 ];
 const WhyChooseUs = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true });
   const leftRef = useRef(null);
-  const leftInView = useInView(leftRef, { once: false });
+  const leftInView = useInView(leftRef, { once: true });
   const rightRef = useRef(null);
-  const rightInView = useInView(rightRef, { once: false });
+  const rightInView = useInView(rightRef, { once: true });
 
   return (
     <div className="why-choose-us pl-15 pr-15 p-10 mt-12">
@@ -83,9 +83,9 @@ const WhyChooseUs = () => {
           {/* Repeated Content Block */}
           {contents.map((content, i) => (
             <div className="mt-6" key={i}>
-              <h4 className="text-black font-bold text-lg flex items-center gap-2">
+              <h5 className="text-black font-bold flex items-center gap-2">
                 <img src={NavHoverLogo} alt="nav-logo" /> {content.title}
-              </h4>
+              </h5>
               <p className="mt-2 text-md">{content.description}</p>
               <div className="border-t border-dashed border-gray-500 mt-5" />
             </div>
