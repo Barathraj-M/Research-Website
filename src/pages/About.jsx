@@ -236,7 +236,8 @@ const About = () => {
                         src={aboutimage}
                         loading="eager"
                         alt="About Image"
-                        className='absolute w-full h-full '
+                        className='absolute w-full h-full'
+                        role='img'
                     />
                     <div className="absolute inset-0 gradient"></div>
                     <div className='w-full h-full flex flex-col justify-between px-4 sm:px-10 sm:pt-1 pt-6 lg:px-15 lg:pt-8'>
@@ -260,7 +261,7 @@ const About = () => {
                         </div>
 
                         <div className='relative flex self-end w-full max-w-5xl -mb-[0.8px] md:h-auto sm:h-[170px] rounded-t-lg h-[150px]'>
-                            <div className='absolute -left-6 bottom-0 z-40 self-end'><img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683e866c5a5df0d7b03e41e6_hero-bottom-left.svg" loading="eager" alt="Icon" class="about-left-decorative" /></div>
+                            <div className='absolute -left-6 bottom-0 z-40 self-end'><img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683e866c5a5df0d7b03e41e6_hero-bottom-left.svg" loading="eager" alt="Icon" class="about-left-decorative" aria-hidden="true" /></div>
                             <motion.div
                                 className='w-full bg-gray-8 flex justify-around items-center rounded-t-lg p-3 sm:p-4 md:p-6 overflow-hidden bg-gradient-to-t from-gray-8 to-[#fff3d1]'
                                 variants={heroSectionBottomContainerVariants}
@@ -337,7 +338,7 @@ const About = () => {
                                     </div> */}
                                 </motion.div>
                             </motion.div>
-                            <div className='absolute -right-6 self-end'><img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/6841390341d0511acefa1664_hero-bottom-right.svg" loading="eager" alt="Icon" class="about-right-decorative" /></div>
+                            <div className='absolute -right-6 self-end'><img src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/6841390341d0511acefa1664_hero-bottom-right.svg" loading="eager" alt="Icon" class="about-right-decorative" aria-hidden="true" /></div>
                         </div>
                     </div>
                 </div>
@@ -407,7 +408,7 @@ const About = () => {
                 >
                     <div className='overflow-hidden'>
                         <SectionPill sectionTitle={'Our Mission & Vision'} />
-                        <h2 className='overflow-hidden '>Committed to an eco-friendly world: <span className='text-primary-1'>Our vision & mission</span> explained</h2>
+                        <h2 className='overflow-hidden '>Committed to an eco-friendly world: <span className='bg-gradient-to-r! from-primary-1! via-primary-variant-2! to-primary-variant-3! bg-clip-text! text-transparent!'>Our vision & mission</span> explained</h2>
                     </div>
                     <div className="flex flex-col lg:flex-row gap-8 sm:px-6 py-16 xl:mt-10 lg:mt-20 md:mt-14">
                         {/* Mission Card */}
