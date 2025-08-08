@@ -1,5 +1,4 @@
 import React from 'react'
-// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion'
 
 import ItemsMarquee from '../components/ItemsMaquee';
@@ -32,82 +31,49 @@ import '../index.css';
 
 const Environment = () => {
   const items = [
-    {
-      src: HeroMarqueeIcon,
-      type: 'text',
-      alt: '',
-      text: 'Innovation'
-    },
-    {
-      src: HeroMarqueeIcon,
-      type: 'text',
-      alt: '',
-      text: 'Incubation'
-    },
-    {
-      src: HeroMarqueeIcon,
-      type: 'text',
-      alt: '',
-      text: 'Engineering'
-    },
-    {
-      src: HeroMarqueeIcon,
-      type: 'text',
-      alt: '',
-      text: 'Ayush'
-    },
-    {
-      src: HeroMarqueeIcon,
-      type: 'text',
-      alt: '',
-      text: 'Collaboration'
-    },
-    {
-      src: HeroMarqueeIcon,
-      type: 'text',
-      alt: '',
-      text: 'Intelligence'
-    },
+    { src: HeroMarqueeIcon, type: 'text', alt: '', text: 'Innovation' },
+    { src: HeroMarqueeIcon, type: 'text', alt: '', text: 'Incubation' },
+    { src: HeroMarqueeIcon, type: 'text', alt: '', text: 'Engineering' },
+    { src: HeroMarqueeIcon, type: 'text', alt: '', text: 'Ayush' },
+    { src: HeroMarqueeIcon, type: 'text', alt: '', text: 'Collaboration' },
+    { src: HeroMarqueeIcon, type: 'text', alt: '', text: 'Intelligence' },
   ];
 
   const scrollToInnovation = () => {
     const element = document.getElementById('innovation-section');
     if(element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
   const scrollToCollaboration = () => {
     const element = document.getElementById('collaboration-section');
     if(element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 
-
   return (
-    <section className='w-full min-h-screen'>
+    <section className='w-full min-h-screen' aria-labelledby='environment-heading'>
+      <h1 id='environment-heading' className='sr-only'>Environment Page</h1>
+
       <div className='w-full h-screen mx-auto xs:px-2 sm:px-5 md:px-10 lg:px-15 bg-primary-variant-7'>
         <div className='w-full h-[90vh] overflow-hidden rounded-2xl relative mt-16 -mb-0.5'>
           <img
             src={HeroImage}
-            alt="environment-hero-section"
+            alt="Hero background showing environmental theme"
             className='w-full h-[90vh] object-cover overflow-hidden absolute inset-0'
             loading='eager'
+            role='img'
           />
           <div className='xs:w-9/10 md:w-7/10 lg:w-6/10 absolute right-0 bottom-0 flex flex-col justify-start items-start gap-0'>
             <div className='w-full flex flex-col justify-start items-center gap-0 bg-primary-variant-7 rounded-tl-3xl rounded-bl-3xl'>
               <img
                 src={HeroBottomLeft}
-                alt='svg-place-holder'
+                alt='decorative divider'
                 className='self-end w-8 h-8 object-cover -mt-8 -me-[0.3px]'
                 loading='eager'
+                aria-hidden='true'
               />
               <motion.h1
                 className='px-10 py-5'
@@ -134,9 +100,10 @@ const Environment = () => {
               <div className='w-full h-full flex flex-col justify-start items-center gap-0'>
                 <img
                   src={HeroTopLeft}
-                  alt='svg-place-holder'
+                  alt='decorative divider'
                   className='self-start w-8 h-8 object-cover -ms-8 -mt-[0.4px]'
                   loading='eager'
+                  aria-hidden='true'
                 />
                 <motion.p
                   className='px-10'
@@ -148,16 +115,17 @@ const Environment = () => {
                 >
                   At Semporutkalai Life Science Research Park (SLSRP), environmental responsibility is not a passive commitment - it is a proactive mission. We do not treat nature as a backdrop to progress but as the very foundation of human continuity.
                 </motion.p>
-                <div className='w-full relative mt-3'>
+                <div className='w-full relative mt-3' aria-hidden='true'>
                   <div className='absolute left-0 top-0 h-full w-20 pointer-events-none z-10 bg-gradient-to-r from-primary-variant-7 via-primary-variant-7/80 to-transparent'></div>
                   <div className='absolute right-0 top-0 h-full w-20 pointer-events-none z-10 bg-gradient-to-l from-primary-variant-7 via-primary-variant-7/80 to-transparent'></div>
                   <ItemsMarquee items={items} />
                 </div>
                 <img
                   src={HeroBottomLeft}
-                  alt='svg-place-holder'
+                  alt='decorative divider'
                   className='self-start w-8 h-8 object-cover -ms-8 -mt-[0.4px]'
                   loading='eager'
+                  aria-hidden='true'
                 />
               </div>
             </div>
@@ -165,12 +133,14 @@ const Environment = () => {
         </div>
       </div>
 
-      <div className='w-full h-[90vh] flex flex-col justify-center items-center gap-y-10 xs:px-2 sm:px-5 md:px-10 lg:px-15 relative'>
+      <div className='w-full h-[90vh] flex flex-col justify-center items-center gap-y-10 xs:px-2 sm:px-5 md:px-10 lg:px-15 relative' aria-labelledby='eng-regenerative'>
+        <h2 id='eng-regenerative' className='sr-only'>Engineering a Regenerative Future</h2>
         <img
           src={BackgroundImage}
-          alt="background-pattern"
+          alt="Decorative background pattern"
           className='absolute inset-0 w-full h-full object-cover opacity-20'
           loading='eager'
+          aria-hidden='true'
         />
 
         <div className='h-15 w-full absolute inset-0 bg-linear-to-t from-transparent via-primary-variant-7/60 to-primary-variant-7'></div>
@@ -210,6 +180,7 @@ const Environment = () => {
             viewport={{ once: true, amount: "all" }}
             custom={2}
             onClick={scrollToInnovation}
+            aria-label='Scroll to Innovation Section'
           >
             Explore Our Research
           </motion.button>
@@ -221,6 +192,7 @@ const Environment = () => {
             viewport={{ once: true, amount: "all" }}
             custom={3}
             onClick={scrollToCollaboration}
+            aria-label='Scroll to Collaboration Section'
           >
             Join Our Mission
           </motion.button>
@@ -228,12 +200,11 @@ const Environment = () => {
       </div>
 
       <InnovationSection />
-
       <IncubationSection />
-
       <EngineeringSection />
 
-      <div className="grid auto-rows-auto gap-y-10 min-h-screen w-full xs:px-2 sm:px-5 md:px-10 lg:px-15 pt-15">
+      <div className="grid auto-rows-auto gap-y-10 min-h-screen w-full xs:px-2 sm:px-5 md:px-10 lg:px-15 pt-15" aria-labelledby='ayush-heading'>
+        <h2 id='ayush-heading' className='sr-only'>AYUSH Integration Section</h2>
         <div className="grid sm:auto-rows-auto md:grid-rows-none md:grid-cols-5 gap-y-5 gap-x-5 w-full">
           <div className="md:col-span-2 flex flex-col justify-start items-start gap-y-2">
             <SectionPill sectionTitle={"Ayush"} />
@@ -282,14 +253,13 @@ const Environment = () => {
         >
           <img
             src={AyushBannerImage}
-            alt="banner-image-ayush"
+            alt="Banner promoting AYUSH integration with greenery and science symbolism"
             className="w-full h-full object-cover rounded-2xl transition-transform duration-500 ease-in-out group-hover:scale-102 md:h-[20rem]"
           />
         </motion.div>
       </div>
 
       <CollaborationSection />
-
       <IntelligenceSection />
     </section>
   )
