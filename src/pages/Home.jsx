@@ -4,7 +4,7 @@ import space from "../assets/Videos/space.mp4";
 import nature from "../assets/Videos/nature.mp4";
 import ocean from "../assets/Videos/ocean.mp4";
 import { motion, useInView } from "framer-motion";
-import StepConnector from '../assets/Images/step-connector.svg';
+import StepConnector from "../assets/Images/step-connector.svg";
 import OurServices from "../components/homeComponents/OurServices";
 import WhyChooseUs from "../components/homeComponents/WhyChooseUs";
 import Section6 from "../components/homeComponents/Section6";
@@ -148,7 +148,7 @@ const Home = () => {
                 viewport={{ once: true, amount: "some" }}
                 exit="exit"
               >
-                <h6 className="text-center text-gray-1 font-semibold!">
+                <h6 className="text-center  font-semibold!">
                   SLSRP - The timeless mission
                 </h6>
                 <InifiteIcon width={50} height={50} />
@@ -162,7 +162,7 @@ const Home = () => {
                 viewport={{ once: true, amount: "some" }}
                 exit="exit"
               >
-                <h6 className="text-center text-gray-1 font-semibold!">
+                <h6 className="text-center  font-semibold!">
                   Forging a Civilizational Shift - For sustenance
                 </h6>
                 <HandsGlobeIcon width={40} height={40} />
@@ -176,7 +176,7 @@ const Home = () => {
                 viewport={{ once: true, amount: "some" }}
                 exit="exit"
               >
-                <h6 className="text-center text-gray-1 font-semibold!">
+                <h6 className="text-center  font-semibold!">
                   Sustaining Humanity
                 </h6>
                 <ShieldCheckIcon width={40} height={40} />
@@ -201,10 +201,7 @@ const Home = () => {
           className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center "
         >
           {/* Left Text Box */}
-          <div
-            className="text-gray-800 space-y-4 p-4"
-            style={{ textAlign: "justify" }}
-          >
+          <div className=" space-y-4 p-4" style={{ textAlign: "justify" }}>
             <div className="text-3xl sm:text-4xl font-bold flex items-center gap-3">
               <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div>
               <h2>
@@ -212,7 +209,7 @@ const Home = () => {
                 Welcome to <span className="text-[#ffbb00]">SLSRP</span>
               </h2>
             </div>
-            <h3 className="text-2xl sm:text-3xl text-gray-500">
+            <h3 className="text-2xl sm:text-3xl ">
               Semporutkalai Life Science Research Park (SLSRP)
             </h3>
             <p>
@@ -289,7 +286,7 @@ const Home = () => {
                 <span className="text-[#ffbb00]"> Matters</span>{" "}
               </h3>
             </h2>
-            <p className="text-[17px] text-gray-500 lg:pe-20 lg:ps-20 pe-5 ps-5">
+            <p className="text-[17px]  lg:pe-20 lg:ps-20 pe-5 ps-5">
               We live in a world overwhelmed by complexity—mental stress,
               environmental collapse, socio-political fragmentation, and
               disconnected knowledge systems. <br />
@@ -333,7 +330,7 @@ const Home = () => {
             viewport={{ once: false }}
             transition={{ duration: 1, ease: "easeInOut" }}
             className="flex md:flex-row flex-col justify-center 
-            items-center lg:gap-25 md:gap-10 gap-5 p-5 text-gray-500 mt-4"
+            items-center lg:gap-25 md:gap-10 gap-5 p-5  mt-4"
           >
             <p className="  text-center h-auto">
               We bridge the intangible aspects of human consciousness with the
@@ -359,9 +356,7 @@ const Home = () => {
                         <span className="w-10 h-10 rounded-lg bg-primary-1 opacity-75 group-hover:animate-ping"></span>
                       </span>
                     </div>
-                    <h6 className="text-sm text-center text-gray-1 mb-0!">
-                      Responsible
-                    </h6>
+                    <h6 className="text-sm text-center  mb-0!">Responsible</h6>
                   </div>
                   <img
                     src={StepConnector}
@@ -377,9 +372,7 @@ const Home = () => {
                         <span className="w-10 h-10 rounded-lg bg-primary-1 opacity-75 group-hover:animate-ping"></span>
                       </span>
                     </div>
-                    <h6 className="text-sm text-center text-gray-1 mb-0!">
-                      Resilient
-                    </h6>
+                    <h6 className="text-sm text-center  mb-0!">Resilient</h6>
                   </div>
                   <img
                     src={StepConnector}
@@ -395,11 +388,8 @@ const Home = () => {
                         <span className="w-10 h-10 rounded-lg bg-primary-1 opacity-75 group-hover:animate-ping"></span>
                       </span>
                     </div>
-                    <h6 className="text-sm text-center text-gray-1 mb-0!">
-                      Research
-                    </h6>
+                    <h6 className="text-sm text-center  mb-0!">Research</h6>
                   </div>
-                 
                 </div>
               </div>
             </motion.div>
@@ -411,16 +401,11 @@ const Home = () => {
           </motion.div>
         </motion.div>
       </div>
-      {/* <HomeAbout /> */}
       <OurServices />
       <Section6 />
-      {/* <Section9 />
-      <Clients />
-      <Section3 /> */}
       <div className="grid auto-rows-auto gap-y-10 min-h-screen w-full xs:px-2 sm:px-5 md:px-10 lg:px-15 pt-15">
         <div className="grid sm:auto-rows-auto md:grid-rows-none md:grid-cols-5 gap-y-5 gap-x-5 w-full">
           <div className="md:col-span-2 flex flex-col justify-start items-start gap-y-2">
-         
             <motion.h2
               className="mt-5!"
               variants={contentBasicVariants}
@@ -435,7 +420,7 @@ const Home = () => {
           </div>
           <div className="md:col-span-3">
             <motion.p
-              className="text-gray-2"
+              className=""
               variants={contentBasicVariants}
               initial="initial"
               whileInView="whileInView"
@@ -452,7 +437,7 @@ const Home = () => {
               platforms that connect the past with the future
             </motion.p>
             <motion.p
-              className="text-gray-2 md:mt-5!"
+              className=" md:mt-5!"
               variants={contentBasicVariants}
               initial="initial"
               whileInView="whileInView"
@@ -492,7 +477,3 @@ const Home = () => {
 };
 
 export default Home;
-
-// SLSRP - The timeless mission
-// Forging a Civilizational Shift — For sustenance
-// Sustaining Humanity

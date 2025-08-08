@@ -310,3 +310,10 @@ p {
 .custom-popover .ant-popover-inner {
   background: linear-gradient(to right, #ffffff, #fffbeb, #ffedd5); /* white to amber-100 to orange-100 */
 }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

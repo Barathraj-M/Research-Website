@@ -100,8 +100,6 @@ const OurServices = () => {
               </p>
               <div className="flex justify-center w-full items-center mt-10  shadow-lg hover:shadow-xl rounded-xl rounded-xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300">
                <div  className='w-full min-h-[350px] bg-white  flex flex-col items-center gap-y-5 cursor-pointer rounded-xl group  '>
-
-            
                   <ServiceCard
                     cardHeading={"Environmental Innovation"}
                     description={
@@ -147,8 +145,6 @@ const OurServices = () => {
               </p>
               <div className="flex justify-center w-full items-center mt-10  shadow-lg hover:shadow-xl rounded-xl rounded-xl border  border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300" >
                 <div  className='w-full min-h-[350px] bg-white  flex flex-col items-center gap-y-5 cursor-pointer rounded-xl group  '>
-
-            
                   <ServiceCard
                     cardHeading={"Noetic Science Research & Validation"}
                     description={
@@ -167,69 +163,15 @@ const OurServices = () => {
                     tagLines={""}
                   />
                       </div>
-            
-              
               </div>
             </motion.div>
           </motion.div>
         </div>
-        {/* <HorizontalScrollSection>
-          <ServiceCard
-            cardHeading={"Ecofriendly transportation"}
-            description={
-              "We offer responsible logistics that minimize pollution and maximize operational efficiency."
-            }
-            link={"#"}
-            img={ServiceCardImg1}
-            imgAlt={"service-card-image-avif"}
-            tagLines={""}
-          />
-          <ServiceCard
-            cardHeading={"Ecofriendly transportation"}
-            description={
-              "We offer responsible logistics that minimize pollution and maximize operational efficiency."
-            }
-            link={"#"}
-            img={ServiceCardImg1}
-            imgAlt={"service-card-image-avif"}
-            tagLines={""}
-          />
-          <ServiceCard
-            cardHeading={"Ecofriendly transportation"}
-            description={
-              "We offer responsible logistics that minimize pollution and maximize operational efficiency."
-            }
-            link={"#"}
-            img={ServiceCardImg1}
-            imgAlt={"service-card-image-avif"}
-            tagLines={""}
-          />
-          <ServiceCard
-            cardHeading={"Ecofriendly transportation"}
-            description={
-              "We offer responsible logistics that minimize pollution and maximize operational efficiency."
-            }
-            link={"#"}
-            img={ServiceCardImg1}
-            imgAlt={"service-card-image-avif"}
-            tagLines={""}
-          />
-          <ServiceCard
-            cardHeading={"Ecofriendly transportation"}
-            description={
-              "We offer responsible logistics that minimize pollution and maximize operational efficiency."
-            }
-            link={"#"}
-            img={ServiceCardImg1}
-            imgAlt={"service-card-image-avif"}
-            tagLines={""}
-          />
-        </HorizontalScrollSection> */}
-        <div className="mt-5 text-lg font-bold text-white flex justify-center items-center w-2/3  gap-4 px-9 text-center">
+        <p className="mt-5 text-lg font-bold text-white flex justify-center items-center w-2/3  gap-4 px-9 text-center">
           At SLSRP, we operate at the intersection of deep science, cultural
           responsibility, and systemic transformation. Our work is divided into
           two mission-driven verticals with distinct but interlinked approaches.
-        </div>
+        </p>
       </motion.div>
     </div>
   );

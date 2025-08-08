@@ -14,6 +14,7 @@ import HeroImage from "../assets/Images/environment-hero-image.webp";
 import HeroBottomLeft from "../assets/Images/hero-bottom-left.svg";
 import HeroTopLeft from "../assets/Images/hero-top-left.svg";
 import HeroMarqueeIcon from "../assets/Images/hero-marquee-icon.svg";
+import StoryCarousel from "../components/StoryCarousel";
 
 const About = () => {
   const items = [
@@ -188,17 +189,17 @@ const About = () => {
   return (
     <div>
       <div
-        className="w-full h-screen mx-auto xs:px-2 sm:px-5 md:px-10 lg:px-15"
+        className="w-full h-screen mx-auto xs:px-2 sm:px-5 md:px-10 lg:px-15 "
         ref={title}
       >
-        <div className="w-full h-[90vh] overflow-hidden rounded-2xl relative mt-16">
+        <div className="w-full h-[90vh] overflow-hidden rounded-2xl relative mt-16 ">
           <img
             src={HeroImage}
             alt="environment-hero-section"
-            className="w-full h-[90vh] object-cover overflow-hidden absolute inset-0"
+            className="w-full h-[90vh] object-cover overflow-hidden absolute inset-0 "
             loading="eager"
           />
-          <div className="xs:w-9/10 md:w-7/10 lg:w-6/10 absolute right-0 bottom-0 flex flex-col justify-start items-start gap-0">
+          <div className="xs:w-9/10 md:w-7/10 lg:w-6/10 absolute right-0 bottom-0 flex flex-col justify-start items-start gap-0 ">
             <div className="w-full flex flex-col justify-start items-center gap-0 bg-gray-8 rounded-tl-3xl rounded-bl-3xl">
               <img
                 src={HeroBottomLeft}
@@ -207,7 +208,7 @@ const About = () => {
                 loading="eager"
               />
               <div
-                className="px-10 py-5"
+                className="px-10 py-5 "
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -287,7 +288,7 @@ const About = () => {
             <h2 className=" text-center overflow-hidden p-2 xl:w-[800px]">
               A New Standard for Social Responsibility
             </h2>
-            <p className="text-lg text-center text-gray-500 lg:ms-20 lg:me-20">
+            <p className="text-lg text-center  lg:ms-20 lg:me-20">
               At Semporutkalai Life Science Research Park (SLSRP), we redefine
               the meaning of social initiative by grounding it in scientific
               validation, ethical frameworks, and cultural intelligence.
@@ -310,14 +311,14 @@ const About = () => {
               {/* Header */}
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div>
-                <h3 className="text-2xl font-bold text-gray-800">
+                <h3 className="text-2xl font-bold ">
                   Science Meets Wisdom
                 </h3>
               </div>
 
               {/* Content */}
               <ul
-                className="space-y-4 text-gray-700 text-[1rem] leading-relaxed list-disc list-inside "
+                className="space-y-4  text-[1rem] leading-relaxed list-disc list-inside "
                 style={{ listStyle: "none" }}
               >
                 <li className="flex items-start gap-2">
@@ -348,12 +349,12 @@ const About = () => {
             <div className="flex-1 bg-white rounded-2xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300 p-8 relative overflow-hidden">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div>
-                <h3 className="text-2xl font-bold text-gray-800">
+                <h3 className="text-2xl font-bold ">
                   Evidence-Based Interventions
                 </h3>
               </div>
 
-              <ul className="space-y-4 text-gray-700 text-[1rem] leading-relaxed list-disc list-inside">
+              <ul className="space-y-4 text-[1rem] leading-relaxed list-disc list-inside">
                 <li className="flex items-start gap-2">
                   <img src={NavHoverLogo} alt="" className="mt-1" />
                   SLSRP uses physiological and psychological assessments to
@@ -390,7 +391,7 @@ const About = () => {
         >
           {/* Left Text Box */}
           <div
-            className="text-gray-800 space-y-4 p-4 lg:w-800px"
+            className=" space-y-4 p-4 lg:w-800px"
             style={{ textAlign: "justify" }}
           >
             <div className="text-3xl sm:text-4xl font-bold flex items-center gap-3 w-full">
@@ -462,7 +463,75 @@ const About = () => {
           </motion.div>
         </motion.div>
       </div>
-
+      <motion.div
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="min-h-screen bg-black text-white!"
+      >
+        <div className="max-w-7xl mx-auto px-6 py-16">
+          {/* Enabling Pillars */}
+          <div className="mb-20">
+            <div className="text-center mb-12 flex flex-col items-center">
+              <h2 className="font-bold mb-4 text-white! flex text-center gap-3 items-center">
+                <div
+                  className="p-3 rounded-xl text-white"
+                  style={{ backgroundColor: "#ffbb00", borderRadius: "50%" }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M7 12q7 1 8 8q1-7 8-8q-7-1-8-8q-1 7-8 8M4 2v6M1 5h6M4 16v6m-3-3h6"
+                    />
+                  </svg>
+                </div>
+                nseUW
+              </h2>
+              <p className="text-lg text-white max-w-2xl mx-auto">
+                Structuring Legacy Knowledge into Credible Pathways
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8 ">
+              {enablingPillars.map((pillar, idx) => (
+                <div
+                  key={idx}
+                  initial={{ opacity: 0, y: 80 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  className={`${pillar.bgColor} rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-200 bg-white border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300`}
+                >
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div
+                      className="p-3 rounded-xl text-white"
+                      style={{ backgroundColor: "#ffbb00" }}
+                    >
+                      {pillar.icon}
+                    </div>
+                    <h4 className="text-xl font-bold ">
+                      {pillar.title}
+                    </h4>
+                  </div>
+                  <p className="text-black! leading-relaxed">
+                    {pillar.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <StoryCarousel />
+        </div>
+      </motion.div>
       <div className="w-full px-4 py-8 ">
         <motion.div
           initial={{ opacity: 0, y: 80 }}
@@ -488,7 +557,7 @@ const About = () => {
           </motion.div>
           {/* right Text Box */}
           <div
-            className="text-gray-800 space-y-4 p-4"
+            className="space-y-4 p-4"
             style={{ textAlign: "justify" }}
           >
             <div className="text-3xl sm:text-4xl font-bold flex items-center gap-3">
@@ -539,287 +608,6 @@ const About = () => {
                 </p>
               </div>
             </div>
-          </div>
-        </motion.div>
-      </div>
-
-      <div className="min-h-screen bg-black text-white!">
-      
-        <div className="max-w-7xl mx-auto px-6 py-16">
-      
-
-          {/* Enabling Pillars */}
-          <div className="mb-20">
-            <div className="text-center mb-12 flex flex-col items-center">
-              <h2 className="font-bold mb-4 text-white! flex text-center gap-3 items-center">
-                <div
-                  className="p-3 rounded-xl text-white"
-                  style={{ backgroundColor: "#ffbb00",borderRadius:"50%" }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="1em"
-                    height="1em"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M7 12q7 1 8 8q1-7 8-8q-7-1-8-8q-1 7-8 8M4 2v6M1 5h6M4 16v6m-3-3h6"
-                    />
-                  </svg>
-                </div>
-                nseUW
-              </h2>
-              <p className="text-lg text-white max-w-2xl mx-auto">
-                Structuring Legacy Knowledge into Credible Pathways
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8 ">
-              {enablingPillars.map((pillar, idx) => (
-                <div
-                  key={idx}
-                  className={`${pillar.bgColor} rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-200 bg-white border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300`}
-                >
-                  <div className="flex items-center space-x-4 mb-4">
-                    <div
-                      className="p-3 rounded-xl text-white"
-                      style={{ backgroundColor: "#ffbb00" }}
-                    >
-                      {pillar.icon}
-                    </div>
-                    <h4 className="text-xl font-bold text-gray-800">
-                      {pillar.title}
-                    </h4>
-                  </div>
-                  <p className="text-gray-600 leading-relaxed">
-                    {pillar.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Financial Model */}
-          {/* <div className="bg-gradient-to-r from-amber-50 to-orange-100 rounded-2xl p-8 border-2 border-amber-200">
-            <div className="text-center mb-8">
-              <div
-                className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4"
-                style={{ backgroundColor: "#ffbb00" }}
-              >
-                <svg
-                  className="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </div>
-              <div className="text-3xl font-bold mb-4 text-gray-800">
-                Financial & Revenue Model
-              </div>
-              <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-                Diversified funding streams ensuring sustainable impact and
-                growth
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-              {fundingStreams.map((stream, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow duration-300 border border-amber-200"
-                >
-                  <div className="flex items-center space-x-3">
-                    <div
-                      className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold"
-                      style={{ backgroundColor: "#ffbb00" }}
-                    >
-                      {idx + 1}
-                    </div>
-                    <span className="text-sm font-medium text-gray-700">
-                      {stream}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="border-t-2 border-amber-300 pt-8">
-              <div className="text-2xl font-bold mb-6 text-center text-gray-800">
-                Allocation Principles
-              </div>
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-white rounded-xl p-6 text-center shadow-sm border border-amber-200">
-                  <div
-                    className="text-4xl font-bold mb-2"
-                    style={{ color: "#ffbb00" }}
-                  >
-                    80%
-                  </div>
-                  <div className="text-sm font-medium text-gray-700">
-                    Core programs, research, and impact initiatives
-                  </div>
-                </div>
-                <div className="bg-white rounded-xl p-6 text-center shadow-sm border border-amber-200">
-                  <div
-                    className="text-4xl font-bold mb-2"
-                    style={{ color: "#ffbb00" }}
-                  >
-                    20%
-                  </div>
-                  <div className="text-sm font-medium text-gray-700">
-                    Administration and operations
-                  </div>
-                </div>
-                <div className="bg-white rounded-xl p-6 text-center shadow-sm border border-amber-200">
-                  <div
-                    className="text-4xl font-bold mb-2"
-                    style={{ color: "#ffbb00" }}
-                  >
-                    100%
-                  </div>
-                  <div className="text-sm font-medium text-gray-700">
-                    Revenue reinvestment for national development
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
-        </div>
-      </div>
-      <div className="w-full px-4 py-8 ">
-        <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="max-w-7xl mx-auto flex
-          sm:flex-col lg:flex-row sm:flex-col-reverse gap-8 items-center "
-        >
-          {/* left Image Box */}
-          <div
-            className="text-gray-800 space-y-4 p-4 contianer"
-            style={{ textAlign: "justify" }}
-          >
-            <div className="text-3xl sm:text-4xl font-bold flex items-start gap-3">
-              <div className="w-2 h-6 bg-[#ffbb00] rounded-sm mt-1"></div>
-              <h3 className="w-8/10">A Future Designed with Purpose</h3>
-            </div>
-            {/* <div className="text-2xl sm:text-3xl text-gray-500">
-              Semporutkalai Life Science Research Park (SLSRP)
-            </div> */}
-            <p>
-              In a world grappling with fragmentation—social, psychological,
-              environmental—SLSRP offers a unifying model that connects science
-              with culture, youth with leadership, and knowledge with measurable
-              outcomes.
-            </p>
-            <p>
-              We define social initiative as a high-stakes responsibility—one
-              that demands clarity, discipline, and vision.
-            </p>
-            <p>
-              In partnership with international universities, we conduct
-              mixed-method studies, co-author publications, and organize
-              collaborative symposia.
-            </p>
-            <p>
-              Through our sustained efforts, we aim to build a more stable,
-              thoughtful, and ethically grounded society.
-            </p>
-            <p>
-              A society where ancient knowledge is not lost but refined; where
-              modern science is not isolated but inclusive; and where
-              individuals rise not by chance but through well-designed platforms
-              that empower growth with integrity.
-            </p>
-          </div>
-          {/* right Text Box */}
-          <motion.div
-            initial={{ opacity: 0, y: 80 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.3 }}
-            className="flex justify-center"
-          >
-            <img
-              src={new1} // Replace with actual image path
-              alt="SLSRP"
-              className="w-3/4"
-            />
-          </motion.div>
-        </motion.div>
-      </div>
-      <div className="w-full px-4 py-8 ">
-        <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="max-w-7xl mx-auto flex gap-8 items-center sm:flex-col lg:flex-row "
-        >
-          {/* Right Image Box */}
-          <motion.div
-            initial={{ opacity: 0, y: 80 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.3 }}
-            className="flex justify-center"
-          >
-            <img
-              src={newone} // Replace with actual image path
-              alt="SLSRP"
-              className="w-3/4"
-            />
-          </motion.div>
-          {/* Left Text Box */}
-          <div
-            className="text-gray-800 space-y-4 p-4"
-            style={{ textAlign: "justify" }}
-          >
-            <div className="text-3xl sm:text-4xl font-bold flex items-start gap-3">
-              <div className="w-2 h-6 bg-[#ffbb00] rounded-sm mt-1"></div>
-              <h3 className="w-8/10">
-                Positioning Social Change as Systemic Impact
-              </h3>
-            </div>
-            {/* <div className="text-2xl sm:text-3xl text-gray-500">
-              Semporutkalai Life Science Research Park (SLSRP)
-            </div> */}
-            <p>
-              What makes SLSRP’s social initiatives resilient is their strategic
-              embedding into national and global development goals.
-            </p>
-            <p>
-              Every initiative—whether research, training, or certification—is
-              designed with a systems view.
-            </p>
-            <p>
-              We align our frameworks with Sustainable Development Goals (SDGs),
-              collaborate with ministries, and engage with academic and
-              community stakeholders to ensure that our work is replicable,
-              scalable, and policy-relevant.
-            </p>
-            <p>
-              By treating social initiatives not as fragmented efforts but as
-              part of a structured ecosystem, we eliminate randomness and
-              enhance accountability.
-            </p>
-            <p>
-              Our programs are tested for impact, documented for
-              reproducibility, and continually improved through feedback loops
-              and research insights.
-            </p>
           </div>
         </motion.div>
       </div>

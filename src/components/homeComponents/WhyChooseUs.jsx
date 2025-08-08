@@ -83,9 +83,9 @@ const WhyChooseUs = () => {
           {/* Repeated Content Block */}
           {contents.map((content, i) => (
             <div className="mt-6" key={i}>
-              <div className="text-black font-bold text-lg flex items-center gap-2">
+              <h4 className="text-black font-bold text-lg flex items-center gap-2">
                 <img src={NavHoverLogo} alt="nav-logo" /> {content.title}
-              </div>
+              </h4>
               <p className="mt-2 text-md">{content.description}</p>
               <div className="border-t border-dashed border-gray-500 mt-5" />
             </div>
