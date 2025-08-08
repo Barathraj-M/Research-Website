@@ -1,11 +1,8 @@
 import React, { useRef } from "react";
 import "./WhyChooseUs.css";
 import { motion, useInView } from "framer-motion";
-import asterick from "../../assets/Images/asterisk.png";
 import NavHoverLogo from "../../assets/Images/nav-hover-icon.svg";
-import SectionPill from "../SectionPill";
-import PrimaryButtom from "../PrimaryButtom";
-import { title } from "framer-motion/client";
+
 
 const contents = [
   {

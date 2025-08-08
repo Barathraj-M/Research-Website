@@ -9,15 +9,14 @@ import StepConnector from "../assets/Images/step-connector.svg";
 import OurServices from "../components/homeComponents/OurServices";
 import WhyChooseUs from "../components/homeComponents/WhyChooseUs";
 import Section6 from "../components/homeComponents/Section6";
-import science from "../assets/Images/science.png";
+import ancient from "../assets/Images/home-ancient.jpg";
 import jc from "../assets/Images/jc.png";
 import RoundedBottomRight from "../assets/Images/hero-bottom-right.svg";
 import RoundedBottomLeft from "../assets/Images/hero-bottom-left.svg";
-import YogaBannerImage from "../assets/Images/ancient-yoga-banner-image.png";
 import NavHoverLogo from "../assets/Images/nav-hover-icon.svg";
-import resilient from "../assets/Images/resilient.jpg";
-import research from "../assets/Images/research.jpg";
-import responsible from "../assets/Images/responsible.jpg";
+import resilient from "../assets/Images/home-what-matters-resilient.jpg";
+import research from "../assets/Images/home-what-matters-research.jpg";
+import responsible from "../assets/Images/home-what-matters-responsible.jpg";
 import {
   heroSectionBottomContainerVariants,
   contentBasicVariants,
@@ -520,7 +519,7 @@ const Home = () => {
             aria-label="SLSRP conceptual illustration"
           >
             <img
-              src={science}
+              src={ancient}
               alt="Illustration representing SLSRP scientific focus"
               className="w-3/4"
             />

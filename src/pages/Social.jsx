@@ -2,8 +2,8 @@
 import { useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import "../index.css";
-import youth from "../assets/Images/youth1.png";
-import science from "../assets/Images/science.png";
+import youth from "../assets/Images/social-resilience-youth.png";
+import science from "../assets/Images/social-synthesis-science.png";
 
 import ItemsMarquee from "../components/ItemsMaquee";
 import NavHoverLogo from "../assets/Images/nav-hover-icon.svg";

@@ -4,11 +4,8 @@ import { motion, useInView } from "framer-motion";
 import arrow from "../../assets/Images/arrow.svg";
 import drop from "../../assets/Images/drop.svg";
 import cloud from "../../assets/Images/cloud.svg";
-import { BsSunFill } from "react-icons/bs";
 import location from "../../assets/Images/location.svg";
 import earthVideo from "../../assets/Videos/earth.mp4";
-import SectionPill from "../SectionPill";
-import PrimaryButtom from "../PrimaryButtom";
 import { QuoteDownIcon, QuoteUpIcon } from "../../assets/Icons/Icons";
 import { quoteIconDanceVariants } from "../../utils/animationVarients";
 

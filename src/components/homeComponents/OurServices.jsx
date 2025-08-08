@@ -1,16 +1,9 @@
 import React, { useRef } from "react";
 import "./OurServices.css";
 import { motion, useInView } from "framer-motion";
-
-import SectionPill from "../SectionPill";
-import ServiceCard from "../ServiceCard";
 import NavHoverLogo from "../../assets/Images/nav-hover-icon.svg";
-import ServiceCardImg1 from "../../assets/Images/service-card-image.avif";
-
 import "../../index.css";
-import bulb from "../../assets/Images/bulb.svg";
 
-import HorizontalScrollSection from "../HorizontalScrollSection";
 
 const descriptionPoints = [
   "AI-powered, blockchain-secured PhytoVault Systems.",

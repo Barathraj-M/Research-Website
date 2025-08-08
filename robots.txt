@@ -7,3 +7,8 @@ Disallow: /src/components/InitialLoader.jsx
 Disallow: /src/components/HorizontalScrollSection.jsx
 Disallow: /src/components/ScrollToTop.jsx
 Disallow: /src/components/ConfettiHeart.jsx
+Disallow: /src/components/homeComponents/Clients.jsx
+Disallow: /src/components/homeComponents/HomeAbout.jsx
+Disallow: /src/components/homeComponents/Section3.jsx
+Disallow: /src/components/homeComponents/Section9.jsx
+Disallow: /src/components/homeComponents/Testimonials.jsx
