@@ -250,11 +250,11 @@ const About = () => {
 
                 <div className="w-full relative mt-3">
                   <div
-                    className="absolute left-0 top-0 h-full w-20 pointer-events-none z-50 bg-gradient-to-r from-primary-variant-7 via-primary-variant-7/80 to-transparent"
+                    className="absolute left-0 top-0 h-full w-20 pointer-events-none z-10 bg-gradient-to-r from-primary-variant-7 via-primary-variant-7/80 to-transparent"
                     aria-hidden="true"
                   ></div>
                   <div
-                    className="absolute right-0 top-0 h-full w-20 pointer-events-none z-50 bg-gradient-to-l from-primary-variant-7 via-primary-variant-7/80 to-transparent"
+                    className="absolute right-0 top-0 h-full w-20 pointer-events-none z-10 bg-gradient-to-l from-primary-variant-7 via-primary-variant-7/80 to-transparent"
                     aria-hidden="true"
                   ></div>
 
