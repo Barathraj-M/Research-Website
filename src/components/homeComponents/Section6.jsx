@@ -1,16 +1,13 @@
 import React, { useRef } from "react";
 import "./Section6.css";
 import { motion, useInView } from "framer-motion";
-import arrow from "../../assets/Images/arrow.svg";
-import drop from "../../assets/Images/drop.svg";
-import cloud from "../../assets/Images/cloud.svg";
 import location from "../../assets/Images/location.svg";
 import earthVideo from "../../assets/Videos/earth.mp4";
 import { QuoteDownIcon, QuoteUpIcon } from "../../assets/Icons/Icons";
 import { quoteIconDanceVariants } from "../../utils/animationVarients";
 
 // Icons used in box items
-const icons = [arrow, drop, cloud, location];
+const icons = [ location];
 
 // Staggered animation for boxes
 const containerVariants = {
