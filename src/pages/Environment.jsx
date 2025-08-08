@@ -18,7 +18,8 @@ import HeroImage from '../assets/Images/environment-hero-image-3.jpg';
 import HeroBottomLeft from '../assets/Images/hero-bottom-left.svg';
 import HeroTopLeft from '../assets/Images/hero-top-left.svg';
 import HeroMarqueeIcon from '../assets/Images/hero-marquee-icon.svg';
-import AyushBannerImage from "../assets/Images/ayush-integration-image.jpg";
+// import AyushBannerImage from "../assets/Images/ayush-integration-image.jpg";
+import AyushBannerImage from "../assets/Images/ayush-integration-image-2.jpg";
 import BackgroundImage from "../assets/Images/pexels-googledeepmind-17485706.jpg";
 
 import {
@@ -164,7 +165,7 @@ const Environment = () => {
         </div>
       </div>
 
-      <div className='w-full h-screen flex flex-col justify-center items-center gap-y-10 xs:px-2 sm:px-5 md:px-10 lg:px-15 relative'>
+      <div className='w-full h-[90vh] flex flex-col justify-center items-center gap-y-10 xs:px-2 sm:px-5 md:px-10 lg:px-15 relative'>
         <img
           src={BackgroundImage}
           alt="background-pattern"
@@ -281,7 +282,7 @@ const Environment = () => {
         >
           <img
             src={AyushBannerImage}
-            alt="banner-image-yoga"
+            alt="banner-image-ayush"
             className="w-full h-full object-cover rounded-2xl transition-transform duration-500 ease-in-out group-hover:scale-102 md:h-[20rem]"
           />
         </motion.div>
