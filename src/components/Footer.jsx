@@ -1,4 +1,5 @@
 import React from 'react'
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 
 import AnimatedTextCycler from './AnimatedTextCycler.jsx';
@@ -30,12 +31,22 @@ const Footer = () => {
   };
 
   return (
-    <footer className='w-full pt-20 relative flex flex-col items-center justify-center overflow-hidden'>
-      <div className='h-15 w-full absolute inset-0 bg-linear-to-t from-transparent via-gray-8/60 to-gray-8'></div>
+    <footer className='w-full pt-20 relative flex flex-col items-center justify-center overflow-hidden' aria-labelledby='footer-heading'>
+      <h2 id='footer-heading' className='sr-only'>Footer Section</h2>
 
-      <video className='absolute left-0 top-0 w-[100vw] h-full object-cover -z-50 overflow-clip m-auto' autoPlay loop muted playsInline preload='auto'>
-        <source src={footerMp4} type='video/mp4' role='mp4 media'/>
-        <source src={footerWebm} type='video/webm' role='webm media'/>
+      <div className='h-15 w-full absolute inset-0 bg-linear-to-t from-transparent via-gray-8/60 to-gray-8' aria-hidden='true'></div>
+
+      <video
+        className='absolute left-0 top-0 w-[100vw] h-full object-cover -z-50 overflow-clip m-auto'
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload='auto'
+        aria-hidden='true'
+      >
+        <source src={footerMp4} type='video/mp4'/>
+        <source src={footerWebm} type='video/webm'/>
         Your browser does not support the video tag.
       </video>
 
@@ -48,23 +59,29 @@ const Footer = () => {
       >
         <div className='flex xs:flex-col lg:flex-row w-full gap-0'>
           <div className='lg:w-10/20 flex flex-col justify-between items-center gap-3 bg-white rounded-2xl p-5 border-white'>
-            <img src={DummyLogo} alt='brand-logo' className='w-30 h-30 self-start'/>
+            <img src={DummyLogo} alt='SLRP Research Park Logo' className='w-30 h-30 self-start'/>
             <div className='flex flex-col justify-start items-start gap-y-5 w-full'>
               <AnimatedTextCycler />
               <div className='flex flex-col justify-start items-center gap-y-3 w-full'>
                 <p>Join our community.</p>
-                <form className='flex flex-row justify-around items-center gap-x-2 w-full rounded-full p-1 border-1 border-gray-3 focus-within:ring-1 focus-within:ring-gray-2'>
+                <form
+                  className='flex flex-row justify-around items-center gap-x-2 w-full rounded-full p-1 border-1 border-gray-3 focus-within:ring-1 focus-within:ring-gray-2'
+                  aria-label='Subscribe to our newsletter'
+                >
+                  <label htmlFor='email' className='sr-only'>Email address</label>
                   <input 
-                    type='text'
+                    type='email'
                     id='email'
                     placeholder='Enter your email'
                     name='email'
-                    className='w-full px-3 py-2 focus:outline-none'  
+                    className='w-full px-3 py-2 focus:outline-none'
+                    aria-required='true'
                   />
                   <input 
                     type='submit'
                     value='Subscribe'
                     className='text-decoration-none rounded-full bg-primary-1 border-1 border-dashed border-primary-1 hover:bg-black hover:text-white text-black px-4 py-2 transition-color duration-300 ease-in-out text-nowrap font-semibold'
+                    aria-label='Subscribe'
                   />
                 </form>
               </div>
@@ -73,80 +90,81 @@ const Footer = () => {
 
           <img
             src={FooterDivider}
-            alt='footer-divider'
+            alt='Decorative divider'
             className='xs:w-7 xs:h-auto lg:h-10 lg:w-auto xs:rotate-90 lg:rotate-0 self-center object-cover -my-3.5'
+            aria-hidden='true'
           />
 
-          <div className='grid grid-cols-2 bg-white rounded-2xl p-10 border-white'>
+          <div className='grid grid-cols-2 bg-white rounded-2xl p-10 border-white' role='navigation' aria-label='Footer links'>
             <div className='border-b-1 border-e-1 border-gray-5 border-dashed flex flex-col justify-between items-start gap-y-3 py-4'>
               <h4>Pages</h4>
               <div className='grid xs:grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-2'>
                 <div className='flex flex-col justify-center items-start gap-y-2'>
-                  <a href='/' className='text-decoration-none hover:text-black hover:underline active:text-black active:underline underline-offset-5 transition-all duration-300 ease-in-out'>Home</a>
-                  <a href='/about' className='text-decoration-none hover:text-black hover:underline active:text-black active:underline underline-offset-5 transition-all duration-300 ease-in-out'>About</a>
-                  <a href='/about?scroll=core-initiatives' className='text-decoration-none hover:text-black hover:underline active:text-black active:underline underline-offset-5 transition-all duration-300 ease-in-out' onClick={scrollToCoreInitiatives}>Services</a>
-                  <a href='/environment' className='text-decoration-none hover:text-black hover:underline active:text-black active:underline underline-offset-5 transition-all duration-300 ease-in-out'>Environment</a>
-                  <a href='/social' className='text-decoration-none hover:text-black hover:underline active:text-black active:underline underline-offset-5 transition-all duration-300 ease-in-out'>Social</a>
-                  <a href='/contact' className='text-decoration-none hover:text-black hover:underline active:text-black active:underline underline-offset-5 transition-all duration-300 ease-in-out'>Contact</a>
+                  <a href='/' aria-label='Home Page'>Home</a>
+                  <a href='/about' aria-label='About Us Page'>About</a>
+                  <a href='/about?scroll=core-initiatives' onClick={scrollToCoreInitiatives} aria-label='Services Section'>Services</a>
+                  <a href='/environment' aria-label='Environment Page'>Environment</a>
+                  <a href='/social' aria-label='Social Page'>Social</a>
+                  <a href='/contact' aria-label='Contact Page'>Contact</a>
                 </div>
                 <div className='flex flex-col justify-start items-start gap-y-2'>
-                  <a href='/privacy' className='text-decoration-none hover:text-black hover:underline active:text-black active:underline underline-offset-5 transition-all duration-300 ease-in-out'>Privacy and Policy</a>
-                  <a href='/terms-and-conditions' className='text-decoration-none hover:text-black hover:underline active:text-black active:underline underline-offset-5 transition-all duration-300 ease-in-out'>Terms and Conditions</a>
+                  <a href='/privacy' aria-label='Privacy and Policy Page'>Privacy and Policy</a>
+                  <a href='/terms-and-conditions' aria-label='Terms and Conditions Page'>Terms and Conditions</a>
                 </div>
               </div>
             </div>
             <div className='border-b-1 border-gray-5 border-dashed py-4 ps-4'>
               <h4>Our Conglomerate</h4>
               <div className='grid grid-cols-2 gap-x-2 gap-y-5 text-center mt-5'>
-                <a href='https://brixnet.in/' target='_blank' rel='noopener noreferrer'>
+                <a href='https://brixnet.in/' target='_blank' rel='noopener noreferrer' aria-label='Brixnet Website'>
                   <img 
                     src={BrixLogo} 
-                    alt='brix-logo' 
+                    alt='Brix Logo' 
                     className='w-15 h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
-                    loading='lazy' 
+                    loading='lazy'
                   />
                 </a>
-                <a href='https://qdotz.in/' target='_blank' rel='noopener noreferrer'>
+                <a href='https://qdotz.in/' target='_blank' rel='noopener noreferrer' aria-label='Qdotz Website'>
                   <img 
                     src={QdotzLogo} 
-                    alt='qdotz-logo' 
+                    alt='Qdotz Logo' 
                     className='w-15 h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
-                    loading='lazy' 
+                    loading='lazy'
                   />
                 </a>
-                <a href='https://coreverse.in/' target='_blank' rel='noopener noreferrer'>
+                <a href='https://coreverse.in/' target='_blank' rel='noopener noreferrer' aria-label='Coreverse Website'>
                   <img 
                     src={CoreverseLogo} 
-                    alt='coreverse-logo' 
+                    alt='Coreverse Logo' 
                     className='w-20 h-20 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto grayscale'
-                    loading='lazy' 
+                    loading='lazy'
                   />
                 </a>
-                <a href='https://snaedu.in/' target='_blank' rel='noopener noreferrer'>
+                <a href='https://snaedu.in/' target='_blank' rel='noopener noreferrer' aria-label='Savant Website'>
                   <img 
                     src={SavantLogo} 
-                    alt='savant-logo' 
+                    alt='Savant Logo' 
                     className='w-15 h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
-                    loading='lazy' 
+                    loading='lazy'
                   />
                 </a>
               </div>
             </div>
             <div className='border-e-1 border-gray-5 border-dashed flex flex-col justify-between items-start gap-y-3 py-4'>
               <h4>Contact</h4>
-              <a href='mailto:hello@slrp-research-park.com' className='text-decoration-none hover:text-black active:text-black transition-all duration-300 ease-in-out'>hello@slrp-research-park.com</a>
-              <a href='tel:+91 6383499920' className='text-decoration-none hover:text-black active:text-black transition-all duration-300 ease-in-out'>+91 6383499920</a>
+              <a href='mailto:hello@slrp-research-park.com' aria-label='Email SLRP'>hello@slrp-research-park.com</a>
+              <a href='tel:+91 6383499920' aria-label='Call SLRP'>+91 6383499920</a>
             </div>
             <div className='border-gray-5 border-dashed py-4 ps-4'>
               <h4>Social Media</h4>
               <div className='flex flex-row justify-start items-center gap-x-4 mt-5'>
-                <a href='https://www.linkedin.com/company/slrp-research-park/' target='_blank' rel='noopener noreferrer' className='hover:text-blue-700'>
+                <a href='https://www.linkedin.com/company/slrp-research-park/' target='_blank' rel='noopener noreferrer' aria-label='LinkedIn Profile' className='hover:text-blue-700'>
                   <LinkedIn width='30' height='30' />
                 </a>
-                <a href='https://www.instagram.com/slrp_research_park/' target='_blank' rel='noopener noreferrer' className='hover:text-pink-500'>
+                <a href='https://www.instagram.com/slrp_research_park/' target='_blank' rel='noopener noreferrer' aria-label='Instagram Profile' className='hover:text-pink-500'>
                   <InstagramIcon width='30' height='30' />
                 </a>
-                <a href='https://www.youtube.com/@slrp_research_park' target='_blank' rel='noopener noreferrer' className='hover:text-red-600'>
+                <a href='https://www.youtube.com/@slrp_research_park' target='_blank' rel='noopener noreferrer' aria-label='YouTube Channel' className='hover:text-red-600'>
                   <YoutubeIcon width='30' height='30' />
                 </a>
               </div>
