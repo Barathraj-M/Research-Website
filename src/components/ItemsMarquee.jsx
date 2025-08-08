@@ -1,19 +1,6 @@
 import React from 'react'
 import {motion} from 'framer-motion'
 
-// import TechNukeLogo from '../assets/1.png';
-// import TuneUpLogo from '../assets/2.png';
-// import LebyyLogo from '../assets/3.png';
-// import VirtuosparkLogo from '../assets/4.png';
-// import SmassAgroProducts from '../assets/5.png';
-// import KingGoliSoda from '../assets/6.png';
-
-// import {
-//     TechNukeSVGLogo,
-//     TuneUpSVGLogo,
-//     VirtuosparkSVGLogo
-// } from '../assets/ClientLogos/ClientLogoSVGs'
-
 const ItemsMarquee = ({ items }) => {
 
     return (
