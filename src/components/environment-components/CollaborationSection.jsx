@@ -36,13 +36,17 @@ const CollaborationSection = () => {
         <div
             id='collaboration-section'
             className='w-full min-h-[50vh] flex flex-col justify-center items-center gap-y-16 xs:px-2 sm:px-5 md:px-10 lg:px-15 xs:py-10 md:py-20 bg-primary-variant-7'
+            role='region'
+            aria-labelledby='collaboration-heading'
         >
+            <h2 id='collaboration-heading' className='sr-only'>Collaboration Section</h2>
             <div className="grid sm:auto-rows-auto md:grid-rows-none md:grid-cols-6 gap-y-5 gap-x-5 w-full">
                 <div className="md:col-span-3 xs:order-last md:order-first flex justify-center items-center xs:p-2 md:p-5">
-                    <div className='flex flex-col justify-start items-start'>
+                    <div className='flex flex-col justify-start items-start' aria-label='Collaboration partners box grid'>
                         <motion.div
                             className='grid grid-cols-2 grid-rows-2 border border-dashed border-primary-variant-2 rounded-xl bg-primary-variant-8'
                             layout
+                            role='list'
                         >
                             {boxes.map((box, idx) => (
                                 <motion.div
@@ -56,6 +60,8 @@ const CollaborationSection = () => {
                                             'border-dashed border-primary-variant-2 bg-primary-variant-8 xs:p-3 sm:p-7 flex justify-center items-center text-center'
                                         ].join(' ')
                                     }
+                                    role='listitem'
+                                    aria-label={box.label}
                                 >
                                     <AnimatePresence mode="wait">
                                         <motion.h6
