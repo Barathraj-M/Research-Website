@@ -1,5 +1,5 @@
 import React from 'react'
-import PrimaryButtom from '../components/PrimaryButtom'
+import PrimaryButton from '../components/PrimaryButton'
 
 const NotFound = () => {
   return (
@@ -8,7 +8,7 @@ const NotFound = () => {
             <h1 className='text-5xl font-bold'>404</h1>
             <h2 className='font-semibold text-3xl!'>Page Not Found</h2>
             <p className='text-center text-gray-2 -mt-5'>The page you are looking for doesn't exist or has been moved</p>
-            <PrimaryButtom link={'/'} text={'Back to home'}/>
+            <PrimaryButton link={'/'} text={'Back to home'}/>
         </div>
     </div>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 
 import '../index.css'
 
-const PrimaryButtom = ({ link, text }) => {
+const PrimaryButton = ({ link, text }) => {
   const handleClick = (e) => {
     e.preventDefault();
     const target = document.getElementById(link);
@@ -22,4 +22,4 @@ const PrimaryButtom = ({ link, text }) => {
   )
 }
 
-export default PrimaryButtom
+export default PrimaryButton

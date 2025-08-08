@@ -5,7 +5,7 @@ import "../index.css";
 import youth from "../assets/Images/social-resilience-youth.png";
 import science from "../assets/Images/social-synthesis-science.png";
 
-import ItemsMarquee from "../components/ItemsMaquee";
+import ItemsMarquee from "../components/ItemsMarquee";
 import NavHoverLogo from "../assets/Images/nav-hover-icon.svg";
 
 import HeroImage from "../assets/Images/environment-hero-image.webp";

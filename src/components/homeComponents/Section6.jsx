@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import location from "../../assets/Images/location.svg";
 import earthVideo from "../../assets/Videos/earth.mp4";
 import { QuoteDownIcon, QuoteUpIcon } from "../../assets/Icons/Icons";
-import { quoteIconDanceVariants } from "../../utils/animationVarients";
+import { quoteIconDanceVariants } from "../../utils/animationVariants";
 
 // Icons used in box items
 const icons = [ location];

@@ -14,7 +14,7 @@ import {
     contentBasicVariants,
     visibleAnimationVariants,
     basicCardVariants
-} from '../../utils/animationVarients';
+} from '../../utils/animationVariants';
 
 const EngineeringSection = () => {
     const naturalSystemRestoration = [

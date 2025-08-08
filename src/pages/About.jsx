@@ -6,9 +6,9 @@ import { motion, useInView } from "framer-motion";
 import '../index.css';
 
 import SectionPill from '../components/SectionPill';
-import PrimaryButtom from '../components/PrimaryButtom';
+import PrimaryButton from '../components/PrimaryButton';
 import aboutimage from '../assets/Images/aboutimage2.jpg'; // Update with the correct path to your image
-import { contentBasicVariants, heroSectionBottomContainerVariants } from '../utils/animationVarients';
+import { contentBasicVariants, heroSectionBottomContainerVariants } from '../utils/animationVariants';
 import PercentageCounter from '../components/aboutComponents/PercentageCounter';
 
 const About = () => {
@@ -252,7 +252,7 @@ const About = () => {
                                     inclusive.
                                 </p>
                                 <div>
-                                    <PrimaryButtom
+                                    <PrimaryButton
                                         link={'core-initiatives'}
                                         text={'Know More ->'}
                                     />
@@ -390,7 +390,7 @@ const About = () => {
                         <p className='xl:w-[440px] h-auto text-center'>From electric fleets to carbon-neutral strategies, every solution we offer is designed to minimize environmental impact while maximizing operational value.</p>
                     </div>
                     <p className='text-gray-500 xl:mt-8 lg:mt-5 mt-2 text-center'>Together, we can redefine logistics for a better tomorrow.</p>
-                    <PrimaryButtom
+                    <PrimaryButton
                         link={'#'}
                         text={'Learn more'}
                     />
@@ -509,7 +509,7 @@ const About = () => {
                 >
                     <h2 className=' text-center overflow-hidden p-2 xl:w-[800px]'>Join the mission for smarter, cleaner transportation</h2>
                     <p className='text-lg text-center text-gray-500 md:w-[500px] sm:w-[400px] w-auto'>Let’s work together to reduce emissions, optimize our operations, and make a positive impact on the planet.</p>
-                    <PrimaryButtom
+                    <PrimaryButton
                         link={'#'}
                         text={'Talk to our experts'}
                     />

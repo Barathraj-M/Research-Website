@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-import ItemsMarquee from '../components/ItemsMaquee';
+import ItemsMarquee from '../components/ItemsMarquee';
 import SectionPill from '../components/SectionPill'
 import InnovationSection from '../components/environment-components/InnovationSection';
 import IncubationSection from '../components/environment-components/IncubationSection';
@@ -25,7 +25,7 @@ import {
   contentBasicVariants,
   heroSectionMainContainerVariants,
   visibleAnimationVariants
-} from '../utils/animationVarients'
+} from '../utils/animationVariants'
 
 import '../index.css';
 

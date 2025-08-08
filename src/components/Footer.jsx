@@ -16,7 +16,7 @@ import { LinkedIn, InstagramIcon, YoutubeIcon } from '../assets/Icons/Icons.jsx'
 import footerMp4 from '../assets/Videos/footer-video.mp4';
 import footerWebm from '../assets/Videos/footer-video.webm';
 
-import { footerContainerVariants, heartBeatVariants } from '../utils/animationVarients.js';
+import { footerContainerVariants, heartBeatVariants } from '../utils/animationVariants.js';
 
 import '../index.css'
 

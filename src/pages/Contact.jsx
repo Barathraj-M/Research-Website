@@ -6,7 +6,7 @@ import emailjs from '@emailjs/browser'
 import ContactHeroImage from '../assets/Images/contact-hero-image2.png'
 import RoundedBottomRight from '../assets/Images/hero-bottom-right.svg'
 import RoundedBottomLeft from '../assets/Images/hero-bottom-left.svg'
-// import PrimaryButtom from '../components/PrimaryButtom'
+// import PrimaryButton from '../components/PrimaryButton'
 
 import { ConversationSparkIcon } from '../assets/Icons/Icons'
 
@@ -17,7 +17,7 @@ import {
     contentBasicVariants,
     heroSectionBottomContainerVariants,
     overlayVariants
-} from '../utils/animationVarients'
+} from '../utils/animationVariants'
 
 import '../index.css';
 

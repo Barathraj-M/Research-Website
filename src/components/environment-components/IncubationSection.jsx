@@ -8,7 +8,7 @@ import {
     contentBasicVariants,
     visibleAnimationVariants,
     quoteIconDanceVariants
-} from '../../utils/animationVarients';
+} from '../../utils/animationVariants';
 
 import NavHoverLogo from '../../assets/Images/nav-hover-icon.svg';
 import StepConnector from '../../assets/Images/step-connector.svg';

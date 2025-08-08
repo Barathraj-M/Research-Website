@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion'
 
-import { collapsableContentVariants } from '../utils/animationVarients';
+import { collapsableContentVariants } from '../utils/animationVariants';
 
 import '../App.css';
 

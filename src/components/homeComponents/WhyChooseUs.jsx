@@ -103,7 +103,7 @@ const WhyChooseUs = () => {
             className="w-full max-w-[600px] max-h-[650px] object-cover rounded-xl"
           />
           {/* <div className="whybox flex justify-center items-center absolute bottom-10 lg:bottom-[3.75rem]">
-            <PrimaryButtom text={"Meet our Team"} />
+            <PrimaryButton text={"Meet our Team"} />
           </div> */}
         </motion.div>
       </motion.div>

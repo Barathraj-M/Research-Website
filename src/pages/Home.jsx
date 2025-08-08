@@ -20,7 +20,7 @@ import responsible from "../assets/Images/home-what-matters-responsible.jpg";
 import {
   heroSectionBottomContainerVariants,
   contentBasicVariants,
-} from "../utils/animationVarients";
+} from "../utils/animationVariants";
 import {
   HandsGlobeIcon,
   InifiteIcon,

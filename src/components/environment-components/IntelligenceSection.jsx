@@ -8,7 +8,7 @@ import CardBackgroundBlurImage from '../../assets/Images/intelligence-section-ca
 
 import SectionPill from '../SectionPill';
 
-import { contentBasicVariants, visibleAnimationVariants } from '../../utils/animationVarients';
+import { contentBasicVariants, visibleAnimationVariants } from '../../utils/animationVariants';
 
 const IntelligenceSection = () => {
     return (

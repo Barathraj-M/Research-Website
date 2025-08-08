@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import "./HomeAbout.css";
 import SectionPill from "../SectionPill";
-import PrimaryButtom from "../PrimaryButtom";
+import PrimaryButton from "../PrimaryButton";
 
 const HomeAbout = () => {
   const head = useRef(null);
@@ -65,7 +65,7 @@ const HomeAbout = () => {
         className="mt-20 flex flex-col items-center"
       >
         <div className="mt-5 py-2 px-6 cursor-pointer">
-          <PrimaryButtom text={"More about us"} />
+          <PrimaryButton text={"More about us"} />
         </div>
 
         <div className="w-full flex flex-wrap justify-center gap-4 mt-5">

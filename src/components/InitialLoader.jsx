@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import LoadingHolder from '../assets/Images/nav-hover-icon.svg';
 import DummyLogo from '../assets/Images/dummy-icon.svg';
 
-import { initialLoaderVariants } from '../utils/animationVarients';
+import { initialLoaderVariants } from '../utils/animationVariants';
 
 const InitialLoader = () => {
     return (
