@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import SectionPill from '../SectionPill';
 
-import { contentBasicVariants, shufflingTextBoxes } from '../../utils/animationVarients';
+import { contentBasicVariants, shufflingTextBoxes } from '../../utils/animationVariants';
 
 const CollaborationSection = () => {
     const boxLabels = [

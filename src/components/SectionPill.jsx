@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-import { sectionPillVariants } from '../utils/animationVarients'
+import { sectionPillVariants } from '../utils/animationVariants'
 
 import '../index.css'
 

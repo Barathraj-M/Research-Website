@@ -2,8 +2,13 @@ User-agent: *
 
 Disallow: /src/assets/Email Templates/
 Disallow: /src/components/Loading.jsx
-Disallow: /src/components/aboutComponents/PercentageCounter.jsx
+Disallow: /src/components/about-components/PercentageCounter.jsx
 Disallow: /src/components/InitialLoader.jsx
 Disallow: /src/components/HorizontalScrollSection.jsx
 Disallow: /src/components/ScrollToTop.jsx
 Disallow: /src/components/ConfettiHeart.jsx
+Disallow: /src/components/home-components/Clients.jsx
+Disallow: /src/components/home-components/HomeAbout.jsx
+Disallow: /src/components/home-components/Section3.jsx
+Disallow: /src/components/home-components/Section9.jsx
+Disallow: /src/components/home-components/Testimonials.jsx

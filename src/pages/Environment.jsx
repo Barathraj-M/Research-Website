@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-import ItemsMarquee from '../components/ItemsMaquee';
+import ItemsMarquee from '../components/ItemsMarquee';
 import SectionPill from '../components/SectionPill'
 import InnovationSection from '../components/environment-components/InnovationSection';
 import IncubationSection from '../components/environment-components/IncubationSection';
@@ -25,7 +25,7 @@ import {
   contentBasicVariants,
   heroSectionMainContainerVariants,
   visibleAnimationVariants
-} from '../utils/animationVarients'
+} from '../utils/animationVariants'
 
 import '../index.css';
 
@@ -63,7 +63,7 @@ const Environment = () => {
             src={HeroImage}
             alt="Hero background showing environmental theme"
             className='w-full h-[90vh] object-cover overflow-hidden absolute inset-0'
-            loading='eager'
+            loading='lazy'
             role='img'
           />
           <div className='xs:w-9/10 md:w-7/10 lg:w-6/10 absolute right-0 bottom-0 flex flex-col justify-start items-start gap-0'>
@@ -72,7 +72,7 @@ const Environment = () => {
                 src={HeroBottomLeft}
                 alt='decorative divider'
                 className='self-end w-8 h-8 object-cover -mt-8 -me-[0.3px]'
-                loading='eager'
+                loading='lazy'
                 aria-hidden='true'
               />
               <motion.h1
@@ -102,7 +102,7 @@ const Environment = () => {
                   src={HeroTopLeft}
                   alt='decorative divider'
                   className='self-start w-8 h-8 object-cover -ms-8 -mt-[0.4px]'
-                  loading='eager'
+                  loading='lazy'
                   aria-hidden='true'
                 />
                 <motion.p
@@ -124,7 +124,7 @@ const Environment = () => {
                   src={HeroBottomLeft}
                   alt='decorative divider'
                   className='self-start w-8 h-8 object-cover -ms-8 -mt-[0.4px]'
-                  loading='eager'
+                  loading='lazy'
                   aria-hidden='true'
                 />
               </div>
@@ -139,7 +139,7 @@ const Environment = () => {
           src={BackgroundImage}
           alt="Decorative background pattern"
           className='absolute inset-0 w-full h-full object-cover opacity-20'
-          loading='eager'
+          loading='lazy'
           aria-hidden='true'
         />
 
@@ -254,6 +254,7 @@ const Environment = () => {
           <img
             src={AyushBannerImage}
             alt="Banner promoting AYUSH integration with greenery and science symbolism"
+            loading='lazy'
             className="w-full h-full object-cover rounded-2xl transition-transform duration-500 ease-in-out group-hover:scale-102 md:h-[20rem]"
           />
         </motion.div>

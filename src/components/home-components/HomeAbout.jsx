@@ -1,12 +1,8 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import bulb from "../../assets/Images/bulb.svg";
-import star from "../../assets/Images/star.svg";
-import cross from "../../assets/Images/cross.svg";
-import crosses from "../../assets/Images/crosses.svg";
 import "./HomeAbout.css";
 import SectionPill from "../SectionPill";
-import PrimaryButtom from "../PrimaryButtom";
+import PrimaryButton from "../PrimaryButton";
 
 const HomeAbout = () => {
   const head = useRef(null);
@@ -28,7 +24,7 @@ const HomeAbout = () => {
         transition={{ duration: 1, ease: "easeInOut" }}
         className="flex flex-col items-center text-center"
       >
-        <img src={bulb} alt="bulb" className="mt-2 w-12 sm:w-16" />
+        <img src={""} alt="bulb" className="mt-2 w-12 sm:w-16" />
         <SectionPill
           sectionTitle={"Driving Changes"}
           className={"h-auto w-auto"}
@@ -69,7 +65,7 @@ const HomeAbout = () => {
         className="mt-20 flex flex-col items-center"
       >
         <div className="mt-5 py-2 px-6 cursor-pointer">
-          <PrimaryButtom text={"More about us"} />
+          <PrimaryButton text={"More about us"} />
         </div>
 
         <div className="w-full flex flex-wrap justify-center gap-4 mt-5">

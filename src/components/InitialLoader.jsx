@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import LoadingHolder from '../assets/Images/nav-hover-icon.svg';
 import DummyLogo from '../assets/Images/dummy-icon.svg';
 
-import { initialLoaderVariants } from '../utils/animationVarients';
+import { initialLoaderVariants } from '../utils/animationVariants';
 
 const InitialLoader = () => {
     return (
@@ -19,7 +19,7 @@ const InitialLoader = () => {
                     src={DummyLogo}
                     alt='logo'
                     className='w-30 h-30'
-                    loading='eager'
+                    loading='lazy'
                 />
             </motion.div>
             <motion.h2
@@ -40,7 +40,7 @@ const InitialLoader = () => {
                     src={LoadingHolder}
                     alt='loading'
                     className='w-20 h-20 animate-ping'
-                    loading='eager'
+                    loading='lazy'
                 />
             </motion.div>
         </div>

@@ -8,14 +8,14 @@ import {
 
 import Header from './components/Header'
 import Footer from './components/Footer'
-import ScrollToTop from './components/ScrollToTop.jsx'
+import ScrollToTop from './components/ScrollToTop'
 import InitialLoader from './components/InitialLoader';
 
-const Home = lazy(() => import('./pages/Home.jsx'))
+const Home = lazy(() => import('./pages/Home'))
 const Contact = lazy(() => import('./pages/Contact'))
-const About = lazy(() => import('./pages/About.jsx'))
-const Environment = lazy(() => import('./pages/Environment.jsx'))
-const Social = lazy(() => import('./pages/Social.jsx'))
+const About = lazy(() => import('./pages/About'))
+const Environment = lazy(() => import('./pages/Environment'))
+const Social = lazy(() => import('./pages/Social'))
 
 const Loading = lazy(() => import('./components/Loading'))
 const NotFound = lazy(() => import('./pages/NotFound'))

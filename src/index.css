@@ -4,7 +4,7 @@
 
 /* Tailwind CSS base styles */
 @theme {
-    /* Typograpy font styling */
+    /* Typography font styling */
     --font-family-body: Inter, sans-serif;
     --font-family-heading: "Instrument Sans", sans-serif;
     
@@ -63,52 +63,6 @@
     --font-size-9: 2.5rem;
     --font-size-12: 5rem;
 }
-
-/* h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-h1 {
-  margin-top: 20px;
-  font-size: 38px;
-  line-height: 44px;
-}
-
-h2 {
-  margin-top: 20px;
-  font-size: 32px;
-  line-height: 36px;
-}
-
-h3 {
-  margin-top: 20px;
-  font-size: 24px;
-  line-height: 30px;
-}
-
-h4 {
-  margin-top: 10px;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-h5 {
-  margin-top: 10px;
-  font-size: 14px;
-  line-height: 20px;
-}
-
-h6 {
-  margin-top: 10px;
-  font-size: 12px;
-  line-height: 18px;
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 10px;
-} */
 
 body {
   background-color: var(--color-gray-8);
@@ -310,13 +264,7 @@ p {
 .custom-popover .ant-popover-inner {
   background: linear-gradient(to right, #ffffff, #fffbeb, #ffedd5); /* white to amber-100 to orange-100 */
 }
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
+
 
 .sr-only {
   position: absolute;

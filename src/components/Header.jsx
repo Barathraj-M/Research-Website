@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import PrimaryButtom from './PrimaryButtom';
+import PrimaryButton from './PrimaryButton';
 import '../index.css'
 
 import DummyLogo from '../assets/Images/dummy-icon-with-name.svg';
@@ -10,7 +10,7 @@ import NavDivider from '../assets/Images/nav-divider.svg';
 import NavHoverLogo from '../assets/Images/nav-hover-icon.svg';
 import { MenuIcon } from '../assets/Icons/Icons';
 
-import { navHoverLogoVariants, navMenuVariants } from '../utils/animationVarients';
+import { navHoverLogoVariants, navMenuVariants } from '../utils/animationVariants';
 
 const Header = () => {
   const [currentLocation, setCurrentLocation] = useState('/');
@@ -69,6 +69,7 @@ const Header = () => {
         exit='exit'
         src={NavHoverLogo}
         alt=''
+        loading='lazy'
         aria-hidden="true"
       />
       <Link
@@ -101,7 +102,7 @@ const Header = () => {
                 src={DummyLogo} 
                 alt='SLSRP logo' 
                 className='xs:h-12 xs:w-25 md:w-30 md:h-13' 
-                loading='eager' 
+                loading='lazy' 
               />
             </Link>
           </div>
@@ -120,7 +121,7 @@ const Header = () => {
         </nav>
         <div className='flex flex-row gap-x-2 items-center h-full bg-transparent'>
           <div className='xs:hidden p-2 bg-white/70 backdrop-blur-sm rounded-full h-full sm:flex items-center'>
-            <PrimaryButtom link='/contact' text='Contact us' />
+            <PrimaryButton link='/contact' text='Contact us' />
           </div>
           <button
             ref={menuButtonRef}

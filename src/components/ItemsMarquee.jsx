@@ -1,19 +1,6 @@
 import React from 'react'
 import {motion} from 'framer-motion'
 
-// import TechNukeLogo from '../assets/1.png';
-// import TuneUpLogo from '../assets/2.png';
-// import LebyyLogo from '../assets/3.png';
-// import VirtuosparkLogo from '../assets/4.png';
-// import SmassAgroProducts from '../assets/5.png';
-// import KingGoliSoda from '../assets/6.png';
-
-// import {
-//     TechNukeSVGLogo,
-//     TuneUpSVGLogo,
-//     VirtuosparkSVGLogo
-// } from '../assets/ClientLogos/ClientLogoSVGs'
-
 const ItemsMarquee = ({ items }) => {
 
     return (
@@ -37,7 +24,7 @@ const ItemsMarquee = ({ items }) => {
                                 key={index}
                                 src={logo.src}
                                 alt={logo.alt}
-                                loading='eager'
+                                loading='lazy'
                                 className='w-20 md:w-35 h-auto mx-2 my-1 grayscale'
                             />
                         ) : (
@@ -46,7 +33,7 @@ const ItemsMarquee = ({ items }) => {
                                     key={index}
                                     src={logo.src}
                                     alt={logo.alt}
-                                    loading='eager'
+                                    loading='lazy'
                                     className='w-5 h-auto my-1'
                                 />
                                 <p className='mb-0!'>{logo.text}</p>
@@ -72,7 +59,7 @@ const ItemsMarquee = ({ items }) => {
                                 key={index}
                                 src={logo.src}
                                 alt={logo.alt}
-                                loading='eager'
+                                loading='lazy'
                                 className='w-20 md:w-35 h-auto mx-2 my-1 grayscale'
                             />
                         ) : (
@@ -81,7 +68,7 @@ const ItemsMarquee = ({ items }) => {
                                     key={index}
                                     src={logo.src}
                                     alt={logo.alt}
-                                    loading='eager'
+                                    loading='lazy'
                                     className='w-5 h-auto my-1'
                                 />
                                 <p className='mb-0!'>{logo.text}</p>

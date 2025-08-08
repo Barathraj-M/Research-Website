@@ -8,7 +8,7 @@ import {
     contentBasicVariants,
     visibleAnimationVariants,
     quoteIconDanceVariants
-} from '../../utils/animationVarients';
+} from '../../utils/animationVariants';
 
 import NavHoverLogo from '../../assets/Images/nav-hover-icon.svg';
 import StepConnector from '../../assets/Images/step-connector.svg';
@@ -179,6 +179,7 @@ const IncubationSection = () => {
                             <motion.img
                                 src={activeContent.image}
                                 alt={activeContent.title}
+                                loading='lazy'
                                 className='xs:w-full xs:h-[10rem] sm:h-[17rem] md:w-auto md:h-[20rem] lg:h-[27rem] object-cover rounded-xl'
                                 variants={visibleAnimationVariants}
                                 initial='initial'
@@ -231,6 +232,7 @@ const IncubationSection = () => {
                                                 src={NavHoverLogo}
                                                 alt='nav-logo decorative bullet'
                                                 aria-hidden='true'
+                                                loading='lazy'
                                             />
                                             <span className='text-gray-3 text-base leading-relaxed'>{feature}</span>
                                         </motion.li>
@@ -258,6 +260,7 @@ const IncubationSection = () => {
                     <img
                         src={StepConnector}
                         alt='step-divider'
+                        loading='lazy'
                         className='xs:w-4 xs:h-auto md:h-7 md:w-auto xs:rotate-90 md:rotate-0 self-center object-cover -my-1'
                     />
                     <div className='flex flex-row justify-start items-center gap-2 group p-5 bg-primary-variant-8 rounded-lg xs:min-w-[15rem] md:min-w-auto'>
@@ -274,6 +277,7 @@ const IncubationSection = () => {
                     <img
                         src={StepConnector}
                         alt='step-divider'
+                        loading='lazy'
                         className='xs:w-4 xs:h-auto md:h-7 md:w-auto xs:rotate-90 md:rotate-0 self-center object-cover -my-1'
                     />
                     <div className='flex flex-row justify-start items-center gap-2 group p-5 bg-primary-variant-8 rounded-lg xs:min-w-[15rem] md:min-w-auto'>
@@ -290,6 +294,7 @@ const IncubationSection = () => {
                     <img
                         src={StepConnector}
                         alt='step-divider'
+                        loading='lazy'
                         className='xs:w-4 xs:h-auto md:h-7 md:w-auto xs:rotate-90 md:rotate-0 self-center object-cover -my-1'
                     />
                     <div className='flex flex-row justify-start items-center gap-2 group p-5 bg-primary-variant-8 rounded-lg xs:min-w-[15rem] md:min-w-auto'>
@@ -306,6 +311,7 @@ const IncubationSection = () => {
                     <img
                         src={StepConnector}
                         alt='step-divider'
+                        loading='lazy'
                         className='xs:w-4 xs:h-auto md:h-7 md:w-auto xs:rotate-90 md:rotate-0 self-center object-cover -my-1'
                     />
                     <div className='flex flex-row justify-start items-center gap-2 group p-5 bg-primary-variant-8 rounded-lg xs:min-w-[15rem] md:min-w-auto'>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
 
-import { animatedTextCyclerVariants } from '../utils/animationVarients';
+import { animatedTextCyclerVariants } from '../utils/animationVariants';
 
 import '../index.css';
 

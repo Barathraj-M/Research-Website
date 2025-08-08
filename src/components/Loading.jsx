@@ -9,7 +9,7 @@ const Loading = () => {
           src={LoadingHolder}
           alt='loading'
           className='w-20 h-20 animate-ping'
-          loading='eager'
+          loading='lazy'
         />
     </div>
   )

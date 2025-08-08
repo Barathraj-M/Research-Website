@@ -6,25 +6,24 @@ import nature from "../assets/Videos/nature.mp4";
 import ocean from "../assets/Videos/ocean.mp4";
 import { motion, useInView } from "framer-motion";
 import StepConnector from "../assets/Images/step-connector.svg";
-import OurServices from "../components/homeComponents/OurServices";
-import WhyChooseUs from "../components/homeComponents/WhyChooseUs";
-import Section6 from "../components/homeComponents/Section6";
-import science from "../assets/Images/science.png";
+import OurServices from "../components/home-components/OurServices";
+import WhyChooseUs from "../components/home-components/WhyChooseUs";
+import Section6 from "../components/home-components/Section6";
+import ancient from "../assets/Images/home-ancient.jpg";
 import jc from "../assets/Images/jc.png";
 import RoundedBottomRight from "../assets/Images/hero-bottom-right.svg";
 import RoundedBottomLeft from "../assets/Images/hero-bottom-left.svg";
-import YogaBannerImage from "../assets/Images/ancient-yoga-banner-image.png";
 import NavHoverLogo from "../assets/Images/nav-hover-icon.svg";
-import resilient from "../assets/Images/resilient.jpg";
-import research from "../assets/Images/research.jpg";
-import responsible from "../assets/Images/responsible.jpg";
+import resilient from "../assets/Images/home-what-matters-resilient.jpg";
+import research from "../assets/Images/home-what-matters-research.jpg";
+import responsible from "../assets/Images/home-what-matters-responsible.jpg";
 import {
   heroSectionBottomContainerVariants,
   contentBasicVariants,
-} from "../utils/animationVarients";
+} from "../utils/animationVariants";
 import {
   HandsGlobeIcon,
-  InifiteIcon,
+  InfiniteIcon,
   ShieldCheckIcon,
 } from "../assets/Icons/Icons";
 import SectionPill from "../components/SectionPill";
@@ -59,7 +58,6 @@ const videoSlides = [
 const Home = () => {
   const [videoIndex, setVideoIndex] = useState(0);
   const bottomRef = useRef(null);
-  const bottomInView = useInView(bottomRef, { once: true });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -118,17 +116,15 @@ const Home = () => {
                   style={{ color: "white" }}
                 >
                   {video.title.split("\n").map((line, i) => (
-                    <span key={i}>
-                      {line}
-                    </span>
+                    <span key={i}>{line}</span>
                   ))}
                 </h1>
-                <p
+                <h3
                   className={`w-3/4 ${video.textColor} ml-6`}
                   style={{ color: "white" }}
                 >
                   {video.description}
-                </p>
+                </h3>
               </motion.div>
             ) : null
           )}
@@ -149,6 +145,7 @@ const Home = () => {
               alt=""
               aria-hidden="true"
               className="self-end -mb-[0.8px] -me-[0.8px]"
+              loading="lazy"
             />
 
             <motion.div
@@ -172,7 +169,7 @@ const Home = () => {
                 <h6 className="text-center font-semibold">
                   SLSRP - The timeless mission
                 </h6>
-                <InifiteIcon
+                <InfiniteIcon
                   width={50}
                   height={50}
                   title="Timeless Mission Icon"
@@ -225,6 +222,7 @@ const Home = () => {
               alt=""
               aria-hidden="true"
               className="self-end -mb-[0.8px] -ms-[0.8px]"
+              loading="lazy"
             />
           </div>
         </div>
@@ -268,7 +266,7 @@ const Home = () => {
             </p>
             <p>
               Spearheaded by Thiru. Jeyachandran Srinivasan, a distinguished
-              socialpreneur and thought leader, SLSRP represents a powerful
+              social entrepreneur and thought leader, SLSRP represents a powerful
               confluence of Eastern ancient wisdom systems and contemporary
               scientific research.
             </p>
@@ -294,6 +292,7 @@ const Home = () => {
               src={jc}
               alt="Portrait of Thiru. Jeyachandran Srinivasan"
               className="w-full max-w-md rounded-md"
+              loading="lazy"
             />
           </motion.div>
         </motion.div>
@@ -334,6 +333,7 @@ const Home = () => {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                   role="img"
+                  loading="lazy"
                   aria-label="Checklist icon"
                 >
                   <path
@@ -345,7 +345,7 @@ const Home = () => {
                 </svg>
               </div>
               <h3 id="section-title" className="mt-3!">
-                Whats<span className="text-primary-1"> Matters</span>
+                What's<span className="text-primary-1"> Matters</span>
               </h3>
             </div>
             <p className="text-[17px] lg:pe-20 lg:ps-20 pe-5 ps-5">
@@ -366,7 +366,7 @@ const Home = () => {
             <div className="rounded-2xl overflow-hidden">
               <img
                 src={responsible}
-                loading="eager"
+                loading="lazy"
                 alt="Representation of responsibility"
                 className="object-cover w-full h-full"
               />
@@ -375,7 +375,7 @@ const Home = () => {
             <div className="rounded-2xl overflow-hidden">
               <img
                 src={resilient}
-                loading="eager"
+                loading="lazy"
                 alt="Representation of resilience"
                 className="w-full h-full object-cover"
               />
@@ -384,7 +384,7 @@ const Home = () => {
             <div className="rounded-2xl overflow-hidden sm:col-span-1 col-span-2">
               <img
                 src={research}
-                loading="eager"
+                loading="lazy"
                 alt="Representation of research and inquiry"
                 className="w-full h-full object-cover"
               />
@@ -439,6 +439,7 @@ const Home = () => {
                   <img
                     src={StepConnector}
                     alt=""
+                    loading="lazy"
                     role="presentation"
                     className="xs:w-4 xs:h-auto md:h-7 md:w-auto xs:rotate-90 md:rotate-0 self-center object-cover -my-1"
                     aria-hidden="true"
@@ -464,6 +465,7 @@ const Home = () => {
                   {/* Connector */}
                   <img
                     src={StepConnector}
+                    loading="lazy"
                     alt=""
                     role="presentation"
                     className="xs:w-4 xs:h-auto md:h-7 md:w-auto xs:rotate-90 md:rotate-0 self-center object-cover -my-1"
@@ -520,7 +522,8 @@ const Home = () => {
             aria-label="SLSRP conceptual illustration"
           >
             <img
-              src={science}
+              src={ancient}
+              loading="lazy"
               alt="Illustration representing SLSRP scientific focus"
               className="w-3/4"
             />
@@ -539,8 +542,11 @@ const Home = () => {
               id="ancient-wisdom-heading"
             >
               <h3 style={{ textAlign: "start" }}>
-                A <span className="text-primary-1">Deep Respect</span> for
-                Ancient Knowledge
+                A{" "}
+                <span className="bg-gradient-to-r from-primary-1 via-primary-variant-2 to-primary-variant-3 bg-clip-text text-transparent">
+                  Deep Respect
+                </span>{" "}
+                for Ancient Knowledge
               </h3>
             </div>
 
@@ -557,6 +563,7 @@ const Home = () => {
                     className="mt-1"
                     role="presentation"
                     aria-hidden="true"
+                    loading="lazy"
                   />
                   SLSRP stands at the frontier where Applied noetic science
                   research, Tamil Siddha science, Eastern ancient traditional
@@ -571,6 +578,7 @@ const Home = () => {
                     className="mt-1"
                     role="presentation"
                     aria-hidden="true"
+                    loading="lazy"
                   />
                   We operate in close coordination with government ministries,
                   research institutions, and thought leaders to create academic
@@ -583,6 +591,7 @@ const Home = () => {
                     alt="Decorative navigation logo"
                     className="mt-1"
                     role="presentation"
+                    loading="lazy"
                     aria-hidden="true"
                   />
                   Our Noetic Science Enablement on Unified Wholeness (nseUW)

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-import { serviceCardVariants } from '../utils/animationVarients';
+import { serviceCardVariants } from '../utils/animationVariants';
 
 import '../index.css';
 

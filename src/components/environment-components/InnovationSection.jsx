@@ -7,7 +7,7 @@ import SectionPill from '../SectionPill';
 import {
   contentBasicVariants,
   basicCardVariants
-} from '../../utils/animationVarients'
+} from '../../utils/animationVariants'
 
 import { BlockChainIcon, TargetIcon, DroneIcon } from '../../assets/Icons/Icons';
 

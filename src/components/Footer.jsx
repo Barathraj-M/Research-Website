@@ -16,7 +16,7 @@ import { LinkedIn, InstagramIcon, YoutubeIcon } from '../assets/Icons/Icons.jsx'
 import footerMp4 from '../assets/Videos/footer-video.mp4';
 import footerWebm from '../assets/Videos/footer-video.webm';
 
-import { footerContainerVariants, heartBeatVariants } from '../utils/animationVarients.js';
+import { footerContainerVariants, heartBeatVariants } from '../utils/animationVariants.js';
 
 import '../index.css'
 
@@ -64,7 +64,7 @@ const Footer = () => {
         <div className='flex xs:flex-col lg:flex-row w-full gap-0'>
           <div className='lg:w-10/20 flex flex-col justify-between items-center bg-white rounded-2xl border-white'>
             <div className='flex flex-col justify-between items-center flex-grow-1 gap-3 p-5'>
-              <img src={DummyLogo} alt='SLRP Research Park Logo' className='w-30 h-30 self-start'/>
+              <img src={DummyLogo} alt='SLRP Research Park Logo' className='w-30 h-30 self-start' loading='lazy'/>
               <div className='flex flex-col justify-start items-start gap-y-5 w-full'>
                 <AnimatedTextCycler />
                 <div className='flex flex-col justify-start items-center gap-y-3 w-full'>
@@ -124,6 +124,7 @@ const Footer = () => {
             alt='Decorative divider'
             className='xs:w-7 xs:h-auto lg:h-10 lg:w-auto xs:rotate-90 lg:rotate-0 self-center object-cover -my-3.5'
             aria-hidden='true'
+            loading='lazy'
           />
 
           <div className='flex flex-col justify-center items-center bg-white rounded-2xl border-white' role='navigation' aria-label='Footer links'>
