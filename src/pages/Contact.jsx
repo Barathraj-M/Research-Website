@@ -356,7 +356,7 @@ const Contact = () => {
                 </motion.h2>
                 <CollapsableCard
                     heading={'Who founded SLSRP and what is its core philosophy?'}
-                    text={'SLSRP was founded by Thiru. Jeyachandran Srinivasan, a distinguished socialpreneur and thought leader. Its philosophy emphasizes a wholistic model of transformation that integrates science with spirit, technology with ethics, and intangible human consciousness with tangible global development goals.'}
+                    text={'SLSRP was founded by Thiru. Jeyachandran Srinivasan, a distinguished social entrepreneur and thought leader. Its philosophy emphasizes a wholistic model of transformation that integrates science with spirit, technology with ethics, and intangible human consciousness with tangible global development goals.'}
                 />
                 <CollapsableCard
                     heading={'What is the Noetic Science Enablement on Unified Wholeness (nseUW) program?'}

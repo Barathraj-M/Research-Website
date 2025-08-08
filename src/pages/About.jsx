@@ -9,7 +9,7 @@ import SectionPill from '../components/SectionPill';
 import PrimaryButton from '../components/PrimaryButton';
 import aboutimage from '../assets/Images/aboutimage2.jpg'; // Update with the correct path to your image
 import { contentBasicVariants, heroSectionBottomContainerVariants } from '../utils/animationVariants';
-import PercentageCounter from '../components/aboutComponents/PercentageCounter';
+import PercentageCounter from '../components/about-components/PercentageCounter';
 
 const About = () => {
 

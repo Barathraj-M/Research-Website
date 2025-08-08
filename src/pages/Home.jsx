@@ -6,9 +6,9 @@ import nature from "../assets/Videos/nature.mp4";
 import ocean from "../assets/Videos/ocean.mp4";
 import { motion, useInView } from "framer-motion";
 import StepConnector from "../assets/Images/step-connector.svg";
-import OurServices from "../components/homeComponents/OurServices";
-import WhyChooseUs from "../components/homeComponents/WhyChooseUs";
-import Section6 from "../components/homeComponents/Section6";
+import OurServices from "../components/home-components/OurServices";
+import WhyChooseUs from "../components/home-components/WhyChooseUs";
+import Section6 from "../components/home-components/Section6";
 import ancient from "../assets/Images/home-ancient.jpg";
 import jc from "../assets/Images/jc.png";
 import RoundedBottomRight from "../assets/Images/hero-bottom-right.svg";
@@ -23,7 +23,7 @@ import {
 } from "../utils/animationVariants";
 import {
   HandsGlobeIcon,
-  InifiteIcon,
+  InfiniteIcon,
   ShieldCheckIcon,
 } from "../assets/Icons/Icons";
 import SectionPill from "../components/SectionPill";
@@ -169,7 +169,7 @@ const Home = () => {
                 <h6 className="text-center font-semibold">
                   SLSRP - The timeless mission
                 </h6>
-                <InifiteIcon
+                <InfiniteIcon
                   width={50}
                   height={50}
                   title="Timeless Mission Icon"
@@ -266,7 +266,7 @@ const Home = () => {
             </p>
             <p>
               Spearheaded by Thiru. Jeyachandran Srinivasan, a distinguished
-              socialpreneur and thought leader, SLSRP represents a powerful
+              social entrepreneur and thought leader, SLSRP represents a powerful
               confluence of Eastern ancient wisdom systems and contemporary
               scientific research.
             </p>
@@ -345,7 +345,7 @@ const Home = () => {
                 </svg>
               </div>
               <h3 id="section-title" className="mt-3!">
-                Whats<span className="text-primary-1"> Matters</span>
+                What's<span className="text-primary-1"> Matters</span>
               </h3>
             </div>
             <p className="text-[17px] lg:pe-20 lg:ps-20 pe-5 ps-5">

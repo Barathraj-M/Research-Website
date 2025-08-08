@@ -4,7 +4,7 @@
 
 /* Tailwind CSS base styles */
 @theme {
-    /* Typograpy font styling */
+    /* Typography font styling */
     --font-family-body: Inter, sans-serif;
     --font-family-heading: "Instrument Sans", sans-serif;
     
