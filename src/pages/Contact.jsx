@@ -13,16 +13,17 @@ import { ConversationSparkIcon } from '../assets/Icons/Icons'
 import CollapsableCard from '../components/CollapsableCard'
 import SectionPill from '../components/SectionPill'
 
-import { 
-    contentBasicVariants, 
-    heroSectionBottomContainerVariants, 
-    overlayVariants 
+import {
+    contentBasicVariants,
+    heroSectionBottomContainerVariants,
+    overlayVariants
 } from '../utils/animationVarients'
 
 import '../index.css';
 
 const Contact = () => {
     const [errors, setErrors] = useState({})
+    const [isSubmitting, setIsSubmitting] = useState(false)
 
     const validate = (fields) => {
         const errs = {}
@@ -65,6 +66,8 @@ const Contact = () => {
         if (Object.keys(validationErrors).length > 0) {
             return
         }
+
+        setIsSubmitting(true)
         console.log('Submitted... ');
 
         emailjs.sendForm(
@@ -72,18 +75,20 @@ const Contact = () => {
             import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
             e.target,
             import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-        ). then(() => {
+        ).then(() => {
             alert('Success');
             e.target.reset();
             setErrors({})
+            setIsSubmitting(false)
         }).catch((error) => {
             console.error(error);
+            setIsSubmitting(false)
         })
     }
 
     return (
         <>
-            <section className='w-full h-full'>
+            <section className='w-full h-full' role="banner" aria-labelledby="hero-title">
                 <AnimatePresence mode='sync'>
                     <div className='w-full h-full relative'>
                         <motion.div
@@ -92,16 +97,18 @@ const Contact = () => {
                             initial='initial'
                             whileInView='whileInView'
                             exit='exit'
+                            aria-hidden="true"
                         ></motion.div>
                         <img
                             src={ContactHeroImage}
-                            alt='Contact-hero-section-header-img'
+                            alt='Contact hero section featuring SLSRP office building with modern architecture and green landscaping'
                             className='w-full h-[100vh] object-cover overflow-hidden'
                             loading='eager'
                         />
                         <div className='absolute w-full flex flex-col justify-center items-center gap-y-2 md:gap-y-15 bottom-0 left-0 right-0'>
                             <div className='flex flex-col justify-center items-center gap-y-7 max-w-lg'>
                                 <motion.h1
+                                    id="hero-title"
                                     className='mx-auto text-white!'
                                     variants={contentBasicVariants}
                                     initial='initial'
@@ -127,14 +134,17 @@ const Contact = () => {
                             <div className='xs:w-full sm:w-8/10 md:w-9/10 lg:w-8/10 flex flex-row justify-between items-center gap-0'>
                                 <img
                                     src={RoundedBottomLeft}
-                                    alt='Rounded bottom left decoration'
+                                    alt=''
                                     className='self-end -mb-[0.8px] -me-[0.8px]'
+                                    aria-hidden="true"
                                 />
                                 <motion.div
                                     className='w-full grid xs:grid-cols-1 md:grid-cols-3 md:gap-x-5 rounded-tl-xl rounded-tr-xl bg-gray-8 px-4 pt-4 pb-2 bg-gradient-to-t from-gray-8 to-[#fff3d1]'
                                     variants={heroSectionBottomContainerVariants}
                                     initial='initial'
                                     animate='animate'
+                                    role="contentinfo"
+                                    aria-label="Contact information"
                                 >
                                     <motion.div
                                         className='flex flex-col justify-center items-center gap-y-2 h-full xs:border-b-1 md:border-b-0 md:border-r-1 border-dashed border-gray-4 p-4'
@@ -146,7 +156,13 @@ const Contact = () => {
                                         exit='exit'
                                     >
                                         <h5>Call us anytime</h5>
-                                        <a href='tel: +1234567890' className='text-gray-3 hover:text-gray-2'>+1234567890</a>
+                                        <a
+                                            href='tel:+1234567890'
+                                            className='text-gray-3 hover:text-gray-2'
+                                            aria-label="Call SLSRP at +1234567890"
+                                        >
+                                            +1234567890
+                                        </a>
                                     </motion.div>
                                     <motion.div
                                         className='flex flex-col justify-center items-center gap-y-2 h-full xs:border-b-1 md:border-b-0 md:border-r-1 border-dashed border-gray-4 p-4'
@@ -158,7 +174,13 @@ const Contact = () => {
                                         exit='exit'
                                     >
                                         <h5>Write to us</h5>
-                                        <a href='tel: +1234567890' className='text-gray-3 hover:text-gray-2'>+1234567890</a>
+                                        <a
+                                            href='mailto:info@slsrp.com'
+                                            className='text-gray-3 hover:text-gray-2'
+                                            aria-label="Send email to SLSRP"
+                                        >
+                                            info@slsrp.com
+                                        </a>
                                     </motion.div>
                                     <motion.div
                                         className='text-center flex flex-col justify-center items-center gap-y-2 h-full p-4'
@@ -176,14 +198,15 @@ const Contact = () => {
                                 </motion.div>
                                 <img
                                     src={RoundedBottomRight}
-                                    alt='Rounded bottom right decoration'
+                                    alt=''
                                     className='self-end -mb-[0.8px] -ms-[0.8px]'
+                                    aria-hidden="true"
                                 />
                             </div>
                         </div>
                     </div>
                     <div className='w-full flex flex-col justify-center items-center gap-y-10 my-10'>
-                        <span className="relative flex w-16 h-16 items-center justify-center -mb-3 mt-10">
+                        <span className="relative flex w-16 h-16 items-center justify-center -mb-3 mt-10" aria-hidden="true">
                             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary-1/50 opacity-75"></span>
                             <span className="relative inline-flex w-16 h-16 rounded-full bg-primary-1 items-center justify-center">
                                 <ConversationSparkIcon width={30} height={30} />
@@ -197,6 +220,7 @@ const Contact = () => {
                             viewport={{ once: true, amount: "some" }}
                             exit='exit'
                             custom={1}
+                            id="contact-form-title"
                         >
                             Let's start a <span className='bg-gradient-to-r from-primary-1 via-primary-variant-2 to-primary-variant-3 bg-clip-text text-transparent'>conversation</span>
                         </motion.h2>
@@ -209,10 +233,17 @@ const Contact = () => {
                             exit='exit'
                             custom={3}
                             onSubmit={sendEmail}
+                            role="form"
+                            aria-labelledby="contact-form-title"
+                            aria-describedby="form-description"
+                            noValidate
                         >
+                            <div id="form-description" className="sr-only">
+                                Use this form to send a message to SLSRP. All fields are required.
+                            </div>
                             <div className='w-full'>
                                 <label htmlFor='name' className='block mb-2 text-black'>
-                                    What is your full name?
+                                    What is your full name? <span aria-label="required" className="text-red-500">*</span>
                                 </label>
                                 <input
                                     type='text'
@@ -220,15 +251,18 @@ const Contact = () => {
                                     id='name'
                                     placeholder='Type your full name'
                                     className={`w-full p-4 border border-dashed border-gray-4 focus:outline-dashed focus:ring-gray-2 focus:border-transparent rounded-md transition-all duration-200${errors.name ? ' border-red-500' : ''}`}
+                                    aria-required="true"
+                                    aria-invalid={errors.name ? 'true' : 'false'}
+                                    aria-describedby={errors.name ? 'name-error' : undefined}
                                 />
                                 <div className='h-6 mt-1'>
-                                    {errors.name && <span className='text-red-500 text-sm'>{errors.name}</span>}
+                                    {errors.name && <span id="name-error" className='text-red-500 text-sm' role="alert">{errors.name}</span>}
                                 </div>
                             </div>
                             <div className='w-full flex xs:flex-col md:flex-row justify-between items-start gap-x-8 xs:gap-y-5 md:gap-y-7'>
                                 <div className='w-full self-start'>
                                     <label htmlFor='email' className='block mb-2 text-black'>
-                                        Email Address
+                                        Email Address <span aria-label="required" className="text-red-500">*</span>
                                     </label>
                                     <input
                                         type='email'
@@ -236,14 +270,18 @@ const Contact = () => {
                                         id='email'
                                         placeholder='Type your email address'
                                         className={`w-full p-4 border border-dashed border-gray-4 focus:outline-dashed focus:ring-gray-2 focus:border-transparent rounded-md transition-all duration-200${errors.email ? ' border-red-500' : ''}`}
+                                        aria-required="true"
+                                        aria-invalid={errors.email ? 'true' : 'false'}
+                                        aria-describedby={errors.email ? 'email-error' : undefined}
+                                        autoComplete="email"
                                     />
                                     <div className='h-5 mt-1'>
-                                        {errors.email && <span className='text-red-500 text-xs'>{errors.email}</span>}
+                                        {errors.email && <span id="email-error" className='text-red-500 text-xs' role="alert">{errors.email}</span>}
                                     </div>
                                 </div>
                                 <div className='w-full self-start'>
                                     <label htmlFor='phone' className='block mb-2 text-black'>
-                                        Phone Number
+                                        Phone Number <span aria-label="required" className="text-red-500">*</span>
                                     </label>
                                     <input
                                         type='tel'
@@ -251,15 +289,20 @@ const Contact = () => {
                                         id='phone'
                                         placeholder='Type your phone number'
                                         className={`w-full p-4 border border-dashed border-gray-4 focus:outline-dashed focus:ring-gray-2 focus:border-transparent rounded-md transition-all duration-200${errors.phone ? ' border-red-500' : ''}`}
+                                        aria-required="true"
+                                        aria-invalid={errors.phone ? 'true' : 'false'}
+                                        aria-describedby={errors.phone ? 'phone-error phone-help' : 'phone-help'}
+                                        autoComplete="tel"
                                     />
+                                    <div id="phone-help" className="sr-only">Enter a 10-digit phone number</div>
                                     <div className='h-5 mt-1'>
-                                        {errors.phone && <span className='text-red-500 text-sm'>{errors.phone}</span>}
+                                        {errors.phone && <span id="phone-error" className='text-red-500 text-sm' role="alert">{errors.phone}</span>}
                                     </div>
                                 </div>
                             </div>
                             <div className='w-full'>
                                 <label htmlFor='message' className='block mb-2 text-black'>
-                                    Send us a message
+                                    Send us a message <span aria-label="required" className="text-red-500">*</span>
                                 </label>
                                 <textarea
                                     name='message'
@@ -267,25 +310,38 @@ const Contact = () => {
                                     rows='5'
                                     placeholder='Type your message here'
                                     className={`w-full p-4 border border-dashed border-gray-4 focus:outline-dashed focus:ring-gray-2 focus:border-transparent rounded-md transition-all duration-200 resize-vertical${errors.message ? ' border-red-500' : ''}`}
+                                    aria-required="true"
+                                    aria-invalid={errors.message ? 'true' : 'false'}
+                                    aria-describedby={errors.message ? 'message-error message-help' : 'message-help'}
                                 />
+                                <div id="message-help" className="sr-only">Message must be at least 10 characters long</div>
                                 <div className='h-6 mt-1'>
-                                    {errors.message && <span className='text-red-500 text-sm'>{errors.message}</span>}
+                                    {errors.message && <span id="message-error" className='text-red-500 text-sm' role="alert">{errors.message}</span>}
                                 </div>
                             </div>
                             <input
                                 type='submit'
                                 name='submit'
                                 id='submit'
-                                value='Send Message'
-                                className='rounded-full bg-primary-1 border-1 border-dashed border-primary-1 hover:bg-black hover:text-white text-black px-4 py-2 transition-colors duration-300 ease-in-out text-nowrap font-medium cursor-pointer'
+                                value={isSubmitting ? 'Sending...' : 'Send Message'}
+                                className='rounded-full bg-primary-1 border-1 border-dashed border-primary-1 hover:bg-black hover:text-white text-black px-4 py-2 transition-colors duration-300 ease-in-out text-nowrap font-medium cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed'
+                                disabled={isSubmitting}
+                                aria-describedby="submit-help"
                             />
+                            <div id="submit-help" className="sr-only">Click to send your message to SLSRP</div>
                         </motion.form>
                     </div>
                 </AnimatePresence>
             </section>
-            <section className='w-full min-h-screen p-2 flex flex-col justify-start items-center gap-y-8 pt-20!'>
-                <SectionPill sectionTitle={'FAQ'}/>
+            <section
+                className='w-full min-h-screen p-2 flex flex-col justify-start items-center gap-y-8 pt-20!'
+                role="list"
+                aria-label="Frequently asked questions"
+                aria-labelledby="faq-title"
+            >
+                <SectionPill sectionTitle={'FAQ'} />
                 <motion.h2
+                    id="faq-title"
                     className='text-center font-semibold max-w-lg'
                     variants={contentBasicVariants}
                     initial='initial'
