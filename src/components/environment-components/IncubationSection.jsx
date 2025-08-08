@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -7,16 +8,16 @@ import {
     contentBasicVariants,
     visibleAnimationVariants,
     quoteIconDanceVariants
-} from '../../utils/animationVarients'
+} from '../../utils/animationVarients';
 
 import NavHoverLogo from '../../assets/Images/nav-hover-icon.svg';
 import StepConnector from '../../assets/Images/step-connector.svg';
 
 import PolicySignImage from '../../assets/Images/policy-sign-image.jpg';
-import EndToEndSupport from '../../assets/Images/end-to-end-support-image.jpg'
-import IdeaIncubationImage from '../../assets/Images/idea-incubation-image.jpg'
-import ExpertMentoringImage from '../../assets/Images/expert-mentoring-image.jpg'
-import GreenDiscoveryPlantDNAImage from '../../assets/Images/green-discovery-dna-plant-image.jpg'
+import EndToEndSupport from '../../assets/Images/end-to-end-support-image.jpg';
+import IdeaIncubationImage from '../../assets/Images/idea-incubation-image.jpg';
+import ExpertMentoringImage from '../../assets/Images/expert-mentoring-image.jpg';
+import GreenDiscoveryPlantDNAImage from '../../assets/Images/green-discovery-dna-plant-image.jpg';
 
 import {
     LightBulbIcon,
@@ -102,10 +103,17 @@ const IncubationSection = () => {
     const activeContent = tabData.find(tab => tab.id === activeTab);
 
     return (
-        <div className='w-full min-h-screen flex flex-col justify-center items-center gap-y-10 xs:px-2 sm:px-5 md:px-10 lg:px-15 py-5 my-10'>
+        <div
+            className='w-full min-h-screen flex flex-col justify-center items-center gap-y-10 xs:px-2 sm:px-5 md:px-10 lg:px-15 py-5 my-10'
+            role='region'
+            aria-labelledby='incubation-heading'
+        >
+            <h2 id='incubation-heading' className='sr-only'>Incubation Section</h2>
+
             <div>
                 <SectionPill sectionTitle={'Incubation'} />
             </div>
+
             <div className='text-center max-w-2xl flex flex-col gap-y-5'>
                 <motion.h2
                     className="font-semibold!"
@@ -130,10 +138,14 @@ const IncubationSection = () => {
             </div>
 
             <div className='w-full'>
-                <div className='flex flex-wrap justify-center xs:gap-x-1 sm:gap-x-2 xs:gap-y-2 md:gap-4 mb-12'>
+                <div className='flex flex-wrap justify-center xs:gap-x-1 sm:gap-x-2 xs:gap-y-2 md:gap-4 mb-12' role='tablist' aria-label='Incubation tabs'>
                     {tabData.map((tab, index) => (
                         <motion.button
                             key={tab.id}
+                            id={`tab-${tab.id}`}
+                            aria-selected={activeTab === tab.id}
+                            aria-controls={`tabpanel-${tab.id}`}
+                            role='tab'
                             onClick={() => setActiveTab(tab.id)}
                             className={`flex items-center border-dashed gap-3 px-3 py-2 rounded-md border-1 transition-all duration-300 hover:cursor-pointer ${activeTab === tab.id
                                 ? 'border-primary-1 bg-white text-gray-1'
@@ -158,6 +170,9 @@ const IncubationSection = () => {
                 <AnimatePresence mode='wait'>
                     <div
                         key={activeTab}
+                        id={`tabpanel-${activeTab}`}
+                        role='tabpanel'
+                        aria-labelledby={`tab-${activeTab}`}
                         className='bg-white rounded-xl overflow-hidden xs:p-3 sm:p-5 md:p-7 md:w-8/10 mx-auto'
                     >
                         <div className='flex flex-col md:flex-row'>
@@ -199,7 +214,7 @@ const IncubationSection = () => {
                                     </motion.p>
                                 </div>
 
-                                <ul className='space-y-3'>
+                                <ul className='space-y-3' role='list'>
                                     {activeContent.features.map((feature, index) => (
                                         <motion.li
                                             key={index}
@@ -210,11 +225,12 @@ const IncubationSection = () => {
                                             exit='exit'
                                             viewport={{ once: true, amount: "0.1" }}
                                             custom={index + 3}
+                                            role='listitem'
                                         >
-                                            {/* <div className='w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0'></div> */}
                                             <img
                                                 src={NavHoverLogo}
-                                                alt='nav-logo'
+                                                alt='nav-logo decorative bullet'
+                                                aria-hidden='true'
                                             />
                                             <span className='text-gray-3 text-base leading-relaxed'>{feature}</span>
                                         </motion.li>
@@ -226,7 +242,7 @@ const IncubationSection = () => {
                 </AnimatePresence>
             </div>
 
-            <div className='w-full'>
+            <div className='w-full' aria-label='Incubation timeline'>
                 <div className='flex xs:flex-col md:flex-row justify-center items-center gap-0'>
                     <div className='flex flex-row justify-start items-center gap-2 group p-5 bg-primary-variant-8 rounded-lg xs:min-w-[15rem] md:min-w-auto'>
                         <div className='p-1 relative border-1 border-dashed border-primary-1 rounded-xl'>
@@ -306,11 +322,12 @@ const IncubationSection = () => {
                 </div>
             </div>
 
-            <div className='bg-gray-1 rounded-full flex flex-row justify-center items-center gap-x-5 p-5'>
+            <div className='bg-gray-1 rounded-full flex flex-row justify-center items-center gap-x-5 p-5' role='contentinfo' aria-label='Incubation quote'>
                 <motion.div
                     className='self-start text-primary-1'
                     variants={quoteIconDanceVariants}
                     animate='animate'
+                    aria-hidden='true'
                 >
                     <QuoteDownIcon width={40} height={40} />
                 </motion.div>
@@ -321,13 +338,13 @@ const IncubationSection = () => {
                     className='self-end text-primary-1'
                     variants={quoteIconDanceVariants}
                     animate='animate'
+                    aria-hidden='true'
                 >
                     <QuoteUpIcon width={40} height={40} />
                 </motion.div>
             </div>
-
         </div>
     );
 };
 
-export default IncubationSection; 
+export default IncubationSection;
