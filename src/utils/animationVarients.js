@@ -317,3 +317,17 @@ export const shufflingTextBoxes = {
         damping: 30
     }
 }
+
+export const heartBeatVariants = {
+    initial: {
+        scale: 1
+    },
+    animate: {
+        scale: [1, 1.2, 1],
+        transition: {
+            duration: 0.6,
+            repeat: Infinity,
+            ease: "easeInOut"
+        }
+    }
+};

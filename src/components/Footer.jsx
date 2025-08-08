@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 
 import AnimatedTextCycler from './AnimatedTextCycler.jsx';
+import ConfettiHeart from './ConfettiHeart.jsx';
 
 import DummyLogo from '../assets/Images/dummy-icon.svg';
 import FooterDivider from '../assets/Images/nav-divider.svg';
@@ -15,11 +16,14 @@ import { LinkedIn, InstagramIcon, YoutubeIcon } from '../assets/Icons/Icons.jsx'
 import footerMp4 from '../assets/Videos/footer-video.mp4';
 import footerWebm from '../assets/Videos/footer-video.webm';
 
+import { footerContainerVariants, heartBeatVariants } from '../utils/animationVarients.js';
+
 import '../index.css'
 
-import { footerContainerVariants } from '../utils/animationVarients.js';
-
 const Footer = () => {
+  const [confettiKey, setConfettiKey] = useState(0);
+  const numHearts = 15; // The number of hearts to show on hover 
+
   const scrollToCoreInitiatives = () => {
     const element = document.getElementById('core-initiatives');
     if (element) {
@@ -58,32 +62,59 @@ const Footer = () => {
         viewport={{ once: true, amount: "some" }}
       >
         <div className='flex xs:flex-col lg:flex-row w-full gap-0'>
-          <div className='lg:w-10/20 flex flex-col justify-between items-center gap-3 bg-white rounded-2xl p-5 border-white'>
-            <img src={DummyLogo} alt='SLRP Research Park Logo' className='w-30 h-30 self-start'/>
-            <div className='flex flex-col justify-start items-start gap-y-5 w-full'>
-              <AnimatedTextCycler />
-              <div className='flex flex-col justify-start items-center gap-y-3 w-full'>
-                <p>Join our community.</p>
-                <form
-                  className='flex flex-row justify-around items-center gap-x-2 w-full rounded-full p-1 border-1 border-gray-3 focus-within:ring-1 focus-within:ring-gray-2'
-                  aria-label='Subscribe to our newsletter'
-                >
-                  <label htmlFor='email' className='sr-only'>Email address</label>
-                  <input 
-                    type='email'
-                    id='email'
-                    placeholder='Enter your email'
-                    name='email'
-                    className='w-full px-3 py-2 focus:outline-none'
-                    aria-required='true'
-                  />
-                  <input 
-                    type='submit'
-                    value='Subscribe'
-                    className='text-decoration-none rounded-full bg-primary-1 border-1 border-dashed border-primary-1 hover:bg-black hover:text-white text-black px-4 py-2 transition-color duration-300 ease-in-out text-nowrap font-semibold'
-                    aria-label='Subscribe'
-                  />
-                </form>
+          <div className='lg:w-10/20 flex flex-col justify-between items-center bg-white rounded-2xl border-white'>
+            <div className='flex flex-col justify-between items-center flex-grow-1 gap-3 p-5'>
+              <img src={DummyLogo} alt='SLRP Research Park Logo' className='w-30 h-30 self-start'/>
+              <div className='flex flex-col justify-start items-start gap-y-5 w-full'>
+                <AnimatedTextCycler />
+                <div className='flex flex-col justify-start items-center gap-y-3 w-full'>
+                  <p>Join our community.</p>
+                  <form
+                    className='flex flex-row justify-around items-center gap-x-2 w-full rounded-full p-1 border-1 border-gray-3 focus-within:ring-1 focus-within:ring-gray-2'
+                    aria-label='Subscribe to our newsletter'
+                  >
+                    <label htmlFor='email' className='sr-only'>Email address</label>
+                    <input 
+                      type='email'
+                      id='email'
+                      placeholder='Enter your email'
+                      name='email'
+                      className='w-full px-3 py-2 focus:outline-none'
+                      aria-required='true'
+                    />
+                    <input 
+                      type='submit'
+                      value='Subscribe'
+                      className='text-decoration-none rounded-full bg-primary-1 border-1 border-dashed border-primary-1 hover:bg-black hover:text-white text-black px-4 py-2 transition-color duration-300 ease-in-out text-nowrap font-semibold'
+                      aria-label='Subscribe'
+                    />
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div className='flex-shrink-1'>
+              <div
+                className='relative cursor-pointer'
+                onMouseEnter={() => setConfettiKey(prevKey => prevKey + 1)}
+              >
+                <div className='absolute inset-0'>
+                  {confettiKey > 0 && [...Array(numHearts)].map((_, i) => (
+                    <ConfettiHeart key={`${confettiKey}-${i}`} />
+                  ))}
+                </div>
+
+                <p className='text-sm text-gray-3 flex items-center justify-center gap-1'>
+                  Crafted with 
+                  <motion.span 
+                    className='inline-block'
+                    variants={heartBeatVariants}
+                    initial='initial'
+                    whileHover='animate'
+                    aria-hidden='true'
+                  >
+                    💖
+                  </motion.span>
+                </p>
               </div>
             </div>
           </div>
@@ -95,79 +126,89 @@ const Footer = () => {
             aria-hidden='true'
           />
 
-          <div className='grid grid-cols-2 bg-white rounded-2xl p-10 border-white' role='navigation' aria-label='Footer links'>
-            <div className='border-b-1 border-e-1 border-gray-5 border-dashed flex flex-col justify-between items-start gap-y-3 py-4'>
-              <h4>Pages</h4>
-              <div className='grid xs:grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-2'>
-                <div className='flex flex-col justify-center items-start gap-y-2'>
-                  <a href='/' aria-label='Home Page'>Home</a>
-                  <a href='/about' aria-label='About Us Page'>About</a>
-                  <a href='/about?scroll=core-initiatives' onClick={scrollToCoreInitiatives} aria-label='Services Section'>Services</a>
-                  <a href='/environment' aria-label='Environment Page'>Environment</a>
-                  <a href='/social' aria-label='Social Page'>Social</a>
-                  <a href='/contact' aria-label='Contact Page'>Contact</a>
+          <div className='flex flex-col justify-center items-center bg-white rounded-2xl border-white' role='navigation' aria-label='Footer links'>
+            <div className='grid grid-cols-2 px-10 pt-10 pb-5'>
+              <div className='border-b-1 border-e-1 border-gray-5 border-dashed flex flex-col justify-between items-start gap-y-3 py-4'>
+                <h4>Pages</h4>
+                <div className='grid xs:grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-2'>
+                  <div className='flex flex-col justify-center items-start gap-y-2'>
+                    <a href='/' aria-label='Home Page'>Home</a>
+                    <a href='/about' aria-label='About Us Page'>About</a>
+                    <a href='/about?scroll=core-initiatives' onClick={scrollToCoreInitiatives} aria-label='Services Section'>Services</a>
+                    <a href='/environment' aria-label='Environment Page'>Environment</a>
+                    <a href='/social' aria-label='Social Page'>Social</a>
+                    <a href='/contact' aria-label='Contact Page'>Contact</a>
+                  </div>
+                  <div className='flex flex-col justify-start items-start gap-y-2'>
+                    <a href='/privacy' aria-label='Privacy and Policy Page'>Privacy and Policy</a>
+                    <a href='/terms-and-conditions' aria-label='Terms and Conditions Page'>Terms and Conditions</a>
+                  </div>
                 </div>
-                <div className='flex flex-col justify-start items-start gap-y-2'>
-                  <a href='/privacy' aria-label='Privacy and Policy Page'>Privacy and Policy</a>
-                  <a href='/terms-and-conditions' aria-label='Terms and Conditions Page'>Terms and Conditions</a>
+              </div>
+              <div className='border-b-1 border-gray-5 border-dashed py-4 ps-4'>
+                <h4>Our Conglomerate</h4>
+                <div className='grid grid-cols-2 gap-x-2 gap-y-5 text-center mt-5'>
+                  <a href='https://brixnet.in/' target='_blank' rel='noopener noreferrer' aria-label='Brixnet Website'>
+                    <img 
+                      src={BrixLogo} 
+                      alt='Brix Logo' 
+                      className='w-15 h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
+                      loading='lazy'
+                    />
+                  </a>
+                  <a href='https://qdotz.in/' target='_blank' rel='noopener noreferrer' aria-label='Qdotz Website'>
+                    <img 
+                      src={QdotzLogo} 
+                      alt='Qdotz Logo' 
+                      className='w-15 h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
+                      loading='lazy'
+                    />
+                  </a>
+                  <a href='https://coreverse.in/' target='_blank' rel='noopener noreferrer' aria-label='Coreverse Website'>
+                    <img 
+                      src={CoreverseLogo} 
+                      alt='Coreverse Logo' 
+                      className='w-20 h-20 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto grayscale'
+                      loading='lazy'
+                    />
+                  </a>
+                  <a href='https://snaedu.in/' target='_blank' rel='noopener noreferrer' aria-label='Savant Website'>
+                    <img 
+                      src={SavantLogo} 
+                      alt='Savant Logo' 
+                      className='w-15 h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
+                      loading='lazy'
+                    />
+                  </a>
+                </div>
+              </div>
+              <div className='border-e-1 border-gray-5 border-dashed flex flex-col justify-between items-start gap-y-3 py-4'>
+                <h4>Contact</h4>
+                <a href='mailto:hello@slrp-research-park.com' aria-label='Email SLRP'>hello@slrp-research-park.com</a>
+                <a href='tel:+91 6383499920' aria-label='Call SLRP'>+91 6383499920</a>
+              </div>
+              <div className='border-gray-5 border-dashed py-4 ps-4'>
+                <h4>Social Media</h4>
+                <div className='flex flex-row justify-start items-center gap-x-4 mt-5'>
+                  <a href='https://www.linkedin.com/company/slrp-research-park/' target='_blank' rel='noopener noreferrer' aria-label='LinkedIn Profile' className='hover:text-blue-700'>
+                    <LinkedIn width='30' height='30' />
+                  </a>
+                  <a href='https://www.instagram.com/slrp_research_park/' target='_blank' rel='noopener noreferrer' aria-label='Instagram Profile' className='hover:text-pink-500'>
+                    <InstagramIcon width='30' height='30' />
+                  </a>
+                  <a href='https://www.youtube.com/@slrp_research_park' target='_blank' rel='noopener noreferrer' aria-label='YouTube Channel' className='hover:text-red-600'>
+                    <YoutubeIcon width='30' height='30' />
+                  </a>
                 </div>
               </div>
             </div>
-            <div className='border-b-1 border-gray-5 border-dashed py-4 ps-4'>
-              <h4>Our Conglomerate</h4>
-              <div className='grid grid-cols-2 gap-x-2 gap-y-5 text-center mt-5'>
-                <a href='https://brixnet.in/' target='_blank' rel='noopener noreferrer' aria-label='Brixnet Website'>
-                  <img 
-                    src={BrixLogo} 
-                    alt='Brix Logo' 
-                    className='w-15 h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
-                    loading='lazy'
-                  />
-                </a>
-                <a href='https://qdotz.in/' target='_blank' rel='noopener noreferrer' aria-label='Qdotz Website'>
-                  <img 
-                    src={QdotzLogo} 
-                    alt='Qdotz Logo' 
-                    className='w-15 h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
-                    loading='lazy'
-                  />
-                </a>
-                <a href='https://coreverse.in/' target='_blank' rel='noopener noreferrer' aria-label='Coreverse Website'>
-                  <img 
-                    src={CoreverseLogo} 
-                    alt='Coreverse Logo' 
-                    className='w-20 h-20 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto grayscale'
-                    loading='lazy'
-                  />
-                </a>
-                <a href='https://snaedu.in/' target='_blank' rel='noopener noreferrer' aria-label='Savant Website'>
-                  <img 
-                    src={SavantLogo} 
-                    alt='Savant Logo' 
-                    className='w-15 h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
-                    loading='lazy'
-                  />
-                </a>
-              </div>
-            </div>
-            <div className='border-e-1 border-gray-5 border-dashed flex flex-col justify-between items-start gap-y-3 py-4'>
-              <h4>Contact</h4>
-              <a href='mailto:hello@slrp-research-park.com' aria-label='Email SLRP'>hello@slrp-research-park.com</a>
-              <a href='tel:+91 6383499920' aria-label='Call SLRP'>+91 6383499920</a>
-            </div>
-            <div className='border-gray-5 border-dashed py-4 ps-4'>
-              <h4>Social Media</h4>
-              <div className='flex flex-row justify-start items-center gap-x-4 mt-5'>
-                <a href='https://www.linkedin.com/company/slrp-research-park/' target='_blank' rel='noopener noreferrer' aria-label='LinkedIn Profile' className='hover:text-blue-700'>
-                  <LinkedIn width='30' height='30' />
-                </a>
-                <a href='https://www.instagram.com/slrp_research_park/' target='_blank' rel='noopener noreferrer' aria-label='Instagram Profile' className='hover:text-pink-500'>
-                  <InstagramIcon width='30' height='30' />
-                </a>
-                <a href='https://www.youtube.com/@slrp_research_park' target='_blank' rel='noopener noreferrer' aria-label='YouTube Channel' className='hover:text-red-600'>
-                  <YoutubeIcon width='30' height='30' />
-                </a>
-              </div>
+            <div className=''>
+              <p 
+                className='text-xs text-gray-4'
+                aria-label='Copyright 2025 SLSRP Research Park. All rights reserved.'
+              >
+                &copy; 2025 - SLSRP Research Park. All rights reserved.
+              </p>
             </div>
           </div>
         </div>
