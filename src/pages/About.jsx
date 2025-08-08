@@ -186,25 +186,25 @@ const About = () => {
     ];
 
     const title = useRef(null);
-    const title1 = useInView(title, { once: false });
+    const title1 = useInView(title, { once: true });
 
     const head = useRef(null);
-    const headInView = useInView(head, { once: false });
+    const headInView = useInView(head, { once: true });
     
     const head5 = useRef(null);
-    const headInView5 = useInView(head5, { once: false });
+    const headInView5 = useInView(head5, { once: true });
 
     const head1 = useRef(null);
-    const headInView1 = useInView(head1, { once: false });
+    const headInView1 = useInView(head1, { once: true });
 
     const head2 = useRef(null);
-    const headInView2 = useInView(head2, { once: false });
+    const headInView2 = useInView(head2, { once: true });
 
     const head3 = useRef(null);
-    const headInView3 = useInView(head3, { once: false });
+    const headInView3 = useInView(head3, { once: true });
 
     const head4 = useRef(null);
-    const headInView4 = useInView(head4, { once: false });
+    const headInView4 = useInView(head4, { once: true });
     const containerRef = useRef(null);
 
     useEffect(() => {
@@ -411,7 +411,7 @@ const About = () => {
                     </div>
                     <div className="flex flex-col lg:flex-row gap-8 sm:px-6 py-16 xl:mt-10 lg:mt-20 md:mt-14">
                         {/* Mission Card */}
-                        <div className="flex-1 bg-white rounded-2xl border-1 border-dashed border-primary-variant-5 hover:shadow-lg transition-all duration-300 p-8 relative overflow-hidden">
+                        <div className="flex-1 bg-white rounded-xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300 p-8 relative overflow-hidden">
                             {/* Accent Bar */}
                             {/* <span className="absolute top-0 left-0 h-1 w-full bg-[#ffbb00] rounded-t-2xl"></span> */}
 
@@ -420,7 +420,7 @@ const About = () => {
                             <div className="flex items-center gap-3 mb-6">
                                 {/* <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div> */}
                                 
-                                <h3 className="">Mission</h3>
+                                <h3 className="bg-gradient-to-r! from-primary-1! via-primary-variant-2! to-primary-variant-3! bg-clip-text! text-transparent!">Mission</h3>
                             </div>
 
                             {/* Content */}
@@ -432,12 +432,12 @@ const About = () => {
                         </div>
 
                         {/* Vision Card */}
-                        <div className="flex-1 bg-white rounded-2xl border-1 border-dashed border-primary-variant-5 hover:shadow-lg transition-all duration-300 p-8 relative overflow-hidden">
+                        <div className="flex-1 bg-white rounded-xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300 p-8 relative overflow-hidden">
                             {/* <span className="absolute top-0 left-0 h-1 w-full bg-[#ffbb00] rounded-t-2xl"></span> */}
 
                             <div className="flex items-center gap-3 mb-6">
                                 {/* <div className="w-2 h-6 bg-[#ffbb00] rounded-sm"></div> */}
-                                <h3 className="">Vision</h3>
+                                <h3 className="bg-gradient-to-r! from-primary-1! via-primary-variant-2! to-primary-variant-3! bg-clip-text! text-transparent!">Vision</h3>
                             </div>
 
                             <ul className="space-y-4 text-[1rem] leading-relaxed list-disc list-inside">
@@ -461,7 +461,7 @@ const About = () => {
             >
                 <div className='xl:h-[700px] lg:h-[1200px] w-full bg-gray-1 flex flex-col items-center'>
                     <p className='border-gray-500 border-1 text-gray-500 mt-23  inline-block pt-1 xl:pb-5 pb-2 pe-4 ps-4 rounded-full overflow-hidden'>OUR TEAM</p>
-                    <h2 className='text-white!  pt-3 xl:pb-20 sm:pb-13 pb-7 overflow-hidden lg:w-[600px] text-center'>The <span className='text-primary-1'>team</span> powering green transport</h2>
+                    <h2 className='text-white!  pt-3 xl:pb-20 sm:pb-13 pb-7 overflow-hidden lg:w-[600px] text-center'>The <span className='bg-gradient-to-r! from-primary-1! via-primary-variant-2! to-primary-variant-3! bg-clip-text! text-transparent!'>team</span> powering green transport</h2>
                     <div className='grid xl:grid-cols-[3fr_3fr_3fr_3fr] lg:grid-cols-3 sm:grid-cols-2 xl:h-[1100px] lg:h-[900px] md:h-[800px] sm:w-full md:w-[90%] lg:w-full w-full md:px-18 px-10 xl:py-8 md:gap-9 gap-4'>
                         <div className='rounded-2xl flex justify-center items-center flex-col bg-[#282828]'>
                             <div className='h-[85%] w-[80%] flex flex-col items-start py-2'>
@@ -547,7 +547,7 @@ const About = () => {
                     
                 >
                     <div className="max-w-6xl mx-auto text-center">
-                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-6" style={{ backgroundColor: '#ffbb00' }}>
+                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-6 bg-primary-1">
                             <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 16 16" className='text-white'><g fill="currentColor"><path d="m14.12 10.163l1.715.858c.22.11.22.424 0 .534L8.267 15.34a.6.6 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858l5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.6.6 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.6.6 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535z"/><path d="m14.12 6.576l1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.6.6 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858l5.317 2.659c.505.252 1.1.252 1.604 0z"/></g></svg>
                         </div>
                         <h3 className=" mb-6">
@@ -559,64 +559,86 @@ const About = () => {
                     </div>
 
                     <div className="max-w-7xl mx-auto sm:px-6 py-16">
-                        {initiatives.map((category) => (
-                            <div key={category.id} className="mb-8">
-                                <div
-                                    className={`flex items-center justify-between p-6 rounded-2xl border-1 border-dashed border-primary-variant-5 ${category.borderColor} hover:shadow-lg transition-all duration-300 cursor-pointer`}
-                                    onClick={() => toggleSection(category.id)}
-                                >
-                                    <div className="flex items-center space-x-4">
-                                        <div className="p-3 rounded-xl text-white" style={{ backgroundColor: '#ffbb00' }}>
-                                            {category.icon}
-                                        </div>
-                                        <h5 className="pt-2">{category.title}</h5>
-                                    </div>
-                                    {expandedSections[category.id] ?
-                                        (
-                                            <svg className="w-6 h-6 " fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-                                            </svg>
-                                        ) :
-                                        (
-                                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                            </svg>
-                                        )
-                                    }
-                                </div>
-
-                                {expandedSections[category.id] && (
-                                    <div className="mt-6 space-y-4">
-                                        {category.items.map((item, idx) => (
-                                            <div key={idx} className="bg-white hover:shadow-md transition-shadow duration-300 rounded-xl border-1 border-dashed border-primary-variant-5">
-                                                <div className="p-6">
-                                                    <div className="flex items-start space-x-4">
-                                                        <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold bg-primary-1" >
-                                                            {idx + 1}
-                                                        </div>
-                                                        <div className="flex-1">
-                                                            <div className="text-xl mb-3 text-gray-1">
-                                                                {item.title}
-                                                            </div>
-                                                            <p className="mb-4 leading-relaxed text-gray-2">{item.description}</p>
-                                                            <div className="space-y-2">
-                                                                {item.details.map((detail, detailIdx) => (
-                                                                    <div key={detailIdx} className="flex items-start space-x-3">
-                                                                        <img src={NavHoverLogo} alt='nav-logo' className='p-1'/>
-                                                                        <span className="text-sm leading-relaxed">{detail}</span>
-                                                                    </div>
-                                                                ))}
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                )}
-                            </div>
-                        ))}
+    {initiatives.map((category) => (
+        <div key={category.id} className="mb-8">
+            <div
+                className={`flex items-center justify-between p-6 bg-white rounded-xl border border-dashed border-primary-variant-3 hover:border-primary-1 ${category.borderColor} transition-all duration-300 cursor-pointer`}
+                onClick={() => toggleSection(category.id)}
+            >
+                <div className="flex items-center space-x-4">
+                    <div className="p-3 rounded-xl text-white bg-primary-1">
+                        {category.icon}
                     </div>
+                    <h5 className="pt-2">{category.title}</h5>
+                </div>
+                <svg 
+                    className={`w-6 h-6 transition-transform duration-300 ease-in-out ${expandedSections[category.id] ? 'rotate-180' : 'rotate-0'}`} 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+            </div>
+
+            <div 
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                    expandedSections[category.id] 
+                        ? 'max-h-[2000px] opacity-100 mt-6' 
+                        : 'max-h-0 opacity-0 mt-0'
+                }`}
+            >
+                <div className="space-y-4">
+                    {category.items.map((item, idx) => (
+                        <div 
+                            key={idx} 
+                            className={`bg-white hover:shadow-md transition-all duration-300 rounded-xl border border-dashed border-primary-variant-3 hover:border-primary-1 transform transition-transform ${
+                                expandedSections[category.id] 
+                                    ? 'translate-y-0 opacity-100' 
+                                    : 'translate-y-2 opacity-0'
+                            }`}
+                            style={{
+                                transitionDelay: expandedSections[category.id] ? `${idx * 100}ms` : '0ms'
+                            }}
+                        >
+                            <div className="p-6">
+                                <div className="flex items-start space-x-4">
+                                    <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold bg-primary-1">
+                                        {idx + 1}
+                                    </div>
+                                    <div className="flex-1">
+                                        <div className="text-xl mb-3 text-gray-1">
+                                            {item.title}
+                                        </div>
+                                        <p className="mb-4 leading-relaxed text-gray-2">{item.description}</p>
+                                        <div className="space-y-2">
+                                            {item.details.map((detail, detailIdx) => (
+                                                <div 
+                                                    key={detailIdx} 
+                                                    className={`flex items-start space-x-3 transition-all duration-300 ${
+                                                        expandedSections[category.id] 
+                                                            ? 'translate-x-0 opacity-100' 
+                                                            : 'translate-x-4 opacity-0'
+                                                    }`}
+                                                    style={{
+                                                        transitionDelay: expandedSections[category.id] ? `${(idx * 100) + (detailIdx * 50) + 200}ms` : '0ms'
+                                                    }}
+                                                >
+                                                    <img src={NavHoverLogo} alt='nav-logo' className='p-1'/>
+                                                    <span className="text-sm leading-relaxed">{detail}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    ))}
+</div>
                     </motion.div>
                 </div>
 
@@ -635,7 +657,7 @@ const About = () => {
                     className="flex flex-col items-center text-center"
                 >
                         <div className="text-center mb-12">
-                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: '#ffbb00' }}>
+                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 bg-primary-1">
                             <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512" className='text-white'><path fill="currentColor" d="M247.759 14.358L16 125.946V184h480v-58.362ZM464 152H48v-5.946l200.241-96.412L464 146.362ZM16 496h480V392H16Zm32-72h416v40H48Zm24-216h32v160H72zm336 0h32v160h-32zm-224 0h32v160h-32zm112 0h32v160h-32z"/></svg>
                                 {/* <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -648,7 +670,7 @@ const About = () => {
                         </div>
                         <div className="grid md:grid-cols-2 gap-8">
                             {enablingPillars.map((pillar, idx) => (
-                                <div key={idx} className={`${pillar.bgColor} rounded-2xl border-1 border-dashed border-primary-variant-5 hover:shadow-lg transition-all duration-300 p-8`}>
+                                <div key={idx} className={`${pillar.bgColor} bg-white rounded-xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300 p-8`}>
                                     <div className="flex items-center space-x-4 mb-4">
                                         <div className="p-3 rounded-xl text-white bg-primary-1">
                                             {pillar.icon}
