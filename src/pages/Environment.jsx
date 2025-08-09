@@ -18,7 +18,8 @@ import HeroBottomLeft from '../assets/Images/hero-bottom-left.svg';
 import HeroTopLeft from '../assets/Images/hero-top-left.svg';
 import HeroMarqueeIcon from '../assets/Images/hero-marquee-icon.svg';
 // import AyushBannerImage from "../assets/Images/ayush-integration-image.jpg";
-import AyushBannerImage from "../assets/Images/ayush-integration-image-2.jpg";
+// import AyushBannerImage from "../assets/Images/ayush-integration-image-2.jpg";
+import AyushBannerImage from "../assets/Images/ayush.png";
 import BackgroundImage from "../assets/Images/pexels-googledeepmind-17485706.jpg";
 
 import {
