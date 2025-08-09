@@ -14,6 +14,7 @@ import IntelligenceSection from '../components/environment-components/Intelligen
 // import HeroImage from '../assets/Images/environment-hero-image-2.jpeg';
 import HeroImage from '../assets/Images/environment-hero-image-3.jpg';
 // import HeroImage from '../assets/Images/environment-hero-image-4.jpg';
+import HeroImageBackground from "../assets/Images/grain.1ccdda41.png";
 import HeroBottomLeft from '../assets/Images/hero-bottom-left.svg';
 import HeroTopLeft from '../assets/Images/hero-top-left.svg';
 import HeroMarqueeIcon from '../assets/Images/hero-marquee-icon.svg';
@@ -66,6 +67,12 @@ const Environment = () => {
             className='w-full h-[90vh] object-cover overflow-hidden absolute inset-0'
             loading='lazy'
             role='img'
+          />
+          <img
+            src={HeroImageBackground}
+            alt="gradient"
+            className="w-full h-[90vh] overflow-hidden absolute inset-0 bg-repeat opacity-90"
+            loading="lazy"
           />
           <div className='xs:w-9/10 md:w-7/10 lg:w-6/10 absolute right-0 bottom-0 flex flex-col justify-start items-start gap-0'>
             <div className='w-full flex flex-col justify-start items-center gap-0 bg-primary-variant-7 rounded-tl-3xl rounded-bl-3xl'>
