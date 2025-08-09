@@ -1,7 +1,10 @@
 import  { useRef } from "react";
-import "./WhyChooseUs.css";
 import { motion, useInView } from "framer-motion";
+
 import NavHoverLogo from "../../assets/Images/nav-hover-icon.svg";
+import OurCoreImage from '../../assets/Images/our-core-image.jpg';
+
+import "./WhyChooseUs.css";
 
 
 const contents = [
@@ -98,7 +101,7 @@ const WhyChooseUs = () => {
           className="flex-1  flex justify-center"
         >
           <img
-            src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683585dd0346c20307f1e513_3ef414f9ff986dba7104bc7f30ec8a38_why-choose-image.webp"
+            src={OurCoreImage}
             alt="Industry Visual"
             className="w-full max-w-[600px] max-h-[650px] object-cover rounded-xl"
             loading="lazy"

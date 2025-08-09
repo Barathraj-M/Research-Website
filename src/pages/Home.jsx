@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef } from "react";
-import "../Home.css";
+import { motion, useInView } from "framer-motion";
+
+import SectionPill from "../components/SectionPill";
 
 import space from "../assets/Videos/space.mp4";
 import nature from "../assets/Videos/nature.mp4";
 import ocean from "../assets/Videos/ocean.mp4";
-import { motion, useInView } from "framer-motion";
+
 import StepConnector from "../assets/Images/step-connector.svg";
 import OurServices from "../components/home-components/OurServices";
 import WhyChooseUs from "../components/home-components/WhyChooseUs";
@@ -17,16 +19,19 @@ import NavHoverLogo from "../assets/Images/nav-hover-icon.svg";
 import resilient from "../assets/Images/home-what-matters-resilient.jpg";
 import research from "../assets/Images/home-what-matters-research.jpg";
 import responsible from "../assets/Images/home-what-matters-responsible.jpg";
+
 import {
   heroSectionBottomContainerVariants,
   contentBasicVariants,
 } from "../utils/animationVariants";
+
 import {
   HandsGlobeIcon,
   InfiniteIcon,
   ShieldCheckIcon,
 } from "../assets/Icons/Icons";
-import SectionPill from "../components/SectionPill";
+
+import "../Home.css";
 
 const videoSlides = [
   {
