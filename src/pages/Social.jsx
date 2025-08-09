@@ -9,7 +9,7 @@ import ItemsMarquee from "../components/ItemsMarquee";
 import NavHoverLogo from "../assets/Images/nav-hover-icon.svg";
 
 // import HeroImage from "../assets/Images/environment-hero-image.webp";
-import HeroImage from "../assets/Images/1.jpg";
+import HeroImage from "../assets/Images/social-hero.jpg";
 import HeroImageBackground from "../assets/Images/grain.1ccdda41.png";
 import HeroBottomLeft from "../assets/Images/hero-bottom-left.svg";
 import HeroTopLeft from "../assets/Images/hero-top-left.svg";

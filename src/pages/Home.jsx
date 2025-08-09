@@ -18,7 +18,7 @@ import RoundedBottomLeft from "../assets/Images/hero-bottom-left.svg";
 import NavHoverLogo from "../assets/Images/nav-hover-icon.svg";
 import resilient from "../assets/Images/home-what-matters-resilient.jpg";
 import research from "../assets/Images/home-what-matters-research.jpg";
-import responsible from "../assets/Images/home-what-matters-responsible.jpg";
+import responsible from "../assets/Images/home-what-matters-responsible.jpeg";
 
 import {
   heroSectionBottomContainerVariants,
