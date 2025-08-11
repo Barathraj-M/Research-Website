@@ -8,9 +8,8 @@ import science from "../assets/Images/social-synthesis-science.png";
 import ItemsMarquee from "../components/ItemsMarquee";
 import NavHoverLogo from "../assets/Images/nav-hover-icon.svg";
 
-// import HeroImage from "../assets/Images/environment-hero-image.webp";
-import HeroImage from "../assets/Images/social-hero.jpg";
-import HeroImageBackground from "../assets/Images/grain.1ccdda41.png";
+import HeroImage from "../assets/Images/social banner.jpg";
+// import HeroImageBackground from "../assets/Images/grain.1ccdda41.png";
 import HeroBottomLeft from "../assets/Images/hero-bottom-left.svg";
 import HeroTopLeft from "../assets/Images/hero-top-left.svg";
 import HeroMarqueeIcon from "../assets/Images/hero-marquee-icon.svg";
@@ -190,12 +189,12 @@ const About = () => {
             className="w-full h-[90vh] object-cover overflow-hidden absolute inset-0"
             loading="lazy"
           />
-          <img
+          {/* <img
             src={HeroImageBackground}
             alt="gradient"
             className="w-full h-[90vh] overflow-hidden absolute inset-0 bg-repeat opacity-50"
             loading="lazy"
-          />
+          /> */}
 
           <div
             className="xs:w-9/10 md:w-7/10 lg:w-6/10 absolute right-0 bottom-0 flex flex-col justify-start items-start gap-0"
