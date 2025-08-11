@@ -11,7 +11,7 @@ import StepConnector from "../assets/Images/step-connector.svg";
 import OurServices from "../components/home-components/OurServices";
 import WhyChooseUs from "../components/home-components/WhyChooseUs";
 import Section6 from "../components/home-components/Section6";
-import ancient from "../assets/Images/deep respect.jpg";
+import ancient from "../assets/Images/home-ancient.jpg";
 import jc from "../assets/Images/jc.png";
 import RoundedBottomRight from "../assets/Images/hero-bottom-right.svg";
 import RoundedBottomLeft from "../assets/Images/hero-bottom-left.svg";
