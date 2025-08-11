@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 
-import ContactHeroImage from '../assets/Images/contact-hero-image2.png'
+import ContactHeroImage from '../assets/Images/contact-hero-image5.jpg'
 import RoundedBottomRight from '../assets/Images/hero-bottom-right.svg'
 import RoundedBottomLeft from '../assets/Images/hero-bottom-left.svg'
 // import PrimaryButton from '../components/PrimaryButton'

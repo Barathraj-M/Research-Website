@@ -41,8 +41,8 @@ const OurServices = () => {
       >
         <div className="flex gap-3 items-center" role="heading" aria-level="2">
           <div
-            className="inline-flex items-center justify-center w-12 h-12 rounded-full"
-            style={{ backgroundColor: "#ffbb00" }}
+            className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary-1"
+           
             aria-hidden="true"
           >
             <svg
@@ -110,11 +110,11 @@ const OurServices = () => {
               </p>
 
               <div
-                className="flex justify-center w-full items-center mt-10 shadow-lg hover:shadow-xl rounded-xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300 "
+                className="flex justify-center w-full items-center mt-10 shadow-lg hover:shadow-xl rounded-xl bg-gradient-to-t from-gray-8 to-[#fff3d1] border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300"
                 role="group"
                 aria-labelledby="env-innovation"
               >
-                <div className="w-full min-h-[220px] bg-white flex flex-col items-center  cursor-pointer rounded-xl group text-black">
+                <div className="w-full min-h-[220px]  flex flex-col items-center  cursor-pointer rounded-xl group text-black">
                   <ul
                     className="flex flex-col gap-2 p-4 text-sm"
                     aria-label="Environmental Innovation Key Points"
@@ -161,11 +161,11 @@ const OurServices = () => {
                 emotional, and behavioral resilience. Focus areas include
               </p>
               <div
-                className="flex justify-center w-full items-center mt-10 shadow-lg hover:shadow-xl rounded-xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300"
+                className="flex justify-center w-full items-center mt-10 shadow-lg hover:shadow-xl rounded-xl bg-gradient-to-t from-gray-8 to-[#fff3d1] border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300"
                 role="group"
                 aria-labelledby="noetic-science"
               >
-                <div className="w-full min-h-[220px] bg-white flex flex-col items-center  cursor-pointer rounded-xl group text-black ">
+                <div className="w-full min-h-[220px]  flex flex-col items-center  cursor-pointer rounded-xl group text-black ">
                   <ul
                     className="flex flex-col gap-2 p-4 text-sm"
                     aria-label="Noetic Science Focus Points"

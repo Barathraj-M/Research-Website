@@ -1,7 +1,10 @@
 import  { useRef } from "react";
-import "./WhyChooseUs.css";
 import { motion, useInView } from "framer-motion";
+
 import NavHoverLogo from "../../assets/Images/nav-hover-icon.svg";
+import OurCoreImage from '../../assets/Images/our-core-image.jpg';
+
+import "./WhyChooseUs.css";
 
 
 const contents = [
@@ -43,8 +46,8 @@ const WhyChooseUs = () => {
         >
           <div className="flex gap-4 items-center">
             <div
-              className="inline-flex items-center justify-center w-12 h-12 rounded-full mb-4"
-              style={{ backgroundColor: "#ffbb00" }}
+              className="inline-flex items-center justify-center w-12 h-12 rounded-full mb-4 bg-primary-1"
+              aria-hidden="true"
             >
               <svg
                 className="w-8 h-8 text-white"
@@ -68,14 +71,14 @@ const WhyChooseUs = () => {
             className="mt-5 ml-2 text-2xl max-w-xl font-semibold"
             style={{ fontSize: "1.2rem" }}
           >
-            <span className="text-[#ffbb00]"> At SLSRP</span>, we believe that
+            <span className="text-primary-1"> At SLSRP</span>, we believe that
             the future of humanity depends on our ability to evolve — internally
             and externally. Our research park is built upon a dual-core mission
             that touches both the inner consciousness of individuals and the{" "}
             outer ecosystems of the planet.
           </p>
 
-          <div className="border-t border-dashed border-gray-500 mt-5" />
+          <div className="border border-dashed border-primary-variant-3  mt-5" />
 
           {/* Repeated Content Block */}
           {contents.map((content, i) => (
@@ -84,7 +87,7 @@ const WhyChooseUs = () => {
                 <img src={NavHoverLogo} alt="nav-logo"  loading="lazy"/> {content.title}
               </h5>
               <p className="mt-2 text-md">{content.description}</p>
-              <div className="border-t border-dashed border-gray-500 mt-5" />
+              <div className="border border-dashed border-primary-variant-3 mt-5" />
             </div>
           ))}
         </motion.div>
@@ -98,7 +101,7 @@ const WhyChooseUs = () => {
           className="flex-1  flex justify-center"
         >
           <img
-            src="https://cdn.prod.website-files.com/682ece3ee8db099bf4d4580f/683585dd0346c20307f1e513_3ef414f9ff986dba7104bc7f30ec8a38_why-choose-image.webp"
+            src={OurCoreImage}
             alt="Industry Visual"
             className="w-full max-w-[600px] max-h-[650px] object-cover rounded-xl"
             loading="lazy"
