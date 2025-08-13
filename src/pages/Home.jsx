@@ -93,6 +93,7 @@ const Home = () => {
             src={video.src}
             autoPlay
             loop
+            preload="auto"
             muted
             playsInline
             aria-hidden="true" // Hide video from screen readers

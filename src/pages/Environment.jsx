@@ -65,7 +65,7 @@ const Environment = () => {
             src={HeroImage}
             alt="Hero background showing environmental theme"
             className='w-full h-[90vh] object-cover overflow-hidden absolute inset-0'
-            loading='lazy'
+            loading='eager'
             role='img'
           />
           {/* <img
