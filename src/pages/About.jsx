@@ -234,7 +234,7 @@ const About = () => {
                 <div className="w-full relative h-[450px] sm:h-[500px] md:h-[600px] lg:h-[655px]">
                     <img
                         src={aboutimage}
-                        loading="lazy"
+                        loading="eager"
                         alt="About Image"
                         className='absolute w-full h-full'
                         role='img'

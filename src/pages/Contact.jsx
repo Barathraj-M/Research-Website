@@ -103,7 +103,7 @@ const Contact = () => {
                             src={ContactHeroImage}
                             alt='Contact hero section featuring SLSRP office building with modern architecture and green landscaping'
                             className='w-full h-[100vh] object-cover overflow-hidden'
-                            loading='lazy'
+                            loading='eager'
                         />
                         <div className='absolute w-full flex flex-col justify-center items-center gap-y-2 md:gap-y-15 bottom-0 left-0 right-0'>
                             <div className='flex flex-col justify-center items-center gap-y-7 max-w-lg'>

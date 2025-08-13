@@ -2,8 +2,8 @@
 import { useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import "../index.css";
-import youth from "../assets/Images/social-resilience-youth.png";
-import science from "../assets/Images/social-synthesis-science.png";
+import youth from "../assets/Images/social-resilience-youth.webp";
+import science from "../assets/Images/social-synthesis-science.webp";
 
 import ItemsMarquee from "../components/ItemsMarquee";
 import NavHoverLogo from "../assets/Images/nav-hover-icon.svg";
@@ -187,7 +187,7 @@ const About = () => {
             src={HeroImage}
             alt="Scenic environment backdrop representing nature and social harmony"
             className="w-full h-[90vh] object-cover overflow-hidden absolute inset-0"
-            loading="lazy"
+            loading="eager"
           />
           {/* <img
             src={HeroImageBackground}
@@ -598,12 +598,13 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.3 }}
-            className="flex justify-center"
+            className="flex justify-center w-2/4"
+          
           >
             <img
               src={youth}
               alt="Illustration of youth development and community engagement at SLSRP"
-              className="w-3/4"
+              className="w-4/4"
               loading="lazy"
             />
           </motion.div>
@@ -686,15 +687,16 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.3 }}
-            className="flex justify-center"
+            className="flex justify-center w-2/4"
             role="img"
             aria-label="Illustration representing Semporutkalai Life Science Research Park"
           >
             <img
               src={science}
               alt="Illustration showcasing cultural and scientific convergence at SLSRP"
-              className="w-3/4"
+              className="w-4/4"
               loading="lazy"
+              
             />
           </motion.div>
 
