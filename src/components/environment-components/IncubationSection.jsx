@@ -13,11 +13,11 @@ import {
 import NavHoverLogo from '../../assets/Images/nav-hover-icon.svg';
 import StepConnector from '../../assets/Images/step-connector.svg';
 
-import PolicySignImage from '../../assets/Images/policy-sign-image.jpg';
-import EndToEndSupport from '../../assets/Images/end-to-end-support-image.jpg';
-import IdeaIncubationImage from '../../assets/Images/idea-incubation-image.jpg';
-import ExpertMentoringImage from '../../assets/Images/expert-mentoring-image.jpg';
-import GreenDiscoveryPlantDNAImage from '../../assets/Images/green-discovery-dna-plant-image.jpg';
+import PolicySignImage from '../../assets/Images/policy-sign-image.webp';
+import EndToEndSupport from '../../assets/Images/end-to-end-support-image.webp';
+import IdeaIncubationImage from '../../assets/Images/idea-incubation-image.webp';
+import ExpertMentoringImage from '../../assets/Images/expert-mentoring-image.webp';
+import GreenDiscoveryPlantDNAImage from '../../assets/Images/green-discovery-dna-plant-image.webp';
 
 import {
     LightBulbIcon,

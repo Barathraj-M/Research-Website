@@ -11,14 +11,14 @@ import StepConnector from "../assets/Images/step-connector.svg";
 import OurServices from "../components/home-components/OurServices";
 import WhyChooseUs from "../components/home-components/WhyChooseUs";
 import Section6 from "../components/home-components/Section6";
-import ancient from "../assets/Images/home-ancient.jpg";
+import ancient from "../assets/Images/home-ancient.webp";
 import jc from "../assets/Images/jc.png";
 import RoundedBottomRight from "../assets/Images/hero-bottom-right.svg";
 import RoundedBottomLeft from "../assets/Images/hero-bottom-left.svg";
 import NavHoverLogo from "../assets/Images/nav-hover-icon.svg";
-import resilient from "../assets/Images/home-what-matters-resilient.jpg";
+import resilient from "../assets/Images/home-what-matters-resilient.webp";
 import research from "../assets/Images/home-what-matters-research.jpg";
-import responsible from "../assets/Images/home-what-matters-responsible.jpeg";
+import responsible from "../assets/Images/home-what-matters-responsible.webp";
 
 import {
   heroSectionBottomContainerVariants,

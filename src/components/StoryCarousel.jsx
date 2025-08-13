@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import CardImage1 from '../assets/Images/A Future Designed with Purpose.jpg';
-import CardImage2 from '../assets/Images/Positioning Social Change as Systemic Impact.jpg';
+import CardImage1 from '../assets/Images/A Future Designed with Purpose.webp';
+import CardImage2 from '../assets/Images/Positioning Social Change as Systemic Impact.webp';
 import FooterDivider from '../assets/Images/nav-divider.svg';
 import NavHoverLogo from "../assets/Images/nav-hover-icon.svg";
 const StoryCarousel = () => {

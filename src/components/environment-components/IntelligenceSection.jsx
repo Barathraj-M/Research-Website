@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 // import CardBackgroundBlurImage from '../../assets/Images/intelligence-section-card-image-1.jpg';
 // import CardBackgroundBlurImage from '../../assets/Images/intelligence-section-card-image-2.jpg';
-import CardBackgroundBlurImage from '../../assets/Images/intelligence-section-card-image-3.jpg';
+import CardBackgroundBlurImage from '../../assets/Images/intelligence-section-card-image-3.webp';
 
 import SectionPill from '../SectionPill';
 
