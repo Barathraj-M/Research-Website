@@ -133,16 +133,16 @@ const Footer = () => {
                 <h4>Pages</h4>
                 <div className='grid xs:grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-2'>
                   <div className='flex flex-col justify-center items-start gap-y-2'>
-                    <a href='/' aria-label='Home Page'>Home</a>
-                    <a href='/about' aria-label='About Us Page'>About</a>
-                    <a href='/about?scroll=core-initiatives' onClick={scrollToCoreInitiatives} aria-label='Services Section'>Services</a>
-                    <a href='/environment' aria-label='Environment Page'>Environment</a>
-                    <a href='/social' aria-label='Social Page'>Social</a>
-                    <a href='/contact' aria-label='Contact Page'>Contact</a>
+                    <a href='/' aria-label='Home Page' className='hover:text-gray-1 hover:underline hover:decoration-gray-2'>Home</a>
+                    <a href='/about' aria-label='About Us Page' className='hover:text-gray-1 hover:underline hover:decoration-gray-2'>About</a>
+                    <a href='/about?scroll=core-initiatives' onClick={scrollToCoreInitiatives} aria-label='Services Section' className='hover:text-gray-1 hover:underline hover:decoration-gray-2'>Services</a>
+                    <a href='/environment' aria-label='Environment Page' className='hover:text-gray-1 hover:underline hover:decoration-gray-2'>Environment</a>
+                    <a href='/social' aria-label='Social Page' className='hover:text-gray-1 hover:underline hover:decoration-gray-2'>Social</a>
+                    <a href='/contact' aria-label='Contact Page' className='hover:text-gray-1 hover:underline hover:decoration-gray-2'>Contact</a>
                   </div>
                   <div className='flex flex-col justify-start items-start gap-y-2'>
-                    <a href='/privacy' aria-label='Privacy and Policy Page'>Privacy and Policy</a>
-                    <a href='/terms-and-conditions' aria-label='Terms and Conditions Page'>Terms and Conditions</a>
+                    <a href='/privacy' aria-label='Privacy and Policy Page' className='hover:text-gray-1 hover:underline hover:decoration-gray-2'>Privacy and Policy</a>
+                    <a href='/terms-and-conditions' aria-label='Terms and Conditions Page' className='hover:text-gray-1 hover:underline hover:decoration-gray-2'>Terms and Conditions</a>
                   </div>
                 </div>
               </div>

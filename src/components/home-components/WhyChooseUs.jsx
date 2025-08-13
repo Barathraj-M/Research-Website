@@ -2,7 +2,7 @@ import  { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 import NavHoverLogo from "../../assets/Images/nav-hover-icon.svg";
-import OurCoreImage from '../../assets/Images/our-core-image.jpg';
+import OurCoreImage from '../../assets/Images/our-core-image.webp';
 
 import "./WhyChooseUs.css";
 
