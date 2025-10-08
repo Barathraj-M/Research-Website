@@ -285,7 +285,7 @@ const About = () => {
       </div>
 
       <div
-        className="p-10 bg-primary-variant-7"
+        className="p-3 sm:p-5 bg-primary-variant-7"
         role="region"
         aria-label="Social Responsibility Section"
       >
@@ -302,7 +302,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 100 }}
             transition={{ duration: 1, ease: "easeInOut" }}
-            viewport={{once:true}}
+            viewport={{ once: true }}
             className="flex flex-col items-center text-center"
           >
             {/* Section Pill (assumed to be accessible already) */}
@@ -316,9 +316,10 @@ const About = () => {
             </h2>
 
             <p className="text-lg text-center lg:ms-20 lg:me-20">
-              At Semporutkalai Life Science Research Foundation (SLSRF), we redefine
-              the meaning of social initiative by grounding it in scientific
-              validation, ethical frameworks, and cultural intelligence.
+              At Semporutkalai Life Science Research Foundation (SLSRF), we
+              redefine the meaning of social initiative by grounding it in
+              scientific validation, ethical frameworks, and cultural
+              intelligence.
             </p>
 
             {content}
@@ -335,11 +336,11 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease: "easeIn" }}
-            className="flex flex-col lg:flex-row gap-8 px-6 py-16"
+            className="flex flex-col md:flex-row gap-8 md:px-6 md:py-16 "
           >
             {/* Mission Card */}
             <article
-              className="flex-1 bg-white rounded-2xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300 p-8 relative overflow-hidden"
+              className="flex-1 bg-white rounded-2xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300 p-3 sm:p-5 md:p-8 relative overflow-hidden"
               aria-labelledby="mission-heading"
             >
               <div className="flex items-center gap-3 mb-6">
@@ -399,7 +400,7 @@ const About = () => {
 
             {/* Vision Card */}
             <article
-              className="flex-1 bg-white rounded-2xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300 p-8 relative overflow-hidden"
+              className="flex-1 bg-white rounded-2xl border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300 p-3 sm:p-5 md:p-8 relative overflow-hidden"
               aria-labelledby="vision-heading"
             >
               <div className="flex items-center gap-3 mb-6">
@@ -474,11 +475,11 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
-          className="max-w-7xl mx-auto flex gap-8 items-center sm:flex-col lg:flex-row justify-center"
+          className="max-w-7xl mx-auto flex gap-4 items-center flex-col md:flex-row justify-center items-center!"
         >
           {/* Left Text Box */}
           <div
-            className="space-y-4 p-4 lg:w-800px"
+            className="space-y-4 p-2 lg:w-800px"
             style={{ textAlign: "justify" }}
           >
             <SectionPill sectionTitle={"Resilience"} />
@@ -598,49 +599,62 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.3 }}
-            className="flex justify-center w-2/4"
-          
+            className="md:mt-20 w-1/2"
           >
             <img
               src={youth}
               alt="Illustration of youth development and community engagement at SLSRF"
-              className="w-4/4"
               loading="lazy"
             />
           </motion.div>
         </motion.div>
       </section>
 
-      <motion.div
-        initial={{ opacity: 0, y: 80 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.3 }}
-        className="min-h-screen bg-black text-white"
-        role="region"
-        aria-labelledby="nseuw-title"
-      >
+      <div className="min-h-screen bg-black text-white overflow-visible">
         <div className="max-w-7xl mx-auto px-6 py-16">
-          {/* Enabling Pillars Section */}
-          <section aria-labelledby="nseuw-title" className="mb-20">
+          {/* ========== Section Header ========== */}
+          <motion.section
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
+            aria-labelledby="nseuw-title"
+            className="mb-20"
+          >
             <div className="text-center mb-12 flex flex-col items-center">
-              <SectionPill sectionTitle={"Wholeness"} />
+              <SectionPill sectionTitle="Wholeness" />
               <h2
                 id="nseuw-title"
                 className="font-bold mb-4 text-center mt-5 text-white!"
               >
+                {" "}
                 <span className="bg-gradient-to-r from-primary-1 via-primary-variant-2 to-primary-variant-3 bg-clip-text text-transparent">
+                  {" "}
                   nseUW{" "}
-                </span>
-                – Structuring Legacy Knowledge into Credible Pathways
+                </span>{" "}
+                – Structuring Legacy Knowledge into Credible Pathways{" "}
               </h2>
             </div>
 
-            {/* Pillar Cards */}
-            <div className="grid md:grid-cols-2 gap-8">
+            {/* ========== Pillar Cards ========== */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="grid md:grid-cols-2 gap-8"
+            >
               {enablingPillars.map((pillar, idx) => (
-                <article
+                <motion.article
                   key={idx}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: idx * 0.15,
+                    ease: "easeOut",
+                  }}
+                  viewport={{ once: true, amount: 0.3 }}
                   className={`${pillar.bgColor} rounded-2xl shadow-lg hover:shadow-xl bg-white border border-dashed border-primary-variant-3 hover:border-primary-1 transition-all duration-300`}
                   aria-label={pillar.title}
                   role="region"
@@ -652,22 +666,28 @@ const About = () => {
                     >
                       {pillar.icon}
                     </div>
-                    <h4 className="font-bold mt-2!">{pillar.title}</h4>
+                    <h4 className="font-bold">{pillar.title}</h4>
                   </header>
                   <p className="text-black leading-relaxed p-5">
                     {pillar.description}
                   </p>
-                </article>
+                </motion.article>
               ))}
-            </div>
-          </section>
+            </motion.div>
+          </motion.section>
 
-          {/* Carousel Component */}
-          <section aria-label="SLSRF Story Carousel">
+          {/* ========== Story Carousel Section ========== */}
+          <motion.section
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
+            aria-label="SLSRF Story Carousel"
+          >
             <StoryCarousel />
-          </section>
+          </motion.section>
         </div>
-      </motion.div>
+      </div>
 
       <div
         className="w-full px-4 py-8"
@@ -679,7 +699,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
-          className="max-w-7xl mx-auto flex sm:flex-col lg:flex-row sm:flex-col-reverse gap-8 items-center"
+          className="max-w-7xl mx-auto flex  md:flex-row flex-col gap-8 items-center"
         >
           {/* Left Image Box */}
           <motion.div
@@ -696,7 +716,6 @@ const About = () => {
               alt="Illustration showcasing cultural and scientific convergence at SLSRF"
               className="w-4/4"
               loading="lazy"
-              
             />
           </motion.div>
 
