@@ -9,7 +9,7 @@ import DummyLogo from '../assets/Images/SLSRF Logo.png';
 import FooterDivider from '../assets/Images/nav-divider.svg';
 import BrixLogo from '../assets/Images/brix-logo.jpg';
 import QdotzLogo from '../assets/Images/qdotz-logo.png';
-import CoreverseLogo from '../assets/Images/coreverse-logo.png';
+import MarginsLogo from '../assets/Images/margin-logo.png';
 import SavantLogo from '../assets/Images/sna-logo.jpg';
 import { LinkedIn, InstagramIcon, YoutubeIcon } from '../assets/Icons/Icons.jsx';
 
@@ -167,9 +167,9 @@ const Footer = () => {
                   </a>
                   <a href='https://coreverse.in/' target='_blank' rel='noopener noreferrer' aria-label='Coreverse Website'>
                     <img 
-                      src={CoreverseLogo} 
+                      src={MarginsLogo} 
                       alt='Coreverse Logo' 
-                      className='w-20 h-20 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto grayscale'
+                      className='w-20 h-20 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
                       loading='lazy'
                     />
                   </a>
