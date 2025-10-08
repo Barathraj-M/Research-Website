@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import PrimaryButton from './PrimaryButton';
 import '../index.css'
 
-import DummyLogo from '../assets/Images/dummy-icon-with-name.svg';
+import DummyLogo from '../assets/Images/slsrf.png';
 
 import NavHoverLogo from '../assets/Images/nav-hover-icon.svg';
 import { MenuIcon } from '../assets/Icons/Icons';
@@ -88,7 +88,7 @@ const Header = () => {
     <header className='fixed w-full top-0 left-0 z-50' role="banner">
       <div className='xs:h-17 md:h-19 px-3 md:px-10 py-2 flex flex-row justify-between items-center gap-x-1 h-full relative z-50'>
         <nav 
-          className='flex flex-row justify-start items-center gap-3 w-full h-full bg-white/70 backdrop-blur-sm rounded-full relative'
+          className='flex flex-row justify-start items-center gap-3 w-full h-full bg-white/70 backdrop-blur-md shadow-lg rounded-full relative'
           role="navigation"
           aria-label="Main navigation"
         >
@@ -120,12 +120,12 @@ const Header = () => {
           {/* <div className='absolute my-auto top-0 bottom-0 left-auto -right-2.5 w-4 h-4 bg-white/70 backdrop-blur-sm -z-100 mask-auto'></div> */}
         </nav>
         <div className='flex flex-row gap-x-2 items-center h-full bg-transparent'>
-          <div className='xs:hidden p-2 bg-white/70 backdrop-blur-sm rounded-full h-full sm:flex items-center'>
+          <div className='xs:hidden p-2 bg-white/70 backdrop-blur-md shadow-lg rounded-full h-full sm:flex items-center'>
             <PrimaryButton link='/contact' text='Contact us' />
           </div>
           <button
             ref={menuButtonRef}
-            className='md:hidden bg-white/70 backdrop-blur-sm rounded-full flex items-center h-full cursor-pointer'
+            className='md:hidden bg-white/70 backdrop-blur-md shadow-lg rounded-full flex items-center h-full cursor-pointer'
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={isMenuOpen}
