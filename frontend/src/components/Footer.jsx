@@ -181,7 +181,14 @@ const Footer = () => {
                       loading='lazy'
                     />
                   </a>
-                  
+                  {/* <a href='https://snaedu.in/' target='_blank' rel='noopener noreferrer' aria-label='Savant Website'>
+                    <img 
+                      src={SavantLogo} 
+                      alt='Savant Logo' 
+                      className='w-15 h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
+                      loading='lazy'
+                    />
+                  </a> */}
                 </div>
               </div>
               <div className='border-e-1 border-gray-5 border-dashed flex flex-col justify-between items-start gap-y-3 py-4'>
