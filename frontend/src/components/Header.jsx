@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import PrimaryButton from './PrimaryButton';
 import '../index.css'
 
-import DummyLogo from '../assets/Images/slsrf.png';
+import DummyLogo from '../assets/Images/slsrf-logo-with-name.svg';
 
 import NavHoverLogo from '../assets/Images/nav-hover-icon.svg';
 import { MenuIcon } from '../assets/Icons/Icons';

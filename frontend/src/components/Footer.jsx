@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import AnimatedTextCycler from './AnimatedTextCycler.jsx';
 import ConfettiHeart from './ConfettiHeart.jsx';
 
-import DummyLogo from '../assets/Images/SLSRF Logo.png';
+import DummyLogo from '../assets/Images/slsrf-logo.svg';
 import FooterDivider from '../assets/Images/nav-divider.svg';
 import BrixLogo from '../assets/Images/brix-logo.jpg';
 import QdotzLogo from '../assets/Images/qdotz-logo.png';

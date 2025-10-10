@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import LoadingHolder from '../assets/Images/nav-hover-icon.svg';
-import DummyLogo from '../assets/Images/SLSRF Logo.png';
+import DummyLogo from '../assets/Images/slsrf-logo.svg';
 
 import { initialLoaderVariants } from '../utils/animationVariants';
 
