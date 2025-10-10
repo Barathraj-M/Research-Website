@@ -328,7 +328,7 @@ const IncubationSection = () => {
                 </div>
             </div>
 
-            <div className='bg-gray-1 rounded-full flex flex-row justify-center items-center gap-x-5 p-5' role='contentinfo' aria-label='Incubation quote'>
+            <div className='bg-gray-1 xs:rounded-3xl sm:rounded-full flex flex-row justify-center items-center gap-x-5 p-5' role='contentinfo' aria-label='Incubation quote'>
                 <motion.div
                     className='self-start text-primary-1'
                     variants={quoteIconDanceVariants}

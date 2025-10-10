@@ -79,7 +79,7 @@ const Environment = () => {
               <img
                 src={HeroBottomLeft}
                 alt='decorative divider'
-                className='self-end w-8 h-8 object-cover -mt-8 -me-[0.3px]'
+                className='self-end w-8 h-8 object-cover -mt-7.5 -me-[0.5px] -mb-[0.2px]'
                 loading='lazy'
                 aria-hidden='true'
               />
@@ -114,14 +114,14 @@ const Environment = () => {
                   aria-hidden='true'
                 />
                 <motion.p
-                  className='px-10'
+                  className='xs:px-2 sm:px-5 md:px-10'
                   variants={heroSectionMainContainerVariants}
                   initial='initial'
                   animate='whileInView'
                   viewport={{ once: true, amount: "0.1" }}
                   custom={3}
                 >
-                  At Semporutkalai Life Science Research Foundation (SLSRF), environmental responsibility is not a passive commitment - it is a proactive mission. We do not treat nature as a backdrop to progress but as the very foundation of human continuity.
+                  At SLSRF, environmental responsibility is not a passive commitment - it is a proactive mission. We do not treat nature as a backdrop to progress but as the very foundation of human continuity.
                 </motion.p>
                 <div className='w-full relative mt-3' aria-hidden='true'>
                   <div className='absolute left-0 top-0 h-full w-20 pointer-events-none z-10 bg-gradient-to-r from-primary-variant-7 via-primary-variant-7/80 to-transparent'></div>
@@ -131,7 +131,7 @@ const Environment = () => {
                 <img
                   src={HeroBottomLeft}
                   alt='decorative divider'
-                  className='self-start w-8 h-8 object-cover -ms-8 -mt-[0.4px]'
+                  className='self-start w-8 h-8 object-cover -ms-8 -mt-[0.4px] -mb-[0.5px]'
                   loading='lazy'
                   aria-hidden='true'
                 />
@@ -179,7 +179,7 @@ const Environment = () => {
             scientific validation, long-term sustainability, and community relevance.
           </motion.p>
         </div>
-        <div className='flex flex-row justify-center items-center gap-x-5 relative z-10'>
+        <div className='flex xs:flex-col sm:flex-row justify-center items-center gap-x-5 gap-y-5 relative z-10'>
           <motion.button
             className='text-decoration-none cursor-pointer rounded-full bg-primary-1 border-1 border-dashed border-primary-1 hover:bg-black hover:text-white text-black px-4 py-2 transition-colors duration-300 ease-in-out text-nowrap font-medium'
             variants={visibleAnimationVariants}
