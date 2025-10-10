@@ -213,7 +213,7 @@ const Footer = () => {
             </div>
             <div className='xs:px-4 md:px-10'>
               <p 
-                className='text-xs text-gray-4 text-wrap text-center'
+                className='text-xs! text-gray-4 text-wrap text-center'
                 aria-label='Copyright current year SLSRF Research Foundation. All rights reserved.'
               >
                 &copy; {new Date().getFullYear()} - SLSRF Research Foundation. All rights reserved.
