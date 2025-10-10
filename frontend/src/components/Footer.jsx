@@ -128,7 +128,7 @@ const Footer = () => {
           />
 
           <div className='flex flex-col justify-center items-center bg-white rounded-2xl border-white' role='navigation' aria-label='Footer links'>
-            <div className='grid grid-cols-2 px-10 pt-10 pb-5'>
+            <div className='grid grid-cols-2 xs:px-4 xs:pt-5 xs:pb-6 md:px-10 md:pt-10 md:pb-5'>
               <div className='border-b-1 border-e-1 border-gray-5 border-dashed flex flex-col justify-between items-start gap-y-3 py-4'>
                 <h4>Pages</h4>
                 <div className='grid xs:grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-2'>
@@ -146,14 +146,14 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              <div className='border-b-1 border-gray-5 border-dashed py-4 ps-4'>
+              <div className='border-b-1 border-gray-5 border-dashed xs:ps-2 py-4 sm:ps-4 overflow-hidden'>
                 <h4>Our Conglomerate</h4>
                 <div className='grid grid-cols-2 gap-x-2 gap-y-5 text-center mt-5'>
                   <a href='https://brixnet.in/' target='_blank' rel='noopener noreferrer' aria-label='Brixnet Website'>
                     <img 
                       src={BrixLogo} 
                       alt='Brix Logo' 
-                      className='w-15 h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
+                      className='xs:w-10 xs:h-10 sm:w-15 sm:h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
                       loading='lazy'
                     />
                   </a>
@@ -161,7 +161,7 @@ const Footer = () => {
                     <img 
                       src={QdotzLogo} 
                       alt='Qdotz Logo' 
-                      className='w-15 h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
+                      className='xs:w-10 xs:h-10 sm:w-15 sm:h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
                       loading='lazy'
                     />
                   </a>
@@ -169,7 +169,7 @@ const Footer = () => {
                     <img 
                       src={MarginsLogo} 
                       alt='Coreverse Logo' 
-                      className='w-20 h-20 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
+                      className='xs:w-10 xs:h-10 sm:w-15 sm:h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
                       loading='lazy'
                     />
                   </a>
@@ -177,7 +177,7 @@ const Footer = () => {
                     <img 
                       src={SavantLogo} 
                       alt='Savant Logo' 
-                      className='w-15 h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
+                      className='xs:w-10 xs:h-10 sm:w-15 sm:h-15 object-contain hover:scale-105 transition-transform duration-300 ease-in-out m-auto'
                       loading='lazy'
                     />
                   </a>
@@ -211,12 +211,12 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className=''>
+            <div className='xs:px-4 md:px-10'>
               <p 
-                className='text-xs text-gray-4'
-                aria-label='Copyright 2025 SLSRF Research Foundation. All rights reserved.'
+                className='text-xs text-gray-4 text-wrap text-center'
+                aria-label='Copyright current year SLSRF Research Foundation. All rights reserved.'
               >
-                &copy; 2025 - SLSRF Research Foundation. All rights reserved.
+                &copy; {new Date().getFullYear()} - SLSRF Research Foundation. All rights reserved.
               </p>
             </div>
           </div>
